@@ -98,8 +98,8 @@ const navigationButton = { ...navBtnConfig, ...customNavigationButton };
       ClassName,
     ]}>
     <nav class="relative container">
-      <div class="hs-dropdown relative flex items-center justify-between py-3 lg:py-4">
-        <Logo />
+      <div class="hs-dropdown relative flex items-center justify-between py-2 sm:py-3 lg:py-4">
+        <Logo class="max-w-[170px] sm:max-w-[220px]" />
 
         <Navbar
           navigationButton={navigationButton}
@@ -109,7 +109,7 @@ const navigationButton = { ...navBtnConfig, ...customNavigationButton };
           ]}
         />
 
-        <div class="ms-auto flex items-center gap-2 lg:ms-0">
+        <div class="flex items-center gap-2">
           <!-- Search Icon Button -->
           <button
             type="button"

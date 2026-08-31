@@ -10,6 +10,12 @@ const favicons: {
   color?: string;
 }[] = [
   {
+    rel: "icon",
+    type: "image/png",
+    sizes: "192x192",
+    href: "/images/favicon.png",
+  },
+  {
     rel: "apple-touch-icon",
     sizes: "180x180",
     href: `${faviconPath}/apple-touch-icon.png`,
@@ -33,13 +39,8 @@ const favicons: {
     href: `${faviconPath}/web-app-manifest-512x512.png`,
   },
   {
-    rel: "icon",
-    type: "image/svg+xml",
-    href: `${faviconPath}/favicon.svg`,
-  },
-  {
     rel: "shortcut icon",
-    href: `${faviconPath}/favicon.ico`,
+    href: "/images/favicon.png",
   },
   {
     rel: "manifest",

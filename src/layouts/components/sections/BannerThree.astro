@@ -1,87 +1,218 @@
 ---
-import { z } from "astro/zod";
-import type { Section } from "@/types";
 import Button from "@/components/Button.astro";
-import { getEntryCTM } from "@/lib/contentParser.astro";
-import { markdownify } from "@/lib/utils/textConverter";
-import overrideObjects from "@/lib/utils/overrideObjects.ts";
-import OptimizedImage from "../utilities/OptimizedImage.astro";
-import type { bannerAgencySectionSchema } from "@/sections.schema";
 
-type BannerThreeType = Section & z.infer<typeof bannerAgencySectionSchema>;
-type Props = { content?: BannerThreeType };
-
-const defaultContent = (
-  await getEntryCTM("sections", "banner-three", Astro.currentLocale)
-)?.data as BannerThreeType;
-
-const actualContent = overrideObjects(
-  { ...defaultContent },
-  Astro.props.content,
-) as BannerThreeType;
-
-const { title, description, gradientBackgroundImage, mapImage, buttons } =
-  actualContent;
-const backgroundImage = mapImage || "/images/banner/map.svg";
+const slides = [
+  {
+    title: "Professional Chartered Accountancy Services",
+    description:
+      "Committed to delivering quality financial and advisory solutions with integrity and excellence",
+    button: {
+      enable: true,
+      label: "About Us",
+      url: "/about-us/",
+      variant: "fill" as const,
+      hoverEffect: "magnetic-text-flip" as const,
+    },
+    secondaryButton: {
+      enable: true,
+      label: "Contact Us",
+      url: "/contact/",
+      variant: "fill-white" as const,
+      hoverEffect: "magnetic-text-flip" as const,
+    },
+    bgImage: "/images/banner/hero-slide-1.jpg",
+  },
+  {
+    title: "Comprehensive Financial Expertise",
+    description:
+      "Offering a wide range of accounting and auditing services tailored to your business needs",
+    button: {
+      enable: true,
+      label: "About Us",
+      url: "/about-us/",
+      variant: "fill" as const,
+      hoverEffect: "magnetic-text-flip" as const,
+    },
+    secondaryButton: {
+      enable: true,
+      label: "Contact Us",
+      url: "/contact/",
+      variant: "fill-white" as const,
+      hoverEffect: "magnetic-text-flip" as const,
+    },
+    bgImage: "/images/banner/hero-slide-2.jpg",
+  },
+  {
+    title: "Ethical & Transparent Financial Practices",
+    description:
+      "Adhering strictly to ICAI professional guidelines, ensuring ethical conduct and complete transparency in all financial services.",
+    button: {
+      enable: true,
+      label: "Our Services",
+      url: "/services/",
+      variant: "fill" as const,
+      hoverEffect: "magnetic-text-flip" as const,
+    },
+    secondaryButton: {
+      enable: true,
+      label: "Get In Touch",
+      url: "/contact/",
+      variant: "fill-white" as const,
+      hoverEffect: "magnetic-text-flip" as const,
+    },
+    bgImage: "/images/banner/hero-slide-3.jpg",
+  },
+];
 ---
 
-<section class="banner-three-section bg-theme-dark relative overflow-hidden">
-  <div class="container py-44">
+<section class="banner-three-section relative overflow-hidden bg-slate-900 mt-0 pt-0 min-h-[480px] sm:min-h-[640px] md:min-h-[680px] flex items-center">
+  <div class="hero-carousel-container relative w-full h-[480px] sm:h-[640px] md:h-[680px] flex items-center">
     {
-      backgroundImage && (
-        <OptimizedImage
-          src={backgroundImage}
-          alt="map"
-          aria-hidden="true"
-          loading="eager"
-          fetchpriority="high"
-          class="banner-three-map has-no-interaction lg:translate-centered absolute z-10 w-255 opacity-7 max-lg:bottom-0 max-lg:left-0"
-        />
-      )
-    }
-    {
-      gradientBackgroundImage && (
-        <div class="banner-three-gradient has-no-interaction translate-centered absolute z-10 flex h-245 w-400">
-          <OptimizedImage
-            src={gradientBackgroundImage}
-            alt="map"
-            aria-hidden="true"
-            loading="eager"
-            fetchpriority="high"
-            class="w-400 flex-1 max-lg:bottom-0 max-lg:left-0"
-          />
-        </div>
-      )
-    }
-    <div
-      class="banner-three-content relative z-10 mx-auto max-w-4xl text-center">
-      {
-        title && (
-          <h1
-            class="banner-three-title text-display-5 md:text-display-4 lg:text-display-3 xl:text-display-2 leading-tight text-white"
-            set:html={markdownify(title)}
-          />
-        )
-      }
-
-      {
-        description && (
-          <p
-            class="banner-three-description text-light mx-auto mt-5 max-w-4xl md:text-lg"
-            set:html={markdownify(description)}
-          />
-        )
-      }
-
-      {
-        buttons?.length && (
-          <div class="banner-three-actions mt-10 flex flex-wrap items-center justify-center gap-4">
-            {buttons.map((button) => (
-              <Button {...button} />
-            ))}
+      slides.map((slide, index) => (
+        <div
+          class:list={[
+            "hero-slide absolute inset-0 transition-opacity duration-700 ease-in-out flex items-center py-14 sm:py-20 lg:py-24",
+            index === 0 ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none",
+          ]}
+          data-slide-index={index}>
+          <!-- Soft overlay for text legibility on all devices -->
+          <div class="absolute inset-0 z-0">
+            <img
+              src={slide.bgImage}
+              alt={slide.title}
+              class="w-full h-full object-cover object-center opacity-100"
+            />
+            <!-- Gradient overlay for text contrast on mobile & desktop -->
+            <div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 sm:via-white/70 to-transparent max-w-full sm:max-w-2xl" />
           </div>
-        )
+
+          <div class="container relative z-10 text-left max-w-6xl mx-auto px-6 sm:px-12">
+            <div class="max-w-sm sm:max-w-xl lg:max-w-2xl">
+              <h1 class="text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#0A165E] leading-tight mb-4 sm:mb-5">
+                {slide.title}
+              </h1>
+              <p class="text-slate-800 sm:text-slate-700 text-sm sm:text-base lg:text-xl font-medium sm:font-normal mb-6 sm:mb-8 leading-relaxed">
+                {slide.description}
+              </p>
+              <div class="flex flex-wrap items-center justify-start gap-3 sm:gap-4">
+                {slide.button?.enable && <Button {...slide.button} />}
+                {slide.secondaryButton?.enable && <Button {...slide.secondaryButton} />}
+              </div>
+            </div>
+          </div>
+        </div>
+      ))
+    }
+
+    <!-- Side Navigation Controls (< and >) - Hidden on mobile (< md) to prevent overlapping -->
+    <button
+      type="button"
+      id="hero-prev-btn"
+      class="absolute left-4 top-1/2 -translate-y-1/2 z-30 hidden md:flex size-11 items-center justify-center bg-black/60 text-white rounded transition hover:bg-black/80 cursor-pointer"
+      aria-label="Previous Slide">
+      <svg xmlns="http://www.w3.org/2000/svg" class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+    </button>
+    <button
+      type="button"
+      id="hero-next-btn"
+      class="absolute right-4 top-1/2 -translate-y-1/2 z-30 hidden md:flex size-11 items-center justify-center bg-black/60 text-white rounded transition hover:bg-black/80 cursor-pointer"
+      aria-label="Next Slide">
+      <svg xmlns="http://www.w3.org/2000/svg" class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+    </button>
+
+    <!-- Carousel Pagination Dots -->
+    <div class="absolute bottom-6 left-0 right-0 z-20 flex justify-center items-center gap-2">
+      {
+        slides.map((_, index) => (
+          <button
+            type="button"
+            class:list={[
+              "hero-dot h-2.5 rounded-full transition-all duration-300 cursor-pointer border border-black/20",
+              index === 0 ? "bg-primary w-7" : "bg-black/30 w-2.5 hover:bg-black/60",
+            ]}
+            data-dot-index={index}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))
       }
     </div>
   </div>
 </section>
+
+<script>
+  function initHeroSlider() {
+    const slides = document.querySelectorAll<HTMLElement>(".hero-slide");
+    const dots = document.querySelectorAll<HTMLElement>(".hero-dot");
+    const prevBtn = document.getElementById("hero-prev-btn");
+    const nextBtn = document.getElementById("hero-next-btn");
+    if (!slides.length) return;
+
+    let currentIndex = 0;
+    let timer: any = null;
+
+    function goToSlide(index: number) {
+      slides.forEach((slide, i) => {
+        if (i === index) {
+          slide.classList.remove("opacity-0", "z-0", "pointer-events-none");
+          slide.classList.add("opacity-100", "z-10");
+        } else {
+          slide.classList.remove("opacity-100", "z-10");
+          slide.classList.add("opacity-0", "z-0", "pointer-events-none");
+        }
+      });
+
+      dots.forEach((dot, i) => {
+        if (i === index) {
+          dot.classList.remove("bg-black/30", "w-2.5");
+          dot.classList.add("bg-primary", "w-7");
+        } else {
+          dot.classList.remove("bg-primary", "w-7");
+          dot.classList.add("bg-black/30", "w-2.5");
+        }
+      });
+
+      currentIndex = index;
+    }
+
+    function startAutoPlay() {
+      stopAutoPlay();
+      timer = setInterval(() => {
+        const nextIndex = (currentIndex + 1) % slides.length;
+        goToSlide(nextIndex);
+      }, 5000);
+    }
+
+    function stopAutoPlay() {
+      if (timer) clearInterval(timer);
+    }
+
+    dots.forEach((dot) => {
+      dot.addEventListener("click", () => {
+        const targetIndex = parseInt(dot.getAttribute("data-dot-index") || "0", 10);
+        goToSlide(targetIndex);
+        startAutoPlay();
+      });
+    });
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", () => {
+        const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+        goToSlide(prevIndex);
+        startAutoPlay();
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener("click", () => {
+        const nextIndex = (currentIndex + 1) % slides.length;
+        goToSlide(nextIndex);
+        startAutoPlay();
+      });
+    }
+
+    startAutoPlay();
+  }
+
+  document.addEventListener("astro:page-load", initHeroSlider);
+  document.addEventListener("DOMContentLoaded", initHeroSlider);
+</script>
