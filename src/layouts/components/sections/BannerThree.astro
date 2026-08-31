@@ -11,14 +11,12 @@ const slides = [
       label: "About Us",
       url: "/about-us/",
       variant: "fill" as const,
-      hoverEffect: "magnetic-text-flip" as const,
     },
     secondaryButton: {
       enable: true,
       label: "Contact Us",
       url: "/contact/",
-      variant: "fill-white" as const,
-      hoverEffect: "magnetic-text-flip" as const,
+      variant: "outline" as const,
     },
     bgImage: "/images/banner/hero-slide-1.jpg",
   },
@@ -31,14 +29,12 @@ const slides = [
       label: "About Us",
       url: "/about-us/",
       variant: "fill" as const,
-      hoverEffect: "magnetic-text-flip" as const,
     },
     secondaryButton: {
       enable: true,
       label: "Contact Us",
       url: "/contact/",
-      variant: "fill-white" as const,
-      hoverEffect: "magnetic-text-flip" as const,
+      variant: "outline" as const,
     },
     bgImage: "/images/banner/hero-slide-2.jpg",
   },
@@ -48,17 +44,15 @@ const slides = [
       "Adhering strictly to ICAI professional guidelines, ensuring ethical conduct and complete transparency in all financial services.",
     button: {
       enable: true,
-      label: "Our Services",
-      url: "/services/",
+      label: "About Us",
+      url: "/About/",
       variant: "fill" as const,
-      hoverEffect: "magnetic-text-flip" as const,
     },
     secondaryButton: {
       enable: true,
-      label: "Get In Touch",
+      label: "Contact Us",
       url: "/contact/",
-      variant: "fill-white" as const,
-      hoverEffect: "magnetic-text-flip" as const,
+      variant: "outline" as const,
     },
     bgImage: "/images/banner/hero-slide-3.jpg",
   },
@@ -71,32 +65,30 @@ const slides = [
       slides.map((slide, index) => (
         <div
           class:list={[
-            "hero-slide absolute inset-0 transition-opacity duration-700 ease-in-out flex items-center py-14 sm:py-20 lg:py-24",
-            index === 0 ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none",
+            "hero-slide absolute inset-0 flex items-center py-14 sm:py-20 lg:py-24",
+            index === 0 ? "is-active" : "",
           ]}
           data-slide-index={index}>
-          <!-- Soft overlay for text legibility on all devices -->
           <div class="absolute inset-0 z-0">
             <img
               src={slide.bgImage}
               alt={slide.title}
-              class="w-full h-full object-cover object-center opacity-100"
+              class="w-full h-full object-cover object-center"
             />
-            <!-- Gradient overlay for text contrast on mobile & desktop -->
             <div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 sm:via-white/70 to-transparent max-w-full sm:max-w-2xl" />
           </div>
 
           <div class="container relative z-10 text-left max-w-6xl mx-auto px-6 sm:px-12">
             <div class="max-w-sm sm:max-w-xl lg:max-w-2xl">
-              <h1 class="text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#0A165E] leading-tight mb-4 sm:mb-5">
+              <h1 class="hero-slide-title text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#0F5277] leading-tight mb-4 sm:mb-5">
                 {slide.title}
               </h1>
-              <p class="text-slate-800 sm:text-slate-700 text-sm sm:text-base lg:text-xl font-medium sm:font-normal mb-6 sm:mb-8 leading-relaxed">
+              <p class="hero-slide-desc text-slate-800 sm:text-slate-700 text-sm sm:text-base lg:text-xl font-medium sm:font-normal mb-6 sm:mb-8 leading-relaxed">
                 {slide.description}
               </p>
-              <div class="flex flex-wrap items-center justify-start gap-3 sm:gap-4">
+              <div class="hero-slide-btns flex flex-wrap items-center justify-start gap-3 sm:gap-4">
                 {slide.button?.enable && <Button {...slide.button} />}
-                {slide.secondaryButton?.enable && <Button {...slide.secondaryButton} />}
+                {slide.secondaryButton?.enable && <Button {...slide.secondaryButton} class="hero-outline-btn" />}
               </div>
             </div>
           </div>
@@ -139,6 +131,66 @@ const slides = [
   </div>
 </section>
 
+<style>
+  /* Slide visibility */
+  .hero-slide {
+    opacity: 0;
+    z-index: 0;
+    pointer-events: none;
+    transition: opacity 0.7s ease-in-out;
+  }
+  .hero-slide.is-active {
+    opacity: 1;
+    z-index: 10;
+    pointer-events: auto;
+  }
+
+  /* Entrance animation: slide up + fade in */
+  @keyframes slideUpFade {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .hero-slide.is-active .hero-slide-title {
+    animation: slideUpFade 0.65s ease-out 0.1s both;
+  }
+  .hero-slide.is-active .hero-slide-desc {
+    animation: slideUpFade 0.65s ease-out 0.3s both;
+  }
+  .hero-slide.is-active .hero-slide-btns {
+    animation: slideUpFade 0.65s ease-out 0.5s both;
+  }
+
+  /* Secondary button (Contact Us): Navy outline -> Turns Green on hover */
+  .hero-outline-btn {
+    color: #0F5277 !important;
+    background: transparent !important;
+    border: 2px solid #0F5277 !important;
+    transform: none !important;
+    transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease !important;
+  }
+  .hero-outline-btn:hover {
+    background: #61CE70 !important;
+    border-color: #61CE70 !important;
+    color: #ffffff !important;
+    transform: none !important;
+  }
+
+  /* Primary button (About Us / Our Services): Initial navy fill (#0F5277) -> Turns Green on hover (#61CE70) */
+  .banner-three-section .btn-primary {
+    background-color: #0F5277 !important;
+    border: 2px solid #0F5277 !important;
+    color: #ffffff !important;
+    transform: none !important;
+    transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease !important;
+  }
+  .banner-three-section .btn-primary:hover {
+    background-color: #61CE70 !important;
+    border-color: #61CE70 !important;
+    color: #ffffff !important;
+    transform: none !important;
+  }
+</style>
+
 <script>
   function initHeroSlider() {
     const slides = document.querySelectorAll<HTMLElement>(".hero-slide");
@@ -148,18 +200,14 @@ const slides = [
     if (!slides.length) return;
 
     let currentIndex = 0;
-    let timer: any = null;
+    let timer: ReturnType<typeof setInterval> | null = null;
 
     function goToSlide(index: number) {
-      slides.forEach((slide, i) => {
-        if (i === index) {
-          slide.classList.remove("opacity-0", "z-0", "pointer-events-none");
-          slide.classList.add("opacity-100", "z-10");
-        } else {
-          slide.classList.remove("opacity-100", "z-10");
-          slide.classList.add("opacity-0", "z-0", "pointer-events-none");
-        }
-      });
+      slides[currentIndex].classList.remove("is-active");
+      // Force reflow to restart CSS animations on new slide
+      slides[index].classList.remove("is-active");
+      void (slides[index] as HTMLElement).offsetWidth;
+      slides[index].classList.add("is-active");
 
       dots.forEach((dot, i) => {
         if (i === index) {
@@ -175,40 +223,28 @@ const slides = [
     }
 
     function startAutoPlay() {
-      stopAutoPlay();
-      timer = setInterval(() => {
-        const nextIndex = (currentIndex + 1) % slides.length;
-        goToSlide(nextIndex);
-      }, 5000);
-    }
-
-    function stopAutoPlay() {
       if (timer) clearInterval(timer);
+      timer = setInterval(() => {
+        goToSlide((currentIndex + 1) % slides.length);
+      }, 5000);
     }
 
     dots.forEach((dot) => {
       dot.addEventListener("click", () => {
-        const targetIndex = parseInt(dot.getAttribute("data-dot-index") || "0", 10);
-        goToSlide(targetIndex);
+        goToSlide(parseInt(dot.getAttribute("data-dot-index") || "0", 10));
         startAutoPlay();
       });
     });
 
-    if (prevBtn) {
-      prevBtn.addEventListener("click", () => {
-        const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
-        goToSlide(prevIndex);
-        startAutoPlay();
-      });
-    }
+    prevBtn?.addEventListener("click", () => {
+      goToSlide((currentIndex - 1 + slides.length) % slides.length);
+      startAutoPlay();
+    });
 
-    if (nextBtn) {
-      nextBtn.addEventListener("click", () => {
-        const nextIndex = (currentIndex + 1) % slides.length;
-        goToSlide(nextIndex);
-        startAutoPlay();
-      });
-    }
+    nextBtn?.addEventListener("click", () => {
+      goToSlide((currentIndex + 1) % slides.length);
+      startAutoPlay();
+    });
 
     startAutoPlay();
   }
