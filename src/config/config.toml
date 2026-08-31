@@ -8,8 +8,8 @@
   logo             = "/images/logo.png" # Path to the site's logo
   logoAlternate    = "" # Alternate logo for dark background if needed
   logoText         = "" # Text displayed next to the logo
-  logoWidth        = "210px" # Width of the logo
-  logoHeight       = "36px" # Height of the logo
+  logoWidth        = "240px" # Width of the logo
+  logoHeight       = "48px" # Height of the logo
 
   # Add a trailing slash at the end of URLs (e.g., https://example.com/, https://example.com/contact/)˝
   # Note: Manually restart your server when you change this value
