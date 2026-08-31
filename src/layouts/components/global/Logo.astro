@@ -56,7 +56,7 @@ if (Astro.props.height) {
             height: "auto",
           }}
         />
-        {logoAlternate && (
+        {logoAlternate && logoAlternate !== logo && (
           <OptimizedImage
             src={logoAlternate}
             class="logo-alternate max-w-full h-auto object-contain"
