@@ -27,13 +27,13 @@ const isMenuActive = (item: NavigationLink): boolean =>
     "hs-dropdown nav-dropdown group [--auto-close:inside] [--offset:0px] [--strategy:fixed]",
     recursive
       ? "nav-dropdown-item [--offset:22px] [--placement:right-start]"
-      : "nav-item",
-    menu.hasChildren ? "relative" : "",
+      : "nav-item relative",
   ]}
+  data-hs-dropdown-trigger="hover"
   role="menuitem">
   <span
     class:list={[
-      "nav-dropdown-toggle hs-dropdown-toggle flex items-center",
+      "nav-dropdown-toggle hs-dropdown-toggle flex items-center whitespace-nowrap",
       {
         active: isMenuActive(menu),
       },
@@ -79,7 +79,10 @@ const isMenuActive = (item: NavigationLink): boolean =>
   {
     menu.hasChildren && (
       <ul
-        class="nav-dropdown-list hs-dropdown-menu hs-dropdown-open:mt-2! hs-dropdown-open:pointer-events-auto hs-dropdown-open:opacity-100 pointer-events-none top-0 mt-4 hidden opacity-0 transition-[opacity,margin] max-lg:m-0! max-lg:transform-none! lg:absolute"
+        class:list={[
+          "nav-dropdown-list hs-dropdown-menu hs-dropdown-open:pointer-events-auto hs-dropdown-open:opacity-100 pointer-events-none hidden opacity-0 transition-all duration-200 max-lg:m-0! max-lg:transform-none! lg:absolute",
+          recursive ? "lg:left-full lg:top-0 lg:ms-2 lg:mt-0!" : "lg:top-full lg:left-0 lg:mt-2!",
+        ]}
         {...(recursive ? { "aria-orientation": "vertical" } : {})}>
         {menu.children?.map((child) => {
           const childUrl = child.url || "/";
@@ -102,7 +105,7 @@ const isMenuActive = (item: NavigationLink): boolean =>
                     : child.target || undefined,
                 }}
                 class:list={[
-                  "nav-dropdown-link",
+                  "nav-dropdown-link whitespace-nowrap",
                   {
                     active:
                       pathname === childUrl ||

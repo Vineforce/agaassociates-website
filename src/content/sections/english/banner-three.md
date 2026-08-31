@@ -1,7 +1,7 @@
 ---
 enable: true
-title: "We provide best tech solutions for your business"
-description: "We are architects of innovation, trailblazers of technological advancement, and partners in your success. As a dynamic and forward-thinking organization"
+title: "Premier Chartered Accountants & Financial Advisory Services"
+description: "Empowering your business with expert Taxation, Audit & Assurance, Corporate Registrations, and Management Consultancy solutions."
 mapImage: "/images/banner/map.svg"
 gradientBackgroundImage: "/images/banner/home-three-gradient-bg.svg"
 

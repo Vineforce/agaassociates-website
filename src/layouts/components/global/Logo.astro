@@ -47,21 +47,25 @@ if (Astro.props.height) {
       <>
         <OptimizedImage
           src={src ? src : logo}
-          class="logo"
+          class="logo max-w-full h-auto object-contain"
           alt={toSentenceCase("Brand logo of " + title)}
           style={{
-            height: logoHeight,
-            width: logoWidth,
+            maxHeight: logoHeight,
+            maxWidth: logoWidth,
+            width: "100%",
+            height: "auto",
           }}
         />
         {logoAlternate && (
           <OptimizedImage
             src={logoAlternate}
-            class="logo-alternate"
+            class="logo-alternate max-w-full h-auto object-contain"
             alt={toSentenceCase("Brand logo of " + title)}
             style={{
-              height: logoHeight,
-              width: logoWidth,
+              maxHeight: logoHeight,
+              maxWidth: logoWidth,
+              width: "100%",
+              height: "auto",
             }}
           />
         )}

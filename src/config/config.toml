@@ -1,14 +1,14 @@
 # Site Configuration
 [site]
-  title            = "Techlo Lite" # Shared title for SEO and OpenGraph
-  description      = "Techlo Lite is a free IT solutions and services theme for managed IT services, cloud consulting, cybersecurity, software development, and digital transformation websites." # Shared description for SEO and OpenGraph
+  title            = "H A V N & COMPANY" # Shared title for SEO and OpenGraph
+  description      = "AGA Associates provides reliable CA services, including tax planning, auditing, compliance, and financial consulting to help businesses thrive." # Shared description for SEO and OpenGraph
   tagline          = "Free IT Solutions & Services Astro & Tailwind CSS Theme"
   taglineSeparator = "" # default is " - " 
   baseUrl          = "https://techlo-lite-astro.pages.dev/" # Base URL for the site and used in OpenGraph meta tags.
-  logo             = "/images/logo.svg" # Path to the site's logo
-  logoAlternate    = "" # Path to the site's logo
-  logoText         = "Techlo" # Text displayed next to the logo
-  logoWidth        = "24px" # Width of the logo
+  logo             = "/images/logo.png" # Path to the site's logo
+  logoAlternate    = "" # Alternate logo for dark background if needed
+  logoText         = "" # Text displayed next to the logo
+  logoWidth        = "210px" # Width of the logo
   logoHeight       = "36px" # Height of the logo
 
   # Add a trailing slash at the end of URLs (e.g., https://example.com/, https://example.com/contact/)˝
@@ -119,10 +119,10 @@
 
   # Global Contact Information
   [settings.contactInfo]
-    phone       = "[518-564-3200](tel:5185643200)"
-    email       = "[hello@example.com](mailto:hello@example.com)"
-    address     = "1791 Yorkshire Circle Kitty <br /> Hawk, NC 279499"
-    officeHours = "Office Hours: 8:00 AM – 10:00 PM"
+    phone       = "[+91 99140-14949](tel:+919914014949)"
+    email       = "[info@agaassociates.com](mailto:info@agaassociates.com)"
+    address     = "E10C, First Floor, Near Hira Sweets, Laxmi Nagar – 110092, New Delhi"
+    officeHours = "Office Hours: 9:30 AM – 7:00 PM"
 
   # Header Offcanvas Configuration
   # Update social links in `src/config/social.json`

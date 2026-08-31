@@ -1,13 +1,12 @@
 ---
-import Button from "@/components/Button.astro";
 import Logo from "@/components/global/Logo.astro";
 import HeaderOffcanvasContent from "@/components/widgets/HeaderOffcanvasContent.astro";
 import Offcanvas from "../../widgets/Offcanvas.astro";
-import LanguageSwitcher from "@/layouts/components/global/header/LanguageSwitcher.astro";
 import NavbarToggler from "@/layouts/components/global/header/NavbarToggler.astro";
 import Navbar from "./Navbar.astro";
 import Topbar from "./Topbar.astro";
-import { useTranslations } from "@/lib/utils/i18nUtils.ts";
+import Icons from "@/helpers/Icons.astro";
+import { getLocaleUrlCTM, useTranslations } from "@/lib/utils/i18nUtils.ts";
 import config from ".astro/config.generated.json";
 import type { HeaderLayout } from "@/types";
 
@@ -24,12 +23,7 @@ type HeaderLayoutConfig = {
   navbarClass?: string;
 };
 
-const isCategoryFilteredPage = ["/category/", "/tag/"].some((path) =>
-  Astro.url.pathname.includes(`/${config.settings.blogFolder}${path}`),
-);
-
 const {
-  site: { logoAlternate },
   settings: { stickyHeader, navigationButton: navBtnConfig, headerOffcanvas },
 } = config;
 
@@ -54,15 +48,16 @@ const layoutConfig: Record<HeaderLayout, HeaderLayoutConfig> = {
     topbarLayout: "light",
     topbarLeftContent: ["location"],
     hasDarkAppearance: false,
+    isTransparent: false,
     isMenuRight: false,
     navbarClass: "navbar-right lg:ps-5",
   },
   three: {
-    topbarLayout: "navy",
-    topbarLeftContent: ["office-hours"],
+    topbarLayout: "light",
+    topbarLeftContent: ["location"],
     topbarSize: "compact",
-    hasDarkAppearance: true,
-    isTransparent: true,
+    hasDarkAppearance: false,
+    isTransparent: false,
     isMenuRight: true,
     navbarClass: "lg:pe-5",
   },
@@ -79,14 +74,8 @@ const resolvedLayout = isAvailableLayout(headerLayout)
     ? layout
     : "two";
 const currentLayout = layoutConfig[resolvedLayout];
-const hasLanguageSwitcher =
-  config.settings.multilingual.enable && !isCategoryFilteredPage;
 
 const navigationButton = { ...navBtnConfig, ...customNavigationButton };
-
-const hasDesktopActions = hasLanguageSwitcher || navigationButton.enable;
-const logoSrc = currentLayout.hasDarkAppearance ? logoAlternate : undefined;
-const accentAppearance = currentLayout.hasDarkAppearance ? "light" : "dark";
 ---
 
 <div
@@ -104,15 +93,13 @@ const accentAppearance = currentLayout.hasDarkAppearance ? "light" : "dark";
 
   <header
     class:list={[
-      "header group/header",
+      "header group/header bg-white border-b border-slate-100 shadow-xs",
       `header-${resolvedLayout}`,
-      { "has-dark-background": currentLayout.hasDarkAppearance },
-      { "header-transparent": currentLayout.isTransparent },
       ClassName,
     ]}>
     <nav class="relative container">
-      <div class="hs-dropdown relative flex items-center py-6">
-        {currentLayout.hasDarkAppearance ? <Logo src={logoSrc} /> : <Logo />}
+      <div class="hs-dropdown relative flex items-center justify-between py-3 lg:py-4">
+        <Logo />
 
         <Navbar
           navigationButton={navigationButton}
@@ -122,48 +109,33 @@ const accentAppearance = currentLayout.hasDarkAppearance ? "light" : "dark";
           ]}
         />
 
-        {
-          hasLanguageSwitcher && (
-            <div class="ms-auto flex lg:hidden">
-              <LanguageSwitcher appearance={accentAppearance} />
-            </div>
-          )
-        }
+        <div class="ms-auto flex items-center gap-2 lg:ms-0">
+          <!-- Search Icon Button -->
+          <button
+            type="button"
+            aria-label="Search"
+            data-hs-overlay="#header-search-modal"
+            class="flex h-10 w-10 items-center justify-center rounded-full bg-slate-100 text-slate-700 hover:bg-primary hover:text-white transition-all duration-200 cursor-pointer">
+            <Icons icon="Search" class="size-5" />
+          </button>
 
-        {
-          hasDesktopActions && (
-            <div class="hidden gap-3.5 max-lg:ms-auto max-lg:me-4 lg:flex lg:items-center">
-              {hasLanguageSwitcher && (
-                <LanguageSwitcher appearance={accentAppearance} />
-              )}
-
-              {navigationButton.enable && (
-                <Button
-                  variant="fill"
-                  hoverEffect="creative-fill"
-                  {...navigationButton}
-                  label={t("navigation.buttonLabel")}
-                />
-              )}
-            </div>
-          )
-        }
-
-        {
-          headerOffcanvas?.enable && (
-            <NavbarToggler
-              title={t("aria.openSidebarContent")}
-              appearance={accentAppearance}
-              isOffcanvasToggler={true}
-              class:list={["rounded-md", "lg:hidden"]}
-              aria-haspopup="dialog"
-              aria-expanded="false"
-              aria-controls="offcanvas-main"
-              data-hs-overlay="#offcanvas-main"
-              data-hs-overlay-options='{"emulateScrollbarSpace": true}'
-            />
-          )
-        }
+          <!-- Mobile Navbar Toggler -->
+          {
+            headerOffcanvas?.enable && (
+              <NavbarToggler
+                title={t("aria.openSidebarContent")}
+                appearance="dark"
+                isOffcanvasToggler={true}
+                class:list={["rounded-md", "lg:hidden"]}
+                aria-haspopup="dialog"
+                aria-expanded="false"
+                aria-controls="offcanvas-main"
+                data-hs-overlay="#offcanvas-main"
+                data-hs-overlay-options='{"emulateScrollbarSpace": true}'
+              />
+            )
+          }
+        </div>
       </div>
     </nav>
   </header>
@@ -184,6 +156,42 @@ const accentAppearance = currentLayout.hasDarkAppearance ? "light" : "dark";
     </Offcanvas>
   )
 }
+
+<!-- Search Modal Overlay -->
+<div
+  id="header-search-modal"
+  class="hs-overlay hidden fixed inset-0 z-50 overflow-y-auto bg-slate-900/60 backdrop-blur-xs p-4 sm:p-6 md:p-20"
+  tabindex="-1">
+  <div class="hs-overlay-open:opacity-100 hs-overlay-open:duration-300 opacity-0 transition-all max-w-2xl mx-auto bg-white rounded-2xl shadow-2xl p-6 border border-slate-100">
+    <div class="flex items-center justify-between border-b border-slate-100 pb-4 mb-4">
+      <h3 class="text-lg font-semibold text-slate-800 flex items-center gap-2">
+        <Icons icon="Search" class="size-5 text-primary" /> Search AGA Associates
+      </h3>
+      <button
+        type="button"
+        class="inline-flex justify-center items-center size-8 rounded-full bg-slate-100 text-slate-500 hover:bg-slate-200 hover:text-slate-800 transition-colors"
+        data-hs-overlay="#header-search-modal">
+        <span class="sr-only">Close</span>
+        <Icons icon="X" class="size-4" />
+      </button>
+    </div>
+    <form action={getLocaleUrlCTM("/blog/", Astro.currentLocale)} method="get" class="relative">
+      <input
+        type="search"
+        name="search"
+        placeholder="Search services, articles, audits..."
+        class="w-full rounded-xl border border-slate-200 bg-slate-50 py-3.5 pl-4 pr-24 text-slate-800 placeholder:text-slate-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 text-base"
+        autofocus
+      />
+      <button
+        type="submit"
+        class="absolute right-2 top-1/2 -translate-y-1/2 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white hover:bg-primary/90 transition-colors">
+        Search
+      </button>
+    </form>
+  </div>
+</div>
+
 <script>
   function stickyHeader(): void {
     const header = document.querySelector(
@@ -229,6 +237,5 @@ const accentAppearance = currentLayout.hasDarkAppearance ? "light" : "dark";
     handleScroll(true);
   }
 
-  // Uncomment if you want upwards sticky feature
   stickyHeader();
 </script>

@@ -55,7 +55,7 @@
     "buttonLabel": "Back to Homepage"
   },
   "headerOffcanvas": {
-    "description": "We help teams modernize infrastructure, secure critical systems, and launch digital products that are easier to scale and maintain.",
+    "description": "We are a premier Chartered Accountants firm providing comprehensive Tax, Audit & Assurance, Corporate Registration, and Financial Management Consultancy services.",
     "addressLabel": "Address",
     "contactLabel": "Contact"
   },
@@ -76,11 +76,11 @@
     "searchPlaceholder": "Search..."
   },
   "footer": {
-    "description": "We partner with growing organizations to plan, build, secure, and support reliable technology systems for everyday business operations.",
+    "description": "H A V N & COMPANY (AGA Associates) is a leading Chartered Accountants firm dedicated to providing expert Taxation, Audit & Assurance, Corporate Registration, and Business Consultancy.",
     "quickLinksTitle": "Quick Links",
     "servicesTitle": "Services",
     "informationTitle": "Information",
-    "copyright": "Copyright © 2026 Your Company. All rights reserved.",
+    "copyright": "Copyright © 2026 H A V N & COMPANY. All rights reserved.",
     "_comment": "Footer text matches the default footer design. Update this value if the product copyright changes."
   }
 }

@@ -23,8 +23,9 @@ const t = await useTranslations(Astro.currentLocale as string);
 
 <div
   id={id}
+  data-lenis-prevent
   class:list={[
-    "offcanvas hs-overlay hs-overlay-backdrop-open:bg-theme-dark/50 fixed z-50 h-full w-full transform bg-white transition-all duration-300",
+    "offcanvas hs-overlay hs-overlay-backdrop-open:bg-theme-dark/50 fixed z-50 h-full max-h-screen overflow-y-auto overscroll-contain w-full transform bg-white transition-all duration-300",
     direction === "left"
       ? initiallyOpen
         ? "start-0 top-0 translate-x-0"

@@ -25,18 +25,18 @@ if (!enable) {
 ---
 
 <div
-  data-lenis-scroll-native
-  class="flex h-screen flex-col justify-between space-y-6 overflow-auto bg-white px-8 pt-16 pb-5 md:px-16 md:pb-10">
+  data-lenis-prevent
+  class="flex min-h-full flex-col justify-between space-y-6 bg-white px-6 pt-14 pb-10 md:px-12">
   <button
     type="button"
     data-hs-overlay={`#${offcanvas}`}
     title={t("aria.closeOffcanvas")}
-    class="absolute end-7 top-5 z-20 inline-flex h-12 w-12 items-center justify-center gap-x-2 rounded-full bg-slate-100 text-xl ring-transparent transition-all duration-500 ease-out hover:rotate-90"
+    class="absolute end-5 top-4 z-20 inline-flex h-10 w-10 items-center justify-center rounded-full bg-slate-100 text-slate-600 transition-all duration-300 hover:bg-slate-200 hover:rotate-90"
     aria-expanded="true">
     <Icons icon="X" />
   </button>
 
-  <Logo class="text-dark justify-start" src={logo} />
+  <Logo class="text-dark justify-start max-w-[160px] sm:max-w-[210px] h-auto object-contain" src={logo} />
   {
     (description || t("headerOffcanvas.description")) && (
       <p
@@ -49,7 +49,7 @@ if (!enable) {
     linkType="follow"
     list={social.main.filter((social) => social.enable)}
   />
-  <div class="mb-10 pt-10 lg:hidden">
+  <div class="my-4 w-full pt-4 lg:hidden">
     <Navbar isMobile={true} navigationButton={navigationButton} />
   </div>
 

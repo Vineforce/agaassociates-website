@@ -55,7 +55,7 @@
     "buttonLabel": "Retour à l'accueil"
   },
   "headerOffcanvas": {
-    "description": "Nous aidons les équipes à moderniser leur infrastructure, à sécuriser les systèmes critiques et à lancer des produits numériques plus faciles à faire évoluer et à maintenir.",
+    "description": "Nous sommes un cabinet de pères experts-comptables fournissant des services complets de fiscalité, d'audit et d'assurance, d'immatriculation d'entreprises et de conseil en gestion financière.",
     "addressLabel": "Adresse",
     "contactLabel": "Contact"
   },
@@ -76,11 +76,11 @@
     "searchPlaceholder": "Rechercher..."
   },
   "footer": {
-    "description": "Nous accompagnons les organisations en croissance pour planifier, concevoir, sécuriser et maintenir des systèmes technologiques fiables au service de leurs activités quotidiennes.",
+    "description": "H A V N & COMPANY est un cabinet d'experts-comptables de premier plan dédié à la fourniture de services d'audit, de fiscalité et de conseil.",
     "quickLinksTitle": "Liens rapides",
     "servicesTitle": "Services",
     "informationTitle": "Informations",
-    "copyright": "Copyright © 2026 Your Company. Tous droits réservés.",
+    "copyright": "Copyright © 2026 H A V N & COMPANY. Tous droits réservés.",
     "_comment": "Footer text matches the default footer design. Update this value if the product copyright changes."
   }
 }

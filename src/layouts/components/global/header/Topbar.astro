@@ -33,12 +33,12 @@ const sizeClass = size === "compact" ? "py-3 text-sm" : "py-4 text-sm";
 
 <div class:list={[sizeClass, styleClass, Astro.props.class]}>
   <div
-    class="container flex flex-wrap items-center justify-center gap-4 md:justify-between">
-    <div class="relative flex flex-wrap items-center gap-4 lg:flex-nowrap">
+    class="container flex flex-wrap items-center justify-center gap-2 py-2 text-xs sm:text-sm md:justify-between">
+    <div class="relative flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-center md:text-left">
       {
         resolvedLeftContent.includes("office-hours") && (
           <div class="flex items-center gap-2">
-            <DynamicIcon name="Clock" class="size-4 shrink-0" />
+            <DynamicIcon name="Clock" class="size-4 shrink-0 text-primary" />
             <span set:html={markdownify(officeHours)} />
           </div>
         )
@@ -47,22 +47,22 @@ const sizeClass = size === "compact" ? "py-3 text-sm" : "py-4 text-sm";
       {
         resolvedLeftContent.includes("location") && (
           <div class="flex items-center gap-2">
-            <DynamicIcon name="MapPin" class="size-4 shrink-0" />
-            <span class="hide-line-breaks" set:html={markdownify(address)} />
+            <DynamicIcon name="MapPin" class="size-4 shrink-0 text-primary" />
+            <span class="break-words leading-normal text-slate-700" set:html={markdownify(address)} />
           </div>
         )
       }
     </div>
 
     <div
-      class="flex flex-wrap items-center justify-center gap-4 md:justify-between md:gap-10">
+      class="flex flex-wrap items-center justify-center gap-x-6 gap-y-1 text-xs sm:text-sm">
       <div class="flex items-center gap-2 hover:underline">
-        <DynamicIcon name="Phone" class="size-4 shrink-0" />
+        <DynamicIcon name="Phone" class="size-4 shrink-0 text-primary" />
         <span set:html={markdownify(phone)} />
       </div>
 
       <div class="flex items-center gap-2 hover:underline">
-        <DynamicIcon name="Mail" class="size-4 shrink-0" />
+        <DynamicIcon name="Mail" class="size-4 shrink-0 text-primary" />
         <span set:html={markdownify(email)} />
       </div>
     </div>
