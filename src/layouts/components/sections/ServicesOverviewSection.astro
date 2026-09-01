@@ -55,13 +55,8 @@ const ctaUrl = cta?.buttonUrl
     {/* 6 Services Grid - Top-Left Icon + Title, No Bottom Arrow */}
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
       {
-        services.map((item) => {
-          const itemUrl = item.url
-            ? getLocaleUrlCTM(item.url, Astro.currentLocale)
-            : "#";
-
-          return (
-            <article class="group relative flex flex-col justify-start rounded-2xl bg-white p-5 sm:p-6 border border-slate-100 shadow-xs transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+        services.map((item) => (
+          <article class="group relative flex flex-col justify-start rounded-2xl bg-white p-5 sm:p-6 border border-slate-100 shadow-xs transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
               <div class="flex items-center gap-3.5 mb-3.5">
                 <div class="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-[#EEFBEE] text-[#0F5277] transition-colors duration-300 group-hover:bg-[#61CE70] group-hover:text-white shadow-xs">
                   <DynamicIcon
@@ -80,16 +75,8 @@ const ctaUrl = cta?.buttonUrl
                 {item.description}
               </p>
 
-              {itemUrl && (
-                <a
-                  href={itemUrl}
-                  class="absolute inset-0 z-10 size-full"
-                  aria-label={item.title}
-                />
-              )}
             </article>
-          );
-        })
+        ))
       }
     </div>
 

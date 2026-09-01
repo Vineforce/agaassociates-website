@@ -55,6 +55,7 @@ const buttonProps = button && {
   ...button,
   hoverEffect: button.hoverEffect ?? "",
   variant: button.variant || (hasDarkAppearance ? "fill-white" : "fill"),
+  class: `!px-4 !py-2 !text-sm ${button.class || ""}`.trim(),
 };
 const hasActionButton = Boolean(buttonProps?.enable && optionsLimit);
 const defaultMarquee = {
