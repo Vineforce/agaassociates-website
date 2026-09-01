@@ -104,13 +104,13 @@ const footerSocials = social.main
 
         <nav
           aria-label={t("aria.footer")}
-          class="grid gap-y-8 grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 lg:col-span-9 gap-x-6 sm:gap-x-8 xl:gap-x-10">
+          class="grid gap-y-8 grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 lg:col-span-9 gap-x-6 sm:gap-x-8 xl:gap-x-10">
           {/* Column 1: Quick Links + Company stacked */}
           <div class="flex flex-col gap-8">
             {footerColumns.slice(0, 2).map(({ label, list }) => (
               <div>
                 {label && (
-                  <h2 class="footer-heading text-base sm:text-lg font-bold text-slate-900 mb-4 whitespace-nowrap" set:html={label} />
+                  <h2 class="footer-heading text-base sm:text-lg font-bold text-slate-900 mb-4 break-words sm:whitespace-nowrap" set:html={label} />
                 )}
                 <ul class="flex flex-col gap-2">
                   {list.map((item) => (
@@ -134,7 +134,7 @@ const footerSocials = social.main
           {footerColumns.slice(2).map(({ label, list }) => (
             <div>
               {label && (
-                <h2 class="footer-heading text-base sm:text-lg font-bold text-slate-900 mb-4 whitespace-nowrap" set:html={label} />
+                <h2 class="footer-heading text-base sm:text-lg font-bold text-slate-900 mb-4 break-words sm:whitespace-nowrap" set:html={label} />
               )}
               <ul class="flex flex-col gap-2">
                 {list.map((item) => (

@@ -35,7 +35,7 @@ const createBreadcrumbParts = (pathname: string) => {
   ];
 
   segments.forEach((segment, index) => {
-    if (segment === "page") return;
+    if (segment === "page" || segment === "blog") return;
 
     const label =
       humanize(segment.replace(".html", "").replace(/[-_]/g, " ")) || "";

@@ -1,0 +1,84 @@
+---
+import Base from "@/layouts/Base.astro";
+import { getCollectionCTM } from "@/lib/contentParser.astro";
+import { generatePaths } from "@/lib/utils/i18nUtils.ts";
+import BlogCard from "@/components/cards/BlogCard.astro";
+import Pagination from "@/components/widgets/Pagination.astro";
+
+export async function getStaticPaths() {
+  const basePaths = generatePaths();
+  const paths: any[] = [];
+  
+  // Support pages 2 and beyond
+  basePaths.forEach((path) => {
+    [2].forEach((pageNum) => {
+      paths.push({
+        params: {
+          ...path.params,
+          slug: pageNum.toString(),
+        },
+      });
+    });
+  });
+
+  return paths;
+}
+
+const { slug } = Astro.params;
+const currentPage = slug && !isNaN(Number(slug)) ? Number(slug) : 2;
+
+const rawPosts = await getCollectionCTM("blog", Astro.currentLocale);
+const posts = rawPosts.sort((a, b) => {
+  const dateA = a.data.date ? new Date(a.data.date).getTime() : 0;
+  const dateB = b.data.date ? new Date(b.data.date).getTime() : 0;
+  return dateB - dateA;
+});
+
+// Calculate items for this page
+const pageSize = 3;
+const startIndex = (currentPage - 1) * pageSize;
+const pagePosts = posts.slice(startIndex, startIndex + pageSize);
+const totalPages = Math.max(2, Math.ceil(posts.length / pageSize));
+
+const pageMeta = {
+  title: `Article - Page ${currentPage}`,
+  description: "Read our latest articles on accounting, taxation, auditing, and corporate compliance.",
+};
+---
+
+<Base {...pageMeta} headerLayout="two" headerPosition="sticky">
+  <section class="py-10 md:py-14 bg-slate-50/50 min-h-[75vh]">
+    <div class="container mx-auto px-4 md:px-6">
+      {/* Top Right Breadcrumb Bar */}
+      <div class="flex items-center justify-end text-xs sm:text-sm text-slate-500 font-medium pb-4 mb-8 border-b border-slate-200/60">
+        <nav class="flex items-center gap-1.5 flex-wrap justify-end" aria-label="Breadcrumb">
+          <a href="/" class="text-[#61CE70] hover:underline font-medium">Home</a>
+          <span class="text-slate-400">&gt;</span>
+          <a href="/article/" class="text-[#61CE70] hover:underline font-medium">Article</a>
+          <span class="text-slate-400">&gt;</span>
+          <span class="text-slate-700 font-semibold">Page {currentPage}</span>
+        </nav>
+      </div>
+
+      {/* Articles Grid */}
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        {
+          pagePosts.length > 0 ? (
+            pagePosts.map((post) => (
+              <div data-scroll-reveal="fade-up">
+                <BlogCard content={post} options={{ layout: "grid" }} />
+              </div>
+            ))
+          ) : (
+            <div class="col-span-full py-12 text-center text-slate-500">
+              No additional articles available on page {currentPage}.
+            </div>
+          )
+        }
+      </div>
+
+      {/* Dynamic Theme Pagination Bar */}
+      <Pagination collection="article" currentPage={currentPage} totalPages={totalPages} />
+    </div>
+  </section>
+</Base>

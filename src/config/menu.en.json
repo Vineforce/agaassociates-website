@@ -372,7 +372,7 @@
     {
       "enable": true,
       "name": "Article",
-      "url": "/blog/"
+      "url": "/article/"
     },
     {
       "enable": true,
@@ -422,7 +422,7 @@
         {
           "enable": true,
           "name": "Latest Posts",
-          "url": "/blog/"
+          "url": "/article/"
         },
         {
           "enable": true,

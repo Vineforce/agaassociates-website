@@ -48,7 +48,7 @@ delete restAttrs["aria-haspopup"];
   aria-haspopup={hasPopup}
   aria-pressed={expanded}
   class:list={[
-    "group ms-4 inline-flex h-15 w-15 items-center justify-center rounded border text-center transition",
+    "group ms-2 sm:ms-4 inline-flex size-9 sm:size-10 items-center justify-center rounded-lg border text-center transition",
     isLightToggler
       ? "border-white/10 bg-white/10 text-white"
       : "bg-slate-100 text-slate-800",
@@ -59,7 +59,7 @@ delete restAttrs["aria-haspopup"];
   <span class="sr-only">{t("aria.menu")}</span>
 
   <svg
-    class="pointer-events-none h-6 w-6 fill-current"
+    class="pointer-events-none h-4.5 w-4.5 sm:h-5 sm:w-5 fill-current"
     viewBox="0 0 16 16"
     xmlns="http://www.w3.org/2000/svg">
     <!-- Top line -->

@@ -304,7 +304,7 @@ export const getLocaleUrlCTM = (
 
   // Combine the language prefix with the URL with or without its language code
   updatedUrl = path.posix.join(
-    prependLanguage,
+    prependLanguage || "/",
     getUrlWithoutLang(updatedUrl) as string,
   );
 
