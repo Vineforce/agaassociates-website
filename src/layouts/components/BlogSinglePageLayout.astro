@@ -18,7 +18,7 @@ interface Props {
 
 const { content, class: className } = Astro.props;
 const {
-  data: { title, date, image, author, categories, tags },
+  data: { title, date, image, author, categories },
 } = content;
 
 import config from ".astro/config.generated.json";
@@ -40,7 +40,7 @@ const t = await useTranslations(Astro.currentLocale as string);
     image && (
       <OptimizedImage
         width={896}
-        height={560}
+        height={426}
         widths={[600, 896, 1280]}
         sizes="(min-width: 1024px) 896px, 100vw"
         alt={title}
@@ -48,7 +48,7 @@ const t = await useTranslations(Astro.currentLocale as string);
         loading="eager"
         fetchpriority="high"
         data-image-lightbox
-        class:list={["h-80 w-full rounded-2xl object-cover md:h-112 xl:h-135"]}
+        class:list={["w-full rounded-2xl aspect-[770/366] object-contain bg-[#0E2C44] shadow-sm"]}
       />
     )
   }
@@ -89,20 +89,7 @@ const t = await useTranslations(Astro.currentLocale as string);
       )
     }
     <div
-      class="mt-10 flex w-full flex-wrap items-center justify-between gap-x-10 gap-y-5 md:mt-16">
-      {
-        tags && tags.length > 0 && (
-          <div class="flex flex-wrap items-center gap-3">
-            <span class="text-dark font-semibold">{t("blog.tagsLabel")}</span>
-            {tags.map((tag) => (
-              <span
-                class="bg-theme-light text-dark rounded-md px-4 py-2 text-sm capitalize"
-                set:html={markdownify(tag)}
-              />
-            ))}
-          </div>
-        )
-      }
+      class="mt-10 flex w-full flex-wrap items-center justify-end gap-x-10 gap-y-5 md:mt-16">
       <div class="flex items-center gap-5">
         <span>{t("blog.share")}</span>
         <Social

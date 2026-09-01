@@ -104,15 +104,21 @@ const cursorLabel = t("common.readBlog");
         "group border-border-light text-text-default overflow-hidden rounded-2xl border bg-white transition duration-300",
       ]}
       {...rest}>
-      <div class="aspect-blog-card-image relative overflow-hidden">
+      <div class="aspect-[770/366] relative overflow-hidden">
         {image && (
           <OptimizedImage
             src={image}
             alt={toSentenceCase("Image related to " + title)}
             class="size-full object-cover transition duration-500 group-hover:scale-102"
-            width={600}
-            height={600}
+            width={770}
+            height={366}
           />
+        )}
+        {date && (
+          <div class="absolute top-3 left-3 z-20 flex flex-col items-center justify-center bg-slate-900/90 text-white font-black px-3 py-1.5 rounded-lg shadow-md uppercase tracking-wider text-center">
+            <span class="text-base font-extrabold leading-none">{new Date(date).getDate()}</span>
+            <span class="text-[11px] font-bold leading-tight text-[#61CE70]">{new Date(date).toLocaleString("en-US", { month: "short" })}</span>
+          </div>
         )}
         <a
           data-post-link
@@ -143,15 +149,20 @@ const cursorLabel = t("common.readBlog");
           <span data-post-date>{date && dateFormat(date)}</span>
         </div>
         {title && (
-          <h2 class="text-h5-sm md:text-h5 mt-1.5 mb-5 w-full">
+          <h2 class="text-h5-sm md:text-h5 mt-1.5 mb-3 w-full font-extrabold text-slate-900 leading-snug">
             <a
               href={slug}
               data-post-link
-              class="has-underline-anim stretched-link relative z-20 inline"
+              class="hover:text-[#0F5277] transition-colors relative z-20 inline"
               set:html={plainify(title)}
               title={toSentenceCase(t("common.learnMoreAbout") + " " + title)}
             />
           </h2>
+        )}
+        {excerpt && (
+          <p class="text-slate-600 text-sm leading-relaxed mb-4 line-clamp-3">
+            {plainify(excerpt)}
+          </p>
         )}
         <a
           data-post-link
