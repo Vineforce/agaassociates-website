@@ -60,9 +60,8 @@ const nextPage = pages[currentIndex + 1];
     prevPage && (
       <a
         href={getLocaleUrlCTM(
-          extractSlug(prevPage),
+          extractSlug(prevPage).split("/").pop() || extractSlug(prevPage),
           Astro.currentLocale,
-          collection,
         )}
         class="group flex items-center gap-4 transition duration-300">
         <span class="bg-theme-light group-hover:bg-primary flex size-12 shrink-0 items-center justify-center rounded-sm transition duration-300 group-hover:text-white">
@@ -84,9 +83,8 @@ const nextPage = pages[currentIndex + 1];
     nextPage && (
       <a
         href={getLocaleUrlCTM(
-          extractSlug(nextPage),
+          extractSlug(nextPage).split("/").pop() || extractSlug(nextPage),
           Astro.currentLocale,
-          collection,
         )}
         class="group flex items-center justify-end gap-8 text-end transition duration-300 md:col-start-2">
         <div class="space-y-2">

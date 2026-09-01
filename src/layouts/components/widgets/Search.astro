@@ -23,7 +23,10 @@ posts = await processPosts(posts);
 const postJson = sortByDate(posts).map((item) => {
   return {
     title: item.data.title,
-    slug: getLocaleUrlCTM(extractSlug(item), currentLocale, blogFolder),
+    slug: getLocaleUrlCTM(
+      extractSlug(item).split("/").pop() || extractSlug(item),
+      currentLocale,
+    ),
     date: item.data.date,
     author: item.data.author,
     authorImage: item.data.authorImage,

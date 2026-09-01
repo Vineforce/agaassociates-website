@@ -45,8 +45,10 @@ categories = categories.map((category) => {
 
 const t = await useTranslations(Astro.currentLocale as string);
 
-// Sort categories by count
-categories = categories.sort((a, b) => b.count - a.count);
+// Sort categories by count and filter out Taxation and empty categories
+categories = categories
+  .filter((c) => c.count > 0 && c.name.toLowerCase() !== "taxation")
+  .sort((a, b) => b.count - a.count);
 ---
 
 {

@@ -160,11 +160,24 @@ const slides = [
     animation: slideUpFade 0.65s ease-out 0.5s both;
   }
 
-  /* Hero buttons sizing: balanced medium size */
+  /* Hero buttons sizing & alignment: 100% equal height & flex alignment on all screen sizes */
   .banner-three-section .btn {
-    padding: 0.625rem 1.5rem !important;
-    font-size: 1rem !important;
-    line-height: 1.5 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 2.75rem !important;
+    padding: 0 1.35rem !important;
+    font-size: 0.9375rem !important;
+    line-height: 1 !important;
+    box-sizing: border-box !important;
+    border-radius: 9999px !important;
+  }
+  @media (min-width: 640px) {
+    .banner-three-section .btn {
+      height: 3rem !important;
+      padding: 0 1.6rem !important;
+      font-size: 1rem !important;
+    }
   }
 
   /* Secondary button (Contact Us): Navy outline -> Turns Green on hover */

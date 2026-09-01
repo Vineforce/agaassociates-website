@@ -41,9 +41,8 @@ const categoriesArray = categories?.map((category: string) => ({
 }));
 
 let slug = getLocaleUrlCTM(
-  extractSlug(content),
+  extractSlug(content).split("/").pop() || extractSlug(content),
   Astro.currentLocale,
-  collection,
 );
 
 const rawExcerpt = description || (body ? plainify(body).trim() : "");
