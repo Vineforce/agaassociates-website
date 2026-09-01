@@ -36,10 +36,10 @@ const cards = content.cards || [];
         cards.map((card) => {
           const cardUrl = card.url
             ? getLocaleUrlCTM(card.url, Astro.currentLocale)
-            : "#";
+            : null;
 
           return (
-            <article class="group relative flex flex-col justify-end overflow-hidden rounded-xl bg-slate-100 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl h-[280px] sm:h-[310px] md:h-[330px] lg:h-[340px] w-full">
+            <article class="group relative flex flex-col justify-end overflow-hidden rounded-xl bg-slate-100 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl h-[260px] sm:h-[280px] md:h-[300px] lg:h-[310px] w-full">
               {card.image && (
                 <OptimizedImage
                   src={card.image}
@@ -52,19 +52,19 @@ const cards = content.cards || [];
               )}
 
               {/* Bottom Translucent Overlay Bar (Normal State) */}
-              <div class="relative z-10 mx-3 mb-3 sm:mx-4 sm:mb-4 flex items-center justify-between rounded-lg bg-[#314a67]/90 px-4 py-3.5 backdrop-blur-xs transition-all duration-500 ease-in-out group-hover:translate-y-6 group-hover:opacity-0 shadow-lg">
+              <div class="relative z-10 mx-3 mb-3 sm:mx-4 sm:mb-4 flex items-center justify-between rounded-lg bg-[#314a67]/90 px-4 py-3.5 backdrop-blur-xs transition-all duration-500 ease-in-out group-hover:opacity-0 shadow-lg">
                 <h3
-                  class="text-xs sm:text-sm font-bold tracking-wider text-white uppercase pr-3 leading-snug"
+                  class="text-xs sm:text-sm font-bold tracking-wider text-white uppercase pr-2 leading-snug max-w-[82%]"
                   set:html={card.title}
                 />
                 <DynamicIcon
                   name={card.icon || "ChevronRight"}
                   inlineSvg={true}
-                  class="size-6 sm:size-7 shrink-0 text-white stroke-[2.5]"
+                  class="size-5 sm:size-6 shrink-0 text-white stroke-[2.5]"
                 />
               </div>
 
-              {/* Hover Description Card (Slides Down from Top - Matches Reference Screenshot) */}
+              {/* Hover Description Card */}
               {card.description && (
                 <div class="absolute inset-0 z-20 flex flex-col justify-center bg-[#314a67]/92 p-6 sm:p-7 backdrop-blur-xs transition-all duration-500 ease-in-out -translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
                   <p class="text-white text-xs sm:text-sm md:text-[15px] leading-relaxed font-medium text-left">
