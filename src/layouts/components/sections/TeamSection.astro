@@ -16,13 +16,13 @@ type Props = {
   hasDarkAppearance?: boolean;
 };
 
-// Fetching the default content for the this section
+// Fetching the default content for this section
 let defaultContent = (
   await getEntryCTM("sections", "team-section", Astro.currentLocale)
 )?.data as TeamInterface | undefined;
 const hasContentSource = Boolean(defaultContent || Astro.props.content);
 
-// Merges custom content overrides (e.g., just a title) with defaultContent fallbacks. Enables easy section reuse across pages with partial data changes.
+// Merges custom content overrides with defaultContent fallbacks
 let actualContent = overrideObjects(
   { ...(defaultContent || {}) },
   Astro.props.content || {},
@@ -32,12 +32,18 @@ let actualContent = overrideObjects(
 const {
   enable = true,
   title,
+  subtitle,
   button,
   limit,
   options: { layout = "grid", limit: optionsLimit = limit, marquee = {} } = {},
-} = actualContent;
+} = actualContent as any;
 
-const members = await getCollectionCTM("team", Astro.currentLocale);
+const rawMembers = await getCollectionCTM("team", Astro.currentLocale);
+const members = (rawMembers || []).sort((a, b) => {
+  const numA = (a.data as any).order ?? parseInt(a.id.match(/\d+/)?.[0] || "0", 10);
+  const numB = (b.data as any).order ?? parseInt(b.id.match(/\d+/)?.[0] || "0", 10);
+  return numA - numB;
+});
 
 // Limit the number of team members to be displayed
 const slicedMembers =
@@ -47,7 +53,7 @@ const { hasSectionSpacing = true, hasDarkAppearance = false } = Astro.props;
 const carouselLayout = layout === "carousel";
 const buttonProps = button && {
   ...button,
-  hoverEffect: button.hoverEffect || "magnetic-text-flip",
+  hoverEffect: button.hoverEffect ?? "",
   variant: button.variant || (hasDarkAppearance ? "fill-white" : "fill"),
 };
 const hasActionButton = Boolean(buttonProps?.enable && optionsLimit);
@@ -66,6 +72,40 @@ const marqueeMembers =
     ? [...slicedMembers, ...slicedMembers]
     : Array.from({ length: 3 }, () => slicedMembers).flat();
 
+// Robust category classification helper
+function getMemberCategory(item: any): string {
+  if (item.data?.category) return item.data.category;
+  const profession = (item.data?.profession || "").toLowerCase();
+  const order = item.data?.order ?? parseInt(item.id.match(/\d+/)?.[0] || "0", 10);
+
+  if (profession.includes("senior") || order === 9 || order === 10) {
+    return "SENIOR PROFESSIONALS";
+  }
+  if (profession.includes("assistant") || order >= 11) {
+    return "ASSISTANT";
+  }
+  return "FIRM LEADERSHIP";
+}
+
+// Group sliced members by category in strict display order
+const categoryGroups: { category: string; items: typeof slicedMembers }[] = [
+  { category: "FIRM LEADERSHIP", items: [] },
+  { category: "SENIOR PROFESSIONALS", items: [] },
+  { category: "ASSISTANT", items: [] },
+];
+
+for (const item of slicedMembers) {
+  const cat = getMemberCategory(item);
+  let group = categoryGroups.find((g) => g.category === cat);
+  if (!group) {
+    group = { category: cat, items: [] };
+    categoryGroups.push(group);
+  }
+  group.items.push(item);
+}
+
+const activeCategoryGroups = categoryGroups.filter((g) => g.items.length > 0);
+
 if (!hasContentSource || !enable || !slicedMembers?.length) {
   return null;
 }
@@ -73,6 +113,7 @@ if (!hasContentSource || !enable || !slicedMembers?.length) {
 
 <section
   class:list={[
+    "py-12 md:py-16 bg-white",
     carouselLayout && "overflow-hidden",
     !hasSectionSpacing && "pt-0",
   ]}>
@@ -80,20 +121,28 @@ if (!hasContentSource || !enable || !slicedMembers?.length) {
     class:list={[
       hasDarkAppearance && "bg-theme-dark section-spacing-vertical",
     ]}>
-    <div class:list={[!carouselLayout && "container"]}>
+    <div class:list={[!carouselLayout && "container mx-auto px-4 md:px-6"]}>
       <div class="mx-auto space-y-12 md:space-y-16">
         {
           title && (
             <div
               data-scroll-reveal="blur-up"
               class:list={[
-                "mx-auto",
+                "mx-auto text-center",
                 carouselLayout ? "max-w-159" : "max-w-3xl",
               ]}>
               <h2
-                class:list={[hasDarkAppearance && "text-white", "text-center"]}
-                set:html={markdownify(title)}
+                class:list={[
+                  "text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight",
+                  hasDarkAppearance ? "text-white" : "text-slate-900",
+                ]}
+                set:html={title}
               />
+              {subtitle && (
+                <p class="text-slate-600 text-sm sm:text-base font-medium mt-3">
+                  {subtitle}
+                </p>
+              )}
             </div>
           )
         }
@@ -105,25 +154,50 @@ if (!hasContentSource || !enable || !slicedMembers?.length) {
             />
           )
         }
+
         {
           slicedMembers && slicedMembers.length > 0 && !carouselLayout && (
-            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-              {slicedMembers.map((item, index) => (
-                <div
-                  data-scroll-reveal="fade-up"
-                  data-scroll-reveal-delay={index * 30}>
-                  <TeamCard
-                    class:list={[
-                      !hasDarkAppearance &&
-                        "hover:shadow-card-hover border bg-white transition duration-300",
-                    ]}
-                    content={item}
-                  />
-                </div>
-              ))}
-            </div>
+            optionsLimit ? (
+              <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                {slicedMembers.map((item, index) => (
+                  <div
+                    data-scroll-reveal="fade-up"
+                    data-scroll-reveal-delay={index * 30}>
+                    <TeamCard content={item} />
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div class="space-y-12 md:space-y-16">
+                {activeCategoryGroups.map((group) => (
+                  <div class="space-y-6">
+                    <div>
+                      <h3
+                        class:list={[
+                          "text-lg sm:text-xl font-extrabold tracking-wider uppercase",
+                          hasDarkAppearance ? "text-white" : "text-slate-900",
+                        ]}>
+                        {group.category}
+                      </h3>
+                      <div class="w-12 h-1 bg-[#61CE70] rounded-full mt-2"></div>
+                    </div>
+
+                    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                      {group.items.map((item, index) => (
+                        <div
+                          data-scroll-reveal="fade-up"
+                          data-scroll-reveal-delay={index * 30}>
+                          <TeamCard content={item} />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )
           )
         }
+
         {
           slicedMembers && slicedMembers.length > 0 && carouselLayout && (
             <div class="overflow-hidden" data-scroll-reveal="blur-up">
@@ -142,19 +216,14 @@ if (!hasContentSource || !enable || !slicedMembers?.length) {
                 class="items-stretch">
                 {marqueeMembers.map((item) => (
                   <div class="min-w-(--marquee-element-width-responsive) px-3 md:min-w-(--marquee-element-width)">
-                    <TeamCard
-                      class:list={[
-                        "border-border-light hover:shadow-card-hover h-full border transition duration-300",
-                        hasDarkAppearance && "border-transparent",
-                      ]}
-                      content={item}
-                    />
+                    <TeamCard content={item} />
                   </div>
                 ))}
               </Marquee>
             </div>
           )
         }
+
         {
           buttonProps && hasActionButton && (
             <div

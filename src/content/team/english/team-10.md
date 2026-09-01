@@ -1,24 +1,21 @@
 ---
-title: "Miles Tanaka"
-customSlug: "miles-tanaka"
-# Use transparent .png portraits for the best professional gradient background result.
-image: "/images/team/10.png"
-profession: "Product Engineering Lead"
-metaDescription: "Product engineering leader specializing in SaaS delivery, design systems, and customer-facing platform teams."
+title: "Abhishek Sharma"
+customSlug: "abhishek-sharma"
+image: "/images/team/abhishek-sharma.jpg"
+profession: "Senior Professional"
+category: "SENIOR PROFESSIONALS"
+order: 10
+metaDescription: "Abhishek Sharma - Senior Professional at Amol Gupta & Associates."
 draft: false
-email: "miles.tanaka@example.com"
-phone: "+1 415 555 2410"
+
+email: "contact@agaassociates.com"
+phone: "+91 99140-14949"
+
 social:
   - enable: true
     label: "linkedin"
     icon: "FaLinkedin"
     url: "https://www.linkedin.com/company/example-company"
-  - enable: true
-    label: "twitter"
-    icon: "FaXTwitter"
-    url: "https://twitter.com/example_company"
 ---
 
-Miles leads cross-functional engineering teams that ship customer-facing SaaS products. He brings a strong background in frontend systems, API design, and release operations.
-
-His teams are known for fast delivery cycles, clean implementation standards, and measurable product outcomes.
+Abhishek Sharma is a Senior Professional at Amol Gupta & Associates.

@@ -1,34 +1,21 @@
 ---
-title: "Marcus Riley"
-customSlug: "marcus-riley"
-# Use transparent .png portraits for the best professional gradient background result.
-image: "/images/team/5.png"
-profession: "Full Stack Developer"
-metaDescription: "Meet Marcus Riley, a full stack developer with a passion for building performant, scalable web apps."
+title: "CA Anshul Goyal"
+customSlug: "ca-anshul-goyal"
+image: "/images/team/anshul-goyal.png"
+profession: "Managing Partner"
+category: "FIRM LEADERSHIP"
+order: 5
+metaDescription: "CA Anshul Goyal - Managing Partner at Amol Gupta & Associates."
 draft: false
 
-email: "marcus.riley@example.com"
-phone: "+1 415 555 2405"
+email: "contact@agaassociates.com"
+phone: "+91 99140-14949"
 
 social:
-  - enable: true
-    label: "facebook"
-    icon: "FaFacebook"
-    url: "https://www.facebook.com/example-company"
-  - enable: true
-    label: "twitter"
-    icon: "FaXTwitter"
-    url: "https://twitter.com/example_company"
-  - enable: true
-    label: "instagram"
-    icon: "FaInstagram"
-    url: "https://www.instagram.com/example_company"
   - enable: true
     label: "linkedin"
     icon: "FaLinkedin"
     url: "https://www.linkedin.com/company/example-company"
 ---
 
-Marcus blends backend logic with frontend finesse to deliver end-to-end web solutions. He’s worked on fintech, B2B platforms, and open-source tools adopted by startups across the globe.
-
-He’s fluent in TypeScript, Node.js, and scalable infrastructure patterns.
+CA Anshul Goyal is a Managing Partner at Amol Gupta & Associates.

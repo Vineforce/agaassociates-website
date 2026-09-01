@@ -6,11 +6,11 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "dev": "node scripts/toml-watcher.mjs && astro dev",
+    "dev": "node scripts/toml-watcher.mjs && astro dev --host",
     "astro": "astro",
     "toml:watch": "node scripts/toml-watcher.mjs",
     "build": "npm run toml:watch && astro build && npm run remove-draft-from-sitemap",
-    "preview": "astro build && npm run remove-draft-from-sitemap && astro preview",
+    "preview": "astro build && npm run remove-draft-from-sitemap && astro preview --host",
     "astro-check": "astro check",
     "generate-favicons": "node ./scripts/generate-favicons.mjs",
     "generate-multilingual-content": "node ./scripts/generate-multilingual-content.mjs",

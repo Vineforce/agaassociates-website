@@ -334,6 +334,52 @@ export const multipurposeSectionSchema = z
   })
   .optional();
 
+export const featureCardsSectionSchema = z
+  .object({
+    enable: z.boolean().default(true).optional(),
+    cards: z
+      .array(
+        z.object({
+          title: z.string(),
+          image: z.string(),
+          description: z.string().optional(),
+          url: z.string().optional(),
+          icon: z.string().optional(),
+        }),
+      )
+      .optional(),
+  })
+  .optional();
+
+export const servicesOverviewSectionSchema = z
+  .object({
+    enable: z.boolean().default(true).optional(),
+    badge: z.string().optional(),
+    title: z.string().optional(),
+    subtitle: z.string().optional(),
+    services: z
+      .array(
+        z.object({
+          title: z.string(),
+          description: z.string(),
+          icon: z.string().optional(),
+          url: z.string().optional(),
+        }),
+      )
+      .optional(),
+    cta: z
+      .object({
+        enable: z.boolean().default(true).optional(),
+        title: z.string().optional(),
+        subtitle: z.string().optional(),
+        icon: z.string().optional(),
+        buttonLabel: z.string().optional(),
+        buttonUrl: z.string().optional(),
+      })
+      .optional(),
+  })
+  .optional();
+
 export const sectionsSchema = {
   servicesSection: servicesSectionSchema,
   ctaSection: ctaSectionSchema,
@@ -344,4 +390,7 @@ export const sectionsSchema = {
   bannerAgencySection: bannerAgencySectionSchema,
   workingProcessSection: workingProcessSectionSchema,
   multipurposeSection: multipurposeSectionSchema,
+  featureCardsSection: featureCardsSectionSchema,
+  servicesOverviewSection: servicesOverviewSectionSchema,
 };
+

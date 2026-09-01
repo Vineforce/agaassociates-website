@@ -1,24 +1,21 @@
 ---
-title: "Adrian Keller"
-customSlug: "adrian-keller"
-# Use transparent .png portraits for the best professional gradient background result.
-image: "/images/team/9.png"
-profession: "Cloud Solutions Architect"
-metaDescription: "Cloud solutions architect helping software teams design scalable infrastructure and secure migration plans."
+title: "Cherry Kumar"
+customSlug: "cherry-kumar"
+image: "/images/team/cherry-kumar.jpg"
+profession: "Senior Professional"
+category: "SENIOR PROFESSIONALS"
+order: 9
+metaDescription: "Cherry Kumar - Senior Professional at Amol Gupta & Associates."
 draft: false
-email: "adrian.keller@example.com"
-phone: "+1 415 555 2409"
+
+email: "contact@agaassociates.com"
+phone: "+91 99140-14949"
+
 social:
   - enable: true
     label: "linkedin"
     icon: "FaLinkedin"
     url: "https://www.linkedin.com/company/example-company"
-  - enable: true
-    label: "twitter"
-    icon: "FaXTwitter"
-    url: "https://twitter.com/example_company"
 ---
 
-Adrian designs cloud-native systems for high-growth software teams. His work focuses on architecture governance, migration strategy, and resilient infrastructure.
-
-He helps clients reduce platform complexity while improving release confidence.
+Cherry Kumar is a Senior Professional at Amol Gupta & Associates.

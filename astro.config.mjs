@@ -24,6 +24,9 @@ let {
 export default defineConfig({
   site: config.site.baseUrl ? config.site.baseUrl : "http://examplesite.com",
   trailingSlash: config.site.trailingSlash ? "always" : "never",
+  server: {
+    host: true,
+  },
   devToolbar: {
     enabled: true,
   },
