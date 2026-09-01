@@ -24,16 +24,17 @@ const isMenuActive = (item: NavigationLink): boolean =>
 
 <li
   class:list={[
-    "hs-dropdown nav-dropdown group [--auto-close:inside] [--offset:0px] [--strategy:fixed]",
+    "hs-dropdown nav-dropdown group [--auto-close:inside] [--offset:0px] [--strategy:absolute]",
     recursive
       ? "nav-dropdown-item [--offset:22px] [--placement:right-start]"
       : "nav-item relative",
   ]}
   data-hs-dropdown-trigger="hover"
   role="menuitem">
-  <span
+  <a
+    href={menu.url ? getLocaleUrlCTM(menu.url, Astro.currentLocale) : "#"}
     class:list={[
-      "nav-dropdown-toggle hs-dropdown-toggle flex items-center whitespace-nowrap",
+      "nav-dropdown-toggle hs-dropdown-toggle flex items-center whitespace-nowrap cursor-pointer",
       {
         active: isMenuActive(menu),
       },
@@ -75,7 +76,7 @@ const isMenuActive = (item: NavigationLink): boolean =>
         </svg>
       )
     }
-  </span>
+  </a>
   {
     menu.hasChildren && (
       <ul

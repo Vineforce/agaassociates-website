@@ -8,13 +8,13 @@
     {
       "enable": true,
       "name": "About Us",
-      "url": "/about/",
+      "url": "/about-us/",
       "hasChildren": true,
       "children": [
         {
           "enable": true,
           "name": "About",
-          "url": "/about/"
+          "url": "/about-us/"
         },
         {
           "enable": true,
@@ -397,7 +397,7 @@
         {
           "enable": true,
           "name": "About Us",
-          "url": "/about/"
+          "url": "/about-us/"
         },
         {
           "enable": true,
