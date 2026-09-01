@@ -1,0 +1,231 @@
+---
+import Base from "@/layouts/Base.astro";
+import { generatePaths } from "@/lib/utils/i18nUtils.ts";
+import DynamicIcon from "@/helpers/DynamicIcon.astro";
+import OptimizedImage from "@/components/utilities/OptimizedImage.astro";
+
+export function getStaticPaths() {
+  return generatePaths();
+}
+
+const isFrench = Astro.currentLocale === "fr";
+
+const pageMeta = {
+  title: isFrench ? "À Propos de Nous" : "About Us",
+  description: isFrench
+    ? "Découvrez Amol Gupta & Associates, cabinet d'experts-comptables engagé vers l'excellence."
+    : "Founded in 2013 by CA Amol Gupta, Amol Gupta & Associates is a leading CA firm committed to delivering excellence.",
+};
+
+const missionPillars = [
+  {
+    title: isFrench ? "Notre Vision" : "Our Vision",
+    icon: "TrendingUp",
+    description: isFrench
+      ? "Être un partenaire de confiance pour les entreprises, guidant leur succès grâce à des solutions financières novatrices, éthiques et complètes."
+      : "To be a trusted partner for businesses, driving their success through innovative, ethical, and comprehensive financial solutions",
+  },
+  {
+    title: isFrench ? "Notre Mission" : "Our Mission",
+    icon: "Users",
+    description: isFrench
+      ? "Doter les clients des connaissances et des stratégies nécessaires pour atteindre leurs objectifs financiers en toute confiance."
+      : "To equip clients with the knowledge and strategies to achieve financial goals and navigate tax and corporate regulations confidently",
+  },
+  {
+    title: isFrench ? "Nos Valeurs Fondamentales" : "Our Core Values",
+    icon: "Globe",
+    description: isFrench
+      ? "Chez Amol Gupta & Associates, nos valeurs guident chaque interaction, garantissant l'excellence, l'innovation et l'éthique."
+      : "At Amol Gupta & Associates, our values guide every interaction, ensuring excellence, innovation, and ethics",
+  },
+  {
+    title: isFrench ? "Notre Engagement" : "Our Commitment",
+    icon: "Award",
+    description: isFrench
+      ? "Nous nous engageons à fournir des solutions financières personnalisées avec intégrité, transparence et un service d'exception."
+      : "We are committed to providing personalized financial solutions with integrity, transparency, and exceptional service",
+  },
+];
+
+const principles = [
+  {
+    title: isFrench ? "Engagement" : "Commitment",
+    subtitle: isFrench ? "Nous Tenons Nos Promesses" : "We Keep Our Promises",
+    icon: "Briefcase",
+    description: isFrench
+      ? "Chaque tâche est abordée avec rigueur pour des résultats efficaces. Votre confiance renforce notre responsabilité."
+      : "Every task is met with diligence, ensuring timely, effective results. Your trust drives our accountability",
+  },
+  {
+    title: isFrench ? "Respect" : "Respect",
+    subtitle: isFrench ? "Favoriser la Croissance Ensemble" : "Fostering Growth Together",
+    icon: "UsersRound",
+    description: isFrench
+      ? "Nous croyons au respect mutuel et à la collaboration pour autonomiser notre équipe et nos clients."
+      : "We believe in mutual respect and collaboration, empowering our team and clients to reach their full potential",
+  },
+  {
+    title: isFrench ? "Intégrité" : "Integrity",
+    subtitle: isFrench ? "La Transparence à Chaque Étape" : "Transparency at Every Step",
+    icon: "ShieldCheck",
+    description: isFrench
+      ? "L'honnêteté guide notre pratique. Nous offrons des conseils d'experts et ne recommandons que des solutions sûres."
+      : "Honesty and fairness guide our practice. We offer expert advice and recommend only trusted solutions",
+  },
+  {
+    title: isFrench ? "Vision" : "Vision",
+    subtitle: isFrench ? "Stratégies Innovantes" : "Innovative Strategies",
+    icon: "Lightbulb",
+    description: isFrench
+      ? "Nous comprenons vos aspirations et vous proposons des stratégies sur mesure pour stimuler votre croissance."
+      : "We understand your aspirations and provide tailored strategies to drive your growth",
+  },
+  {
+    title: isFrench ? "Empathie" : "Empathy",
+    subtitle: isFrench ? "Vos Défis Sont Les Nôtres" : "Your Challenges Are Ours",
+    icon: "ThumbsUp",
+    description: isFrench
+      ? "Nous traitons vos préoccupations comme les nôtres en garantissant des solutions alignées avec vos objectifs."
+      : "We treat your concerns as our own, ensuring solutions that align with your goals",
+  },
+  {
+    title: isFrench ? "Excellence" : "Excellence",
+    subtitle: isFrench ? "Dépasser les Attentes" : "Exceeding Expectations",
+    icon: "Sparkles",
+    description: isFrench
+      ? "Nous allons au-delà des attentes pour garantir des résultats durables et d'une qualité inégalée."
+      : "We go above and beyond, ensuring solutions that exceed expectations and deliver lasting results",
+  },
+];
+---
+
+<Base {...pageMeta} headerLayout="two" headerPosition="sticky">
+  {/* SECTION 1: ABOUT US MAIN HEADER & INTRO */}
+  <section class="relative bg-white py-12 md:py-16">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="max-w-5xl mx-auto">
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight mb-6 sm:mb-8 text-left">
+          {isFrench ? "À Propos de Nous" : "About Us"}
+        </h1>
+
+        <div class="prose prose-slate max-w-none text-slate-700 text-sm sm:text-base leading-relaxed space-y-4 font-normal text-justify">
+          <p>
+            {
+              isFrench
+                ? "Fondé en 2013 par CA Amol Gupta, un professionnel distingué possédant plus de 11 ans d'expérience approfondie en comptabilité, audit, conseil fiscal et services aux entreprises, Amol Gupta & Associates est un cabinet de premier plan engagé envers l'excellence. Notre parcours a commencé avec la vision de renforcer les entreprises en offrant des stratégies financières innovantes et des solutions éthiques adaptées aux besoins uniques de chaque client."
+                : "Founded in 2013 by CA Amol Gupta, a distinguished professional with over 11 years of extensive experience in accounting, auditing, tax consultancy, and corporate advisory services, Amol Gupta & Associates is a leading firm committed to delivering excellence. Our journey began with a vision to empower businesses by offering innovative financial strategies and ethical solutions tailored to each client's unique needs."
+            }
+            {
+              isFrench
+                ? " CA Amol Gupta est titulaire d'une licence en commerce de l'Université Punjabi de Patiala et a bâti une solide réputation de conseiller de confiance doté d'un esprit analytique exceptionnel. Reconnu pour son dévouement inébranlable à l'intégrité professionnelle et aux normes éthiques, il a gagné le respect et la confiance de ses clients et collègues."
+                : " CA Amol Gupta holds a Bachelor's Degree in Commerce from Punjabi University, Patiala, and has built a reputation as a trusted advisor with an exceptional analytical mind. Known for his unwavering dedication to professional integrity and ethical standards, he has earned the respect and trust of clients and colleagues alike."
+            }
+            {
+              isFrench
+                ? " Son expertise réside dans la création de feuilles de route stratégiques pour les entreprises, permettant aux startups et aux sociétés internationales de naviguer de manière transparente dans la complexité de la réglementation fiscale indienne et du droit des sociétés."
+                : " His expertise lies in creating strategic roadmaps for businesses, enabling startups and international companies to navigate the complexities of Indian tax regulations and corporate laws seamlessly."
+            }
+            {
+              isFrench
+                ? " Chez Amol Gupta & Associates, nous opérons dans un environnement hautement professionnel où la précision, l'innovation et la fiabilité sont les piliers de notre pratique. Notre équipe s'engage à rester à la pointe des connaissances techniques afin de fournir des services complets en fiscalité directe et indirecte, audit et conformité."
+                : " At Amol Gupta & Associates, we operate in a highly professional environment where precision, innovation, and reliability are the cornerstones of our practice. Our team is committed to staying at the forefront of technical knowledge, ensuring we provide comprehensive services in Direct and Indirect Taxation, Audit and Assurance, and Corporate Compliance."
+            }
+          </p>
+        </div>
+
+        {/* Featured Main Image */}
+        <div class="mt-10 sm:mt-12 overflow-hidden rounded-2xl shadow-md border border-slate-100">
+          <OptimizedImage
+            src="/src/assets/images/about-us/person-office-analyzing-checking-finance-graphs-1024x684.jpg"
+            alt={isFrench ? "À Propos de Nous - Amol Gupta & Associates" : "About Us - Amol Gupta & Associates"}
+            width={1200}
+            height={684}
+            loading="eager"
+            class="w-full h-auto object-cover max-h-[520px]"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* SECTION 2: OUR MISSION */}
+  <section class="relative bg-slate-50/60 py-14 sm:py-20 border-t border-slate-100">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          {isFrench ? "Notre Mission" : "Our Mission"}
+        </h2>
+        <div class="w-12 h-1 bg-[#61CE70] rounded-full mx-auto mt-3"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center max-w-6xl mx-auto">
+        {/* Left Side: 2x2 Pillars Grid */}
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10">
+          {
+            missionPillars.map((pillar) => (
+              <div class="flex flex-col items-start text-left">
+                <div class="flex size-12 items-center justify-center rounded-xl bg-[#EEFBEE] text-[#61CE70] mb-4 shadow-xs">
+                  <DynamicIcon name={pillar.icon} inlineSvg={true} class="size-6 stroke-[2]" />
+                </div>
+                <h3 class="text-lg sm:text-xl font-bold text-slate-900 mb-2">
+                  {pillar.title}
+                </h3>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                  {pillar.description}
+                </p>
+              </div>
+            ))
+          }
+        </div>
+
+        {/* Right Side: Working Office Desktop Image */}
+        <div class="lg:col-span-5 overflow-hidden rounded-2xl shadow-lg border border-slate-100 h-full">
+          <OptimizedImage
+            src="/src/assets/images/about-us/business-man-working-office-desktop-resized.jpg"
+            alt={isFrench ? "Notre Mission" : "Our Mission"}
+            width={700}
+            height={700}
+            loading="lazy"
+            class="w-full h-full min-h-[340px] max-h-[460px] object-cover object-center"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* SECTION 3: OUR PRINCIPLES IN ACTION */}
+  <section class="relative bg-white py-14 sm:py-20 border-t border-slate-100">
+    <div class="container mx-auto px-4 md:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          {isFrench ? "Nos Principes en Action" : "Our Principles in Action"}
+        </h2>
+        <div class="w-12 h-1 bg-[#61CE70] rounded-full mx-auto mt-3"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 max-w-6xl mx-auto">
+        {
+          principles.map((item) => (
+            <div class="flex items-start gap-4 sm:gap-5">
+              <div class="flex size-14 shrink-0 items-center justify-center rounded-full bg-[#61CE70] text-white shadow-xs">
+                <DynamicIcon name={item.icon} inlineSvg={true} class="size-6 stroke-[2]" />
+              </div>
+              <div class="text-left">
+                <h3 class="text-lg font-bold text-slate-900 leading-snug">
+                  {item.title}
+                </h3>
+                <p class="text-xs sm:text-sm font-semibold text-slate-500 mb-1.5">
+                  {item.subtitle}
+                </p>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                  {item.description}
+                </p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</Base>
