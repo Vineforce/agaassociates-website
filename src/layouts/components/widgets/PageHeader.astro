@@ -61,14 +61,14 @@ const breadcrumbParts = breadcrumb
 
 <section
   class:list={[
-    "page-header-gradient section-spacing-lg-vertical relative flex items-center overflow-hidden",
+    "page-header-gradient py-10 md:py-14 relative flex items-center overflow-hidden",
   ]}>
   <div
     class="relative z-10 container flex flex-col items-center justify-center text-center"
     data-scroll-reveal="blur-up">
     {
       title && (
-        <h1 class="text-display-6 sm:text-display-5 md:text-display-3 text-white">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
           {humanize(title)}
         </h1>
       )

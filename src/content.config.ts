@@ -85,6 +85,8 @@ export const teamCollection = defineCollection({
   schema: page.extend({
     image: z.string().optional(),
     profession: z.string().optional(),
+    category: z.string().optional(),
+    order: z.number().optional(),
     email: z.string().optional(),
     phone: z.string().optional(),
     social: z

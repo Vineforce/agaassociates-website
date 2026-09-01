@@ -1,24 +1,21 @@
 ---
-title: "Noah Bennett"
-customSlug: "noah-bennett"
-# Use transparent .png portraits for the best professional gradient background result.
-image: "/images/team/12.png"
-profession: "AI Automation Strategist"
-metaDescription: "AI automation strategist building practical workflows for support, operations, sales, and internal knowledge systems."
+title: "Deepanshu Bansal"
+customSlug: "deepanshu-bansal"
+image: "/images/team/deepanshu-bansal.png"
+profession: "Assistant"
+category: "ASSISTANT"
+order: 12
+metaDescription: "Deepanshu Bansal - Assistant at Amol Gupta & Associates."
 draft: false
-email: "noah.bennett@example.com"
-phone: "+1 415 555 2412"
+
+email: "contact@agaassociates.com"
+phone: "+91 99140-14949"
+
 social:
   - enable: true
     label: "linkedin"
     icon: "FaLinkedin"
     url: "https://www.linkedin.com/company/example-company"
-  - enable: true
-    label: "twitter"
-    icon: "FaXTwitter"
-    url: "https://twitter.com/example_company"
 ---
 
-Noah helps teams introduce automation where it creates measurable time savings. He focuses on workflow design, internal tools, and AI-assisted service operations.
-
-His approach keeps automation practical, observable, and aligned with business goals.
+Deepanshu Bansal is a Assistant at Amol Gupta & Associates.

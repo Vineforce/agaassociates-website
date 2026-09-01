@@ -1,0 +1,89 @@
+---
+import type { featureCardsSectionSchema } from "@/sections.schema";
+import { getEntryCTM } from "@/lib/contentParser.astro";
+import { getLocaleUrlCTM } from "@/lib/utils/i18nUtils.ts";
+import OptimizedImage from "@/components/utilities/OptimizedImage.astro";
+import DynamicIcon from "@/helpers/DynamicIcon.astro";
+import type { z } from "astro/zod";
+
+type FeatureCardsSectionType = NonNullable<
+  z.infer<typeof featureCardsSectionSchema>
+>;
+
+interface Props {
+  content?: FeatureCardsSectionType;
+}
+
+const { content: contentProps } = Astro.props;
+
+const contentEntry = (
+  await getEntryCTM("sections", "feature-cards-section", Astro.currentLocale)
+)?.data as FeatureCardsSectionType | undefined;
+
+const content = contentProps || contentEntry;
+
+if (!content || content.enable === false) {
+  return null;
+}
+
+const cards = content.cards || [];
+---
+
+<section class="feature-cards-section relative bg-white py-8 sm:py-12 md:py-14">
+  <div class="container mx-auto px-4 md:px-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+      {
+        cards.map((card) => {
+          const cardUrl = card.url
+            ? getLocaleUrlCTM(card.url, Astro.currentLocale)
+            : "#";
+
+          return (
+            <article class="group relative flex flex-col justify-end overflow-hidden rounded-xl bg-slate-100 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl h-[280px] sm:h-[310px] md:h-[330px] lg:h-[340px] w-full">
+              {card.image && (
+                <OptimizedImage
+                  src={card.image}
+                  alt={card.title}
+                  loading="lazy"
+                  width={600}
+                  height={600}
+                  class="absolute inset-0 size-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                />
+              )}
+
+              {/* Bottom Translucent Overlay Bar (Normal State) */}
+              <div class="relative z-10 mx-3 mb-3 sm:mx-4 sm:mb-4 flex items-center justify-between rounded-lg bg-[#314a67]/90 px-4 py-3.5 backdrop-blur-xs transition-all duration-500 ease-in-out group-hover:translate-y-6 group-hover:opacity-0 shadow-lg">
+                <h3
+                  class="text-xs sm:text-sm font-bold tracking-wider text-white uppercase pr-3 leading-snug"
+                  set:html={card.title}
+                />
+                <DynamicIcon
+                  name={card.icon || "ChevronRight"}
+                  inlineSvg={true}
+                  class="size-6 sm:size-7 shrink-0 text-white stroke-[2.5]"
+                />
+              </div>
+
+              {/* Hover Description Card (Slides Down from Top - Matches Reference Screenshot) */}
+              {card.description && (
+                <div class="absolute inset-0 z-20 flex flex-col justify-center bg-[#314a67]/92 p-6 sm:p-7 backdrop-blur-xs transition-all duration-500 ease-in-out -translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
+                  <p class="text-white text-xs sm:text-sm md:text-[15px] leading-relaxed font-medium text-left">
+                    {card.description}
+                  </p>
+                </div>
+              )}
+
+              {cardUrl && (
+                <a
+                  href={cardUrl}
+                  class="absolute inset-0 z-30 size-full"
+                  aria-label={card.title}
+                />
+              )}
+            </article>
+          );
+        })
+      }
+    </div>
+  </div>
+</section>
