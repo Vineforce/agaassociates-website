@@ -115,9 +115,9 @@ const cursorLabel = t("common.readBlog");
           />
         )}
         {date && (
-          <div class="absolute top-3 left-3 z-20 flex flex-col items-center justify-center bg-slate-900/90 text-white font-black px-3 py-1.5 rounded-lg shadow-md uppercase tracking-wider text-center">
-            <span class="text-base font-extrabold leading-none">{new Date(date).getDate()}</span>
-            <span class="text-[11px] font-bold leading-tight text-[#61CE70]">{new Date(date).toLocaleString("en-US", { month: "short" })}</span>
+          <div class="absolute top-3 left-3 z-20 flex flex-col items-center justify-center bg-slate-900/90 text-white font-black px-3 py-1.5 rounded-lg shadow-md uppercase tracking-wider text-center transition-colors duration-300 group-hover:bg-[#61CE70]">
+            <span class="text-base font-extrabold leading-none text-white">{new Date(date).getDate()}</span>
+            <span class="text-[11px] font-bold leading-tight text-[#61CE70] transition-colors duration-300 group-hover:text-white">{new Date(date).toLocaleString("en-US", { month: "short" })}</span>
           </div>
         )}
         <a

@@ -1,6 +1,6 @@
 ---
 # Default content for `src/layouts/components/sections/CallToAction.astro`; page frontmatter can override these values.
-enable: true # Control the visibility of this section across all pages where it is used
+enable: false # Control the visibility of this section across all pages where it is used
 title: "Let’s work together"
 description: |
   Tell us what you want to improve, and we will help shape the right technical plan, team, and delivery path.

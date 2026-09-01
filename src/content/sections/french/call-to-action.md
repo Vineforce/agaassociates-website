@@ -1,6 +1,6 @@
 ---
 # Default content for `src/layouts/components/sections/CallToAction.astro`; page frontmatter can override these values.
-enable: true # Control the visibility of this section across all pages where it is used
+enable: false # Control the visibility of this section across all pages where it is used
 title: "Travaillons ensemble"
 description: |
   Dites-nous ce que vous souhaitez améliorer, et nous vous aiderons à définir le plan technique, l'équipe et la démarche de livraison qui vous conviennent.

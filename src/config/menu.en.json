@@ -391,54 +391,23 @@
       "list": [
         {
           "enable": true,
+          "name": "Home",
+          "url": "/"
+        },
+        {
+          "enable": true,
           "name": "About Us",
           "url": "/about/"
         },
         {
           "enable": true,
           "name": "Our Team",
-          "url": "/team/",
-          "active": true
+          "url": "/team/"
         },
         {
           "enable": true,
-          "name": "Articles & News",
-          "url": "/blog/"
-        },
-        {
-          "enable": true,
-          "name": "Contact Us",
+          "name": "Contact",
           "url": "/contact/"
-        }
-      ]
-    },
-    {
-      "label": "Services",
-      "list": [
-        {
-          "enable": true,
-          "name": "Registration Services",
-          "url": "/registration-services/"
-        },
-        {
-          "enable": true,
-          "name": "Attestation, Audit & Assurance",
-          "url": "/attestation-audit-assurance/"
-        },
-        {
-          "enable": true,
-          "name": "Management Consultancy",
-          "url": "/management-consultnacy/"
-        },
-        {
-          "enable": true,
-          "name": "Direct Taxation",
-          "url": "/direct-taxation/"
-        },
-        {
-          "enable": true,
-          "name": "Indirect Taxation",
-          "url": "/indirect-taxation/"
         }
       ]
     },
@@ -464,6 +433,181 @@
           "enable": true,
           "name": "Privacy Policy",
           "url": "/privacy-policy/"
+        }
+      ]
+    },
+    {
+      "label": "Registration Services",
+      "list": [
+        {
+          "enable": true,
+          "name": "Company Incorporation Services",
+          "url": "/registration-services/company-incorporation-services/"
+        },
+        {
+          "enable": true,
+          "name": "GST Registration",
+          "url": "/registration-services/gst-registration/"
+        },
+        {
+          "enable": true,
+          "name": "Private Company Registration",
+          "url": "/registration-services/private-company-registration/"
+        },
+        {
+          "enable": true,
+          "name": "Partnership Firm Registration",
+          "url": "/registration-services/partnership-firm-registration/"
+        },
+        {
+          "enable": true,
+          "name": "FSSAI License Registration",
+          "url": "/registration-services/fssai-license-registration/"
+        },
+        {
+          "enable": true,
+          "name": "HUF Registration",
+          "url": "/registration-services/huf-registration/"
+        },
+        {
+          "enable": true,
+          "name": "GEM Registration",
+          "url": "/registration-services/gem-registration/"
+        },
+        {
+          "enable": true,
+          "name": "Society Registration",
+          "url": "/registration-services/society-registration/"
+        },
+        {
+          "enable": true,
+          "name": "Shop Act Registration",
+          "url": "/registration-services/shop-act-registration/"
+        },
+        {
+          "enable": true,
+          "name": "Trademark Registration",
+          "url": "/registration-services/trademark-registration/"
+        },
+        {
+          "enable": true,
+          "name": "Setting Up Company",
+          "url": "/registration-services/setting-up-company/"
+        },
+        {
+          "enable": true,
+          "name": "Start Up Certificate",
+          "url": "/registration-services/start-up-certificate/"
+        }
+      ]
+    },
+    {
+      "label": "Audit & Finance",
+      "list": [
+        {
+          "enable": true,
+          "name": "Internal Audit Services",
+          "url": "/attestation-audit-assurance/internal-audit/"
+        },
+        {
+          "enable": true,
+          "name": "Accounting and Bookkeeping",
+          "url": "/accounting-and-bookkeeping/"
+        },
+        {
+          "enable": true,
+          "name": "Bank Loan & Finance Services",
+          "url": "/other-consultancy-services/bank-loan-and-finance-services/"
+        },
+        {
+          "enable": true,
+          "name": "CMA Data",
+          "url": "/other-consultancy-services/cma-data/"
+        },
+        {
+          "enable": true,
+          "name": "Financial Advisory Services",
+          "url": "/other-consultancy-services/financial-advisory-services/"
+        },
+        {
+          "enable": true,
+          "name": "Income Tax Returns",
+          "url": "/income-tax-returns/"
+        },
+        {
+          "enable": true,
+          "name": "GST Consultancy",
+          "url": "/indirect-taxation/gst-consultancy/"
+        },
+        {
+          "enable": true,
+          "name": "CIBIL Report Correction",
+          "url": "/cibil-report-correction/"
+        },
+        {
+          "enable": true,
+          "name": "Net Worth Report",
+          "url": "/other-consultancy-services/net-worth-report/"
+        }
+      ]
+    },
+    {
+      "label": "Consultancy Services",
+      "list": [
+        {
+          "enable": true,
+          "name": "Business Software Consultancy",
+          "url": "/other-consultancy-services/business-software-consultancy/"
+        },
+        {
+          "enable": true,
+          "name": "HR Assistance and Payroll",
+          "url": "/other-consultancy-services/hr-assistance-and-payroll/"
+        },
+        {
+          "enable": true,
+          "name": "Import Export Code",
+          "url": "/other-consultancy-services/import-export-code/"
+        },
+        {
+          "enable": true,
+          "name": "IEC Renewal",
+          "url": "/other-consultancy-services/iec-renewal/"
+        },
+        {
+          "enable": true,
+          "name": "ISO Certificate",
+          "url": "/other-consultancy-services/iso-certificate/"
+        },
+        {
+          "enable": true,
+          "name": "LEI Codes",
+          "url": "/other-consultancy-services/lei-codes/"
+        },
+        {
+          "enable": true,
+          "name": "LLP Incorporation",
+          "url": "/other-consultancy-services/llp-incorporation/"
+        },
+        {
+          "enable": true,
+          "name": "NRI Services (ITR of NRI)",
+          "url": "/other-consultancy-services/nri-services-itr-of-nri/"
+        },
+        {
+          "enable": true,
+          "name": "Project Report",
+          "url": "/other-consultancy-services/project-report/"
+        },
+        {
+          "enable": true,
+          "name": "Business Advisory Services",
+          "url": "/other-consultancy-services/business-advisory-services/"
+        },
+        {
+          "enable": true,
+          "name": "Other Consultancy Services",
+          "url": "/other-consultancy-services/"
         }
       ]
     }
