@@ -21,7 +21,7 @@ const { content, ...rest } = Astro.props;
 const { sticky, position, search, recentPosts } = content;
 
 const {
-  widgets: widgetList = ["Search", "Categories", "RecentPosts", "Tags"],
+  widgets: widgetList = ["Search", "Categories", "RecentPosts"],
 } = content;
 const widgets = [
   { name: "Search", Component: Search, props: search },
