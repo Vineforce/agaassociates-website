@@ -50,7 +50,7 @@ const footerSocials = social.main
   <div class="container">
     <div class="section-spacing-vertical">
       <div class="grid gap-y-12 lg:grid-cols-12 lg:gap-x-8">
-        <div class="lg:col-span-4">
+        <div class="lg:col-span-3">
           <Logo class="gap-1.5" />
           {
             footerDescription && (
@@ -104,20 +104,21 @@ const footerSocials = social.main
 
         <nav
           aria-label={t("aria.footer")}
-          class="grid gap-y-10 sm:grid-cols-2 sm:gap-x-10 md:sm:grid-cols-3 lg:col-span-7 lg:col-start-6 lg:gap-x-12 xl:gap-x-16">
-          {
-            footerColumns.map(({ label, list }) => (
+          class="grid gap-y-8 grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 lg:col-span-9 gap-x-6 sm:gap-x-8 xl:gap-x-10">
+          {/* Column 1: Quick Links + Company stacked */}
+          <div class="flex flex-col gap-8">
+            {footerColumns.slice(0, 2).map(({ label, list }) => (
               <div>
                 {label && (
-                  <h2 class="footer-heading text-xl" set:html={label} />
+                  <h2 class="footer-heading text-base sm:text-lg font-bold text-slate-900 mb-4 whitespace-nowrap" set:html={label} />
                 )}
-                <ul class="mt-5 flex flex-col gap-2.5">
+                <ul class="flex flex-col gap-2">
                   {list.map((item) => (
                     <li>
                       <a
                         class:list={[
-                          "footer-link leading-body text-text-default hover:text-dark text-base transition duration-300 sm:whitespace-nowrap",
-                          item.active && "active text-dark",
+                          "footer-link leading-snug text-slate-600 hover:text-[#0F5277] text-sm transition duration-200 block",
+                          item.active && "active font-semibold text-slate-900",
                         ]}
                         href={getLocaleUrlCTM(item.url, Astro.currentLocale)}
                         set:html={item.name}
@@ -126,20 +127,46 @@ const footerSocials = social.main
                   ))}
                 </ul>
               </div>
-            ))
-          }
+            ))}
+          </div>
+
+          {/* Columns 2, 3, 4: Service & Consultancy columns */}
+          {footerColumns.slice(2).map(({ label, list }) => (
+            <div>
+              {label && (
+                <h2 class="footer-heading text-base sm:text-lg font-bold text-slate-900 mb-4 whitespace-nowrap" set:html={label} />
+              )}
+              <ul class="flex flex-col gap-2">
+                {list.map((item) => (
+                  <li>
+                    <a
+                      class:list={[
+                        "footer-link leading-snug text-slate-600 hover:text-[#0F5277] text-sm transition duration-200 block",
+                        item.active && "active font-semibold text-slate-900",
+                      ]}
+                      href={getLocaleUrlCTM(item.url, Astro.currentLocale)}
+                      set:html={item.name}
+                    />
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </nav>
       </div>
     </div>
-    <div class="footer-bottom border-t py-5 text-center">
+    <div class="footer-bottom border-t border-slate-200/60 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-600">
       {
         config.settings.copyright?.enable && (
           <p
-            class="footer-copyright leading-body text-text-default text-base"
+            class="footer-copyright text-slate-600 text-sm font-medium"
             set:html={markdownify(copyrightText)}
           />
         )
       }
+      <p class="text-sm text-slate-600 font-medium">
+        Service Provided By <a href="https://www.vineforce.net/" target="_blank" rel="noopener noreferrer" class="underline hover:text-[#0F5277] font-semibold transition">Vineforce</a>
+      </p>
     </div>
   </div>
 </footer>
