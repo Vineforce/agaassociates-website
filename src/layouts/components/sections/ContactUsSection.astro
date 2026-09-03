@@ -1,0 +1,138 @@
+---
+import DynamicIcon from "@/helpers/DynamicIcon.astro";
+import { getEntryCTM } from "@/lib/contentParser.astro";
+
+interface CardItem {
+  title: string;
+  icon: string;
+  content: string;
+  href?: string;
+}
+
+interface ContactUsSectionData {
+  enable?: boolean;
+  title?: string;
+  subtitle?: string;
+  topCards?: CardItem[];
+  bottomCards?: CardItem[];
+  mapUrl?: string;
+}
+
+interface Props {
+  content?: ContactUsSectionData;
+  class?: string;
+}
+
+const defaultContent = (
+  await getEntryCTM("sections", "contact-us-section", Astro.currentLocale)
+)?.data as ContactUsSectionData;
+
+const actualContent = {
+  ...defaultContent,
+  ...(Astro.props.content || {}),
+};
+
+const {
+  enable = true,
+  title = "GET IN TOUCH WITH US",
+  subtitle = "Your Financial Queries, Our Expert Solutions – Contact Us Today!",
+  topCards = defaultContent?.topCards || [],
+  bottomCards = defaultContent?.bottomCards || [],
+  mapUrl = defaultContent?.mapUrl || "https://maps.google.com/maps?q=Hira%20Enclave%2C%20Nabha&t=m&z=10&output=embed&iwloc=near",
+} = actualContent;
+
+if (!enable) return null;
+---
+
+<div class:list={["contact-us-section", Astro.props.class]}>
+  {/* Breadcrumb Header */}
+  <div class="bg-slate-50/80 border-b border-slate-100 py-3">
+    <div class="container max-w-6xl mx-auto px-4 flex justify-end items-center text-xs text-slate-500">
+      <a href="/" class="hover:text-[#10b981] text-[#10b981] transition-colors font-medium">Home</a>
+      <span class="mx-1.5 text-slate-300">&gt;</span>
+      <span class="text-slate-600 font-medium">Contact Us</span>
+    </div>
+  </div>
+
+  {/* Main Header */}
+  <section class="pt-16 pb-12 bg-white text-center">
+    <div class="container max-w-4xl mx-auto px-4">
+      <h1 class="text-2xl md:text-3xl font-extrabold text-slate-900 uppercase tracking-wide">
+        {title}
+      </h1>
+      <div class="w-12 h-[3px] bg-[#10b981] mx-auto mt-2.5 rounded-full"></div>
+      {subtitle && (
+        <p class="mt-3.5 text-xs md:text-sm text-slate-500 font-normal">
+          {subtitle}
+        </p>
+      )}
+    </div>
+  </section>
+
+  {/* Info Cards Grid Section */}
+  <section class="pb-16 bg-white">
+    <div class="container max-w-6xl mx-auto px-4 space-y-12">
+      {/* Top Row: 4 Columns */}
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center items-start">
+        {
+          topCards.map((card) => (
+            <a
+              href={card.href || "#"}
+              target={card.href?.startsWith("http") ? "_blank" : "_self"}
+              rel="noopener noreferrer"
+              class="flex flex-col items-center group cursor-pointer"
+            >
+              <div class="w-20 h-20 md:w-24 md:h-24 p-5 rounded-full bg-[#10b981] text-white border-2 border-[#10b981] flex items-center justify-center mb-4 shadow-sm group-hover:bg-white group-hover:text-[#10b981] transition-all duration-300 cursor-pointer">
+                <DynamicIcon name={card.icon as any} class="w-10 h-10 md:w-12 md:h-12 stroke-[2] transition-colors duration-300" />
+              </div>
+              <h3 class="text-sm md:text-base font-bold text-[#10b981] mb-1.5 group-hover:text-[#0e9f6e] transition-colors">
+                {card.title}
+              </h3>
+              <p class="text-slate-500 text-xs md:text-[13px] leading-relaxed max-w-[240px] md:max-w-[220px] mx-auto group-hover:text-slate-800 transition-colors break-words">
+                {card.content}
+              </p>
+            </a>
+          ))
+        }
+      </div>
+
+      {/* Bottom Row: 2 Columns Grid matching live site */}
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 max-w-5xl mx-auto text-center items-start">
+        {
+          bottomCards.map((card) => (
+            <a
+              href={card.href || "#"}
+              target={card.href?.startsWith("http") ? "_blank" : "_self"}
+              rel="noopener noreferrer"
+              class="flex flex-col items-center group cursor-pointer max-w-[460px] mx-auto"
+            >
+              <div class="w-20 h-20 md:w-24 md:h-24 p-5 rounded-full bg-[#10b981] text-white border-2 border-[#10b981] flex items-center justify-center mb-4 shadow-sm group-hover:bg-white group-hover:text-[#10b981] transition-all duration-300 cursor-pointer">
+                <DynamicIcon name={card.icon as any} class="w-10 h-10 md:w-12 md:h-12 stroke-[2] transition-colors duration-300" />
+              </div>
+              <h3 class="text-sm md:text-base font-bold text-[#10b981] mb-1.5 group-hover:text-[#0e9f6e] transition-colors">
+                {card.title}
+              </h3>
+              <p class="text-slate-500 text-xs md:text-[13px] leading-relaxed max-w-[240px] md:max-w-[450px] mx-auto group-hover:text-slate-800 transition-colors break-words">
+                {card.content}
+              </p>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  {/* Full Width Google Map Section */}
+  <section class="pb-16 bg-white">
+    <div class="container max-w-6xl mx-auto px-4">
+      <div class="w-full h-[380px] md:h-[420px] rounded-xl overflow-hidden border border-slate-200/80 shadow-md">
+        <iframe
+          src={mapUrl}
+          title="Hira Enclave, Nabha"
+          aria-label="Hira Enclave, Nabha"
+          class="w-full h-full border-0"
+          loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+</div>

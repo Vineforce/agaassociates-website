@@ -1,0 +1,20 @@
+---
+import Base from "@/layouts/Base.astro";
+import { generatePaths } from "@/lib/utils/i18nUtils.ts";
+import ContactUsSection from "@/components/sections/ContactUsSection.astro";
+
+export function getStaticPaths() {
+  return generatePaths();
+}
+
+interface Props {}
+
+const pageMeta = {
+  title: "Contact Us - HAVN & COMPANY",
+  description: "GET IN TOUCH WITH US. Your Financial Queries, Our Expert Solutions – Contact Us Today!",
+};
+---
+
+<Base metaTitle={pageMeta.title} metaDescription={pageMeta.description}>
+  <ContactUsSection />
+</Base>
