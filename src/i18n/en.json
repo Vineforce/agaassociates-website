@@ -65,7 +65,15 @@
     "tagsLabel": "Tags:",
     "share": "Share:",
     "paginationPrevious": "Previous Post",
-    "paginationNext": "Next Post"
+    "paginationNext": "Next Post",
+    "comments": "Comments",
+    "commentCount": "Comments",
+    "leaveReply": "LEAVE A REPLY",
+    "namePlaceholder": "Name",
+    "emailPlaceholder": "Email",
+    "commentPlaceholder": "Comment",
+    "postComment": "Post Comment",
+    "thankYouComment": "Thank you! Your comment has been submitted."
   },
   "navigation": {
     "buttonLabel": "Get in Touch"
