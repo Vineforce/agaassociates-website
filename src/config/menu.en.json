@@ -382,7 +382,7 @@
     {
       "enable": true,
       "name": "Contact",
-      "url": "/contact/"
+      "url": "/contact-us/"
     }
   ],
   "footer": [
@@ -407,7 +407,7 @@
         {
           "enable": true,
           "name": "Contact",
-          "url": "/contact/"
+          "url": "/contact-us/"
         }
       ]
     },

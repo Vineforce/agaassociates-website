@@ -63,13 +63,13 @@ const cursorLabel = t("common.readBlog");
       data-cursor-type="blog"
       class:list={["group relative flex items-center gap-4", className]}
       {...rest}>
-      <div class="relative h-24 w-24 shrink-0 overflow-hidden rounded-xl">
+      <div class="relative h-20 w-28 shrink-0 overflow-hidden rounded-lg bg-slate-100/60 border border-slate-200/60 shadow-2xs">
         {image && (
           <OptimizedImage
             src={image}
             alt={toSentenceCase("About " + title)}
             class="size-full object-cover transition duration-500 group-hover:scale-105"
-            width={160}
+            width={220}
             height={160}
           />
         )}
