@@ -409,12 +409,41 @@ export const contactUsSectionSchema = z
   })
   .optional();
 
+export const newsSectionSchema = z
+  .object({
+    enable: z.boolean().default(true).optional(),
+    title: z.string().optional(),
+    subtitle: z.string().optional(),
+    sidebarCategories: z
+      .array(
+        z.object({
+          name: z.string(),
+          url: z.string(),
+        }),
+      )
+      .optional(),
+    newsList: z
+      .array(
+        z.object({
+          year: z.string().optional(),
+          title: z.string(),
+          image: z.string().optional(),
+          description: z.string(),
+          url: z.string(),
+          buttonLabel: z.string().optional(),
+        }),
+      )
+      .optional(),
+  })
+  .optional();
+
 export const sectionsSchema = {
   servicesSection: servicesSectionSchema,
   ctaSection: ctaSectionSchema,
   contactSection: contactSectionSchema,
   contactSectionTwo: contactSectionTwoSchema,
   contactUsSection: contactUsSectionSchema,
+  newsSection: newsSectionSchema,
   teamSection: teamSectionSchema,
   testimonialSection: testimonialSectionSchema,
   bannerAgencySection: bannerAgencySectionSchema,

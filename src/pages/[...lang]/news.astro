@@ -1,0 +1,20 @@
+---
+import Base from "@/layouts/Base.astro";
+import { generatePaths } from "@/lib/utils/i18nUtils.ts";
+import NewsSection from "@/components/sections/NewsSection.astro";
+
+export function getStaticPaths() {
+  return generatePaths();
+}
+
+interface Props {}
+
+const pageMeta = {
+  title: "News - HAVN & COMPANY",
+  description: "Waiver of Late Fee for FORM GSTR-9C Filing and latest financial news updates.",
+};
+---
+
+<Base metaTitle={pageMeta.title} metaDescription={pageMeta.description}>
+  <NewsSection />
+</Base>

@@ -1,0 +1,141 @@
+---
+import OptimizedImage from "@/components/utilities/OptimizedImage.astro";
+import { getEntryCTM } from "@/lib/contentParser.astro";
+
+interface CategoryItem {
+  name: string;
+  url: string;
+}
+
+interface NewsItem {
+  year: string;
+  title: string;
+  image: string;
+  description: string;
+  url: string;
+  buttonLabel?: string;
+}
+
+interface NewsSectionData {
+  enable?: boolean;
+  title?: string;
+  subtitle?: string;
+  sidebarCategories?: CategoryItem[];
+  newsList?: NewsItem[];
+}
+
+interface Props {
+  content?: NewsSectionData;
+  class?: string;
+}
+
+const defaultContent = (
+  await getEntryCTM("sections", "news-section", Astro.currentLocale)
+)?.data as NewsSectionData;
+
+const actualContent = {
+  ...defaultContent,
+  ...(Astro.props.content || {}),
+};
+
+const {
+  enable = true,
+  sidebarCategories = defaultContent?.sidebarCategories || [],
+  newsList = defaultContent?.newsList || [],
+} = actualContent;
+
+if (!enable) return null;
+---
+
+<div class:list={["news-section py-12 md:py-16 bg-white", Astro.props.class]}>
+  {/* Breadcrumb Header */}
+  <div class="bg-slate-50/80 border-b border-slate-100 py-3 -mt-12 md:-mt-16 mb-12">
+    <div class="container max-w-6xl mx-auto px-4 flex justify-end items-center text-xs text-slate-500">
+      <a href="/" class="hover:text-[#18BA60] text-[#18BA60] transition-colors font-medium">Home</a>
+      <span class="mx-1.5 text-slate-300">&gt;</span>
+      <span class="text-slate-600 font-medium">News</span>
+    </div>
+  </div>
+
+  <div class="container max-w-6xl mx-auto px-4">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+      {/* Left Sidebar */}
+      <aside class="lg:col-span-4">
+        <div class="overflow-hidden border border-slate-200/60 rounded-xs shadow-xs">
+          {
+            sidebarCategories.map((cat) => (
+              <a
+                href={cat.url}
+                class="block py-3.5 px-6 text-sm font-bold bg-[#eeeeee] text-slate-900 hover:bg-[#3b536b] hover:text-white transition-all duration-200 border-b border-white last:border-b-0"
+              >
+                {cat.name}
+              </a>
+            ))
+          }
+        </div>
+      </aside>
+
+      {/* Right Content Area */}
+      <main class="lg:col-span-8 space-y-12">
+        {
+          newsList.map((item) => (
+            <article class="space-y-4">
+              {/* Year Heading with Horizontal Line */}
+              {item.year && (
+                <div class="relative flex items-center mb-6">
+                  <span class="text-[#18BA60] font-bold text-lg md:text-xl pr-4">
+                    {item.year}
+                  </span>
+                  <div class="flex-grow border-t border-slate-200"></div>
+                </div>
+              )}
+
+              {/* Featured Image */}
+              {item.image && (
+                <div class="w-full overflow-hidden border border-slate-200/80 shadow-sm group">
+                  <a href={item.url} target="_blank" rel="noopener noreferrer">
+                    <OptimizedImage
+                      src={item.image}
+                      alt={item.title}
+                      class="w-full h-auto object-cover group-hover:scale-101 transition-transform duration-300"
+                    />
+                  </a>
+                </div>
+              )}
+
+              {/* Title */}
+              <h2 class="text-lg md:text-xl font-bold text-slate-900 leading-snug pt-1">
+                <a
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="hover:text-[#18BA60] transition-colors"
+                >
+                  {item.title}
+                </a>
+              </h2>
+
+              {/* Excerpt Description */}
+              <p class="text-slate-600 text-xs md:text-sm leading-relaxed font-normal">
+                {item.description}
+              </p>
+
+              {/* Compact Read More Button */}
+              <div class="pt-2">
+                <a
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 bg-[#18BA60] hover:bg-[#149e52] text-white text-xs md:text-sm font-bold px-5 py-2.5 rounded-[3px] transition-colors shadow-xs cursor-pointer w-fit"
+                >
+                  <span>{item.buttonLabel || "Read More"}</span>
+                  <span class="text-sm font-bold">&gt;</span>
+                </a>
+              </div>
+            </article>
+          ))
+        }
+      </main>
+    </div>
+  </div>
+</div>
