@@ -380,11 +380,41 @@ export const servicesOverviewSectionSchema = z
   })
   .optional();
 
+export const contactUsSectionSchema = z
+  .object({
+    enable: z.boolean().default(true).optional(),
+    title: z.string().optional(),
+    subtitle: z.string().optional(),
+    topCards: z
+      .array(
+        z.object({
+          title: z.string(),
+          icon: z.string(),
+          content: z.string(),
+          href: z.string().optional(),
+        }),
+      )
+      .optional(),
+    bottomCards: z
+      .array(
+        z.object({
+          title: z.string(),
+          icon: z.string(),
+          content: z.string(),
+          href: z.string().optional(),
+        }),
+      )
+      .optional(),
+    mapUrl: z.string().optional(),
+  })
+  .optional();
+
 export const sectionsSchema = {
   servicesSection: servicesSectionSchema,
   ctaSection: ctaSectionSchema,
   contactSection: contactSectionSchema,
   contactSectionTwo: contactSectionTwoSchema,
+  contactUsSection: contactUsSectionSchema,
   teamSection: teamSectionSchema,
   testimonialSection: testimonialSectionSchema,
   bannerAgencySection: bannerAgencySectionSchema,
