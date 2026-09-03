@@ -31,8 +31,11 @@ let {
 let {
   collection,
   body,
-  data: { title, image, date, categories, description } = {},
+  data: { title, image, date, categories, description, comments, commentCount } = {},
 } = content;
+
+const totalComments = commentCount !== undefined ? commentCount : (comments ? comments.length : 0);
+const formattedCommentCount = totalComments.toLocaleString("en-US");
 
 // Format categories
 const categoriesArray = categories?.map((category: string) => ({
@@ -146,6 +149,14 @@ const cursorLabel = t("common.readBlog");
               </>
             ))}
           <span data-post-date>{date && dateFormat(date)}</span>
+          {totalComments > 0 && (
+            <>
+              <span class="inline-block size-1 rounded-full bg-current" />
+              <a href={`${slug}#comments`} class="hover:text-primary relative z-20 transition">
+                {formattedCommentCount} {t("blog.commentCount")}
+              </a>
+            </>
+          )}
         </div>
         {title && (
           <h2 class="text-h5-sm md:text-h5 mt-1.5 mb-3 w-full font-extrabold text-slate-900 leading-snug">

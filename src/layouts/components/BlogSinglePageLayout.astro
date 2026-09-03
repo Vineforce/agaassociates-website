@@ -10,6 +10,7 @@ import { useTranslations } from "@/lib/utils/i18nUtils.ts";
 import OptimizedImage from "./utilities/OptimizedImage.astro";
 import formatRelativeDate from "@/lib/utils/formatRelativeDate";
 import PaginationForSingle from "./widgets/PaginationForSingle.astro";
+import CommentSection from "./widgets/CommentSection.astro";
 
 interface Props {
   content: CollectionEntry<"blog">;
@@ -18,7 +19,7 @@ interface Props {
 
 const { content, class: className } = Astro.props;
 const {
-  data: { title, date, image, author, categories },
+  data: { title, date, image, author, categories, comments, commentCount },
 } = content;
 
 import config from ".astro/config.generated.json";
@@ -31,6 +32,23 @@ const authorName = author || content.data.author || "";
 // Check if table of contents is enable
 const tocEnabled =
   tableOfContents?.enable && tocHeadings && tocHeadings.length > 0;
+
+import extractSlug from "@/lib/utils/extractSlug";
+import fs from "node:fs";
+import path from "node:path";
+
+const postSlug = (extractSlug(content).split("/").pop() || extractSlug(content)).replace(/^\//, "");
+let fileComments: any[] | undefined;
+const commentFilePath = path.resolve(`./src/content/comments/${postSlug}.json`);
+if (fs.existsSync(commentFilePath)) {
+  try {
+    fileComments = JSON.parse(fs.readFileSync(commentFilePath, "utf8"));
+  } catch (err) {
+    console.error("Error reading comments file:", err);
+  }
+}
+const postComments = fileComments || comments || [];
+const postCommentCount = commentCount !== undefined ? commentCount : postComments.length;
 
 const t = await useTranslations(Astro.currentLocale as string);
 ---
@@ -100,6 +118,7 @@ const t = await useTranslations(Astro.currentLocale as string);
         />
       </div>
     </div>
+    <CommentSection comments={postComments} commentCount={postCommentCount} />
     {
       content && content.collection && (
         <div class="mt-10 border-t pt-10">

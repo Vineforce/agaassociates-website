@@ -65,7 +65,15 @@
     "tagsLabel": "Tags :",
     "share": "Partager :",
     "paginationPrevious": "Précédent",
-    "paginationNext": "Suivant"
+    "paginationNext": "Suivant",
+    "comments": "Commentaires",
+    "commentCount": "Commentaires",
+    "leaveReply": "LAISSER UN COMMENTAIRE",
+    "namePlaceholder": "Nom",
+    "emailPlaceholder": "E-mail",
+    "commentPlaceholder": "Commentaire",
+    "postComment": "Publier le commentaire",
+    "thankYouComment": "Merci ! Votre commentaire a été soumis."
   },
   "navigation": {
     "buttonLabel": "Nous contacter"

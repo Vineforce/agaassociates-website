@@ -65,6 +65,17 @@ const blogCollection = defineCollection({
   loader: contentLoader(`./src/content/${blogFolder}`),
   schema: page.extend({
     author: z.string().optional(),
+    commentCount: z.number().optional(),
+    comments: z
+      .array(
+        z.object({
+          author: z.string(),
+          date: z.string(),
+          content: z.string(),
+          website: z.string().optional(),
+        })
+      )
+      .optional(),
     options: z
       .object({
         layout: z
