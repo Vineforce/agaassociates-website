@@ -1,0 +1,239 @@
+---
+import OptimizedImage from "@/components/utilities/OptimizedImage.astro";
+
+interface AccordionItem {
+  title: string;
+  text?: string;
+}
+
+interface Props {
+  service: {
+    title?: string;
+    image: string;
+    images?: string[];
+
+    rightPanel: {
+      title?: string;
+      description?: string;
+      accordions: AccordionItem[];
+    };
+
+    benefits: string[];
+  };
+}
+
+const { service } = Astro.props;
+const panelImages = service.images && service.images.length > 0 ? service.images : [service.image];
+---
+
+<div class="service-right-panel">
+
+  <!-- Interactive Image Carousel -->
+  <div class="right-image-card relative rounded-2xl overflow-hidden shadow-md border border-slate-200" id="service-image-carousel">
+    <div class="carousel-slides relative w-full h-52 sm:h-60 overflow-hidden">
+      {
+        panelImages.map((imgSrc, index) => (
+          <div
+            class:list={[
+              "carousel-slide absolute inset-0 w-full h-full transition-opacity duration-300 ease-in-out",
+              index === 0 ? "opacity-100 z-10" : "opacity-0 z-0"
+            ]}
+            data-index={index}
+          >
+            <OptimizedImage
+              src={imgSrc}
+              alt={`${service.title || 'Service'} Image ${index + 1}`}
+              class="w-full h-full object-cover"
+              loading={index === 0 ? "eager" : "lazy"}
+            />
+          </div>
+        ))
+      }
+    </div>
+
+    <!-- Navigation Arrows -->
+    {panelImages.length > 1 && (
+      <div class="absolute inset-y-0 left-0 right-0 flex items-center justify-between px-3 pointer-events-none z-20">
+        <button
+          type="button"
+          class="carousel-prev pointer-events-auto w-8 h-8 rounded-full bg-slate-900/75 hover:bg-slate-950 text-white flex items-center justify-center backdrop-blur-xs transition shadow-md cursor-pointer"
+          aria-label="Previous image"
+        >
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="m15 18-6-6 6-6"/>
+          </svg>
+        </button>
+        <button
+          type="button"
+          class="carousel-next pointer-events-auto w-8 h-8 rounded-full bg-slate-900/75 hover:bg-slate-950 text-white flex items-center justify-center backdrop-blur-xs transition shadow-md cursor-pointer"
+          aria-label="Next image"
+        >
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="m9 18 6-6-6-6"/>
+          </svg>
+        </button>
+      </div>
+    )}
+
+  </div>
+
+
+  <!-- Accordions Card (No Gap, Single Card Container with Rounded Corners) -->
+  <div class="accordions-card rounded-xl overflow-hidden border border-slate-200 shadow-xs bg-[#3A526A] p-0">
+    <div class="service-accordions flex flex-col divide-y divide-white/20">
+      {
+        service.rightPanel.accordions.map((accordion, index) => (
+          <details
+            class="service-accordion group"
+            open={index === 0}
+          >
+            <summary class="flex items-center gap-3 px-4 py-3.5 bg-[#3A526A] hover:bg-[#2F4458] text-white cursor-pointer font-bold text-sm sm:text-base select-none list-none transition duration-200">
+              <span class="accordion-symbol font-bold text-lg leading-none shrink-0 text-white" aria-hidden="true">
+                {index === 0 ? "−" : "+"}
+              </span>
+              <span class="accordion-title-text flex-1 leading-snug text-white font-bold">
+                {accordion.title}
+              </span>
+            </summary>
+
+            {accordion.text && (
+              <div class="accordion-content bg-white p-5 text-[15px] text-slate-700 leading-relaxed border-t border-slate-200">
+                {accordion.text}
+              </div>
+            )}
+          </details>
+        ))
+      }
+    </div>
+  </div>
+
+  <!-- Separate Benefits Card (No Divider Line) -->
+  {
+    service.benefits && service.benefits.length > 0 && (
+      <div class="benefits-card">
+        <div class="benefits-list">
+          {
+            service.benefits.map((benefit) => (
+              <div class="benefit-item">
+                <span class="benefit-check">
+                  <svg viewBox="0 0 24 24">
+                    <path d="m5 12 4 4L19 6" />
+                  </svg>
+                </span>
+                <span>
+                  {benefit}
+                </span>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    )
+  }
+
+
+  <!-- Questions -->
+  <div class="questions-card">
+
+    <div class="questions-icon">
+
+      <svg viewBox="0 0 24 24">
+        <path
+          d="M18 10a6 6 0 0 0-12 0v5"
+        />
+
+        <path
+          d="M6 15H4a2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2h2"
+        />
+
+        <path
+          d="M18 15h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-2"
+        />
+
+        <path
+          d="M18 15c0 3-2 5-6 5"
+        />
+      </svg>
+
+    </div>
+
+
+    <div class="questions-content">
+
+      <h3>
+        Have Questions?
+      </h3>
+
+      <p>
+        Talk to our experts and get
+        personalized guidance.
+      </p>
+
+      <a href="/contact-us/">
+        Contact Us
+
+        <svg viewBox="0 0 24 24">
+          <path d="M5 12h13" />
+          <path d="m13 6 6 6-6 6" />
+        </svg>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+  const initCarousel = () => {
+    const carousel = document.getElementById("service-image-carousel");
+    if (!carousel) return;
+
+    const slides = carousel.querySelectorAll<HTMLElement>(".carousel-slide");
+    const prevBtn = carousel.querySelector<HTMLButtonElement>(".carousel-prev");
+    const nextBtn = carousel.querySelector<HTMLButtonElement>(".carousel-next");
+    const counter = carousel.querySelector<HTMLElement>(".carousel-counter");
+
+    if (slides.length <= 1) return;
+
+    let currentIndex = 0;
+
+    const updateCarousel = (newIndex: number) => {
+      slides[currentIndex].classList.remove("opacity-100", "z-10");
+      slides[currentIndex].classList.add("opacity-0", "z-0");
+
+      currentIndex = (newIndex + slides.length) % slides.length;
+
+      slides[currentIndex].classList.remove("opacity-0", "z-0");
+      slides[currentIndex].classList.add("opacity-100", "z-10");
+
+      if (counter) {
+        counter.textContent = `${currentIndex + 1} / ${slides.length}`;
+      }
+    };
+
+    prevBtn?.addEventListener("click", () => updateCarousel(currentIndex - 1));
+    nextBtn?.addEventListener("click", () => updateCarousel(currentIndex + 1));
+  };
+
+  const initAccordions = () => {
+    const accordions = document.querySelectorAll<HTMLDetailsElement>(".service-accordion");
+    accordions.forEach((acc) => {
+      acc.addEventListener("toggle", () => {
+        const symbol = acc.querySelector<HTMLElement>(".accordion-symbol");
+        if (symbol) {
+          symbol.textContent = acc.open ? "−" : "+";
+        }
+      });
+    });
+  };
+
+  const initAll = () => {
+    initCarousel();
+    initAccordions();
+  };
+
+  document.addEventListener("DOMContentLoaded", initAll);
+  document.addEventListener("astro:page-load", initAll);
+</script>

@@ -1,3 +1,5 @@
+@import "./service-body.css";
+
 /* content style */
 .prose-styles {
   @apply prose max-w-none;

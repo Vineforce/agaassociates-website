@@ -1,0 +1,106 @@
+---
+import OptimizedImage from "@/components/utilities/OptimizedImage.astro";
+
+interface Props {
+  service: {
+    title: string;
+    category: string;
+    heroDescription: string;
+    heroImage: string;
+  };
+}
+
+const { service } = Astro.props;
+---
+
+<section class="service-hero-light">
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 items-stretch gap-4 lg:gap-0">
+      
+      <!-- Left Copy Section (Reduced top padding to eliminate blank gap above breadcrumb) -->
+      <div class="lg:col-span-7 py-2 lg:py-3 lg:pr-6 flex flex-col justify-center z-10">
+        
+        <!-- Breadcrumb -->
+        <nav class="service-hero-breadcrumb">
+          <a href="/">Home</a>
+          <span class="separator">›</span>
+          <a href="/services">{service.category}</a>
+          <span class="separator">›</span>
+          <span class="active-badge">{service.title}</span>
+        </nav>
+
+        <!-- Title -->
+        <h1 class="service-hero-title">
+          {service.title}
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="service-hero-description">
+          {service.heroDescription}
+        </p>
+
+        <!-- Feature Pills (Unified background color for all 3 icons) -->
+        <div class="service-hero-features">
+          <div class="hero-feature-item">
+            <span class="feature-icon icon-blue-1">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </span>
+            <span class="feature-text">Hassle-Free Process</span>
+          </div>
+
+          <div class="hero-feature-item">
+            <span class="feature-icon icon-blue-1">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M22 21v-2a4 4 0 0 3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </span>
+            <span class="feature-text">Expert Guidance</span>
+          </div>
+
+          <div class="hero-feature-item">
+            <span class="feature-icon icon-blue-1">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <polyline points="9 12 11 14 15 10"></polyline>
+              </svg>
+            </span>
+            <span class="feature-text">100% Compliance</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Photo & Cursive Script Overlay -->
+      <div class="lg:col-span-5 relative h-full flex items-center justify-end">
+        
+        <!-- Cursive Overlay Text -->
+        <div class="hero-cursive-script">
+          <div class="script-content">
+            <span class="line-1">Your</span>
+            <span class="line-2">Business</span>
+            <span class="line-3">Our Support</span>
+            <svg class="script-swoosh" viewBox="0 0 140 24" fill="none">
+              <path d="M4 18 C 45 4, 95 4, 136 18" stroke="#D98A2B" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Image matching left content height with feathered blur edge -->
+        <div class="hero-photo-wrapper">
+          <OptimizedImage
+            src={service.heroImage}
+            alt={service.title}
+            class="hero-photo"
+          />
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
