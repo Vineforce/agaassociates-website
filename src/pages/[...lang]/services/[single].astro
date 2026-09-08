@@ -51,9 +51,13 @@ export async function getStaticPaths() {
 }
 
 const { service } = Astro.props;
+
+if (!service || !service.data) {
+  return Astro.redirect("/404");
+}
 ---
 
 <Base {...service.data} fitToScreen={false}>
-  <PageHeader content={service?.data} />
+  <PageHeader content={service.data} />
   <ServicesSingle content={service} />
 </Base>
