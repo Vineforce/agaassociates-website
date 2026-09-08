@@ -6,11 +6,21 @@ interface Props {
     title: string;
     category: string;
     heroDescription: string;
-    heroImage: string;
+    heroImage?: string;
+    image?: string;
+    images?: string[];
   };
 }
 
 const { service } = Astro.props;
+
+// Always use second image if available; if only one exists, use the first one
+const heroImgSrc =
+  service.images && service.images.length > 1
+    ? service.images[1]
+    : service.images && service.images.length > 0
+    ? service.images[0]
+    : service.heroImage || service.image || "";
 ---
 
 <section class="service-hero-light">
@@ -18,7 +28,7 @@ const { service } = Astro.props;
     <div class="grid grid-cols-1 lg:grid-cols-12 items-stretch gap-4 lg:gap-0">
       
       <!-- Left Copy Section -->
-      <div class="lg:col-span-7 pt-3 pb-2 lg:pt-4 lg:pb-3 lg:pr-6 flex flex-col justify-center z-10">
+      <div class="lg:col-span-7 pt-3 pb-3 lg:pt-4 lg:pb-4 lg:pr-6 flex flex-col justify-center z-10">
         
         <!-- Breadcrumb -->
         <nav class="service-hero-breadcrumb">
@@ -76,7 +86,7 @@ const { service } = Astro.props;
       </div>
 
       <!-- Right Photo & Cursive Script Overlay -->
-      <div class="lg:col-span-5 relative h-full flex items-center justify-end">
+      <div class="lg:col-span-5 relative h-full flex items-center justify-end self-stretch">
         
         <!-- Cursive Overlay Text -->
         <div class="hero-cursive-script">
@@ -93,7 +103,7 @@ const { service } = Astro.props;
         <!-- Image matching left content height with feathered blur edge -->
         <div class="hero-photo-wrapper">
           <OptimizedImage
-            src={service.heroImage}
+            src={heroImgSrc}
             alt={service.title}
             class="hero-photo"
           />
