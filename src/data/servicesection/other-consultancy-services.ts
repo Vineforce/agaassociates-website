@@ -10,14 +10,14 @@ export const consultancyServicesData: ServiceData = {
     "Specialized accounting, bookkeeping, and business advisory services tailored to help enterprises manage financial records, streamline operations, and support expansion.",
 
   heroImage:
-    "/src/assets/images/serviceSection/register-service/team-work-process-young-business-managers-crew-working-with-new-startup-project-labtop-wood-table-typing-keyboard-texting-message-analy.jpg",
+    "/src/assets/images/serviceSection/other-consultancy-services/finance-accounting-paper-desk-using-scaled.jpg",
 
   image:
-    "/src/assets/images/serviceSection/register-service/team-work-process-young-business-managers-crew-working-with-new-startup-project-labtop-wood-table-typing-keyboard-texting-message-analy.jpg",
+    "/src/assets/images/serviceSection/other-consultancy-services/businessmen-hands-white-table-with-documents-drafts-scaled.jpg",
 
   images: [
-    "/src/assets/images/serviceSection/register-service/team-work-process-young-business-managers-crew-working-with-new-startup-project-labtop-wood-table-typing-keyboard-texting-message-analy.jpg",
-    "/src/assets/images/serviceSection/register-service/business-man-financial-inspector-secretary-making-report-calculating-checking-balance-internal-revenue-service-inspector-checking-document-audit-concept-sca.jpg",
+    "/src/assets/images/serviceSection/other-consultancy-services/businessmen-hands-white-table-with-documents-drafts-scaled.jpg",
+    "/src/assets/images/serviceSection/other-consultancy-services/finance-accounting-paper-desk-using-scaled.jpg",
   ],
 
   introTitle: "Consultancy Services",

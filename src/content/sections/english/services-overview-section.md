@@ -1,39 +1,39 @@
 ---
 enable: true
 badge: "WHAT WE DO"
-title: "<span class='relative inline-block pb-3'>Our<span class='absolute left-0 bottom-0 w-full h-1 bg-[#61CE70] rounded-full'></span></span> <span class='text-[#0F5277]'>Services</span>"
-subtitle: "End-to-end solutions to help your business stay compliant, financially strong, and future ready."
+title: "What We Can <span class='relative inline-block pb-2.5'>Offer You<span class='absolute left-0 bottom-0 w-full h-1 bg-[#61CE70] rounded-full'></span></span>"
+subtitle: "Comprehensive solutions and professional guidance to meet your needs. Discover tailored services that drive your success"
 
 services:
-  - title: "Business Registration"
-    icon: "ClipboardList"
-    description: "Partnership Firm Registration, Private Company Registration, LLP Incorporation, Society Registration (District/State/National Level), Company Formation/Incorporation Services, and HUF Registration"
-    url: "/services/"
+  - title: "Registration Services"
+    image: "/src/assets/images/serviceSection/register-service/team-work-process-young-business-managers-crew-working-with-new-startup-project-labtop-wood-table-typing-keyboard-texting-message-analy.jpg"
+    description: "Streamline your business setup with our efficient registration services. From company incorporation to fssai registration, we handle the legalities, ensuring your business starts on the right track."
+    url: "/registration-services/"
 
-  - title: "Regulatory Compliance"
-    icon: "FileCheck"
-    description: "GST Registration and Consultancy, Income Tax Returns, Import Export Code (IEC) and Renewal, FSSAI License Registration, UDYAM Registration, LEI Codes for Bank Financing, and Darpan Registration for Societies"
-    url: "/services/"
+  - title: "Attestation, Audit & Assurance"
+    image: "/src/assets/images/serviceSection/attestation-audit-assurance/close-up-businessman-sitting-table-filling-document-768x513.webp"
+    description: "Ensure accuracy, compliance, and transparency with our attestation, audit, and assurance services. We provide reliable insights to strengthen your financial credibility and operational efficiency."
+    url: "/attestation-audit-assurance/"
 
-  - title: "Financial Advisory"
-    icon: "Banknote"
-    description: "CMA Data Preparation, Bank Loan Services, CIBIL Report Correction, Financial Advisory, Internal Audit Services, and Net Worth Report Preparation for businesses and individuals"
-    url: "/services/"
+  - title: "Management Consultancy"
+    image: "/src/assets/images/serviceSection/management-consultnacy/stacks-coins-arranged-bar-graph-scaled.jpg"
+    description: "Drive growth and optimize performance with our management consultancy services. We deliver strategic guidance tailored to improve operations, enhance profitability, and achieve business goals."
+    url: "/management-consultnacy/"
 
-  - title: "Taxation and Certification"
-    icon: "FileSpreadsheet"
-    description: "PAN Application/Amendment, ISO Certification, NRI Services (ITR for NRIs), and Startup Certificate Assistance for Compliance, Business Growth, and Seamless Tax Filing"
-    url: "/services/"
+  - title: "Direct Taxation"
+    image: "/src/assets/images/serviceSection/direct-taxation/finance-accounting-paper-desk-using-scaled.jpg"
+    description: "Navigate the complexities of direct taxation with ease and confidence. Our expert tax solutions ensure compliance, minimize liabilities, and optimize your financial outcomes for long-term success."
+    url: "/direct-taxation/"
 
-  - title: "Business Support"
-    icon: "Briefcase"
-    description: "Business Advisory, Career Counseling, HR Assistance, Payroll, Internship Opportunities, and Consultancy Services (Equity/Commodity Trading, Mutual Fund Investment)"
-    url: "/services/"
+  - title: "Indirect Taxation"
+    image: "/src/assets/images/serviceSection/indirect-taxation/asian-woman-working-through-paperwork-scaled.jpg"
+    description: "Stay ahead of evolving indirect tax regulations with our comprehensive services. We assist in GST, VAT, and other statutory tax filings to keep your business compliant, efficient, and up to date."
+    url: "/indirect-taxation/"
 
-  - title: "Digital Solutions"
-    icon: "Globe"
-    description: "Digital Signatures, Business Software Consultancy, Trademark Registration, GEM Registration, and Project Report Preparation for Seamless Business Operations and Legal Compliance"
-    url: "/services/"
+  - title: "Other Consultancy Services"
+    image: "/src/assets/images/serviceSection/other-consultancy-services/businessmen-hands-white-table-with-documents-drafts-scaled.jpg"
+    description: "Explore personalized consultancy services designed to address unique business challenges. Our experts provide innovative solutions tailored to your specific needs for sustained growth and success."
+    url: "/other-consultancy-services/"
 
 cta:
   enable: true

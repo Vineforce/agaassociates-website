@@ -2,6 +2,7 @@
 import type { servicesOverviewSectionSchema } from "@/sections.schema";
 import { getEntryCTM } from "@/lib/contentParser.astro";
 import { getLocaleUrlCTM } from "@/lib/utils/i18nUtils.ts";
+import OptimizedImage from "@/components/utilities/OptimizedImage.astro";
 import DynamicIcon from "@/helpers/DynamicIcon.astro";
 import type { z } from "astro/zod";
 
@@ -29,67 +30,97 @@ if (!content || content.enable === false) {
   return null;
 }
 
-const services = content.services || [];
+const services = (content.services || []) as Array<{
+  title: string;
+  image?: string;
+  description: string;
+  url?: string;
+  icon?: string;
+}>;
+
 const cta = content.cta;
 const ctaUrl = cta?.buttonUrl
   ? getLocaleUrlCTM(cta.buttonUrl, Astro.currentLocale)
   : "#";
 ---
 
-<section class="services-overview-section relative bg-gradient-to-b from-white via-slate-50/60 to-slate-100/50 py-12 md:py-16 overflow-hidden">
-  {/* Decorative background watermark circles */}
-  <div class="pointer-events-none absolute -left-20 top-10 size-72 rounded-full border border-[#61CE70]/10 bg-[#61CE70]/5 blur-3xl"></div>
-  <div class="pointer-events-none absolute -right-20 bottom-10 size-80 rounded-full border border-[#61CE70]/10 bg-[#61CE70]/5 blur-3xl"></div>
-
+<section class="services-overview-section relative bg-white py-12 lg:py-16 overflow-hidden">
   <div class="container relative z-10 mx-auto px-4 md:px-6">
-    {/* Section Header */}
-    <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+    
+    <!-- Section Header (Exact as screenshot: Title + Subtitle) -->
+    <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
       {content.title && (
         <h2
-          class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight"
+          class="text-3xl sm:text-4xl lg:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4"
           set:html={content.title}
         />
       )}
+
+      {content.subtitle && (
+        <p class="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl mx-auto font-normal">
+          {content.subtitle}
+        </p>
+      )}
     </div>
 
-    {/* 6 Services Grid - Top-Left Icon + Title, No Bottom Arrow */}
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
+    <!-- 6 Services Grid Cards (Image top, Title, Description, READ MORE button) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
       {
-        services.map((item) => (
-          <article class="group relative flex flex-col justify-start rounded-2xl bg-white p-5 sm:p-6 border border-slate-100 shadow-xs transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-              <div class="flex items-center gap-3.5 mb-3.5">
-                <div class="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-[#EEFBEE] text-[#0F5277] transition-colors duration-300 group-hover:bg-[#61CE70] group-hover:text-white shadow-xs">
-                  <DynamicIcon
-                    name={item.icon || "Briefcase"}
-                    inlineSvg={true}
-                    class="size-6 stroke-[2]"
+        services.map((item) => {
+          const itemUrl = item.url ? getLocaleUrlCTM(item.url, Astro.currentLocale) : "#";
+
+          return (
+            <article class="group relative flex flex-col rounded-xl bg-white border border-slate-200/80 shadow-xs overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+              {item.image && (
+                <a href={itemUrl} class="block relative aspect-[16/10] w-full overflow-hidden bg-slate-100">
+                  <OptimizedImage
+                    src={item.image}
+                    alt={item.title || "Service"}
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
+                </a>
+              )}
+
+              <div class="p-6 sm:p-7 flex flex-col flex-1 justify-between bg-white">
+                <div>
+                  <h3 class="text-lg sm:text-xl font-bold text-slate-900 mb-3 group-hover:text-[#0F5277] transition-colors leading-snug">
+                    <a href={itemUrl}>
+                      {item.title}
+                    </a>
+                  </h3>
+
+                  <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6 font-normal line-clamp-4">
+                    {item.description}
+                  </p>
                 </div>
 
-                <h3 class="text-base sm:text-lg font-bold text-slate-900 leading-snug transition-colors group-hover:text-[#0F5277]">
-                  {item.title}
-                </h3>
+                <div>
+                  <a
+                    href={itemUrl}
+                    class="inline-flex items-center gap-1.5 text-xs font-bold text-[#61CE70] hover:text-[#0F5277] uppercase tracking-wider transition-colors">
+                    <span>READ MORE</span>
+                    <svg class="size-3.5 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="m9 18 6-6-6-6" />
+                    </svg>
+                  </a>
+                </div>
               </div>
-
-              <p class="text-xs sm:text-sm text-slate-500 leading-relaxed font-normal">
-                {item.description}
-              </p>
-
             </article>
-        ))
+          );
+        })
       }
     </div>
 
-    {/* Bottom Call to Action Banner */}
+    <!-- Bottom Call to Action Banner -->
     {
       cta?.enable && (
-        <div class="mt-10 sm:mt-12 rounded-2xl bg-slate-50/80 border border-slate-200/80 p-5 sm:p-6 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xs">
+        <div class="mt-12 sm:mt-16 rounded-2xl bg-slate-50/90 border border-slate-200/80 p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xs">
           <div class="flex items-center gap-4 text-center sm:text-left">
-            <div class="flex size-11 shrink-0 items-center justify-center rounded-full bg-[#0F5277] text-white shadow-sm">
+            <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#0F5277] text-white shadow-sm">
               <DynamicIcon
                 name={cta.icon || "Headphones"}
                 inlineSvg={true}
-                class="size-5 stroke-[2]"
+                class="size-6 stroke-[2]"
               />
             </div>
             <div>
@@ -115,5 +146,6 @@ const ctaUrl = cta?.buttonUrl
         </div>
       )
     }
+
   </div>
 </section>

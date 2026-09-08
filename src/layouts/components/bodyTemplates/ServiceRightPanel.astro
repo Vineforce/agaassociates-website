@@ -23,7 +23,13 @@ interface Props {
 }
 
 const { service } = Astro.props;
-const panelImages = service.images && service.images.length > 0 ? service.images : [service.image];
+
+const rawImages =
+  service?.images && service.images.length > 0
+    ? service.images
+    : [service?.image || service?.heroImage];
+
+const panelImages = Array.from(new Set(rawImages.filter(Boolean)));
 ---
 
 <div class="service-right-panel">
