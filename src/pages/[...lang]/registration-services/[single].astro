@@ -6,33 +6,39 @@ import ServiceRightPanel from "@/components/bodyTemplates/ServiceRightPanel.astr
 import Sidebar from "@/components/bodyTemplates/Sidebar.astro";
 
 import { companyIncorporationData } from "@/data/registerService/companyIncorporation";
-import { registrationServicesData } from "@/data/registerService/registration-services";
+import { getRegistrationServiceData } from "@/data/registerService/registration-services";
 import { sidebarServices } from "@/data/registerService/sidebar";
 import { supportedLanguages } from "@/lib/utils/i18nUtils.ts";
 import config from ".astro/config.generated.json";
 
 export async function getStaticPaths() {
+  const subSlugs = [
+    "registration-services",
+    "fssai-license-registration",
+    "huf-registration",
+    "gem-registration",
+    "niti-udyog-registration",
+    "registration-for-jewelers",
+    "partnership-firm-registration",
+    "society-registration",
+    "shop-act-registration",
+    "trademark-registration",
+    "pan-application",
+    "setting-up-company",
+    "start-up-certificate",
+    "gst-registration",
+    "private-company-registration",
+  ];
+
   const servicesList = [
     // Company Incorporation
     { slug: "company-incorporation-services", data: companyIncorporationData },
     { slug: "company-incorporation", data: companyIncorporationData },
-    // Registration Services (generic overview)
-    { slug: "registration-services", data: registrationServicesData },
-    // All remaining sidebar slugs — fall back to registrationServicesData until dedicated files are created
-    { slug: "fssai-license-registration", data: registrationServicesData },
-    { slug: "huf-registration", data: registrationServicesData },
-    { slug: "gem-registration", data: registrationServicesData },
-    { slug: "niti-udyog-registration", data: registrationServicesData },
-    { slug: "registration-for-jewelers", data: registrationServicesData },
-    { slug: "partnership-firm-registration", data: registrationServicesData },
-    { slug: "society-registration", data: registrationServicesData },
-    { slug: "shop-act-registration", data: registrationServicesData },
-    { slug: "trademark-registration", data: registrationServicesData },
-    { slug: "pan-application", data: registrationServicesData },
-    { slug: "setting-up-company", data: registrationServicesData },
-    { slug: "start-up-certificate", data: registrationServicesData },
-    { slug: "gst-registration", data: registrationServicesData },
-    { slug: "private-company-registration", data: registrationServicesData },
+    // Registration Services (generic & sub-services with unique descriptions)
+    ...subSlugs.map((slug) => ({
+      slug,
+      data: getRegistrationServiceData(slug),
+    })),
   ];
 
   const paths = supportedLanguages.map((lang) => {

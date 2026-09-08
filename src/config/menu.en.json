@@ -43,72 +43,72 @@
             {
               "enable": true,
               "name": "FSSAI License Registration",
-              "url": "/fssai-license-registration/"
+              "url": "/registration-services/fssai-license-registration/"
             },
             {
               "enable": true,
               "name": "HUF Registration",
-              "url": "/huf-registration/"
+              "url": "/registration-services/huf-registration/"
             },
             {
               "enable": true,
               "name": "GEM Registration",
-              "url": "/gem-registration/"
+              "url": "/registration-services/gem-registration/"
             },
             {
               "enable": true,
               "name": "Niti Udyog Registration",
-              "url": "/niti-udyog-registration/"
+              "url": "/registration-services/niti-udyog-registration/"
             },
             {
               "enable": true,
               "name": "Partnership Firm Registration",
-              "url": "/partnership-firm-registration/"
+              "url": "/registration-services/partnership-firm-registration/"
             },
             {
               "enable": true,
               "name": "Registration for Jewelers",
-              "url": "/registration-for-jewelers/"
+              "url": "/registration-services/registration-for-jewelers/"
             },
             {
               "enable": true,
               "name": "Society Registration",
-              "url": "/society-registration/"
+              "url": "/registration-services/society-registration/"
             },
             {
               "enable": true,
               "name": "Shop Act Registration",
-              "url": "/shop-act-registration/"
+              "url": "/registration-services/shop-act-registration/"
             },
             {
               "enable": true,
               "name": "Trademark Registration",
-              "url": "/trademark-registration/"
+              "url": "/registration-services/trademark-registration/"
             },
             {
               "enable": true,
               "name": "PAN Application",
-              "url": "/pan-application/"
+              "url": "/registration-services/pan-application/"
             },
             {
               "enable": true,
               "name": "Setting Up Company",
-              "url": "/setting-up-company/"
+              "url": "/registration-services/setting-up-company/"
             },
             {
               "enable": true,
               "name": "Start Up Certificate",
-              "url": "/start-up-certificate/"
+              "url": "/registration-services/start-up-certificate/"
             },
             {
               "enable": true,
               "name": "GST Registration",
-              "url": "/gst-registration/"
+              "url": "/registration-services/gst-registration/"
             },
             {
               "enable": true,
               "name": "Private Company Registration",
-              "url": "/private-company-registration/"
+              "url": "/registration-services/private-company-registration/"
             }
           ]
         },
