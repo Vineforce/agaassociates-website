@@ -85,11 +85,10 @@ const panelImages = service.images && service.images.length > 0 ? service.images
         service.rightPanel.accordions.map((accordion, index) => (
           <details
             class="service-accordion group"
-            open={index === 0}
           >
             <summary class="flex items-center gap-3 px-4 py-3.5 bg-[#3A526A] hover:bg-[#2F4458] text-white cursor-pointer font-bold text-sm sm:text-base select-none list-none transition duration-200">
               <span class="accordion-symbol font-bold text-lg leading-none shrink-0 text-white" aria-hidden="true">
-                {index === 0 ? "−" : "+"}
+                +
               </span>
               <span class="accordion-title-text flex-1 leading-snug text-white font-bold">
                 {accordion.title}
