@@ -237,5 +237,28 @@ const navigationButton = { ...navBtnConfig, ...customNavigationButton };
     handleScroll(true);
   }
 
+  function initDropdownClickClose(): void {
+    const dropdownLinks = document.querySelectorAll<HTMLAnchorElement>(
+      ".nav-dropdown-list a, .nav-dropdown-link",
+    );
+    dropdownLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        const dropdownLists =
+          document.querySelectorAll<HTMLElement>(".nav-dropdown-list");
+        dropdownLists.forEach((list) => {
+          list.style.setProperty("display", "none", "important");
+          list.style.setProperty("opacity", "0", "important");
+          list.style.setProperty("pointer-events", "none", "important");
+        });
+      });
+    });
+  }
+
   stickyHeader();
+  initDropdownClickClose();
+
+  document.addEventListener("astro:page-load", () => {
+    stickyHeader();
+    initDropdownClickClose();
+  });
 </script>
