@@ -364,7 +364,7 @@ header.has-dark-background .navbar .badge {
 /* Hide alternate logo */
 header {
   .logo {
-    @apply hidden;
+    @apply inline-block;
   }
 
   .logo-text {

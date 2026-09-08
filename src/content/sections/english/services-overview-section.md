@@ -41,5 +41,5 @@ cta:
   subtitle: "Talk to our experts and get the right solutions for your business."
   icon: "Headphones"
   buttonLabel: "Book a Consultation"
-  buttonUrl: "/contact/"
+  buttonUrl: "/contact-us/"
 ---
