@@ -1,4 +1,7 @@
 import type { ServiceData } from "./companyIncorporation";
+import { companyIncorporationData } from "./companyIncorporation";
+import { fssaiLicenseData } from "./fssai-license-registration";
+import { hufRegistrationData } from "./huf-registration";
 
 export const registrationServicesData: ServiceData = {
   title: "Registration Services",
@@ -182,6 +185,15 @@ export const subServicesDataMap: Record<string, Partial<ServiceData>> = {
 };
 
 export function getRegistrationServiceData(slug: string): ServiceData {
+  if (slug === "company-incorporation-services" || slug === "company-incorporation") {
+    return companyIncorporationData;
+  }
+  if (slug === "fssai-license-registration") {
+    return fssaiLicenseData;
+  }
+  if (slug === "huf-registration") {
+    return hufRegistrationData;
+  }
   const custom = subServicesDataMap[slug];
   if (!custom) {
     return registrationServicesData;
