@@ -1,0 +1,70 @@
+---
+interface SidebarService {
+  slug: string;
+  title: string;
+  icon?: string;
+}
+
+interface Props {
+  services: SidebarService[];
+  activeSlug: string;
+  basePath?: string;
+}
+
+const {
+  services,
+  activeSlug,
+  basePath = "/registration-services/"
+} = Astro.props;
+---
+
+<aside class="service-sidebar">
+
+  <!-- Services -->
+  <div class="sidebar-services">
+
+    {
+      services.map((service) => {
+
+        const isActive =
+          service.slug === activeSlug;
+
+        const url = service.slug.startsWith("/") ? service.slug : `${basePath.endsWith('/') ? basePath : basePath + '/'}${service.slug}/`;
+
+        return (
+          <a
+            href={url}
+            class:list={[
+              "sidebar-service-item",
+              {
+                "sidebar-service-active": isActive
+              }
+            ]}
+            aria-current={
+              isActive
+                ? "page"
+                : undefined
+            }
+          >
+            <span class="sidebar-service-title">
+              {service.title}
+            </span>
+
+            <svg
+              class="sidebar-service-arrow"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path d="M5 12h13" />
+              <path d="m13 6 6 6-6 6" />
+            </svg>
+
+          </a>
+        );
+
+      })
+    }
+
+  </div>
+
+</aside>

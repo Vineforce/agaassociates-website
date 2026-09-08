@@ -1,0 +1,48 @@
+---
+interface ContentSection {
+  title: string;
+  text: string;
+  icon?: string;
+}
+
+interface Props {
+  service: {
+    category: string;
+    introTitle: string;
+    intro: string;
+    sections: ContentSection[];
+    quote?: string;
+  };
+}
+
+const { service } = Astro.props;
+---
+
+<section class="service-content">
+
+  <h2 class="content-title">
+    {service.introTitle}
+  </h2>
+
+
+  <p class="content-intro">
+    {service.intro}
+  </p>
+
+
+  <!-- Dynamic Sections -->
+  <div class="content-sections">
+    {
+      service.sections.map((section) => (
+        <article class="content-section">
+          <h3>
+            {section.title}
+          </h3>
+          <p>
+            {section.text}
+          </p>
+        </article>
+      ))
+    }
+  </div>
+</section>

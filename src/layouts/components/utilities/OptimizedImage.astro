@@ -89,7 +89,10 @@ if (!isRemoteImage) {
     }
   }
 
-  const key = Object.keys(images).find((k) => k.includes(src));
+  const key =
+    Object.keys(images).find((k) => k === src) ||
+    Object.keys(images).find((k) => k.endsWith(src)) ||
+    Object.keys(images).find((k) => k.includes(src));
   const mod = key ? await images[key]() : null;
   image = mod?.default ?? null;
 }
