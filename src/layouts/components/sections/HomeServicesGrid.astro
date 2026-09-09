@@ -1,0 +1,104 @@
+---
+import DynamicIcon from "@/helpers/DynamicIcon.astro";
+import { getLocaleUrlCTM } from "@/lib/utils/i18nUtils.ts";
+
+const services = [
+  {
+    title: "Business Registration",
+    icon: "FileText",
+    description:
+      "Partnership Firm Registration, Private Company Registration, LLP Incorporation, Society Registration (District/State/National Level), Company Formation/Incorporation Services, and HUF Registration.",
+    url: "/registration-services/",
+  },
+  {
+    title: "Regulatory Compliance",
+    icon: "ShieldCheck",
+    description:
+      "GST Registration and Consultancy, Income Tax Returns, Import Export Code (IEC) and Renewal, FSSAI License Registration, UDYAM Registration, LEI Codes for Bank Financing, and Darpan Registration for Societies.",
+    url: "/attestation-audit-assurance/",
+  },
+  {
+    title: "Financial Advisory",
+    icon: "TrendingUp",
+    description:
+      "CMA Data Preparation, Bank Loan Services, CIBIL Report Correction, Financial Advisory, Internal Audit Services, and Net Worth Report Preparation for businesses and individuals.",
+    url: "/management-consultnacy/",
+  },
+  {
+    title: "Taxation and Certification",
+    icon: "Receipt",
+    description:
+      "PAN Application/Amendment, ISO Certification, NRI Services (ITR for NRIs), and Startup Certificate Assistance for Compliance, Business Growth, and Seamless Tax Filing.",
+    url: "/direct-taxation/",
+  },
+  {
+    title: "Business Support",
+    icon: "Users",
+    description:
+      "Business Advisory, Career Counseling, HR Assistance, Payroll, Internship Opportunities, and Consultancy Services (Equity/Commodity Trading, Mutual Fund Investment).",
+    url: "/indirect-taxation/",
+  },
+  {
+    title: "Digital Solutions",
+    icon: "Laptop",
+    description:
+      "Digital Signatures, Business Software Consultancy, Trademark Registration, GEM Registration, and Project Report Preparation for Seamless Business Operations and Legal Compliance.",
+    url: "/other-consultancy-services/",
+  },
+];
+---
+
+<section class="home-services-grid relative bg-white py-12 lg:py-16 overflow-hidden">
+  <div class="container relative z-10 mx-auto px-4 md:px-6">
+    
+    <!-- Section Header (Green line bar + Our Services title + Subtitle) -->
+    <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+      <div class="w-12 h-1 bg-[#10B981] mx-auto mb-4 rounded-full"></div>
+      
+      <h2 class="text-3xl sm:text-4xl lg:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight mb-3">
+        Our <span class="text-[#10B981]">Services</span>
+      </h2>
+
+      <p class="text-sm sm:text-base text-slate-500 leading-relaxed max-w-2xl mx-auto font-medium">
+        Comprehensive solutions to help your business grow with confidence.
+      </p>
+    </div>
+
+    <!-- 6 Cards Grid Layout -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      {
+        services.map((item) => {
+          const itemUrl = item.url ? getLocaleUrlCTM(item.url, Astro.currentLocale) : "#";
+
+          return (
+            <article class="group relative flex items-start gap-4 sm:gap-5 rounded-2xl bg-white border border-slate-200/80 p-6 sm:p-7 shadow-xs transition-all duration-300 hover:shadow-md hover:border-[#10B981]/40">
+              
+              <!-- Circular Icon Badge (Light green soft background with dark green icon) -->
+              <div class="flex size-14 sm:size-16 shrink-0 items-center justify-center rounded-full bg-[#D1FAE5] text-[#059669] shadow-xs group-hover:scale-105 group-hover:bg-[#10B981] group-hover:text-white transition-all duration-300">
+                <DynamicIcon
+                  name={item.icon}
+                  inlineSvg={true}
+                  class="size-7 sm:size-8 stroke-[2]"
+                />
+              </div>
+
+              <!-- Content (Title & Description) -->
+              <div class="flex flex-col flex-1">
+                <h3 class="text-lg sm:text-xl font-bold text-slate-900 mb-2 leading-snug group-hover:text-[#10B981] transition-colors">
+                  <a href={itemUrl}>
+                    {item.title}
+                  </a>
+                </h3>
+
+                <p class="text-xs sm:text-sm text-slate-500 leading-relaxed font-normal">
+                  {item.description}
+                </p>
+              </div>
+            </article>
+          );
+        })
+      }
+    </div>
+
+  </div>
+</section>

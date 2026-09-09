@@ -6,7 +6,7 @@ import TeamSection from "@/components/sections/TeamSection.astro";
 import BlogSection from "@/components/sections/BlogSection.astro";
 import BannerThree from "@/components/sections/BannerThree.astro";
 import FeatureCardsSection from "@/components/sections/FeatureCardsSection.astro";
-import ServicesOverviewSection from "@/components/sections/ServicesOverviewSection.astro";
+import HomeServicesGrid from "@/components/sections/HomeServicesGrid.astro";
 
 export function getStaticPaths() {
   return generatePaths();
@@ -22,7 +22,7 @@ const homepageContent = await getEntryCTM(
 <Base {...homepageContent?.data} headerLayout="two" headerPosition="sticky">
   <BannerThree />
   <FeatureCardsSection />
-  <ServicesOverviewSection />
+  <HomeServicesGrid />
   <TeamSection content={{ options: { layout: "grid", limit: 4 } }} />
   <BlogSection />
 </Base>
