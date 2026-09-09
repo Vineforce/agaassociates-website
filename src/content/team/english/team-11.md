@@ -18,4 +18,4 @@ social:
     url: "https://www.linkedin.com/company/example-company"
 ---
 
-Shubham Jain is a Assistant at Amol Gupta & Associates.
+Shubham Jain is an Assistant at Amol Gupta & Associates. He supports the audit and taxation teams with voucher verification, ledger reconciliation, and document filing. His reliable assistance contributes to smooth operational workflow within the practice.

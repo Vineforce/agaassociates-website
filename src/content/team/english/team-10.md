@@ -18,4 +18,4 @@ social:
     url: "https://www.linkedin.com/company/example-company"
 ---
 
-Abhishek Sharma is a Senior Professional at Amol Gupta & Associates.
+Abhishek Sharma is a Senior Professional at Amol Gupta & Associates. He leads direct tax filings, GST compliance verification, and financial report reconciliations. His analytical skill set assists clients in maintaining complete and transparent financial records.

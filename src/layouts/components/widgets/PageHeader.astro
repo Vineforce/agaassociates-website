@@ -1,22 +1,62 @@
 ---
-import Icons from "@/helpers/Icons.astro";
 import { getLocaleUrlCTM, useTranslations } from "@/lib/utils/i18nUtils.ts";
 import { humanize } from "@/lib/utils/textConverter";
+import OptimizedImage from "@/components/utilities/OptimizedImage.astro";
 
 type Props = {
-  content: {
+  showFeatures?: boolean;
+  content?: {
     title?: string;
+    description?: string;
+    heroDescription?: string;
+    metaDescription?: string;
     image?: string;
+    heroImage?: string;
     breadcrumb?: boolean;
     hiddenPaths?: string[];
+    showFeatures?: boolean;
+    cursiveLine1?: string;
+    cursiveLine2?: string;
+    cursiveLine3?: string;
   };
 };
 
-const { title, hiddenPaths, breadcrumb = true } = Astro.props.content || {};
+const propsContent = Astro.props.content || {};
+const {
+  title,
+  description,
+  heroDescription,
+  metaDescription,
+  image,
+  heroImage,
+  hiddenPaths,
+  breadcrumb = true,
+} = propsContent;
+
 const t = await useTranslations(Astro.currentLocale as string);
 
-const createBreadcrumbParts = (pathname: string) => {
-  let segments = pathname.split("/").filter((segment) => segment);
+const pathname = Astro.url.pathname;
+const isTeamPage =
+  pathname.includes("/team") ||
+  pathname.includes("/our-teams") ||
+  (title && title.toLowerCase().includes("team"));
+const isSingleTeamMember = !!(propsContent.profession || propsContent.email || propsContent.customSlug);
+
+// Hide feature pills on team page unless explicitly enabled via props
+const showFeatures =
+  Astro.props.showFeatures !== undefined
+    ? Astro.props.showFeatures
+    : propsContent.showFeatures !== undefined
+    ? propsContent.showFeatures
+    : !isTeamPage;
+
+// Customize cursive overlay text per page type
+const cursiveLine1 = propsContent.cursiveLine1 || (isTeamPage ? "Our" : "Your");
+const cursiveLine2 = propsContent.cursiveLine2 || (isTeamPage ? "Leadership" : "Business");
+const cursiveLine3 = propsContent.cursiveLine3 || (isTeamPage ? "Your Success" : "Our Support");
+
+const createBreadcrumbParts = (urlPathname: string) => {
+  let segments = urlPathname.split("/").filter((segment) => segment);
 
   if (segments[0] === Astro.currentLocale) {
     segments = segments.slice(1);
@@ -30,7 +70,7 @@ const createBreadcrumbParts = (pathname: string) => {
     {
       label: t("common.home"),
       href: getLocaleUrlCTM("/", Astro.currentLocale),
-      isCurrent: pathname === "/",
+      isCurrent: urlPathname === "/",
     },
   ];
 
@@ -54,56 +94,155 @@ const createBreadcrumbParts = (pathname: string) => {
   return breadcrumbParts;
 };
 
-const breadcrumbParts = breadcrumb
-  ? createBreadcrumbParts(Astro.url.pathname)
-  : [];
+const breadcrumbParts = breadcrumb ? createBreadcrumbParts(pathname) : [];
+
+const headerDescription = heroDescription || description || metaDescription || "";
+const heroImgSrc =
+  heroImage ||
+  image ||
+  "/src/assets/images/serviceSection/attestation-audit-assurance/close-up-businessman-sitting-table-filling-document-768x513.webp";
 ---
 
-<section
-  class:list={[
-    "page-header-gradient py-10 md:py-14 relative flex items-center overflow-hidden",
-  ]}>
-  <div
-    class="relative z-10 container flex flex-col items-center justify-center text-center"
-    data-scroll-reveal="blur-up">
-    {
-      title && (
-        <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight">
-          {humanize(title)}
-        </h1>
-      )
-    }
-    {
-      breadcrumb && breadcrumbParts.length > 0 && (
-        <nav class="mt-3" aria-label={t("aria.breadcrumb")}>
-          <ol
-            class="flex flex-wrap items-center justify-center gap-2"
-            role="list">
-            {breadcrumbParts.map((part, index) => (
-              <li class="flex items-center gap-2" role="listitem">
-                {index !== 0 && (
-                  <Icons
-                    icon="ChevronRight"
-                    class="size-5 text-white"
-                    stroke-width="1.8"
+<section class="service-hero-light">
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 items-stretch gap-4 lg:gap-0">
+      
+      <!-- Left Copy Section -->
+      <div class="lg:col-span-7 pt-4 pb-4 lg:pt-6 lg:pb-6 lg:pr-6 flex flex-col justify-center z-10">
+        
+        <!-- Breadcrumb -->
+        {
+          breadcrumb && breadcrumbParts.length > 0 && (
+            <nav class="service-hero-breadcrumb">
+              {breadcrumbParts.map((part, index) => (
+                <>
+                  {index > 0 && <span class="separator">›</span>}
+                  {part.href && !part.isCurrent ? (
+                    <a href={part.href}>{part.label}</a>
+                  ) : (
+                    <span class="active-badge">{part.label}</span>
+                  )}
+                </>
+              ))}
+            </nav>
+          )
+        }
+
+        <!-- Title -->
+        {
+          title && (
+            <h1 class="service-hero-title">
+              {humanize(title)}
+            </h1>
+          )
+        }
+
+        <!-- Description / Subtitle -->
+        {
+          headerDescription && (
+            <p class="service-hero-description">
+              {headerDescription}
+            </p>
+          )
+        }
+
+        <!-- Feature Pills (Shown on service pages, hidden on Team page) -->
+        {
+          showFeatures && (
+            <div class="service-hero-features">
+              <div class="hero-feature-item">
+                <span class="feature-icon icon-blue-1">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </span>
+                <span class="feature-text">Hassle-Free Process</span>
+              </div>
+
+              <div class="hero-feature-item">
+                <span class="feature-icon icon-blue-1">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M22 21v-2a4 4 0 0 3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                </span>
+                <span class="feature-text">Expert Guidance</span>
+              </div>
+
+              <div class="hero-feature-item">
+                <span class="feature-icon icon-blue-1">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    <polyline points="9 12 11 14 15 10"></polyline>
+                  </svg>
+                </span>
+                <span class="feature-text">100% Compliance</span>
+              </div>
+            </div>
+          )
+        }
+
+      </div>
+
+      <!-- Right Photo & Cursive Script Overlay -->
+      <div class="lg:col-span-5 relative h-full flex items-center justify-end self-stretch">
+        
+        {
+          isSingleTeamMember ? (
+            <div class="relative flex items-center justify-center lg:justify-end w-full py-2">
+              <!-- Cursive Overlay Text for Team Member Page -->
+              <div class="hero-cursive-script !left-[-60px] sm:!left-[-80px] lg:!left-[-90px]">
+                <div class="script-content">
+                  <span class="line-1">{cursiveLine1}</span>
+                  <span class="line-2">{cursiveLine2}</span>
+                  <span class="line-3">{cursiveLine3}</span>
+                  <svg class="script-swoosh" viewBox="0 0 140 24" fill="none">
+                    <path d="M4 18 C 45 4, 95 4, 136 18" stroke="#D98A2B" stroke-width="2.5" stroke-linecap="round"/>
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Round Photo with White Background -->
+              <div class="w-36 h-36 sm:w-44 sm:h-44 lg:w-48 lg:h-48 rounded-full bg-white p-1.5 shadow-lg border border-slate-200/80 relative flex items-center justify-center overflow-hidden shrink-0 z-10 my-auto">
+                <div class="w-full h-full rounded-full bg-white overflow-hidden relative flex items-center justify-center">
+                  <OptimizedImage
+                    src={heroImgSrc}
+                    alt={title || "Team Member"}
+                    class="w-full h-full object-cover object-top transition duration-300 hover:scale-105"
                   />
-                )}
-                {part.href && !part.isCurrent ? (
-                  <a class="text-light hover:text-white" href={part.href}>
-                    {part.label}
-                  </a>
-                ) : (
-                  <span
-                    class:list={[part.isCurrent ? "text-white" : "text-light"]}
-                    aria-current={part.isCurrent ? "page" : undefined}>
-                    {part.label}
-                  </span>
-                )}
-              </li>
-            ))}
-          </ol>
-        </nav>
-      )
-    }
+                </div>
+              </div>
+            </div>
+          ) : (
+            <>
+              <!-- Cursive Overlay Text -->
+              <div class="hero-cursive-script">
+                <div class="script-content">
+                  <span class="line-1">{cursiveLine1}</span>
+                  <span class="line-2">{cursiveLine2}</span>
+                  <span class="line-3">{cursiveLine3}</span>
+                  <svg class="script-swoosh" viewBox="0 0 140 24" fill="none">
+                    <path d="M4 18 C 45 4, 95 4, 136 18" stroke="#D98A2B" stroke-width="2.5" stroke-linecap="round"/>
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Image matching left content height with feathered blur edge -->
+              <div class="hero-photo-wrapper">
+                <OptimizedImage
+                  src={heroImgSrc}
+                  alt={title || "Header Image"}
+                  class="hero-photo"
+                />
+              </div>
+            </>
+          )
+        }
+
+      </div>
+
+    </div>
   </div>
 </section>

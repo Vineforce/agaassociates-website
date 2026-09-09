@@ -19,7 +19,7 @@
         {
           "enable": true,
           "name": "Our Team",
-          "url": "/team/"
+          "url": "/our-teams/"
         }
       ]
     },
@@ -402,7 +402,7 @@
         {
           "enable": true,
           "name": "Our Team",
-          "url": "/team/"
+          "url": "/our-teams/"
         },
         {
           "enable": true,

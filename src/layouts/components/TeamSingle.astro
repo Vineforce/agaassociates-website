@@ -195,28 +195,10 @@ const visibleSocials = [...(social || [])]
   }
 
   .team-single-image {
-    min-height: 420px;
-    background:
-      radial-gradient(
-        circle at 76% 18%,
-        rgba(10, 102, 194, 0.16),
-        transparent 30%
-      ),
-      radial-gradient(
-        circle at 18% 82%,
-        rgba(10, 102, 194, 0.1),
-        transparent 28%
-      ),
-      linear-gradient(145deg, #f8fbfd 0%, #edf4f8 48%, #dfeaf1 100%);
-  }
-
-  .team-single-image::before {
-    content: "";
-    position: absolute;
-    inset: 30px 30px 0;
-    border-radius: 24px 24px 0 0;
-    background: rgba(255, 255, 255, 0.58);
-    box-shadow: 0 18px 44px rgba(9, 30, 66, 0.1);
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .team-single-content {
@@ -228,7 +210,7 @@ const visibleSocials = [...(social || [])]
   }
 
   .team-single-profession {
-    color: #2b4dff;
+    color: #0F5277;
     font-size: 20px;
     line-height: 34px;
   }
@@ -275,7 +257,7 @@ const visibleSocials = [...(social || [])]
 
   .team-single-social-link:hover,
   .team-single-social-link.is-active {
-    background: #2b4dff;
+    background: #0F5277;
     color: #ffffff;
   }
 
