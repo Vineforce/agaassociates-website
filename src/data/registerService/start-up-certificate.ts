@@ -23,33 +23,33 @@ export const startUpCertificateData: ServiceData = {
     "/src/assets/images/serviceSection/register-service/start-up-certificate/workaholic-businesswoman-pointing-financial-strategy-using-monitor-working-overtime-company-meeting-office-room-scaled.webp",
   ],
 
-  introTitle: "Eligibility and Documentation",
+  introTitle: "Start Up Certificate",
 
-  intro:
-    "We assist you in understanding the eligibility criteria and gathering the necessary documents for Startup Certificate registration. Our experts review your application, help you meet the required standards, and provide step-by-step support to avoid errors. With our assistance, you can ensure a smooth and successful approval process, saving time and effort",
+intro:
+  "Get your Startup Certificate quickly and efficiently with our hassle-free registration process. We handle all the paperwork, ensuring compliance with government regulations and minimizing delays. Our team guides you through each step, making sure your application is complete and accurate, so you can focus on growing your business without administrative burdens",
 
-  sections: [
-    {
-      title: "Benefits and Government Support",
+sections: [
+  {
+    title: "Eligibility and Documentation",
 
-      text:
-        "A Startup Certificate provides access to tax exemptions, funding opportunities, and other government benefits designed to support new businesses and encourage innovation. It helps startups reduce initial financial burdens, attract potential investors, and gain credibility in the market. We assist you in navigating the application process, ensuring all requirements are met and helping you avoid delays or rejections. With our expert guidance, you can maximize these incentives, streamline compliance, and unlock valuable resources that contribute to your startup’s long-term success and growth",
-    },
+    text:
+      "We assist you in understanding the eligibility criteria and gathering the necessary documents for Startup Certificate registration. Our experts review your application, help you meet the required standards, and provide step-by-step support to avoid errors. With our assistance, you can ensure a smooth and successful approval process, saving time and effort",
+  },
 
-    {
-      title: "Get Your Startup Certificate with Ease",
+  {
+    title: "Benefits and Government Support",
 
-      text:
-        "Obtaining a Startup Certificate is a crucial step in gaining legal recognition, tax benefits, and government support for your business. Our comprehensive services cover everything from eligibility assessment and document preparation to seamless registration and approval. With our expert guidance, you can avoid delays, ensure compliance, and maximize the benefits available to startups. Let us handle the complexities while you focus on building and growing your business. Get in touch today to start your journey with confidence!",
-    },
+    text:
+      "A Startup Certificate provides access to tax exemptions, funding opportunities, and other government benefits designed to support new businesses and encourage innovation. It helps startups reduce initial financial burdens, attract potential investors, and gain credibility in the market. We assist you in navigating the application process, ensuring all requirements are met and helping you avoid delays or rejections. With our expert guidance, you can maximize these incentives, streamline compliance, and unlock valuable resources that contribute to your startup’s long-term success and growth",
+  },
 
-    {
-      title: "Ongoing Business Support",
+  {
+    title: "Get Your Startup Certificate with Ease",
 
-      text:
-        "Our team provides ongoing assistance after obtaining your Startup Certificate, helping you stay compliant with government requirements and maximize available benefits. We support you with tax filing, documentation, funding opportunities, regulatory updates, and other business requirements so you can focus on building and growing your startup",
-    },
-  ],
+    text:
+      "Obtaining a Startup Certificate is a crucial step in gaining legal recognition, tax benefits, and government support for your business. Our comprehensive services cover everything from eligibility assessment and document preparation to seamless registration and approval. With our expert guidance, you can avoid delays, ensure compliance, and maximize the benefits available to startups. Let us handle the complexities while you focus on building and growing your business. Get in touch today to start your journey with confidence!",
+  },
+],
 
   rightPanel: {
     accordions: [

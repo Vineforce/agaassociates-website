@@ -22,33 +22,33 @@ export const privateCompanyRegistrationData: ServiceData = {
     "/src/assets/images/serviceSection/register-service/private-company-registration/close-up-businessman-sitting-table-filling-document-1024x684.webp",
   ],
 
-  introTitle: "Custom Guidance for Formation",
+ introTitle: "Private Company Registration",
 
-  intro:
-    "Whether you're launching a startup or expanding an existing business, we provide personalized guidance tailored to your unique needs. Our team will help you decide the optimal structure for your company, assist in drafting necessary documents, and ensure you meet all legal requirements. We focus on making your company formation process as efficient and hassle-free as possible, with expert advice every step of the way, so you can start operating without any roadblocks",
+intro:
+  "Starting your private company has never been easier. Our streamlined process takes you through every step, from determining the right business structure to submitting all necessary documents. We handle all the legal formalities to ensure you meet compliance standards, allowing you to focus on your core business operations without unnecessary delays or stress. Let us help you get your company registered with efficiency and ease, ensuring a smooth start for your new venture",
 
-  sections: [
-    {
-      title: "Compliance and Legal Assurance",
+sections: [
+  {
+    title: "Custom Guidance for Formation",
 
-      text:
-        "Ensuring your company is legally compliant is crucial to its success. We take care of all the complex paperwork, from filing incorporation documents to ensuring all regulatory requirements are met. Our team ensures your company is registered properly and in full compliance with local laws, helping you avoid penalties and issues in the future. With our support, you can rest assured that your company is legally sound and ready for business",
-    },
+    text:
+      "Whether you're launching a startup or expanding an existing business, we provide personalized guidance tailored to your unique needs. Our team will help you decide the optimal structure for your company, assist in drafting necessary documents, and ensure you meet all legal requirements. We focus on making your company formation process as efficient and hassle-free as possible, with expert advice every step of the way, so you can start operating without any roadblocks",
+  },
 
-    {
-      title: "Simplified Company Registration",
+  {
+    title: "Compliance and Legal Assurance",
 
-      text:
-        "Starting your private company is a crucial step in laying the foundation for long-term success. With our expert guidance, streamlined process, and attention to legal compliance, we ensure that your company is set up efficiently and correctly from the start. From tailored advice to handling all necessary documentation, we are here to make your company registration smooth and hassle-free. Let us help you take the first step toward building a successful and legally compliant business. Reach out today to get started with confidence!",
-    },
+    text:
+      "Ensuring your company is legally compliant is crucial to its success. We take care of all the complex paperwork, from filing incorporation documents to ensuring all regulatory requirements are met. Our team ensures your company is registered properly and in full compliance with local laws, helping you avoid penalties and issues in the future. With our support, you can rest assured that your company is legally sound and ready for business",
+  },
 
-    {
-      title: "Ongoing Compliance Support",
+  {
+    title: "Simplified Company Registration",
 
-      text:
-        "Our team provides ongoing assistance after registration to help your private company maintain legal and regulatory compliance. From statutory filings and documentation to regulatory updates and other compliance requirements, we support your business throughout its journey, ensuring smooth operations while you focus on growth",
-    },
-  ],
+    text:
+      "Starting your private company is a crucial step in laying the foundation for long-term success. With our expert guidance, streamlined process, and attention to legal compliance, we ensure that your company is set up efficiently and correctly from the start. From tailored advice to handling all necessary documentation, we are here to make your company registration smooth and hassle-free. Let us help you take the first step toward building a successful and legally compliant business. Reach out today to get started with confidence!",
+  },
+],
 
   rightPanel: {
     accordions: [

@@ -23,33 +23,33 @@ export const partnershipFirmRegistrationData: ServiceData = {
     "/src/assets/images/serviceSection/register-service/partnership-firm-registration/high-angle-business-plans-company-scaled.jpg",
   ],
 
-  introTitle: "Partnership Firm Registration Process",
+  introTitle: "Partnership Firm Registration",
 
-  intro:
-    "Registering a partnership firm involves drafting a partnership deed, selecting an appropriate business name, filing the necessary forms, and obtaining approvals from the concerned authorities. It is crucial to comply with all regulations to avoid future legal and financial complications. We streamline the entire registration process by drafting legally sound partnership deeds, handling documentation, and ensuring timely submission to regulatory bodies. Our services minimize the hassle, allowing you to focus on growing your business",
+intro:
+  "A partnership firm is a business structure where two or more individuals come together to manage and operate a business with a shared profit motive. Unlike sole proprietorships, partnerships allow for shared responsibility and decision-making. However, to enjoy legal protection and enforceability, registration is highly recommended",
 
-  sections: [
-    {
-      title: "Why Register Your Partnership?",
+sections: [
+  {
+    title: "Partnership Firm Registration Process",
 
-      text:
-        "A registered partnership firm enjoys several advantages, such as legal recognition, the ability to sue or be sued in its name, easier access to loans and funding, and enhanced credibility with clients and vendors. Additionally, registered firms have a structured dispute resolution mechanism, which protects partners' interests. We ensure that your partnership firm is fully compliant and enjoys all the benefits of registration. From advising on taxation to assisting in compliance with regulatory authorities, we provide end-to-end support to safeguard your business interests",
-    },
+    text:
+      "Registering a partnership firm involves drafting a partnership deed, selecting an appropriate business name, filing the necessary forms, and obtaining approvals from the concerned authorities. It is crucial to comply with all regulations to avoid future legal and financial complications. We streamline the entire registration process by drafting legally sound partnership deeds, handling documentation, and ensuring timely submission to regulatory bodies. Our services minimize the hassle, allowing you to focus on growing your business",
+  },
 
-    {
-      title: "Streamlined Partnership Registration",
+  {
+    title: "Why Register Your Partnership?",
 
-      text:
-        "Registering your partnership firm is a crucial step toward ensuring legal security, business credibility, and smooth operations. With our skilled CA services, we simplify the entire process, from documentation to compliance, so you can focus on growing your business. Let us handle the complexities while you build a strong foundation for success. Get in touch with us today to start your partnership registration hassle-free!",
-    },
+    text:
+      "A registered partnership firm enjoys several advantages, such as legal recognition, the ability to sue or be sued in its name, easier access to loans and funding, and enhanced credibility with clients and vendors. Additionally, registered firms have a structured dispute resolution mechanism, which protects partners' interests. We ensure that your partnership firm is fully compliant and enjoys all the benefits of registration. From advising on taxation to assisting in compliance with regulatory authorities, we provide end-to-end support to safeguard your business interests",
+  },
 
-    {
-      title: "Ongoing Compliance Support",
+  {
+    title: "Streamlined Partnership Registration",
 
-      text:
-        "Our team provides ongoing support after registration to help your partnership firm maintain legal and regulatory compliance. From taxation guidance and documentation to regulatory filings and other compliance requirements, we provide end-to-end assistance to safeguard your business interests and ensure smooth operations",
-    },
-  ],
+    text:
+      "Registering your partnership firm is a crucial step toward ensuring legal security, business credibility, and smooth operations. With our skilled CA services, we simplify the entire process, from documentation to compliance, so you can focus on growing your business. Let us handle the complexities while you build a strong foundation for success. Get in touch with us today to start your partnership registration hassle-free!",
+  },
+],
 
   rightPanel: {
     accordions: [
