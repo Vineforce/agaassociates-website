@@ -23,34 +23,33 @@ export const companyFormationData: ServiceData = {
     "/src/assets/images/serviceSection/register-service/setting-up-company/group-business-people-having-meeting-scaled.webp",
   ],
 
-  introTitle: "Expert Guidance for Business Setup",
+  introTitle: "Effortless Company Formation",
 
-  intro:
-    "Receive step-by-step support to navigate the complexities of establishing your company. Whether you’re starting a sole proprietorship, partnership, or limited liability company (LLC), we guide you through every necessary process, ensuring that you make the right decisions for your business. From selecting the most suitable legal structure for your goals to gathering and filing all required documents, we handle every detail with precision. Our team ensures compliance with local laws and regulations, making sure your business is legally established without any unnecessary delays. With our assistance, you can confidently set up your company with everything in place for long-term success",
+intro:
+  "Start your business with ease, from registration to compliance, with our comprehensive company setup solutions. We handle all the paperwork and administrative steps involved in establishing your company, ensuring you meet all legal requirements. Our team makes the process straightforward, saving you time and effort, so you can focus on what matters most—growing your business",
 
-  sections: [
-    {
-      title: "Easy Company Registration",
+sections: [
+  {
+    title: "Expert Guidance for Business Setup",
 
-      text:
-        "Get your company registered quickly and accurately, with minimal paperwork and fast processing, so you can focus on growth. Our streamlined approach ensures that all registration forms and required documents are handled promptly, reducing the time it takes to get your business legally established and ready for operation",
-    },
+    text:
+      "Receive step-by-step support to navigate the complexities of establishing your company. Whether you’re starting a sole proprietorship, partnership, or limited liability company (LLC), we guide you through every necessary process, ensuring that you make the right decisions for your business. From selecting the most suitable legal structure for your goals to gathering and filing all required documents, we handle every detail with precision. Our team ensures compliance with local laws and regulations, making sure your business is legally established without any unnecessary delays. With our assistance, you can confidently set up your company with everything in place for long-term success",
+  },
 
-    {
-      title: "Efficient Company Setup Services",
+  {
+    title: "Easy Company Registration",
 
-      text:
-        "Starting your business has never been easier with our professional company setup services. We ensure a smooth, efficient process from registration to compliance, handling every detail with precision and care. With our expert guidance and commitment to quality, you can confidently launch your business and focus on growth. Trust us to provide fast, reliable, and hassle-free solutions to get your company up and running seamlessly. Reach out today to begin your journey toward successful business ownership",
-    },
+    text:
+      "Get your company registered quickly and accurately, with minimal paperwork and fast processing, so you can focus on growth. Our streamlined approach ensures that all registration forms and required documents are handled promptly, reducing the time it takes to get your business legally established and ready for operation",
+  },
 
-    {
-      title: "Ongoing Compliance Support",
+  {
+    title: "Efficient Company Setup Services",
 
-      text:
-        "Our team provides ongoing assistance after company formation to help you maintain legal and regulatory compliance. From statutory requirements and documentation to updates and filings, we support your business throughout its journey, ensuring your company remains compliant while you focus on growth",
-    },
-  ],
-
+    text:
+      "Starting your business has never been easier with our professional company setup services. We ensure a smooth, efficient process from registration to compliance, handling every detail with precision and care. With our expert guidance and commitment to quality, you can confidently launch your business and focus on growth. Trust us to provide fast, reliable, and hassle-free solutions to get your company up and running seamlessly. Reach out today to begin your journey toward successful business ownership",
+  },
+],
   rightPanel: {
     accordions: [
       {

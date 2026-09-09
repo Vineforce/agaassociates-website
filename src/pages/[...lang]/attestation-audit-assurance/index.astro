@@ -6,6 +6,11 @@ import ServiceRightPanel from "@/components/bodyTemplates/ServiceRightPanel.astr
 import Sidebar from "@/components/bodyTemplates/Sidebar.astro";
 import { attestationAuditAssuranceData } from "@/data/servicesection/attestation-audit-assurance";
 import { sidebarServices } from "@/data/servicesection/attestation-audit-assurance-sidebar";
+import { generatePaths } from "@/lib/utils/i18nUtils.ts";
+
+export function getStaticPaths() {
+  return generatePaths();
+}
 
 const serviceData = attestationAuditAssuranceData;
 const activeSlug = "";

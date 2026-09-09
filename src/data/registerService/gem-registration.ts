@@ -1,4 +1,4 @@
-import type { ServiceData } from "./companyIncorporation";
+import type { ServiceData } from "@/data/registerService/companyIncorporation";
 
 export const gemRegistrationData: ServiceData = {
   title: "GEM Registration",
@@ -23,12 +23,19 @@ export const gemRegistrationData: ServiceData = {
     "/src/assets/images/serviceSection/register-service/gem-registration/showing-cart-trolley-shopping-online-sign-graphic-scaled.jpg",
   ],
 
-  introTitle: "Benefits of GEM Registration",
+  introTitle: "GEM Registration",
 
   intro:
-    "GEM registration opens up opportunities to access government contracts, ensuring consistent business growth. It offers transparency, reduced paperwork, and a simplified procurement process. With our expert assistance, you can navigate the system efficiently and gain a competitive edge",
+    "GEM (Government e-Marketplace) registration allows businesses to sell their products and services directly to government buyers. It is a crucial step for vendors who wish to participate in government procurement. Our Chartered Accountants simplify the registration process to help you get started quickly and comply with all requirements",
 
   sections: [
+    {
+      title: "Benefits of GEM Registration",
+
+      text:
+        "GEM registration opens up opportunities to access government contracts, ensuring consistent business growth. It offers transparency, reduced paperwork, and a simplified procurement process. With our expert assistance, you can navigate the system efficiently and gain a competitive edge",
+    },
+
     {
       title: "Our GEM Registration Services",
 
@@ -42,49 +49,11 @@ export const gemRegistrationData: ServiceData = {
       text:
         "GEM registration is a valuable opportunity for businesses to expand by tapping into the government procurement market. We make the registration process seamless and efficient, ensuring full compliance with all legal requirements. Our skilled team provides dedicated support throughout the entire process, from document preparation to ongoing account management. With our guidance, you can confidently enter the GEM marketplace and position your business for long-term success in government contracts. Contact us today to get started with your GEM registration!",
     },
-
-    {
-      title: "Ongoing Support",
-
-      text:
-        "Our Chartered Accountants provide ongoing support after registration to ensure your GEM account remains active and compliant with platform updates and regulatory requirements. We assist with account management, compliance updates, tender-related requirements, and other necessary processes so you can focus on securing profitable government contracts",
-    },
   ],
 
   rightPanel: {
-    accordions: [
-      {
-        title: "Access to Government Contracts",
-
-        text:
-          "GEM registration opens the door to a wide range of government procurement opportunities, allowing your business to directly supply goods and services to government departments, PSUs, and public sector undertakings",
-      },
-
-      {
-        title: "Streamlined Procurement Process",
-
-        text:
-          "By registering on the GEM platform, you benefit from a simplified and transparent procurement process, reducing paperwork and administrative burdens, and ensuring faster and more efficient contract management",
-      },
-
-      {
-        title: "Compliance and Legal Assurance",
-
-        text:
-          "Our team ensures that your GEM registration complies with all legal requirements, reducing the risk of rejections or penalties. We help you stay up to date with any regulatory changes, ensuring smooth and continuous participation",
-      },
-    ],
+    accordions: [],
   },
 
-  benefits: [
-    "Wide Range of Opportunities",
-    "Real-Time Tracking & Notifications",
-    "Seamless Document Management",
-    "Access to Government Contracts",
-    "Enhance Financial Reporting Accuracy",
-    "Secure & Trusted Digital Platform",
-    "Wide Range of Government Opportunities",
-    "Automatic Updates & Tender Alerts",
-    "Faster Payments & Simplified Transactions",
-  ],
+  benefits: [],
 };

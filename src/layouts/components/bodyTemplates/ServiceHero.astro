@@ -35,8 +35,14 @@ const heroImgSrc =
         <!-- Breadcrumb -->
         <nav class="service-hero-breadcrumb">
           <a href="/">Home</a>
-          <span class="separator">›</span>
-          <a href={service.categoryUrl || "/registration-services/"}>{service.category}</a>
+          {
+            service.category && service.category !== service.title && (
+              <>
+                <span class="separator">›</span>
+                <a href={service.categoryUrl || "/registration-services/"}>{service.category}</a>
+              </>
+            )
+          }
           <span class="separator">›</span>
           <span class="active-badge">{service.title}</span>
         </nav>

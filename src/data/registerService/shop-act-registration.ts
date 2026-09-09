@@ -23,33 +23,33 @@ export const societyActRegistrationData: ServiceData = {
     "/src/assets/images/serviceSection/register-service/shop-act-registration/shop-purchase-retail-selling-buying-graphic-concept-scaled.webp",
   ],
 
-  introTitle: "Legal Protection and Recognition",
+  introTitle: "Society Act Registration",
 
-  intro:
-    "Registering under the Society Act grants your organization legal recognition and protection, establishing it as a formal legal entity. This allows your society to operate with full legal standing, enter into contracts, own property, and manage resources effectively. It also opens access to funding from government grants, donations, and financial institutions, helping your society grow and achieve its mission",
+intro:
+  "We simplify the process of registering your society under the Society Act, ensuring compliance with all legal requirements. Our team takes care of the documentation, filings, and formalities, making the process smooth and efficient so you can focus on your society's mission",
 
-  sections: [
-    {
-      title: "Long-Term Benefits and Growth",
+sections: [
+  {
+    title: "Legal Protection and Recognition",
 
-      text:
-        "A registered society enjoys numerous advantages, including the ability to raise funds through grants, donations, and financial institutions, as well as manage assets more efficiently. Legal recognition also enhances your society’s credibility, making it easier to build partnerships, attract members, and gain support from stakeholders. Our team provides comprehensive assistance in setting up your society for long-term success, ensuring compliance with all legal requirements and providing guidance on governance. We help you navigate key growth opportunities, from fundraising strategies to expanding your operations, setting a strong foundation for the future",
-    },
+    text:
+      "Registering under the Society Act grants your organization legal recognition and protection, establishing it as a formal legal entity. This allows your society to operate with full legal standing, enter into contracts, own property, and manage resources effectively. It also opens access to funding from government grants, donations, and financial institutions, helping your society grow and achieve its mission",
+  },
 
-    {
-      title: "Establish Your Society for Success",
+  {
+    title: "Long-Term Benefits and Growth",
 
-      text:
-        "Registering your society under the Society Act provides legal recognition, access to funding, and operational benefits. Our team ensures a smooth registration process, handling all documentation and compliance requirements. By formalizing your society, you gain credibility, financial opportunities, and a strong foundation for growth. Let us help you set up your society for long-term success with ease and confidence",
-    },
+    text:
+      "A registered society enjoys numerous advantages, including the ability to raise funds through grants, donations, and financial institutions, as well as manage assets more efficiently. Legal recognition also enhances your society’s credibility, making it easier to build partnerships, attract members, and gain support from stakeholders. Our team provides comprehensive assistance in setting up your society for long-term success, ensuring compliance with all legal requirements and providing guidance on governance. We help you navigate key growth opportunities, from fundraising strategies to expanding your operations, setting a strong foundation for the future",
+  },
 
-    {
-      title: "Ongoing Compliance Support",
+  {
+    title: "Establish Your Society for Success",
 
-      text:
-        "Our team provides ongoing assistance after registration to help your society maintain compliance with legal and regulatory requirements. We support you with documentation, governance, management, statutory requirements, and other compliance matters, ensuring your society continues to operate smoothly and remains focused on its mission",
-    },
-  ],
+    text:
+      "Registering your society under the Society Act provides legal recognition, access to funding, and operational benefits. Our team ensures a smooth registration process, handling all documentation and compliance requirements. By formalizing your society, you gain credibility, financial opportunities, and a strong foundation for growth. Let us help you set up your society for long-term success with ease and confidence",
+  },
+],
 
   rightPanel: {
     accordions: [

@@ -23,33 +23,33 @@ export const trademarkRegistrationData: ServiceData = {
     "/src/assets/images/serviceSection/register-service/trademark-registration/hand-design-identity-branding-business-trademark-scaled.webp",
   ],
 
-  introTitle: "Guided Trademark Filing Process",
+  introTitle: "Trademark Registration",
 
-  intro:
-    "Registering a trademark involves several steps, and we provide clear guidance at each stage. Our services include conducting a thorough trademark search to identify conflicts, selecting the appropriate class of goods and services, preparing and submitting the application with all necessary documents, and assisting in handling objections or queries from the trademark office. We also track the application status and ensure timely follow-ups. By following a structured approach, we make the registration process smooth and hassle-free",
+intro:
+  "Securing your brand identity is crucial for business success. We offer complete trademark registration services, including availability searches, proper classification, and seamless application filing. Our streamlined process helps avoid delays and legal hurdles, ensuring your brand is protected and recognized",
 
-  sections: [
-    {
-      title: "Safeguard Your Brand Identity Legally",
+sections: [
+  {
+    title: "Guided Trademark Filing Process",
 
-      text:
-        "A registered trademark gives you the exclusive right to use your brand name, logo, or slogan, preventing unauthorized use by others. It not only protects your business from imitation but also adds credibility and value to your brand. Trademark registration strengthens legal ownership, making it easier to take action against infringement if necessary. With proper registration, your business gains a competitive edge and long-term security for its identity",
-    },
+    text:
+      "Registering a trademark involves several steps, and we provide clear guidance at each stage. Our services include conducting a thorough trademark search to identify conflicts, selecting the appropriate class of goods and services, preparing and submitting the application with all necessary documents, and assisting in handling objections or queries from the trademark office. We also track the application status and ensure timely follow-ups. By following a structured approach, we make the registration process smooth and hassle-free",
+  },
 
-    {
-      title: "Trademark Registration Guidance",
+  {
+    title: "Safeguard Your Brand Identity Legally",
 
-      text:
-        "Securing a trademark is a vital step in protecting your brand identity and ensuring legal ownership of your business name, logo, or slogan. A registered trademark not only safeguards your brand from unauthorized use but also enhances its credibility and market value. Our streamlined process simplifies registration, minimizing delays and legal challenges. Get started today and take the necessary steps to secure your brand’s future",
-    },
+    text:
+      "A registered trademark gives you the exclusive right to use your brand name, logo, or slogan, preventing unauthorized use by others. It not only protects your business from imitation but also adds credibility and value to your brand. Trademark registration strengthens legal ownership, making it easier to take action against infringement if necessary. With proper registration, your business gains a competitive edge and long-term security for its identity",
+  },
 
-    {
-      title: "Ongoing Trademark Support",
+  {
+    title: "Trademark Registration Guidance",
 
-      text:
-        "Our team provides ongoing assistance throughout the trademark registration process, including application tracking, responding to trademark office queries or objections, and ensuring timely follow-ups. We help you navigate each stage efficiently while providing continued guidance to protect your brand identity and maintain your trademark rights",
-    },
-  ],
+    text:
+      "Securing a trademark is a vital step in protecting your brand identity and ensuring legal ownership of your business name, logo, or slogan. A registered trademark not only safeguards your brand from unauthorized use but also enhances its credibility and market value. Our streamlined process simplifies registration, minimizing delays and legal challenges. Get started today and take the necessary steps to secure your brand’s future",
+  },
+],
 
   rightPanel: {
     accordions: [

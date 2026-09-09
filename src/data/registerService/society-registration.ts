@@ -23,33 +23,33 @@ export const societyRegistrationData: ServiceData = {
     "/src/assets/images/serviceSection/register-service/society-registration/paper-mortgage-request-table-scaled.webp",
   ],
 
-  introTitle: "Documentation Support",
+ introTitle: "Society Registration",
 
-  intro:
-    "Legal compliance is a critical aspect of society registration, as non-compliance can lead to future legal complications. We guide you through the entire legal framework, helping you prepare all necessary documents, such as the society’s bylaws, application forms, and details of the governing body. We ensure that every document is in line with statutory requirements, giving you peace of mind that your society is fully compliant and legally recognized",
+intro:
+  "Registering a society involves various steps, including preparing documents, drafting bylaws, and complying with local regulations. Our team simplifies this process by managing everything for you. From helping you define the objectives of your society to filing the registration forms with the relevant authorities, we ensure a hassle-free and timely registration process, allowing you to focus on the mission and activities of your society",
 
-  sections: [
-    {
-      title: "Long-Term Benefits for Societies",
+sections: [
+  {
+    title: "Documentation Support",
 
-      text:
-        "A registered society gains legal recognition, the ability to enter contracts, and access to funding from donors and institutions. Registration boosts credibility, supports growth, and ensures effective governance. We help you leverage these benefits for long-term success",
-    },
+    text:
+      "Legal compliance is a critical aspect of society registration, as non-compliance can lead to future legal complications. We guide you through the entire legal framework, helping you prepare all necessary documents, such as the society’s bylaws, application forms, and details of the governing body. We ensure that every document is in line with statutory requirements, giving you peace of mind that your society is fully compliant and legally recognized",
+  },
 
-    {
-      title: "Trusted Compliance Solutions",
+  {
+    title: "Long-Term Benefits for Societies",
 
-      text:
-        "A registered society gains essential legal recognition, allowing it to enter into contracts, own property, and engage in business activities. This formal status also opens doors to funding opportunities from donors, government grants, and financial institutions, providing the resources needed for expansion. Registration boosts your society's credibility, establishing trust with stakeholders, members, and the public. With a clear governance structure in place, your society is better equipped to manage operations, maintain transparency, and comply with regulations. We assist you in leveraging these benefits, ensuring long-term growth, financial sustainability, and success for your society",
-    },
+    text:
+      "A registered society gains legal recognition, the ability to enter contracts, and access to funding from donors and institutions. Registration boosts credibility, supports growth, and ensures effective governance. We help you leverage these benefits for long-term success",
+  },
 
-    {
-      title: "Ongoing Compliance Support",
+  {
+    title: "Trusted Compliance Solutions",
 
-      text:
-        "Our team provides ongoing support to help your society maintain legal and regulatory compliance after registration. We assist with documentation, governance requirements, statutory compliance, and other regulatory obligations, ensuring your society remains legally recognized and well-managed while you focus on achieving its mission",
-    },
-  ],
+    text:
+      "A registered society gains essential legal recognition, allowing it to enter into contracts, own property, and engage in business activities. This formal status also opens doors to funding opportunities from donors, government grants, and financial institutions, providing the resources needed for expansion. Registration boosts your society's credibility, establishing trust with stakeholders, members, and the public. With a clear governance structure in place, your society is better equipped to manage operations, maintain transparency, and comply with regulations. We assist you in leveraging these benefits, ensuring long-term growth, financial sustainability, and success for your society",
+  },
+],
 
   rightPanel: {
     accordions: [

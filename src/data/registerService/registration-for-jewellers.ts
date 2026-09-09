@@ -23,34 +23,33 @@ export const registrationSupportForJewellersData: ServiceData = {
     "/src/assets/images/serviceSection/register-service/registration-for-jewellers/side-view-woman-paying-groceries-scaled.webp",
   ],
 
-  introTitle: "Legal Compliance & Regulations",
+  introTitle: "Registration Support for Jewellers",
 
-  intro:
-    "The jewellery industry has specific regulations and standards that must be followed to operate legally. We ensure your business meets all the necessary compliance requirements, including licenses and certifications, so you can focus on growing your brand. Our team stays up-to-date with the latest laws and regulations, ensuring your business remains compliant with local and national standards",
+intro:
+  "Our team offers end-to-end support for jewellery business registration, guiding you through every step of the process. From gathering necessary documents to filing applications with the relevant authorities, we ensure all aspects are covered. Whether you're a new business or looking to formalize an existing one, our services simplify the registration process, saving you time and effort",
 
-  sections: [
-    {
-      title: "Boost Your Business Credibility",
+sections: [
+  {
+    title: "Legal Compliance & Regulations",
 
-      text:
-        "Proper registration provides your jewellery business with the legal backing it needs to operate confidently and professionally. It enhances your credibility with clients, suppliers, and banks, allowing you to establish trust and strengthen business relationships. With a registered business, you also gain access to new opportunities, such as financial support and contracts, giving you an edge over competitors",
-    },
+    text:
+      "The jewellery industry has specific regulations and standards that must be followed to operate legally. We ensure your business meets all the necessary compliance requirements, including licenses and certifications, so you can focus on growing your brand. Our team stays up-to-date with the latest laws and regulations, ensuring your business remains compliant with local and national standards",
+  },
 
-    {
-      title: "Register Your Jewelry Business",
+  {
+    title: "Boost Your Business Credibility",
 
-      text:
-        "Registering your jewellery business is a crucial step in ensuring legal compliance, gaining industry recognition, and building trust with clients and partners. With our comprehensive registration services, we handle all the details so you can focus on growing your business. Let us help you navigate the registration process smoothly, ensuring your jewellery business is fully compliant and ready to thrive in a competitive market. Get in touch with us today to start your registration journey!",
-    },
+    text:
+      "Proper registration provides your jewellery business with the legal backing it needs to operate confidently and professionally. It enhances your credibility with clients, suppliers, and banks, allowing you to establish trust and strengthen business relationships. With a registered business, you also gain access to new opportunities, such as financial support and contracts, giving you an edge over competitors",
+  },
 
-    {
-      title: "Ongoing Compliance Support",
+  {
+    title: "Register Your Jewelry Business",
 
-      text:
-        "Our team provides ongoing support to help your jewellery business remain compliant with changing legal, tax, and industry-specific requirements. We assist with documentation, certifications, regulatory updates, and compliance procedures, allowing you to operate confidently while focusing on building and growing your jewellery brand",
-    },
-  ],
-
+    text:
+      "Registering your jewellery business is a crucial step in ensuring legal compliance, gaining industry recognition, and building trust with clients and partners. With our comprehensive registration services, we handle all the details so you can focus on growing your business. Let us help you navigate the registration process smoothly, ensuring your jewellery business is fully compliant and ready to thrive in a competitive market. Get in touch with us today to start your registration journey!",
+  },
+],
   rightPanel: {
     accordions: [
       {
