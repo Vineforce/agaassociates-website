@@ -3,8 +3,8 @@ import type { ServiceData } from "./companyIncorporation";
 export const fssaiLicenseData: ServiceData = {
   title: "FSSAI License Registration",
   slug: "fssai-license-registration",
-  category: "FSSAI License Registration",
-  categoryUrl: "/fssai-license-registration/",
+  category: "Registration Services",
+  categoryUrl: "/registration-services/",
 
   heroDescription:
     "Hassle-free FSSAI food safety license registration services tailored to help food operators meet statutory compliance and scale operations with confidence.",

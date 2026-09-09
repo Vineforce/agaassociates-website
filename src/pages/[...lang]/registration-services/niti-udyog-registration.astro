@@ -4,12 +4,17 @@ import ServiceHero from "@/components/bodyTemplates/ServiceHero.astro";
 import ServiceContent from "@/components/bodyTemplates/ServiceContent.astro";
 import ServiceRightPanel from "@/components/bodyTemplates/ServiceRightPanel.astro";
 import Sidebar from "@/components/bodyTemplates/Sidebar.astro";
+import { generatePaths } from "@/lib/utils/i18nUtils.ts";
 
-import { hufRegistrationData } from "@/data/registerService/huf-registration";
+import { nitiUdyogRegistrationData } from "@/data/registerService/niti-udyog-registration";
 import { sidebarServices } from "@/data/registerService/sidebar";
 
-const serviceData = hufRegistrationData;
-const activeSlug = "huf-registration";
+export function getStaticPaths() {
+  return generatePaths();
+}
+
+const serviceData = nitiUdyogRegistrationData;
+const activeSlug = "niti-udyog-registration";
 ---
 
 <Base

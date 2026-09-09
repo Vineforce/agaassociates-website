@@ -4,9 +4,14 @@ import ServiceHero from "@/components/bodyTemplates/ServiceHero.astro";
 import ServiceContent from "@/components/bodyTemplates/ServiceContent.astro";
 import ServiceRightPanel from "@/components/bodyTemplates/ServiceRightPanel.astro";
 import Sidebar from "@/components/bodyTemplates/Sidebar.astro";
+import { generatePaths } from "@/lib/utils/i18nUtils.ts";
 
 import { fssaiLicenseData } from "@/data/registerService/fssai-license-registration";
 import { sidebarServices } from "@/data/registerService/sidebar";
+
+export function getStaticPaths() {
+  return generatePaths();
+}
 
 const serviceData = fssaiLicenseData;
 const activeSlug = "fssai-license-registration";

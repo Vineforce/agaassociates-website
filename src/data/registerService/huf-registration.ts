@@ -3,8 +3,8 @@ import type { ServiceData } from "./companyIncorporation";
 export const hufRegistrationData: ServiceData = {
   title: "HUF Registration",
   slug: "huf-registration",
-  category: "HUF Registration",
-  categoryUrl: "/huf-registration/",
+  category: "Registration Services",
+  categoryUrl: "/registration-services/",
 
   heroDescription:
     "Comprehensive Hindu Undivided Family registration services tailored to help family businesses optimize tax savings, manage assets, and scale operations.",

@@ -10,6 +10,7 @@ interface Props {
   service: {
     title?: string;
     image: string;
+    heroImage?: string;
     images?: string[];
 
     rightPanel: {
@@ -29,7 +30,9 @@ const rawImages =
     ? service.images
     : [service?.image || service?.heroImage];
 
-const panelImages = Array.from(new Set(rawImages.filter(Boolean)));
+const panelImages = Array.from(
+  new Set(rawImages.filter((img): img is string => Boolean(img)))
+);
 ---
 
 <div class="service-right-panel">
@@ -88,7 +91,7 @@ const panelImages = Array.from(new Set(rawImages.filter(Boolean)));
   <div class="accordions-card rounded-xl overflow-hidden border border-slate-200 shadow-xs bg-[#3A526A] p-0">
     <div class="service-accordions flex flex-col divide-y divide-white/20">
       {
-        service.rightPanel.accordions.map((accordion, index) => (
+        service.rightPanel.accordions.map((accordion) => (
           <details
             class="service-accordion group"
           >
