@@ -5,6 +5,7 @@ interface Props {
   service: {
     title: string;
     category: string;
+    categoryUrl?: string;
     heroDescription: string;
     heroImage?: string;
     image?: string;
@@ -34,7 +35,7 @@ const heroImgSrc =
         <nav class="service-hero-breadcrumb">
           <a href="/">Home</a>
           <span class="separator">›</span>
-          <a href="/services">{service.category}</a>
+          <a href={service.categoryUrl || "/registration-services/"}>{service.category}</a>
           <span class="separator">›</span>
           <span class="active-badge">{service.title}</span>
         </nav>
