@@ -6,7 +6,8 @@ interface Props {
     title: string;
     category: string;
     categoryUrl?: string;
-    heroDescription: string;
+    heroDescription?: string;
+    description?: string;
     heroImage?: string;
     image?: string;
     images?: string[];
@@ -46,9 +47,13 @@ const heroImgSrc =
         </h1>
 
         <!-- Subtitle -->
-        <p class="service-hero-description">
-          {service.heroDescription}
-        </p>
+        {
+          (service.heroDescription || service.description) && (
+            <p class="service-hero-description">
+              {service.heroDescription || service.description}
+            </p>
+          )
+        }
 
         <!-- Feature Pills (Unified background color for all 3 icons) -->
         <div class="service-hero-features">
