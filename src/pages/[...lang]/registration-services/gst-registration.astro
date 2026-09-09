@@ -1,0 +1,53 @@
+---
+import Base from "@/layouts/Base.astro";
+import ServiceHero from "@/components/bodyTemplates/ServiceHero.astro";
+import ServiceContent from "@/components/bodyTemplates/ServiceContent.astro";
+import ServiceRightPanel from "@/components/bodyTemplates/ServiceRightPanel.astro";
+import Sidebar from "@/components/bodyTemplates/Sidebar.astro";
+import { generatePaths } from "@/lib/utils/i18nUtils.ts";
+
+import { gstRegistrationData } from "@/data/registerService/gst-registration";
+import { sidebarServices } from "@/data/registerService/sidebar";
+
+export function getStaticPaths() {
+  return generatePaths();
+}
+
+const serviceData = gstRegistrationData;
+const activeSlug = "gst-registration";
+---
+
+<Base
+  title={serviceData.title}
+  description={serviceData.heroDescription}
+  fitToScreen={false}
+>
+  <!-- Service Hero Section -->
+  <ServiceHero service={serviceData} />
+
+  <!-- Main Content Grid -->
+  <section class="py-12 lg:py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+        <!-- Sidebar Column (Left) -->
+        <div class="lg:col-span-3 flex flex-col gap-6">
+          <Sidebar
+            services={sidebarServices}
+            activeSlug={activeSlug}
+            basePath="/registration-services/"
+          />
+        </div>
+
+        <!-- Main Content Column (Middle) -->
+        <div class="lg:col-span-5">
+          <ServiceContent service={serviceData} />
+        </div>
+
+        <!-- Right Panel Column (Right) -->
+        <div class="lg:col-span-4">
+          <ServiceRightPanel service={serviceData} />
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
