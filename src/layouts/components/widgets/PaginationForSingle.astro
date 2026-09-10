@@ -3,7 +3,6 @@ import { getCollectionCTM } from "@/lib/contentParser.astro";
 import { getLocaleUrlCTM, useTranslations } from "@/lib/utils/i18nUtils.ts";
 import type { CollectionEntry } from "astro:content";
 import extractSlug from "@/lib/utils/extractSlug";
-import Icons from "@/helpers/Icons.astro";
 import { plainify } from "@/lib/utils/textConverter";
 
 interface Props {
@@ -51,53 +50,69 @@ const nextPage = pages[currentIndex + 1];
 <nav
   id="pagination"
   class:list={[
-    "grid w-full grid-cols-1 gap-4 font-normal md:grid-cols-2",
+    "w-full bg-[#f8fafc] border border-slate-200/80 rounded-md p-4 sm:p-5 my-8 shadow-2xs",
     className,
   ]}
   aria-label={t("aria.pagination")}>
-  {/* previous */}
-  {
-    prevPage && (
-      <a
-        href={getLocaleUrlCTM(
-          extractSlug(prevPage).split("/").pop() || extractSlug(prevPage),
-          Astro.currentLocale,
-        )}
-        class="group flex items-center gap-4 transition duration-300">
-        <span class="bg-theme-light group-hover:bg-primary flex size-12 shrink-0 items-center justify-center rounded-sm transition duration-300 group-hover:text-white">
-          <Icons icon="MoveLeft" class="size-5" />
-        </span>
-        <div class="space-y-2">
-          <span class="block text-sm">{prevBtnText}</span>
-          <span
-            class="text-dark group-hover:text-primary block text-base font-semibold"
-            set:html={plainify(prevPage.data.title)}
-          />
-        </div>
-      </a>
-    )
-  }
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 items-center">
+    
+    {/* Previous Post */}
+    <div class="flex items-center gap-3 min-w-0">
+      {
+        prevPage && (
+          <a
+            href={getLocaleUrlCTM(
+              extractSlug(prevPage).split("/").pop() || extractSlug(prevPage),
+              Astro.currentLocale,
+            )}
+            class="group flex items-center gap-3 min-w-0 w-full">
+            <span class="w-9 h-9 sm:w-10 sm:h-10 bg-[#61CE70] group-hover:bg-black text-white flex items-center justify-center rounded-xs shrink-0 transition-colors shadow-xs">
+              <svg class="w-5 h-5 stroke-current fill-none stroke-[2.5]" viewBox="0 0 24 24">
+                <path d="M15 18l-6-6 6-6"/>
+              </svg>
+            </span>
+            <div class="min-w-0 flex-1">
+              <span class="block text-[11px] font-extrabold tracking-wider uppercase text-[#61CE70] group-hover:text-[#10b981] transition-colors leading-tight mb-0.5">
+                {prevBtnText}
+              </span>
+              <span
+                class="block text-sm font-bold text-slate-900 group-hover:text-[#10b981] transition-colors truncate"
+                set:html={plainify(prevPage.data.title)}
+              />
+            </div>
+          </a>
+        )
+      }
+    </div>
 
-  {/* next page */}
-  {
-    nextPage && (
-      <a
-        href={getLocaleUrlCTM(
-          extractSlug(nextPage).split("/").pop() || extractSlug(nextPage),
-          Astro.currentLocale,
-        )}
-        class="group flex items-center justify-end gap-8 text-end transition duration-300 md:col-start-2">
-        <div class="space-y-2">
-          <span class="block text-sm">{nextBtnText}</span>
-          <span
-            class="text-dark group-hover:text-primary block text-base font-semibold"
-            set:html={plainify(nextPage.data.title)}
-          />
-        </div>
-        <span class="bg-theme-light group-hover:bg-primary flex size-12 shrink-0 items-center justify-center rounded-sm transition duration-300 group-hover:text-white">
-          <Icons icon="MoveRight" class="size-5" />
-        </span>
-      </a>
-    )
-  }
+    {/* Next Post */}
+    <div class="flex items-center justify-end gap-3 min-w-0 md:col-start-2">
+      {
+        nextPage && (
+          <a
+            href={getLocaleUrlCTM(
+              extractSlug(nextPage).split("/").pop() || extractSlug(nextPage),
+              Astro.currentLocale,
+            )}
+            class="group flex items-center justify-end gap-3 min-w-0 w-full text-right">
+            <div class="min-w-0 flex-1 text-right">
+              <span class="block text-[11px] font-extrabold tracking-wider uppercase text-[#61CE70] group-hover:text-[#10b981] transition-colors leading-tight mb-0.5">
+                {nextBtnText}
+              </span>
+              <span
+                class="block text-sm font-bold text-slate-900 group-hover:text-[#10b981] transition-colors truncate"
+                set:html={plainify(nextPage.data.title)}
+              />
+            </div>
+            <span class="w-9 h-9 sm:w-10 sm:h-10 bg-[#61CE70] group-hover:bg-black text-white flex items-center justify-center rounded-xs shrink-0 transition-colors shadow-xs">
+              <svg class="w-5 h-5 stroke-current fill-none stroke-[2.5]" viewBox="0 0 24 24">
+                <path d="M9 18l6-6-6-6"/>
+              </svg>
+            </span>
+          </a>
+        )
+      }
+    </div>
+
+  </div>
 </nav>
