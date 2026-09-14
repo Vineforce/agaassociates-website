@@ -1,14 +1,14 @@
 ---
 import Base from "@/layouts/Base.astro";
-import ServiceHero from "@/components/bodyTemplates/ServiceHero.astro";
-import ServiceContent from "@/components/bodyTemplates/ServiceContent.astro";
-import ServiceRightPanel from "@/components/bodyTemplates/ServiceRightPanel.astro";
-import Sidebar from "@/components/bodyTemplates/Sidebar.astro";
-import { consultancyServicesData } from "@/data/servicesection/other-consultancy-services";
+import ServiceHero from "@/layouts/components/bodyTemplates/ServiceHero.astro";
+import ServiceContent from "@/layouts/components/bodyTemplates/ServiceContent.astro";
+import ServiceRightPanel from "@/layouts/components/bodyTemplates/ServiceRightPanel.astro";
+import Sidebar from "@/layouts/components/bodyTemplates/Sidebar.astro";
+import { llpRegistrationProcessData } from "@/data/other-consultancy-services/llp-incorporation";
 import { sidebarServices } from "@/data/servicesection/other-consultancy-services-sidebar";
 
-const serviceData = consultancyServicesData;
-const activeSlug = "";
+const activeSlug = "llp-incorporation";
+const serviceData = llpRegistrationProcessData;
 ---
 
 <Base

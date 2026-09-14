@@ -1,10 +1,10 @@
 export const sidebarServices = [
   {
-    slug: "accounting-book-keeping",
+    slug: "accounting-and-bookkeeping",
     title: "Accounting and Book Keeping",
   },
   {
-    slug: "bank-loan-finance-services",
+    slug: "bank-loan-and-finance-services",
     title: "Bank Loan and Finance Services",
   },
   {
@@ -16,7 +16,7 @@ export const sidebarServices = [
     title: "CMA Data",
   },
   {
-    slug: "hr-assistance-payroll",
+    slug: "hr-assistance-and-payroll",
     title: "HR Assistance and Payroll",
   },
   {
@@ -24,11 +24,11 @@ export const sidebarServices = [
     title: "Import Export Code",
   },
   {
-    slug: "darpan-registration-societies",
+    slug: "darpan-registration-for-societies",
     title: "Darpan Registration for Societies",
   },
   {
-    slug: "iso-certificates",
+    slug: "iso-certificate",
     title: "ISO Certificates",
   },
   {
@@ -36,15 +36,15 @@ export const sidebarServices = [
     title: "LEI Codes",
   },
   {
-    slug: "llp-inauguration",
-    title: "LLP Inauguration",
+    slug: "llp-incorporation",
+    title: "LLP Incorporation",
   },
   {
     slug: "net-worth-report",
     title: "Net Worth Report",
   },
   {
-    slug: "nri-services",
+    slug: "nri-services-itr-of-nri",
     title: "NRI Services (ITR of NRI)",
   },
   {
