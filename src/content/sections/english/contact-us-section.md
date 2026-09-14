@@ -24,12 +24,16 @@ topCards:
 bottomCards:
   - title: "Branch Office 1"
     icon: "MapPin"
-    content: "Cabin No.1, Bir Ji Iron Store, Nabha Malerkotla Road, District Malerkotla, Amargarh-148022"
-    href: "https://maps.google.com/?q=Bir+Ji+Iron+Store+Nabha+Malerkotla+Road+Amargarh+148022"
+    content: "#305, Room No. 1, Street No. 1, Near ITI Majithia Enclave, Patiala, Punjab, 147001"
+    href: "https://maps.google.com/?q=305+Street+No+1+Near+ITI+Majithia+Enclave+Patiala+147001"
   - title: "Branch Office 2"
     icon: "MapPin"
-    content: "E10C, First Floor, Near Hira Sweets, Laxmi Nagar – 110092, New Delhi"
-    href: "https://maps.google.com/?q=E10C+First+Floor+Laxmi+Nagar+110092+New+Delhi"
+    content: "#L143, Upper Ground Floor, Chunna Bhatti Road, Vijay Vihar, Phase 2, Rohini Sector 4, Delhi, 110085"
+    href: "https://maps.google.com/?q=L143+Upper+Ground+Floor+Chunna+Bhatti+Road+Vijay+Vihar+Phase+2+Rohini+Sector+4+Delhi+110085"
+  - title: "Branch Office 3"
+    icon: "MapPin"
+    content: "#663, First Floor, Phase 3B1, Near Janta Market, Sahibzada Ajit Singh Nagar, Punjab 160059"
+    href: "https://maps.google.com/?q=663+First+Floor+Phase+3B1+Near+Janta+Market+Sahibzada+Ajit+Singh+Nagar+Punjab+160059"
 
 mapUrl: "https://maps.google.com/maps?q=Hira%20Enclave%2C%20Nabha&t=m&z=10&output=embed&iwloc=near"
 ---

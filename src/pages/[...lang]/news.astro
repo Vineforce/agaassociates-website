@@ -2,6 +2,7 @@
 import Base from "@/layouts/Base.astro";
 import { generatePaths } from "@/lib/utils/i18nUtils.ts";
 import NewsSection from "@/components/sections/NewsSection.astro";
+import PageHeader from "@/components/widgets/PageHeader.astro";
 
 export function getStaticPaths() {
   return generatePaths();
@@ -10,11 +11,13 @@ export function getStaticPaths() {
 interface Props {}
 
 const pageMeta = {
-  title: "News - HAVN & COMPANY",
+  title: "Latest News & Regulatory Updates",
+  heroDescription: "Stay updated with critical statutory announcements, late fee waivers, tax notifications, and financial regulatory news from HAVN & Company.",
   description: "Waiver of Late Fee for FORM GSTR-9C Filing and latest financial news updates.",
 };
 ---
 
 <Base metaTitle={pageMeta.title} metaDescription={pageMeta.description}>
+  <PageHeader content={pageMeta} />
   <NewsSection />
 </Base>

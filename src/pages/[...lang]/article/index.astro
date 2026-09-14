@@ -6,6 +6,8 @@ import BlogCard from "@/components/cards/BlogCard.astro";
 
 import Pagination from "@/components/widgets/Pagination.astro";
 
+import PageHeader from "@/components/widgets/PageHeader.astro";
+
 export function getStaticPaths() {
   return generatePaths();
 }
@@ -21,22 +23,16 @@ const pageSize = 3;
 const totalPages = Math.max(2, Math.ceil(posts.length / pageSize));
 
 const pageMeta = {
-  title: "Article",
+  title: "Articles, Insights & News",
+  heroDescription: "Stay informed with our latest regulatory updates, statutory tax advisories, corporate compliance guides, and financial insights from HAVN & Company.",
   description: "Read our latest articles on accounting, taxation, auditing, and corporate compliance.",
 };
 ---
 
 <Base {...pageMeta} headerLayout="two" headerPosition="sticky">
+  <PageHeader content={pageMeta} />
   <section class="py-10 md:py-14 bg-slate-50/50 min-h-[75vh]">
     <div class="container mx-auto px-4 md:px-6">
-      {/* Top Right Breadcrumb Bar */}
-      <div class="flex items-center justify-end text-xs sm:text-sm text-slate-500 font-medium pb-4 mb-8 border-b border-slate-200/60">
-        <nav class="flex items-center gap-1.5 flex-wrap justify-end" aria-label="Breadcrumb">
-          <a href="/" class="text-[#61CE70] hover:underline font-medium">Home</a>
-          <span class="text-slate-400">&gt;</span>
-          <span class="text-slate-700 font-semibold">Article</span>
-        </nav>
-      </div>
 
       {/* 3 Articles Grid */}
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
