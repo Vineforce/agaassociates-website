@@ -546,6 +546,11 @@
         },
         {
           "enable": true,
+          "name": "Company Formation",
+          "url": "/company-formation/"
+        },
+        {
+          "enable": true,
           "name": "Net Worth Report",
           "url": "/other-consultancy-services/net-worth-report/"
         }
