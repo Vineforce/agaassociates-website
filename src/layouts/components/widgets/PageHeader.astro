@@ -5,6 +5,7 @@ import OptimizedImage from "@/components/utilities/OptimizedImage.astro";
 
 type Props = {
   showFeatures?: boolean;
+  centerText?: boolean;
   content?: {
     title?: string;
     description?: string;
@@ -15,6 +16,7 @@ type Props = {
     breadcrumb?: boolean;
     hiddenPaths?: string[];
     showFeatures?: boolean;
+    centerText?: boolean;
     cursiveLine1?: string;
     cursiveLine2?: string;
     cursiveLine3?: string;
@@ -46,13 +48,25 @@ const isTeamPage =
   (title && title.toLowerCase().includes("team"));
 const isSingleTeamMember = !!(propsContent.profession || propsContent.email || propsContent.customSlug);
 
-// Hide feature pills on team page unless explicitly enabled via props
+const isBlogOrNews =
+  pathname.includes("/blog") ||
+  pathname.includes("/article") ||
+  pathname.includes("/news");
+
+const centerText =
+  Astro.props.centerText !== undefined
+    ? Astro.props.centerText
+    : propsContent.centerText !== undefined
+    ? propsContent.centerText
+    : false;
+
+// Hide feature pills on team, blog, article, and news pages unless explicitly enabled via props
 const showFeatures =
   Astro.props.showFeatures !== undefined
     ? Astro.props.showFeatures
     : propsContent.showFeatures !== undefined
     ? propsContent.showFeatures
-    : !isTeamPage;
+    : !isTeamPage && !isBlogOrNews;
 
 // Customize cursive overlay text per page type
 const cursiveLine1 = propsContent.cursiveLine1 || (isTeamPage ? "Our" : "Your");
@@ -100,7 +114,15 @@ const createBreadcrumbParts = (urlPathname: string) => {
 
 const breadcrumbParts = breadcrumb ? createBreadcrumbParts(pathname) : [];
 
-const headerDescription = heroDescription || description || metaDescription || "";
+const headerDescription =
+  heroDescription ||
+  description ||
+  metaDescription ||
+  (isBlogOrNews ? "Stay informed with our latest regulatory updates, compliance notices, and expert tax insights. We break down complex statutory notifications to keep your business compliant and prepared." : "");
+
+// Right image is present if heroImage or image passed and page is not blog/news
+const hasRightImage = !isBlogOrNews && (!!heroImage || !!image || isTeamPage);
+
 const heroImgSrc =
   heroImage ||
   image ||
@@ -111,13 +133,13 @@ const heroImgSrc =
   <div class="container mx-auto px-4 relative z-10">
     <div class="grid grid-cols-1 lg:grid-cols-12 items-stretch gap-4 lg:gap-0">
       
-      <!-- Left Copy Section -->
-      <div class="lg:col-span-7 pt-4 pb-4 lg:pt-6 lg:pb-6 lg:pr-6 flex flex-col justify-center z-10">
+      <!-- Text Copy Section -->
+      <div class={`pt-4 pb-4 lg:pt-6 lg:pb-6 flex flex-col justify-center z-10 ${hasRightImage ? "lg:col-span-7 lg:pr-6 text-left items-start" : centerText ? "lg:col-span-12 text-center items-center" : "lg:col-span-12 lg:pr-6 text-left items-start"}`}>
         
         <!-- Breadcrumb -->
         {
           breadcrumb && breadcrumbParts.length > 0 && (
-            <nav class="service-hero-breadcrumb">
+            <nav class={`service-hero-breadcrumb ${centerText && !hasRightImage ? "justify-center" : ""}`}>
               {breadcrumbParts.map((part, index) => (
                 <>
                   {index > 0 && <span class="separator">›</span>}
@@ -144,16 +166,16 @@ const heroImgSrc =
         <!-- Description / Subtitle -->
         {
           headerDescription && (
-            <p class="service-hero-description">
+            <p class={`service-hero-description ${centerText && !hasRightImage ? "mx-auto" : ""}`}>
               {headerDescription}
             </p>
           )
         }
 
-        <!-- Feature Pills (Shown on service pages, hidden on Team page) -->
+        <!-- Feature Pills -->
         {
           showFeatures && (
-            <div class="service-hero-features">
+            <div class={`service-hero-features ${centerText && !hasRightImage ? "justify-center" : ""}`}>
               <div class="hero-feature-item">
                 <span class="feature-icon icon-blue-1">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
@@ -191,61 +213,63 @@ const heroImgSrc =
       </div>
 
       <!-- Right Photo & Cursive Script Overlay -->
-      <div class="lg:col-span-5 relative h-full flex items-center justify-end self-stretch">
-        
-        {
-          isSingleTeamMember ? (
-            <div class="relative flex items-center justify-center lg:justify-end w-full py-2">
-              <!-- Cursive Overlay Text for Team Member Page -->
-              <div class="hero-cursive-script !left-[-60px] sm:!left-[-80px] lg:!left-[-90px]">
-                <div class="script-content">
-                  <span class="line-1">{cursiveLine1}</span>
-                  <span class="line-2">{cursiveLine2}</span>
-                  <span class="line-3">{cursiveLine3}</span>
-                  <svg class="script-swoosh" viewBox="0 0 140 24" fill="none">
-                    <path d="M4 18 C 45 4, 95 4, 136 18" stroke="#D98A2B" stroke-width="2.5" stroke-linecap="round"/>
-                  </svg>
-                </div>
-              </div>
+      {
+        hasRightImage && (
+          <div class="lg:col-span-5 relative h-full flex items-center justify-end self-stretch">
+            {
+              isSingleTeamMember ? (
+                <div class="relative flex items-center justify-center lg:justify-end w-full py-2">
+                  <!-- Cursive Overlay Text for Team Member Page -->
+                  <div class="hero-cursive-script !left-[-60px] sm:!left-[-80px] lg:!left-[-90px]">
+                    <div class="script-content">
+                      <span class="line-1">{cursiveLine1}</span>
+                      <span class="line-2">{cursiveLine2}</span>
+                      <span class="line-3">{cursiveLine3}</span>
+                      <svg class="script-swoosh" viewBox="0 0 140 24" fill="none">
+                        <path d="M4 18 C 45 4, 95 4, 136 18" stroke="#D98A2B" stroke-width="2.5" stroke-linecap="round"/>
+                      </svg>
+                    </div>
+                  </div>
 
-              <!-- Round Photo with White Background -->
-              <div class="w-36 h-36 sm:w-44 sm:h-44 lg:w-48 lg:h-48 rounded-full bg-white p-1.5 shadow-lg border border-slate-200/80 relative flex items-center justify-center overflow-hidden shrink-0 z-10 my-auto">
-                <div class="w-full h-full rounded-full bg-white overflow-hidden relative flex items-center justify-center">
-                  <OptimizedImage
-                    src={heroImgSrc}
-                    alt={title || "Team Member"}
-                    class="w-full h-full object-cover object-top transition duration-300 hover:scale-105"
-                  />
+                  <!-- Round Photo with White Background -->
+                  <div class="w-36 h-36 sm:w-44 sm:h-44 lg:w-48 lg:h-48 rounded-full bg-white p-1.5 shadow-lg border border-slate-200/80 relative flex items-center justify-center overflow-hidden shrink-0 z-10 my-auto">
+                    <div class="w-full h-full rounded-full bg-white overflow-hidden relative flex items-center justify-center">
+                      <OptimizedImage
+                        src={heroImgSrc}
+                        alt={title || "Team Member"}
+                        class="w-full h-full object-cover object-top transition duration-300 hover:scale-105"
+                      />
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          ) : (
-            <>
-              <!-- Cursive Overlay Text -->
-              <div class="hero-cursive-script">
-                <div class="script-content">
-                  <span class="line-1">{cursiveLine1}</span>
-                  <span class="line-2">{cursiveLine2}</span>
-                  <span class="line-3">{cursiveLine3}</span>
-                  <svg class="script-swoosh" viewBox="0 0 140 24" fill="none">
-                    <path d="M4 18 C 45 4, 95 4, 136 18" stroke="#D98A2B" stroke-width="2.5" stroke-linecap="round"/>
-                  </svg>
-                </div>
-              </div>
+              ) : (
+                <>
+                  <!-- Cursive Overlay Text -->
+                  <div class="hero-cursive-script">
+                    <div class="script-content">
+                      <span class="line-1">{cursiveLine1}</span>
+                      <span class="line-2">{cursiveLine2}</span>
+                      <span class="line-3">{cursiveLine3}</span>
+                      <svg class="script-swoosh" viewBox="0 0 140 24" fill="none">
+                        <path d="M4 18 C 45 4, 95 4, 136 18" stroke="#D98A2B" stroke-width="2.5" stroke-linecap="round"/>
+                      </svg>
+                    </div>
+                  </div>
 
-              <!-- Image matching left content height with feathered blur edge -->
-              <div class="hero-photo-wrapper">
-                <OptimizedImage
-                  src={heroImgSrc}
-                  alt={title || "Header Image"}
-                  class="hero-photo"
-                />
-              </div>
-            </>
-          )
-        }
-
-      </div>
+                  <!-- Image matching left content height with feathered blur edge -->
+                  <div class="hero-photo-wrapper">
+                    <OptimizedImage
+                      src={heroImgSrc}
+                      alt={title || "Header Image"}
+                      class="hero-photo"
+                    />
+                  </div>
+                </>
+              )
+            }
+          </div>
+        )
+      }
 
     </div>
   </div>

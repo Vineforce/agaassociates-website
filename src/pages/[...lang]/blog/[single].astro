@@ -50,7 +50,7 @@ const { post } = Astro.props;
 ---
 
 <Base {...post.data}>
-  <PageHeader content={post.data} />
+  <PageHeader content={{ ...post.data, showFeatures: false, heroImage: "", image: "" }} />
   <BlogLayout
     sidebar={{
       enable: true,
