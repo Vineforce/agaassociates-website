@@ -19,8 +19,11 @@ info:
     description: "Floor No. 3, PLSK Tower, Batta Bagh, Circular Road, Nabha, Punjab, India, 147201"
   - title: "Branch Office 1"
     icon: "Building"
-    description: "Cabin No.1, Bir Ji Iron Store, Nabha Malerkotla Road, District Malerkotla, Amargarh-148022"
+    description: "#305, Room No. 1, Street No. 1, Near ITI Majithia Enclave, Patiala, Punjab, 147001"
   - title: "Branch Office 2"
     icon: "Building"
-    description: "E10C, First Floor, Near Hira Sweets, Laxmi Nagar – 110092, New Delhi"
+    description: "#L143, Upper Ground Floor, Chunna Bhatti Road, Vijay Vihar, Phase 2, Rohini Sector 4, Delhi, 110085"
+  - title: "Branch Office 3"
+    icon: "Building"
+    description: "#663, First Floor, Phase 3B1, Near Janta Market, Sahibzada Ajit Singh Nagar, Punjab 160059"
 ---

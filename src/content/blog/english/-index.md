@@ -1,7 +1,8 @@
 ---
-title: "Blog"
-image: "/images/blog/blog-header.png"
-metaDescription: "Read practical articles on software delivery, cloud operations, cybersecurity, automation, and digital strategy."
+title: "Articles, Insights & News"
+description: "Stay informed with our latest regulatory updates, statutory tax advisories, corporate compliance guides, and financial insights from HAVN & Company."
+heroDescription: "Stay informed with our latest regulatory updates, statutory tax advisories, corporate compliance guides, and financial insights from HAVN & Company."
+metaDescription: "Read practical articles, statutory updates, and expert financial insights from HAVN & Company Chartered Accountants."
 draft: false
 
 # Settings of blog list page layout
