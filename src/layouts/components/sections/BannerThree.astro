@@ -1,5 +1,6 @@
 ---
 import Button from "@/components/Button.astro";
+import OptimizedImage from "@/components/utilities/OptimizedImage.astro";
 
 const slides = [
   {
@@ -70,9 +71,16 @@ const slides = [
           ]}
           data-slide-index={index}>
           <div class="absolute inset-0 z-0">
-            <img
+            <OptimizedImage
               src={slide.bgImage}
               alt={slide.title}
+              width={1200}
+              height={800}
+              widths={[480, 768, 1024, 1280]}
+              sizes="(max-width: 640px) 480px, (max-width: 1024px) 768px, 1200px"
+              loading={index === 0 ? "eager" : "lazy"}
+              decoding={index === 0 ? "sync" : "async"}
+              fetchpriority={index === 0 ? "high" : "auto"}
               class="w-full h-full object-cover object-center"
             />
             <div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 sm:via-white/70 to-transparent max-w-full sm:max-w-2xl" />

@@ -18,6 +18,7 @@ interface Props extends astroHTML.JSX.ImgHTMLAttributes {
   quality?: number | string;
   loading?: "eager" | "lazy" | null | undefined;
   decoding?: "async" | "auto" | "sync" | null | undefined;
+  fetchpriority?: "high" | "low" | "auto" | null | undefined;
   formats?: "png" | "webp";
   class?: string;
   style?: astroHTML.JSX.CSSProperties | string;
@@ -113,6 +114,7 @@ if (!isRemoteImage) {
       formats={formats}
       loading={resolvedLoading}
       decoding={resolvedDecoding}
+      fetchpriority={Astro.props.fetchpriority}
       src={image}
       {...{ class: Astro.props.class }}
       {...rest}

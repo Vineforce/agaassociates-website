@@ -2,7 +2,7 @@ import mdx from "@astrojs/mdx";
 import remarkToc from "remark-toc";
 import { unified } from "@astrojs/markdown-remark";
 import sitemap from "@astrojs/sitemap";
-import { defineConfig, passthroughImageService } from "astro/config";
+import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import rehypeExternalLinks from "rehype-external-links";
 import { enabledLanguages } from "./src/lib/utils/i18nUtils.ts";
@@ -31,7 +31,6 @@ export default defineConfig({
     enabled: true,
   },
   image: {
-    service: passthroughImageService(),
     layout: "constrained",
   },
   fonts,
