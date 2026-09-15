@@ -35,6 +35,10 @@ const slug = getLocaleUrlCTM(
         <OptimizedImage
           src={image}
           alt={title}
+          width={280}
+          height={280}
+          widths={[144, 280]}
+          sizes="(max-width: 640px) 144px, 160px"
           class="h-full w-full object-cover object-top"
         />
       </div>

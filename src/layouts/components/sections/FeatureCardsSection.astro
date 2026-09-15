@@ -46,7 +46,9 @@ const cards = content.cards || [];
                   alt={card.title}
                   loading="lazy"
                   width={600}
-                  height={600}
+                  height={400}
+                  widths={[400, 600, 800]}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
                   class="absolute inset-0 size-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
                 />
               )}
