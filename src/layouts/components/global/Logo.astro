@@ -47,13 +47,6 @@ if (Astro.props.height) {
       <>
         <OptimizedImage
           src={src ? src : logo}
-          width={240}
-          height={48}
-          widths={[200, 300, 480]}
-          sizes="(max-width: 640px) 200px, 240px"
-          loading="eager"
-          decoding="sync"
-          fetchpriority="high"
           class="logo max-w-full h-auto object-contain"
           alt={toSentenceCase("Brand logo of " + title)}
           style={{
@@ -66,12 +59,6 @@ if (Astro.props.height) {
         {logoAlternate && logoAlternate !== logo && (
           <OptimizedImage
             src={logoAlternate}
-            width={240}
-            height={48}
-            widths={[200, 300, 480]}
-            sizes="(max-width: 640px) 200px, 240px"
-            loading="eager"
-            decoding="async"
             class="logo-alternate max-w-full h-auto object-contain"
             alt={toSentenceCase("Brand logo of " + title)}
             style={{
