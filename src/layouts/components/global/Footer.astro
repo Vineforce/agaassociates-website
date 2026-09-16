@@ -1,10 +1,7 @@
 ---
-import { getLocaleUrlCTM } from "@/lib/utils/i18nUtils.ts";
+import { getLocaleUrlCTM, useTranslations } from "@/lib/utils/i18nUtils.ts";
 import { markdownify } from "@/lib/utils/textConverter";
-import { splitProtectedText } from "@/lib/utils/splitProtectedText";
-import SocialComponent from "@/components/widgets/Social.astro";
-import social from "@/config/social.json";
-import { useTranslations } from "@/lib/utils/i18nUtils.ts";
+
 import Logo from "@/components/global/Logo.astro";
 import { getFooterMenuGroups } from "@/lib/utils/menu";
 
@@ -22,49 +19,33 @@ let {
 footerDescription = footerDescription || t("footer.description") || "";
 const footerColumns = getFooterMenuGroups(t);
 
-const copyrightText = splitProtectedText(
-  copyright.text || t("footer.copyright") || "",
-).join(" / ");
 
-const socialOrder = ["facebook", "linkedin", "twitter", "instagram"];
-const getSocialSortIndex = (label: string) => {
-  const index = socialOrder.indexOf(label);
-
-  return index === -1 ? socialOrder.length : index;
-};
-
-const footerSocials = social.main
-  .filter((item) => item.enable)
-  .sort(
-    (first, second) =>
-      getSocialSortIndex(first.label) - getSocialSortIndex(second.label),
-  );
 ---
 
 <footer
   class:list={[
-    "py-0!",
-    hasFooterDarkBackground ? "footer-dark" : "bg-theme-light",
+    "py-0! bg-[#082738]",
+    hasFooterDarkBackground && "footer-dark",
     footerSpaceTop && "mt-16 lg:mt-20 xl:mt-24",
   ]}>
   <div class="container">
-    <div class="section-spacing-vertical">
+    <div class="section-spacing pt-12 pb-10 lg:pb-12 xl:pb-14">
       <div class="grid gap-y-12 lg:grid-cols-12 lg:gap-x-8">
         <div class="lg:col-span-3">
           <Logo src="/images/footer-logo.png" class="gap-1.5 max-w-[220px] sm:max-w-[280px]" />
           {
             footerDescription && (
               <p
-                class="footer-description leading-body text-text-default mt-6 max-w-md text-base"
+                class="footer-description leading-body text-white/80 mt-6 max-w-md text-sm"
                 set:html={markdownify(footerDescription)}
               />
             )
           }
-          <div class="mt-4 flex flex-wrap gap-4">
-            <div class="flex items-center gap-2 hover:underline">
+          <div class="mt-5 flex flex-col gap-3">
+            <div class="flex items-center gap-2 text-white/90 hover:text-white hover:underline transition-colors duration-200 text-sm">
               <svg
-                width="20"
-                height="20"
+                width="18"
+                height="18"
                 viewBox="0 0 20 20"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -76,10 +57,10 @@ const footerSocials = social.main
               <span set:html={markdownify(phone)} />
             </div>
 
-            <div class="flex items-center gap-2 hover:underline">
+            <div class="flex items-center gap-2 text-white/90 hover:text-white hover:underline transition-colors duration-200 text-sm">
               <svg
-                width="20"
-                height="20"
+                width="18"
+                height="18"
                 viewBox="0 0 20 20"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -88,18 +69,9 @@ const footerSocials = social.main
                   fill="currentColor">
                 </path>
               </svg>
-
               <span set:html={markdownify(email)} />
             </div>
           </div>
-
-          <SocialComponent
-            size="md"
-            buttonSize="md"
-            class="footer-social mt-10 gap-2"
-            linkType="follow"
-            list={footerSocials}
-          />
         </div>
 
         <nav
@@ -110,15 +82,15 @@ const footerSocials = social.main
             {footerColumns.slice(0, 2).map(({ label, list }) => (
               <div>
                 {label && (
-                  <h2 class="footer-heading text-base sm:text-lg font-bold text-slate-900 mb-4 break-words sm:whitespace-nowrap" set:html={label} />
+                  <h2 class="footer-heading text-base font-bold text-white mb-4 break-words sm:whitespace-nowrap" set:html={label} />
                 )}
                 <ul class="flex flex-col gap-2">
                   {list.map((item) => (
                     <li>
                       <a
                         class:list={[
-                          "footer-link leading-snug text-slate-600 hover:text-[#0F5277] text-sm transition duration-200 block",
-                          item.active && "active font-semibold text-slate-900",
+                          "footer-link leading-snug text-white/70 hover:text-white text-sm transition duration-200 block",
+                          item.active && "active font-semibold text-white",
                         ]}
                         href={getLocaleUrlCTM(item.url, Astro.currentLocale)}
                         set:html={item.name}
@@ -134,15 +106,15 @@ const footerSocials = social.main
           {footerColumns.slice(2).map(({ label, list }) => (
             <div>
               {label && (
-                <h2 class="footer-heading text-base sm:text-lg font-bold text-slate-900 mb-4 break-words sm:whitespace-nowrap" set:html={label} />
+                <h2 class="footer-heading text-base font-bold text-white mb-4 break-words sm:whitespace-nowrap" set:html={label} />
               )}
               <ul class="flex flex-col gap-2">
                 {list.map((item) => (
                   <li>
                     <a
                       class:list={[
-                        "footer-link leading-snug text-slate-600 hover:text-[#0F5277] text-sm transition duration-200 block",
-                        item.active && "active font-semibold text-slate-900",
+                        "footer-link leading-snug text-white/70 hover:text-white text-sm transition duration-200 block",
+                        item.active && "active font-semibold text-white",
                       ]}
                       href={getLocaleUrlCTM(item.url, Astro.currentLocale)}
                       set:html={item.name}
@@ -155,17 +127,22 @@ const footerSocials = social.main
         </nav>
       </div>
     </div>
-    <div class="footer-bottom border-t border-slate-200/60 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-600">
+  </div>
+  <div class="footer-bottom bg-[#4CAF50] py-3 text-sm text-white">
+    <div class="container flex flex-col md:flex-row items-center justify-between gap-4 px-4">
       {
         config.settings.copyright?.enable && (
-          <p
-            class="footer-copyright text-slate-600 text-sm font-medium"
-            set:html={markdownify(copyrightText)}
-          />
+          <span class="footer-copyright !text-white text-sm">
+            Copyright © 2026{" "}
+            <a
+              href="/"
+              class="text-white hover:underline cursor-pointer"
+            >H A V N &amp; COMPANY</a>. All rights reserved. Last updated on Sept 17, 2026.
+          </span>
         )
       }
-      <p class="text-sm text-slate-600 font-medium">
-        Service Provided By <a href="https://www.vineforce.net/" target="_blank" rel="noopener noreferrer" class="underline hover:text-[#0F5277] font-semibold transition">Vineforce</a>
+      <p class="text-sm text-white font-normal">
+        Service Provided By <a href="https://www.vineforce.net/" target="_blank" rel="noopener noreferrer" class="underline hover:text-white/80 font-normal transition">Vineforce</a>
       </p>
     </div>
   </div>

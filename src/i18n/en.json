@@ -67,13 +67,7 @@
     "paginationPrevious": "Previous Post",
     "paginationNext": "Next Post",
     "comments": "Comments",
-    "commentCount": "Comments",
-    "leaveReply": "LEAVE A REPLY",
-    "namePlaceholder": "Name",
-    "emailPlaceholder": "Email",
-    "commentPlaceholder": "Comment",
-    "postComment": "Post Comment",
-    "thankYouComment": "Thank you! Your comment has been submitted."
+    "commentCount": "Comments"
   },
   "navigation": {
     "buttonLabel": "Get in Touch"
@@ -88,7 +82,7 @@
     "quickLinksTitle": "Quick Links",
     "servicesTitle": "Services",
     "informationTitle": "Information",
-    "copyright": "Copyright © 2026 H A V N & COMPANY. All rights reserved.",
+    "copyright": "Copyright © 2026 H A V N & COMPANY. All rights reserved. Last updated on Sept 17, 2026.",
     "_comment": "Footer text matches the default footer design. Update this value if the product copyright changes."
   }
 }

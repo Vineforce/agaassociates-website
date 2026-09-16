@@ -5,7 +5,7 @@ import ServiceContent from "@/layouts/components/bodyTemplates/ServiceContent.as
 import ServiceRightPanel from "@/layouts/components/bodyTemplates/ServiceRightPanel.astro";
 import Sidebar from "@/layouts/components/bodyTemplates/Sidebar.astro";
 import { companyIncorporationData } from "@/data/registerService/companyIncorporation";
-import { sidebarServices } from "@/data/servicesection/other-consultancy-services-sidebar";
+import { sidebarServices } from "@/data/servicesection/attestation-audit-assurance-sidebar";
 
 const activeSlug = "company-formation";
 const serviceData = companyIncorporationData;
@@ -28,7 +28,7 @@ const serviceData = companyIncorporationData;
           <Sidebar
             services={sidebarServices}
             activeSlug={activeSlug}
-            basePath="/other-consultancy-services/"
+            basePath="/attestation-audit-assurance/"
           />
         </div>
 
