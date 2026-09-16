@@ -13,13 +13,13 @@ export const internalAuditData: ServiceData = {
     "Independent internal audit and risk assessment services tailored to strengthen governance, optimize internal controls, and prevent operational inefficiencies.",
 
   heroImage:
-    "/src/assets/images/serviceSection/attestation-audit-assurance/internal-audit/people-checking-bankbook-isolated-white-table-1024x683.webp",
+    "/src/assets/images/serviceSection/attestation-audit-assurance/internal-audit.webp",
 
   image:
-    "/src/assets/images/serviceSection/attestation-audit-assurance/internal-audit/people-checking-bankbook-isolated-white-table-1024x683.webp",
+    "/src/assets/images/serviceSection/attestation-audit-assurance/internal-audit.webp",
 
   images: [
-    "/src/assets/images/serviceSection/attestation-audit-assurance/internal-audit/people-checking-bankbook-isolated-white-table-1024x683.webp",
+    "/src/assets/images/serviceSection/attestation-audit-assurance/internal-audit.webp",
   ],
 
   introTitle: "Internal Audit",

@@ -13,13 +13,13 @@ export const inventoryAuditData: ServiceData = {
     "Comprehensive inventory audit and stock verification services tailored to ensure physical count accuracy, prevent leakage, and optimize stock management.",
 
   heroImage:
-    "/src/assets/images/serviceSection/attestation-audit-assurance/inventory-audit/high-angle-business-plans-company-1024x683.jpg",
+    "/src/assets/images/serviceSection/attestation-audit-assurance/inventory-audit.jpg",
 
   image:
-    "/src/assets/images/serviceSection/attestation-audit-assurance/inventory-audit/high-angle-business-plans-company-1024x683.jpg",
+    "/src/assets/images/serviceSection/attestation-audit-assurance/inventory-audit.jpg",
 
   images: [
-    "/src/assets/images/serviceSection/attestation-audit-assurance/inventory-audit/high-angle-business-plans-company-1024x683.jpg",
+    "/src/assets/images/serviceSection/attestation-audit-assurance/inventory-audit.jpg",
   ],
 
   introTitle: "Inventory Audit",

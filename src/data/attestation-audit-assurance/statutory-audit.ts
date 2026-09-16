@@ -13,13 +13,13 @@ export const statutoryAuditData: ServiceData = {
     "Independent statutory audit and financial statement attestation services tailored to ensure complete legal compliance, transparency, and reporting accuracy.",
 
   heroImage:
-    "/src/assets/images/serviceSection/attestation-audit-assurance/statutory-audit/closeup-male-candidate-filling-application-form-1024x684.webp",
+    "/src/assets/images/serviceSection/attestation-audit-assurance/statutory-audit.webp",
 
   image:
-    "/src/assets/images/serviceSection/attestation-audit-assurance/statutory-audit/closeup-male-candidate-filling-application-form-1024x684.webp",
+    "/src/assets/images/serviceSection/attestation-audit-assurance/statutory-audit.webp",
 
   images: [
-    "/src/assets/images/serviceSection/attestation-audit-assurance/statutory-audit/closeup-male-candidate-filling-application-form-1024x684.webp",
+    "/src/assets/images/serviceSection/attestation-audit-assurance/statutory-audit.webp",
   ],
 
   introTitle: "Statutory Audit",

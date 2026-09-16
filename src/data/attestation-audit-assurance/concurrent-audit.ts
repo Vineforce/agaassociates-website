@@ -13,13 +13,13 @@ export const concurrentAuditData: ServiceData = {
     "Real-time concurrent auditing services tailored for financial institutions and corporates to ensure day-to-day transaction accuracy and early risk detection.",
 
   heroImage:
-    "/src/assets/images/serviceSection/attestation-audit-assurance/concurrent-audit/closeup-business-person-completing-form-1024x683.webp",
+    "/src/assets/images/serviceSection/attestation-audit-assurance/concurrent-audit.webp",
 
   image:
-    "/src/assets/images/serviceSection/attestation-audit-assurance/concurrent-audit/closeup-business-person-completing-form-1024x683.webp",
+    "/src/assets/images/serviceSection/attestation-audit-assurance/concurrent-audit.webp",
 
   images: [
-    "/src/assets/images/serviceSection/attestation-audit-assurance/concurrent-audit/closeup-business-person-completing-form-1024x683.webp",
+    "/src/assets/images/serviceSection/attestation-audit-assurance/concurrent-audit.webp",
   ],
 
   introTitle: "Concurrent Audit",

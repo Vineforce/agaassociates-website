@@ -10,14 +10,14 @@ export const attestationAuditAssuranceData: ServiceData = {
     "Comprehensive attestation, audit, and assurance services tailored to help businesses ensure financial accuracy, maintain compliance, and build stakeholder trust.",
 
   heroImage:
-    "/src/assets/images/serviceSection/attestation-audit-assurance/close-up-businessman-sitting-table-filling-document-768x513.webp",
+    "/src/assets/images/serviceSection/attestation-audit-assurance/attestation-audit-assurance.webp",
 
   image:
-    "/src/assets/images/serviceSection/attestation-audit-assurance/close-up-businessman-sitting-table-filling-document-768x513.webp",
+    "/src/assets/images/serviceSection/attestation-audit-assurance/attestation-audit-assurance.webp",
 
   images: [
-    "/src/assets/images/serviceSection/attestation-audit-assurance/close-up-businessman-sitting-table-filling-document-768x513.webp",
-    "/src/assets/images/serviceSection/attestation-audit-assurance/close-up-businessman-sitting-table-filling-document-768x513.webp",
+    "/src/assets/images/serviceSection/attestation-audit-assurance/attestation-audit-assurance.webp",
+    "/src/assets/images/serviceSection/attestation-audit-assurance/attestation-audit-assurance.webp",
   ],
 
   introTitle: "Attestation, Audit & Assurance",

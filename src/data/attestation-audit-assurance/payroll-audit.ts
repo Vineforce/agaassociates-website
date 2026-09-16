@@ -13,13 +13,13 @@ export const payrollAuditData: ServiceData = {
     "Detailed payroll audit and employee statutory compliance services tailored to verify wage accuracy, tax deductions, and labor regulatory adherence.",
 
   heroImage:
-    "/src/assets/images/serviceSection/attestation-audit-assurance/payroll-audit/finances-saving-economy-concept-female-accountant-banker-use-calculator-1024x683.webp",
+    "/src/assets/images/serviceSection/attestation-audit-assurance/payroll-audit.webp",
 
   image:
-    "/src/assets/images/serviceSection/attestation-audit-assurance/payroll-audit/finances-saving-economy-concept-female-accountant-banker-use-calculator-1024x683.webp",
+    "/src/assets/images/serviceSection/attestation-audit-assurance/payroll-audit.webp",
 
   images: [
-    "/src/assets/images/serviceSection/attestation-audit-assurance/payroll-audit/finances-saving-economy-concept-female-accountant-banker-use-calculator-1024x683.webp",
+    "/src/assets/images/serviceSection/attestation-audit-assurance/payroll-audit.webp",
   ],
 
   introTitle: "Payroll Audit",
