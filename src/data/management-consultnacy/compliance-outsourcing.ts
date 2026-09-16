@@ -13,13 +13,13 @@ export const complianceOutsourcingData: ServiceData = {
     "Full-spectrum compliance outsourcing services tailored to help organizations manage corporate statutory filings, tax deadlines, and regulatory obligations.",
 
   heroImage:
-    "/src/assets/images/serviceSection/management-consultnacy/compliance-outsourcing/business-team-discussing-their-ideas-office-working-collaborate-together-1024x683.webp",
+    "/src/assets/images/serviceSection/management-consultnacy/compliance-outsourcing.webp",
 
   image:
-    "/src/assets/images/serviceSection/management-consultnacy/compliance-outsourcing/business-team-discussing-their-ideas-office-working-collaborate-together-1024x683.webp",
+    "/src/assets/images/serviceSection/management-consultnacy/compliance-outsourcing.webp",
 
   images: [
-    "/src/assets/images/serviceSection/management-consultnacy/compliance-outsourcing/business-team-discussing-their-ideas-office-working-collaborate-together-1024x683.webp",
+    "/src/assets/images/serviceSection/management-consultnacy/compliance-outsourcing.webp",
   ],
 
   introTitle: "Compliance Outsourcing",

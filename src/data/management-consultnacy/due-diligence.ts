@@ -13,13 +13,13 @@ export const dueDiligenceData: ServiceData = {
     "Rigorous financial, legal, and operational due diligence services tailored to help investors and buyers evaluate transaction risks before acquisition.",
 
   heroImage:
-    "/src/assets/images/serviceSection/management-consultnacy/due-diligence/report-corporate-pad-cooperation-male-strategy-1024x663.webp",
+    "/src/assets/images/serviceSection/management-consultnacy/due-diligence.webp",
 
   image:
-    "/src/assets/images/serviceSection/management-consultnacy/due-diligence/report-corporate-pad-cooperation-male-strategy-1024x663.webp",
+    "/src/assets/images/serviceSection/management-consultnacy/due-diligence.webp",
 
   images: [
-    "/src/assets/images/serviceSection/management-consultnacy/due-diligence/report-corporate-pad-cooperation-male-strategy-1024x663.webp",
+    "/src/assets/images/serviceSection/management-consultnacy/due-diligence.webp",
   ],
 
   introTitle: "Due Diligence",
