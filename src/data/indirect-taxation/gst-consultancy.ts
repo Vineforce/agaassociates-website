@@ -13,13 +13,13 @@ export const professionalGstAdvisoryData: ServiceData = {
     "Strategic GST advisory and legal consultancy services tailored to help enterprises navigate complex indirect tax regulations, assessments, and notices.",
 
   heroImage:
-    "/src/assets/images/serviceSection/indirect-taxation/report-corporate-pad-cooperation-male-strategy-1024x663.webp",
+    "/src/assets/images/serviceSection/indirect-taxation/gst-consultancy.webp",
 
   image:
-    "/src/assets/images/serviceSection/indirect-taxation/report-corporate-pad-cooperation-male-strategy-1024x663.webp",
+    "/src/assets/images/serviceSection/indirect-taxation/gst-consultancy.webp",
 
   images: [
-    "/src/assets/images/serviceSection/indirect-taxation/report-corporate-pad-cooperation-male-strategy-1024x663.webp",
+    "/src/assets/images/serviceSection/indirect-taxation/gst-consultancy.webp",
   ],
 
   introTitle: "Professional GST Advisory",

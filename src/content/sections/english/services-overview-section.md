@@ -11,7 +11,7 @@ services:
     url: "/registration-services/"
 
   - title: "Attestation, Audit & Assurance"
-    image: "/src/assets/images/serviceSection/attestation-audit-assurance/close-up-businessman-sitting-table-filling-document-768x513.webp"
+    image: "/src/assets/images/serviceSection/attestation-audit-assurance/attestation-audit-assurance.webp"
     description: "Ensure accuracy, compliance, and transparency with our attestation, audit, and assurance services. We provide reliable insights to strengthen your financial credibility and operational efficiency."
     url: "/attestation-audit-assurance/"
 

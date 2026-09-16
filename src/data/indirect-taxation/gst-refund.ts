@@ -13,13 +13,13 @@ export const comprehensiveGstReviewData: ServiceData = {
     "Comprehensive GST refund claim processing services tailored to help exporters and businesses recover unutilized input tax credits and excess tax payments.",
 
   heroImage:
-    "/src/assets/images/serviceSection/indirect-taxation/man-income-analyzing-pushing-button-1024x683.webp",
+    "/src/assets/images/serviceSection/indirect-taxation/gst-refund.webp",
 
   image:
-    "/src/assets/images/serviceSection/indirect-taxation/man-income-analyzing-pushing-button-1024x683.webp",
+    "/src/assets/images/serviceSection/indirect-taxation/gst-refund.webp",
 
   images: [
-    "/src/assets/images/serviceSection/indirect-taxation/man-income-analyzing-pushing-button-1024x683.webp",
+    "/src/assets/images/serviceSection/indirect-taxation/gst-refund.webp",
   ],
 
   introTitle: "Comprehensive GST Review",

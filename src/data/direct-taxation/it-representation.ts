@@ -13,13 +13,13 @@ export const itRepresentationData: ServiceData = {
     "Professional Income Tax litigation and assessment representation services tailored to represent taxpayers before IT officers, CIT(A), and appellate tribunals.",
 
   heroImage:
-    "/src/assets/images/serviceSection/direct-taxation/financial-concept-with-icons-wooden-cubes-calculator-blue-table-flat-lay-1024x683.webp",
+    "/src/assets/images/serviceSection/direct-taxation/it-representation.webp",
 
   image:
-    "/src/assets/images/serviceSection/direct-taxation/financial-concept-with-icons-wooden-cubes-calculator-blue-table-flat-lay-1024x683.webp",
+    "/src/assets/images/serviceSection/direct-taxation/it-representation.webp",
 
   images: [
-    "/src/assets/images/serviceSection/direct-taxation/financial-concept-with-icons-wooden-cubes-calculator-blue-table-flat-lay-1024x683.webp",
+    "/src/assets/images/serviceSection/direct-taxation/it-representation.webp",
   ],
 
   introTitle: "IT Representation",

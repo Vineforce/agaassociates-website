@@ -13,13 +13,13 @@ export const strategicConsultingData: ServiceData = {
     "Executive strategic consulting services tailored to help C-suite decision-makers navigate market disruptions, expansion plans, and organizational change.",
 
   heroImage:
-    "/src/assets/images/serviceSection/management-consultnacy/strategic-consulting/business-team-discussing-their-ideas-office-working-collaborate-together-1024x683.webp",
+    "/src/assets/images/serviceSection/management-consultnacy/strategic-consulting.webp",
 
   image:
-    "/src/assets/images/serviceSection/management-consultnacy/strategic-consulting/business-team-discussing-their-ideas-office-working-collaborate-together-1024x683.webp",
+    "/src/assets/images/serviceSection/management-consultnacy/strategic-consulting.webp",
 
   images: [
-    "/src/assets/images/serviceSection/management-consultnacy/strategic-consulting/business-team-discussing-their-ideas-office-working-collaborate-together-1024x683.webp",
+    "/src/assets/images/serviceSection/management-consultnacy/strategic-consulting.webp",
   ],
 
   introTitle: "Strategic Consulting",

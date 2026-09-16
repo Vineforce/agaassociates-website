@@ -13,13 +13,13 @@ export const businessPlanningData: ServiceData = {
     "Strategic business planning services tailored to help founders and corporate leaders outline growth roadmaps, financial projections, and operational strategies.",
 
   heroImage:
-    "/src/assets/images/serviceSection/management-consultnacy/business-planning/laptop-computer-with-marketing-statistics-standing-desk-1024x683.webp",
+    "/src/assets/images/serviceSection/management-consultnacy/business-planning.webp",
 
   image:
-    "/src/assets/images/serviceSection/management-consultnacy/business-planning/laptop-computer-with-marketing-statistics-standing-desk-1024x683.webp",
+    "/src/assets/images/serviceSection/management-consultnacy/business-planning.webp",
 
   images: [
-    "/src/assets/images/serviceSection/management-consultnacy/business-planning/laptop-computer-with-marketing-statistics-standing-desk-1024x683.webp",
+    "/src/assets/images/serviceSection/management-consultnacy/business-planning.webp",
   ],
 
   introTitle: "Business Planning",

@@ -13,13 +13,13 @@ export const netWorthAssessmentData: ServiceData = {
     "Certified Net Worth Valuation Reports for individuals and enterprises required for bank credit appraisal, visa processing, and financial planning.",
 
   heroImage:
-    "/src/assets/images/serviceSection/other-consultancy-services/financial-graphs-charts-analysis-1024x683.webp",
+    "/src/assets/images/serviceSection/other-consultancy-services/net-worth-report.webp",
 
   image:
-    "/src/assets/images/serviceSection/other-consultancy-services/financial-graphs-charts-analysis-1024x683.webp",
+    "/src/assets/images/serviceSection/other-consultancy-services/net-worth-report.webp",
 
   images: [
-    "/src/assets/images/serviceSection/other-consultancy-services/financial-graphs-charts-analysis-1024x683.webp",
+    "/src/assets/images/serviceSection/other-consultancy-services/net-worth-report.webp",
   ],
 
   introTitle: "Net Worth Assessment",

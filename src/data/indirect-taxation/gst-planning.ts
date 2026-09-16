@@ -13,13 +13,13 @@ export const strategicGstOptimizationData: ServiceData = {
     "Proactive GST planning and optimization services tailored to help businesses structure transactions, claim input credits, and minimize liabilities.",
 
   heroImage:
-    "/src/assets/images/serviceSection/indirect-taxation/group-business-people-having-meeting-1024x646.webp",
+    "/src/assets/images/serviceSection/indirect-taxation/gst-planning.webp",
 
   image:
-    "/src/assets/images/serviceSection/indirect-taxation/group-business-people-having-meeting-1024x646.webp",
+    "/src/assets/images/serviceSection/indirect-taxation/gst-planning.webp",
 
   images: [
-    "/src/assets/images/serviceSection/indirect-taxation/group-business-people-having-meeting-1024x646.webp",
+    "/src/assets/images/serviceSection/indirect-taxation/gst-planning.webp",
   ],
 
   introTitle: "Strategic GST Optimization",

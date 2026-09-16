@@ -13,13 +13,13 @@ export const investigativeAuditData: ServiceData = {
     "Thorough forensic and investigative audit services tailored to detect financial anomalies, investigate fraud risks, and protect business integrity.",
 
   heroImage:
-    "/src/assets/images/serviceSection/attestation-audit-assurance/investigative-audit/group-business-people-having-meeting-1024x646.webp",
+    "/src/assets/images/serviceSection/attestation-audit-assurance/investigative-audit.webp",
 
   image:
-    "/src/assets/images/serviceSection/attestation-audit-assurance/investigative-audit/group-business-people-having-meeting-1024x646.webp",
+    "/src/assets/images/serviceSection/attestation-audit-assurance/investigative-audit.webp",
 
   images: [
-    "/src/assets/images/serviceSection/attestation-audit-assurance/investigative-audit/group-business-people-having-meeting-1024x646.webp",
+    "/src/assets/images/serviceSection/attestation-audit-assurance/investigative-audit.webp",
   ],
 
   introTitle: "Investigative Audit",

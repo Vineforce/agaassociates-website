@@ -13,13 +13,13 @@ export const comprehensiveFinancialAnalysisData: ServiceData = {
     "Professional Credit Monitoring Arrangement (CMA) data compilation services tailored to prepare financial reports and credit proposals for bank loan approvals.",
 
   heroImage:
-    "/src/assets/images/serviceSection/other-consultancy-services/business-team-working-new-business-plan-with-modern-digital-computer-1024x683.jpg",
+    "/src/assets/images/serviceSection/other-consultancy-services/cma-data.jpg",
 
   image:
-    "/src/assets/images/serviceSection/other-consultancy-services/business-team-working-new-business-plan-with-modern-digital-computer-1024x683.jpg",
+    "/src/assets/images/serviceSection/other-consultancy-services/cma-data.jpg",
 
   images: [
-    "/src/assets/images/serviceSection/other-consultancy-services/business-team-working-new-business-plan-with-modern-digital-computer-1024x683.jpg",
+    "/src/assets/images/serviceSection/other-consultancy-services/cma-data.jpg",
   ],
 
   introTitle: "Comprehensive Financial Analysis",

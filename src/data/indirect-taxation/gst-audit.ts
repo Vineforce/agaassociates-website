@@ -13,13 +13,13 @@ export const gstAuditComplianceData: ServiceData = {
     "Comprehensive GST audit services tailored to help businesses verify tax payments, validate input tax credits, and eliminate non-compliance risks.",
 
   heroImage:
-    "/src/assets/images/serviceSection/indirect-taxation/unrecognizable-office-worker-using-calculator-1024x683.webp",
+    "/src/assets/images/serviceSection/indirect-taxation/gst-audit.webp",
 
   image:
-    "/src/assets/images/serviceSection/indirect-taxation/unrecognizable-office-worker-using-calculator-1024x683.webp",
+    "/src/assets/images/serviceSection/indirect-taxation/gst-audit.webp",
 
   images: [
-    "/src/assets/images/serviceSection/indirect-taxation/unrecognizable-office-worker-using-calculator-1024x683.webp",
+    "/src/assets/images/serviceSection/indirect-taxation/gst-audit.webp",
   ],
 
   introTitle: "GST Audit & Compliance",

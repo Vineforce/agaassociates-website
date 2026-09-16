@@ -10,14 +10,14 @@ export const consultancyServicesData: ServiceData = {
     "Specialized accounting, bookkeeping, and business advisory services tailored to help enterprises manage financial records, streamline operations, and support expansion.",
 
   heroImage:
-    "/src/assets/images/serviceSection/other-consultancy-services/finance-accounting-paper-desk-using-scaled.jpg",
+    "/src/assets/images/serviceSection/other-consultancy-services/other-consultancy-services.jpg",
 
   image:
-    "/src/assets/images/serviceSection/other-consultancy-services/businessmen-hands-white-table-with-documents-drafts-scaled.jpg",
+    "/src/assets/images/serviceSection/other-consultancy-services/other-consultancy-services-hero.jpg",
 
   images: [
-    "/src/assets/images/serviceSection/other-consultancy-services/businessmen-hands-white-table-with-documents-drafts-scaled.jpg",
-    "/src/assets/images/serviceSection/other-consultancy-services/finance-accounting-paper-desk-using-scaled.jpg",
+    "/src/assets/images/serviceSection/other-consultancy-services/other-consultancy-services-hero.jpg",
+    "/src/assets/images/serviceSection/other-consultancy-services/other-consultancy-services.jpg",
   ],
 
   introTitle: "Consultancy Services",

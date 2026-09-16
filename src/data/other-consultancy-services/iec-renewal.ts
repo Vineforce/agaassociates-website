@@ -13,13 +13,13 @@ export const iecRegistrationRenewalData: ServiceData = {
     "Timely Import Export Code (IEC) annual renewal and profile updating services to ensure uninterrupted international trade operations.",
 
   heroImage:
-    "/src/assets/images/serviceSection/other-consultancy-services/finances-saveing-economy-concept-female-accountant-banker-use-calculator-1024x683.webp",
+    "/src/assets/images/serviceSection/other-consultancy-services/iec-renewal.webp",
 
   image:
-    "/src/assets/images/serviceSection/other-consultancy-services/finances-saveing-economy-concept-female-accountant-banker-use-calculator-1024x683.webp",
+    "/src/assets/images/serviceSection/other-consultancy-services/iec-renewal.webp",
 
   images: [
-    "/src/assets/images/serviceSection/other-consultancy-services/finances-saveing-economy-concept-female-accountant-banker-use-calculator-1024x683.webp",
+    "/src/assets/images/serviceSection/other-consultancy-services/iec-renewal.webp",
   ],
 
   introTitle: "IEC Registration & Renewal",

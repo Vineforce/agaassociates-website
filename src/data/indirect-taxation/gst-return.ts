@@ -13,13 +13,13 @@ export const gstReturnFilingData: ServiceData = {
     "Timely and accurate GST return filing services tailored to help enterprises reconcile input credits, minimize liability, and ensure statutory compliance.",
 
   heroImage:
-    "/src/assets/images/serviceSection/indirect-taxation/tax-incentive-audit-benefit-cash-payment-income-concept-1024x683.webp",
+    "/src/assets/images/serviceSection/indirect-taxation/gst-return.webp",
 
   image:
-    "/src/assets/images/serviceSection/indirect-taxation/tax-incentive-audit-benefit-cash-payment-income-concept-1024x683.webp",
+    "/src/assets/images/serviceSection/indirect-taxation/gst-return.webp",
 
   images: [
-    "/src/assets/images/serviceSection/indirect-taxation/tax-incentive-audit-benefit-cash-payment-income-concept-1024x683.webp",
+    "/src/assets/images/serviceSection/indirect-taxation/gst-return.webp",
   ],
 
   introTitle: "GST Return Filing",

@@ -13,13 +13,13 @@ export const financialReportAnalysisData: ServiceData = {
     "In-depth financial report analysis services tailored to help management understand profitability metrics, cash flow trends, and financial health.",
 
   heroImage:
-    "/src/assets/images/serviceSection/management-consultnacy/financial-report-analysis/business-concept-with-copy-space-office-desk-table-with-pen-focus-analysis-chart-computer-notebook-cup-coffee-desk-vintage-tone-re.webp",
+    "/src/assets/images/serviceSection/management-consultnacy/financial-report-analysis.webp",
 
   image:
-    "/src/assets/images/serviceSection/management-consultnacy/financial-report-analysis/business-concept-with-copy-space-office-desk-table-with-pen-focus-analysis-chart-computer-notebook-cup-coffee-desk-vintage-tone-re.webp",
+    "/src/assets/images/serviceSection/management-consultnacy/financial-report-analysis.webp",
 
   images: [
-    "/src/assets/images/serviceSection/management-consultnacy/financial-report-analysis/business-concept-with-copy-space-office-desk-table-with-pen-focus-analysis-chart-computer-notebook-cup-coffee-desk-vintage-tone-re.webp",
+    "/src/assets/images/serviceSection/management-consultnacy/financial-report-analysis.webp",
   ],
 
   introTitle: "Financial Report Analysis",

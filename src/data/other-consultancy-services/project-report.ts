@@ -13,13 +13,13 @@ export const detailedProjectReportData: ServiceData = {
     "Detailed Bankable Project Reports and Techno-Economic Feasibility Studies tailored for business funding, bank loans, and investor proposals.",
 
   heroImage:
-    "/src/assets/images/serviceSection/other-consultancy-services/young-team-coworkers-working-project-1024x683.webp",
+    "/src/assets/images/serviceSection/other-consultancy-services/project-report.webp",
 
   image:
-    "/src/assets/images/serviceSection/other-consultancy-services/young-team-coworkers-working-project-1024x683.webp",
+    "/src/assets/images/serviceSection/other-consultancy-services/project-report.webp",
 
   images: [
-    "/src/assets/images/serviceSection/other-consultancy-services/young-team-coworkers-working-project-1024x683.webp",
+    "/src/assets/images/serviceSection/other-consultancy-services/project-report.webp",
   ],
 
   introTitle: "Detailed Project Report",

@@ -13,13 +13,13 @@ export const revenueAuditData: ServiceData = {
     "Strategic revenue audit and income assurance services tailored to identify leakages, verify billing accuracy, and optimize financial performance.",
 
   heroImage:
-    "/src/assets/images/serviceSection/attestation-audit-assurance/revenue-audit/asian-woman-working-through-paperwork-1024x683-1.jpg",
+    "/src/assets/images/serviceSection/attestation-audit-assurance/revenue-audit.jpg",
 
   image:
-    "/src/assets/images/serviceSection/attestation-audit-assurance/revenue-audit/asian-woman-working-through-paperwork-1024x683-1.jpg",
+    "/src/assets/images/serviceSection/attestation-audit-assurance/revenue-audit.jpg",
 
   images: [
-    "/src/assets/images/serviceSection/attestation-audit-assurance/revenue-audit/asian-woman-working-through-paperwork-1024x683-1.jpg",
+    "/src/assets/images/serviceSection/attestation-audit-assurance/revenue-audit.jpg",
   ],
 
   introTitle: "Revenue Audit",

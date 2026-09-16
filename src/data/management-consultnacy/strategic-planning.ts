@@ -13,13 +13,13 @@ export const strategicPlanningData: ServiceData = {
     "Actionable strategic planning frameworks tailored to help organizations align leadership vision, set key performance indicators, and execute goals.",
 
   heroImage:
-    "/src/assets/images/serviceSection/management-consultnacy/strategic-planning/top-view-office-workers-meeting-analyzing-financial-charts-holding-clipboard-1024x768.webp",
+    "/src/assets/images/serviceSection/management-consultnacy/strategic-planning.webp",
 
   image:
-    "/src/assets/images/serviceSection/management-consultnacy/strategic-planning/top-view-office-workers-meeting-analyzing-financial-charts-holding-clipboard-1024x768.webp",
+    "/src/assets/images/serviceSection/management-consultnacy/strategic-planning.webp",
 
   images: [
-    "/src/assets/images/serviceSection/management-consultnacy/strategic-planning/top-view-office-workers-meeting-analyzing-financial-charts-holding-clipboard-1024x768.webp",
+    "/src/assets/images/serviceSection/management-consultnacy/strategic-planning.webp",
   ],
 
   introTitle: "Strategic Planning",

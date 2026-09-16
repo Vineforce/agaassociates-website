@@ -13,13 +13,13 @@ export const businessValuationData: ServiceData = {
     "Objective business valuation services tailored to help companies determine accurate financial worth for mergers, acquisitions, fundraising, and taxation.",
 
   heroImage:
-    "/src/assets/images/serviceSection/management-consultnacy/business-valuation/business-team-discussing-their-ideas-office-working-collaborate-together-1024x683.webp",
+    "/src/assets/images/serviceSection/management-consultnacy/business-valuation.webp",
 
   image:
-    "/src/assets/images/serviceSection/management-consultnacy/business-valuation/business-team-discussing-their-ideas-office-working-collaborate-together-1024x683.webp",
+    "/src/assets/images/serviceSection/management-consultnacy/business-valuation.webp",
 
   images: [
-    "/src/assets/images/serviceSection/management-consultnacy/business-valuation/business-team-discussing-their-ideas-office-working-collaborate-together-1024x683.webp",
+    "/src/assets/images/serviceSection/management-consultnacy/business-valuation.webp",
   ],
 
   introTitle: "Business Valuation",

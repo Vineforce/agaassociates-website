@@ -13,13 +13,13 @@ export const incomeTaxReturnAuditData: ServiceData = {
     "Tax Audit under Section 44AB services tailored for businesses and professionals to audit financial accounts, verify deductions, and file Form 3CA/3CB/3CD.",
 
   heroImage:
-    "/src/assets/images/serviceSection/direct-taxation/close-up-businessman-sitting-table-filling-document-1024x684.webp",
+    "/src/assets/images/serviceSection/direct-taxation/itr-audit.webp",
 
   image:
-    "/src/assets/images/serviceSection/direct-taxation/close-up-businessman-sitting-table-filling-document-1024x684.webp",
+    "/src/assets/images/serviceSection/direct-taxation/itr-audit.webp",
 
   images: [
-    "/src/assets/images/serviceSection/direct-taxation/close-up-businessman-sitting-table-filling-document-1024x684.webp",
+    "/src/assets/images/serviceSection/direct-taxation/itr-audit.webp",
   ],
 
   introTitle: "Income Tax Return Audit",

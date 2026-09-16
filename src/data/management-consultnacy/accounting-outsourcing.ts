@@ -13,13 +13,13 @@ export const accountingOutsourcingData: ServiceData = {
     "End-to-end accounting outsourcing services tailored to help enterprises reduce overhead costs, maintain immaculate ledgers, and access financial expertise.",
 
   heroImage:
-    "/src/assets/images/serviceSection/management-consultnacy/accounting-outsourcing/group-business-people-having-meeting-1024x646.webp",
+    "/src/assets/images/serviceSection/management-consultnacy/accounting-outsourcing.webp",
 
   image:
-    "/src/assets/images/serviceSection/management-consultnacy/accounting-outsourcing/group-business-people-having-meeting-1024x646.webp",
+    "/src/assets/images/serviceSection/management-consultnacy/accounting-outsourcing.webp",
 
   images: [
-    "/src/assets/images/serviceSection/management-consultnacy/accounting-outsourcing/group-business-people-having-meeting-1024x646.webp",
+    "/src/assets/images/serviceSection/management-consultnacy/accounting-outsourcing.webp",
   ],
 
   introTitle: "Accounting Outsourcing",

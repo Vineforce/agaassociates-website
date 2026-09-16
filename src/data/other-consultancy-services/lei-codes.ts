@@ -13,13 +13,13 @@ export const clearIntuitiveLeiLayoutData: ServiceData = {
     "Professional Legal Entity Identifier (LEI) code registration and renewal services ensuring compliance for global financial transactions.",
 
   heroImage:
-    "/src/assets/images/serviceSection/other-consultancy-services/judge-gavel-auction-law-court-concept-1024x718.webp",
+    "/src/assets/images/serviceSection/other-consultancy-services/lei-codes.webp",
 
   image:
-    "/src/assets/images/serviceSection/other-consultancy-services/judge-gavel-auction-law-court-concept-1024x718.webp",
+    "/src/assets/images/serviceSection/other-consultancy-services/lei-codes.webp",
 
   images: [
-    "/src/assets/images/serviceSection/other-consultancy-services/judge-gavel-auction-law-court-concept-1024x718.webp",
+    "/src/assets/images/serviceSection/other-consultancy-services/lei-codes.webp",
   ],
 
   introTitle: "Clear & Intuitive Layout",

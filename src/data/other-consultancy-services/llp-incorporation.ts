@@ -13,13 +13,13 @@ export const llpRegistrationProcessData: ServiceData = {
     "End-to-end Limited Liability Partnership (LLP) incorporation services, from name approval and agreement drafting to MCA portal filing.",
 
   heroImage:
-    "/src/assets/images/serviceSection/other-consultancy-services/man-income-analyzing-pushing-button-1024x683.webp",
+    "/src/assets/images/serviceSection/other-consultancy-services/llp-incorporation.webp",
 
   image:
-    "/src/assets/images/serviceSection/other-consultancy-services/man-income-analyzing-pushing-button-1024x683.webp",
+    "/src/assets/images/serviceSection/other-consultancy-services/llp-incorporation.webp",
 
   images: [
-    "/src/assets/images/serviceSection/other-consultancy-services/man-income-analyzing-pushing-button-1024x683.webp",
+    "/src/assets/images/serviceSection/other-consultancy-services/llp-incorporation.webp",
   ],
 
   introTitle: "LLP Registration Process",

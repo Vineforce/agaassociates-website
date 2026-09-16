@@ -13,13 +13,13 @@ export const complianceAuditData: ServiceData = {
     "Proactive compliance audit and regulatory evaluation services tailored to help organizations meet legal mandates, mitigate risks, and enhance governance.",
 
   heroImage:
-    "/src/assets/images/serviceSection/attestation-audit-assurance/compliance-audit/hand-investment-income-return-results-management-1024x690.jpg",
+    "/src/assets/images/serviceSection/attestation-audit-assurance/compliance-audit.jpg",
 
   image:
-    "/src/assets/images/serviceSection/attestation-audit-assurance/compliance-audit/hand-investment-income-return-results-management-1024x690.jpg",
+    "/src/assets/images/serviceSection/attestation-audit-assurance/compliance-audit.jpg",
 
   images: [
-    "/src/assets/images/serviceSection/attestation-audit-assurance/compliance-audit/hand-investment-income-return-results-management-1024x690.jpg",
+    "/src/assets/images/serviceSection/attestation-audit-assurance/compliance-audit.jpg",
   ],
 
  introTitle: "Compliance Audit",
