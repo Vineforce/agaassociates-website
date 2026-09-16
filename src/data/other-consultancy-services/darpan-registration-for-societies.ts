@@ -13,14 +13,13 @@ export const simplifiedDarpanRegistrationData: ServiceData = {
     "Seamless NITI Aayog NGO Darpan portal registration for societies and trust entities seeking government grants and scheme eligibility.",
 
   heroImage:
-    "/src/assets/images/serviceSection/other-consultancy-services/close-up-businessman-sitting-table-filling-document-1024x684.webp",
+    "/src/assets/images/serviceSection/other-consultancy-services/darpan-registration-for-societies.webp",
 
   image:
-    "/src/assets/images/serviceSection/other-consultancy-services/close-up-businessman-sitting-table-filling-document-1024x684.webp",
+    "/src/assets/images/serviceSection/other-consultancy-services/darpan-registration-for-societies.webp",
 
   images: [
-    "/src/assets/images/serviceSection/other-consultancy-services/close-up-businessman-sitting-table-filling-document-1024x684.webp",
-    
+    "/src/assets/images/serviceSection/other-consultancy-services/darpan-registration-for-societies.webp",
   ],
 
   introTitle: "Simplified Darpan Registration",

@@ -13,13 +13,13 @@ export const businessSoftwareConsultancyData: ServiceData = {
     "Expert software consultancy to assist enterprises in selecting, implementing, and optimizing ERP and accounting systems for operational efficiency.",
 
   heroImage:
-    "/src/assets/images/serviceSection/other-consultancy-services/top-viewtop-view-manager-employee-doing-teamwork-business-office-looking-charts-laptop-display-1024x768.webp",
+    "/src/assets/images/serviceSection/other-consultancy-services/business-software-consultancy.webp",
 
   image:
-    "/src/assets/images/serviceSection/other-consultancy-services/top-viewtop-view-manager-employee-doing-teamwork-business-office-looking-charts-laptop-display-1024x768.webp",
+    "/src/assets/images/serviceSection/other-consultancy-services/business-software-consultancy.webp",
 
   images: [
-    "/src/assets/images/serviceSection/other-consultancy-services/top-viewtop-view-manager-employee-doing-teamwork-business-office-looking-charts-laptop-display-1024x768.webp",
+    "/src/assets/images/serviceSection/other-consultancy-services/business-software-consultancy.webp",
   ],
 
   introTitle: "Business Software Consultancy",

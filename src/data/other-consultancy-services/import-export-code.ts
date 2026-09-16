@@ -13,13 +13,13 @@ export const hassleFreeIecRegistrationData: ServiceData = {
     "Fast and compliant Import Export Code (IEC) registration services to enable seamless international trade and customs clearance operations.",
 
   heroImage:
-    "/src/assets/images/serviceSection/other-consultancy-services/supply-chain-representation-still-life-1024x683.webp",
+    "/src/assets/images/serviceSection/other-consultancy-services/import-export-code.webp",
 
   image:
-    "/src/assets/images/serviceSection/other-consultancy-services/supply-chain-representation-still-life-1024x683.webp",
+    "/src/assets/images/serviceSection/other-consultancy-services/import-export-code.webp",
 
   images: [
-    "/src/assets/images/serviceSection/other-consultancy-services/supply-chain-representation-still-life-1024x683.webp",
+    "/src/assets/images/serviceSection/other-consultancy-services/import-export-code.webp",
   ],
 
   introTitle: "Hassle-Free IEC Registration",

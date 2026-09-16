@@ -13,13 +13,13 @@ export const financialAdvisoryServicesData: ServiceData = {
     "Comprehensive financial advisory solutions delivering strategic risk evaluation, capital restructuring, and sustainable wealth management strategies.",
 
   heroImage:
-    "/src/assets/images/serviceSection/other-consultancy-services/closeup-shot-person-thinking-buying-selling-house-1024x683.webp",
+    "/src/assets/images/serviceSection/other-consultancy-services/financial-advisory-services.webp",
 
   image:
-    "/src/assets/images/serviceSection/other-consultancy-services/closeup-shot-person-thinking-buying-selling-house-1024x683.webp",
+    "/src/assets/images/serviceSection/other-consultancy-services/financial-advisory-services.webp",
 
   images: [
-    "/src/assets/images/serviceSection/other-consultancy-services/closeup-shot-person-thinking-buying-selling-house-1024x683.webp",
+    "/src/assets/images/serviceSection/other-consultancy-services/financial-advisory-services.webp",
   ],
 
   introTitle: "Financial Advisory Services",

@@ -13,13 +13,13 @@ export const streamlinedPayrollManagementData: ServiceData = {
     "Comprehensive HR and payroll management solutions ensuring accurate salary processing, tax deductions, and labor law compliance.",
 
   heroImage:
-    "/src/assets/images/serviceSection/other-consultancy-services/side-view-cropped-man-working-financial-report-1024x683.webp",
+    "/src/assets/images/serviceSection/other-consultancy-services/hr-assistance-and-payroll.webp",
 
   image:
-    "/src/assets/images/serviceSection/other-consultancy-services/side-view-cropped-man-working-financial-report-1024x683.webp",
+    "/src/assets/images/serviceSection/other-consultancy-services/hr-assistance-and-payroll.webp",
 
   images: [
-    "/src/assets/images/serviceSection/other-consultancy-services/side-view-cropped-man-working-financial-report-1024x683.webp",
+    "/src/assets/images/serviceSection/other-consultancy-services/hr-assistance-and-payroll.webp",
   ],
 
   introTitle: "Streamlined Payroll Management",

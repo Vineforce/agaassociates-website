@@ -13,13 +13,13 @@ export const organizedFinancialManagementData: ServiceData = {
     "Professional accounting and bookkeeping services tailored to help enterprises maintain accurate ledgers, track cash flow, and ensure statutory audit readiness.",
 
   heroImage:
-    "/src/assets/images/serviceSection/other-consultancy-services/hand-holding-fountain-pen-office-desk-1024x683.webp",
+    "/src/assets/images/serviceSection/other-consultancy-services/accounting-and-bookkeeping.webp",
 
   image:
-    "/src/assets/images/serviceSection/other-consultancy-services/hand-holding-fountain-pen-office-desk-1024x683.webp",
+    "/src/assets/images/serviceSection/other-consultancy-services/accounting-and-bookkeeping.webp",
 
   images: [
-    "/src/assets/images/serviceSection/other-consultancy-services/hand-holding-fountain-pen-office-desk-1024x683.webp",
+    "/src/assets/images/serviceSection/other-consultancy-services/accounting-and-bookkeeping.webp",
   ],
 
   introTitle: "Organized Financial Management",

@@ -13,13 +13,13 @@ export const hassleFreeItrFilingForNrisData: ServiceData = {
     "Specialized tax advisory and Income Tax Return filing for Non-Resident Indians navigating DTAA benefits, capital gains, and compliance.",
 
   heroImage:
-    "/src/assets/images/serviceSection/other-consultancy-services/payroll-still-life-with-magnifying-glass-1024x683.webp",
+    "/src/assets/images/serviceSection/other-consultancy-services/nri-services-itr-of-nri.webp",
 
   image:
-    "/src/assets/images/serviceSection/other-consultancy-services/payroll-still-life-with-magnifying-glass-1024x683.webp",
+    "/src/assets/images/serviceSection/other-consultancy-services/nri-services-itr-of-nri.webp",
 
   images: [
-    "/src/assets/images/serviceSection/other-consultancy-services/payroll-still-life-with-magnifying-glass-1024x683.webp",
+    "/src/assets/images/serviceSection/other-consultancy-services/nri-services-itr-of-nri.webp",
   ],
 
   introTitle: "Hassle-Free ITR Filing for NRIs",

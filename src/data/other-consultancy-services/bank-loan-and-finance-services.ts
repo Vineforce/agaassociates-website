@@ -13,13 +13,13 @@ export const bankLoanFinanceServicesData: ServiceData = {
     "Comprehensive bank loan and project finance advisory services tailored to help businesses secure working capital, term loans, and credit facilities.",
 
   heroImage:
-    "/src/assets/images/serviceSection/other-consultancy-services/closeup-shot-person-thinking-buying-selling-house-1024x683.webp",
+    "/src/assets/images/serviceSection/other-consultancy-services/bank-loan-and-finance-services.webp",
 
   image:
-    "/src/assets/images/serviceSection/other-consultancy-services/closeup-shot-person-thinking-buying-selling-house-1024x683.webp",
+    "/src/assets/images/serviceSection/other-consultancy-services/bank-loan-and-finance-services.webp",
 
   images: [
-    "/src/assets/images/serviceSection/other-consultancy-services/closeup-shot-person-thinking-buying-selling-house-1024x683.webp",
+    "/src/assets/images/serviceSection/other-consultancy-services/bank-loan-and-finance-services.webp",
   ],
 
   introTitle: "Bank Loan and Finance Services",

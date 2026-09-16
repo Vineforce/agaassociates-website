@@ -13,13 +13,13 @@ export const businessPlanningGrowthData: ServiceData = {
     "Strategic business advisory services tailored to help corporate leaders outline growth roadmaps, optimize operations, and expand market presence.",
 
   heroImage:
-    "/src/assets/images/serviceSection/other-consultancy-services/top-view-office-workers-meeting-analyzing-financial-charts-holding-clipboard-1024x768.webp",
+    "/src/assets/images/serviceSection/other-consultancy-services/business-advisory-services.webp",
 
   image:
-    "/src/assets/images/serviceSection/other-consultancy-services/top-view-office-workers-meeting-analyzing-financial-charts-holding-clipboard-1024x768.webp",
+    "/src/assets/images/serviceSection/other-consultancy-services/business-advisory-services.webp",
 
   images: [
-    "/src/assets/images/serviceSection/other-consultancy-services/top-view-office-workers-meeting-analyzing-financial-charts-holding-clipboard-1024x768.webp",
+    "/src/assets/images/serviceSection/other-consultancy-services/business-advisory-services.webp",
   ],
 
   introTitle: "Business Planning & Growth",

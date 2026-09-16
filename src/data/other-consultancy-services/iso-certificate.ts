@@ -13,13 +13,13 @@ export const isoCertificationProcessData: ServiceData = {
     "Comprehensive ISO certification advisory services helping organizations achieve quality standards, operational compliance, and global market credibility.",
 
   heroImage:
-    "/src/assets/images/serviceSection/other-consultancy-services/people-checking-bankbook-isolated-white-table-1024x683.webp",
+    "/src/assets/images/serviceSection/other-consultancy-services/iso-certificate.webp",
 
   image:
-    "/src/assets/images/serviceSection/other-consultancy-services/people-checking-bankbook-isolated-white-table-1024x683.webp",
+    "/src/assets/images/serviceSection/other-consultancy-services/iso-certificate.webp",
 
   images: [
-    "/src/assets/images/serviceSection/other-consultancy-services/people-checking-bankbook-isolated-white-table-1024x683.webp",
+    "/src/assets/images/serviceSection/other-consultancy-services/iso-certificate.webp",
   ],
 
   introTitle: "ISO Certification Process",
