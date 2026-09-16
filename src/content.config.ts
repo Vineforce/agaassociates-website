@@ -52,7 +52,7 @@ const pagesCollection = defineCollection({
 
 // Service collection schema
 const serviceCollection = defineCollection({
-  loader: contentLoader(`./src/content/${servicesFolder}`),
+  loader: async () => [],
   schema: page.extend({
     icon: z.string().optional(),
     servicesSection: sectionsSchema.servicesSection.optional(),
