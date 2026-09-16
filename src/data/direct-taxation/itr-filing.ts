@@ -13,13 +13,13 @@ export const incomeTaxReturnFilingData: ServiceData = {
     "Accurate Income Tax Return (ITR) filing services tailored for individuals, HUFs, and corporate entities to maximize deductions and ensure deadline compliance.",
 
   heroImage:
-    "/src/assets/images/serviceSection/direct-taxation/checking-workplace-table-counting-man-1024x683.webp",
+    "/src/assets/images/serviceSection/direct-taxation/itr-filing.webp",
 
   image:
-    "/src/assets/images/serviceSection/direct-taxation/checking-workplace-table-counting-man-1024x683.webp",
+    "/src/assets/images/serviceSection/direct-taxation/itr-filing.webp",
 
   images: [
-    "/src/assets/images/serviceSection/direct-taxation/checking-workplace-table-counting-man-1024x683.webp",
+    "/src/assets/images/serviceSection/direct-taxation/itr-filing.webp",
   ],
 
   introTitle: "Income Tax Return Filing",

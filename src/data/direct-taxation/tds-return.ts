@@ -13,13 +13,13 @@ export const tdsReturnData: ServiceData = {
     "End-to-end Tax Deducted at Source (TDS) & TCS return filing services tailored to ensure accurate quarterly computations, challan generation, and Form 16 issuance.",
 
   heroImage:
-    "/src/assets/images/serviceSection/direct-taxation/financial-concept-with-icon-wooden-cubes-calculator-turquoise-table-flat-lay-1024x906.webp",
+    "/src/assets/images/serviceSection/direct-taxation/tds-return.webp",
 
   image:
-    "/src/assets/images/serviceSection/direct-taxation/financial-concept-with-icon-wooden-cubes-calculator-turquoise-table-flat-lay-1024x906.webp",
+    "/src/assets/images/serviceSection/direct-taxation/tds-return.webp",
 
   images: [
-    "/src/assets/images/serviceSection/direct-taxation/financial-concept-with-icon-wooden-cubes-calculator-turquoise-table-flat-lay-1024x906.webp",
+    "/src/assets/images/serviceSection/direct-taxation/tds-return.webp",
   ],
 
   introTitle: "TDS Return",

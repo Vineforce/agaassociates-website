@@ -10,14 +10,14 @@ export const directTaxationData: ServiceData = {
     "Strategic direct taxation and income tax advisory services tailored to help businesses optimize tax liabilities, maintain compliance, and maximize profitability.",
 
   heroImage:
-    "/src/assets/images/serviceSection/direct-taxation/front-view-young-attractive-lady-working-with-documents-front-table-with-calculators-cup-phone-light-background-work-business-technologies-s.jpg",
+    "/src/assets/images/serviceSection/direct-taxation/direct-taxation-hero.jpg",
 
   image:
-    "/src/assets/images/serviceSection/direct-taxation/finance-accounting-paper-desk-using-scaled.jpg",
+    "/src/assets/images/serviceSection/direct-taxation/direct-taxation.jpg",
 
   images: [
-    "/src/assets/images/serviceSection/direct-taxation/front-view-young-attractive-lady-working-with-documents-front-table-with-calculators-cup-phone-light-background-work-business-technologies-s.jpg",
-    "/src/assets/images/serviceSection/direct-taxation/finance-accounting-paper-desk-using-scaled.jpg",
+    "/src/assets/images/serviceSection/direct-taxation/direct-taxation-hero.jpg",
+    "/src/assets/images/serviceSection/direct-taxation/direct-taxation.jpg",
   ],
 
   introTitle: "Direct Taxation",

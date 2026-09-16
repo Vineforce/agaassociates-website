@@ -13,13 +13,13 @@ export const taxCompliancesData: ServiceData = {
     "Comprehensive direct tax compliance management services tailored to ensure timely advance tax payments, SFT disclosures, and statutory filings.",
 
   heroImage:
-    "/src/assets/images/serviceSection/direct-taxation/tax-incentive-audit-benefit-cash-payment-income-concept-1024x683.webp",
+    "/src/assets/images/serviceSection/direct-taxation/tax-compliances.webp",
 
   image:
-    "/src/assets/images/serviceSection/direct-taxation/tax-incentive-audit-benefit-cash-payment-income-concept-1024x683.webp",
+    "/src/assets/images/serviceSection/direct-taxation/tax-compliances.webp",
 
   images: [
-    "/src/assets/images/serviceSection/direct-taxation/tax-incentive-audit-benefit-cash-payment-income-concept-1024x683.webp",
+    "/src/assets/images/serviceSection/direct-taxation/tax-compliances.webp",
   ],
 
   introTitle: "Tax Compliances",

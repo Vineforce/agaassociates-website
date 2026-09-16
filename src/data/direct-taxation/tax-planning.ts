@@ -13,13 +13,13 @@ export const strategicTaxPlanningData: ServiceData = {
     "Proactive direct tax planning and restructuring services tailored to help taxpayers legally minimize liabilities, leverage deductions, and preserve wealth.",
 
   heroImage:
-    "/src/assets/images/serviceSection/direct-taxation/man-income-analyzing-pushing-button-1024x683.webp",
+    "/src/assets/images/serviceSection/direct-taxation/tax-planning.webp",
 
   image:
-    "/src/assets/images/serviceSection/direct-taxation/man-income-analyzing-pushing-button-1024x683.webp",
+    "/src/assets/images/serviceSection/direct-taxation/tax-planning.webp",
 
   images: [
-    "/src/assets/images/serviceSection/direct-taxation/man-income-analyzing-pushing-button-1024x683.webp",
+    "/src/assets/images/serviceSection/direct-taxation/tax-planning.webp",
   ],
 
   introTitle: "Strategic Tax Planning",

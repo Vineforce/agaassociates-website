@@ -10,14 +10,14 @@ export const indirectTaxationData: ServiceData = {
     "Expert indirect taxation and GST advisory services tailored to help businesses streamline regulatory compliance, optimize supply chain duties, and minimize risks.",
 
   heroImage:
-    "/src/assets/images/serviceSection/indirect-taxation/asian-woman-working-through-paperwork-scaled.jpg",
+    "/src/assets/images/serviceSection/indirect-taxation/indirect-taxation.jpg",
 
   image:
-    "/src/assets/images/serviceSection/indirect-taxation/asian-woman-working-through-paperwork-scaled.jpg",
+    "/src/assets/images/serviceSection/indirect-taxation/indirect-taxation.jpg",
 
   images: [
-    "/src/assets/images/serviceSection/indirect-taxation/asian-woman-working-through-paperwork-scaled.jpg",
-    "/src/assets/images/serviceSection/indirect-taxation/close-up-female-hand-counting-with-calculator-scaled.jpg",
+    "/src/assets/images/serviceSection/indirect-taxation/indirect-taxation.jpg",
+    "/src/assets/images/serviceSection/indirect-taxation/indirect-taxation-calculator.jpg",
   ],
 
   introTitle: "Indirect Taxation",
