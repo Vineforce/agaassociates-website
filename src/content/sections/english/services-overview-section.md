@@ -21,17 +21,17 @@ services:
     url: "/management-consultnacy/"
 
   - title: "Direct Taxation"
-    image: "/src/assets/images/serviceSection/direct-taxation/finance-accounting-paper-desk-using-scaled.jpg"
+    image: "/src/assets/images/serviceSection/direct-taxation/direct-taxation.jpg"
     description: "Navigate the complexities of direct taxation with ease and confidence. Our expert tax solutions ensure compliance, minimize liabilities, and optimize your financial outcomes for long-term success."
     url: "/direct-taxation/"
 
   - title: "Indirect Taxation"
-    image: "/src/assets/images/serviceSection/indirect-taxation/asian-woman-working-through-paperwork-scaled.jpg"
+    image: "/src/assets/images/serviceSection/indirect-taxation/indirect-taxation.jpg"
     description: "Stay ahead of evolving indirect tax regulations with our comprehensive services. We assist in GST, VAT, and other statutory tax filings to keep your business compliant, efficient, and up to date."
     url: "/indirect-taxation/"
 
   - title: "Other Consultancy Services"
-    image: "/src/assets/images/serviceSection/other-consultancy-services/businessmen-hands-white-table-with-documents-drafts-scaled.jpg"
+    image: "/src/assets/images/serviceSection/other-consultancy-services/other-consultancy-services.jpg"
     description: "Explore personalized consultancy services designed to address unique business challenges. Our experts provide innovative solutions tailored to your specific needs for sustained growth and success."
     url: "/other-consultancy-services/"
 
