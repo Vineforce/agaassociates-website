@@ -6,7 +6,7 @@ const { toc } = Astro.props;
 
 {
   toc && (
-    <ol>
+    <ol class="list-none pl-4">
       {toc.map((heading: MarkdownHeading & TocHeading) => (
         <li>
           <a href={`#${heading.slug}`}>{heading.text}</a>

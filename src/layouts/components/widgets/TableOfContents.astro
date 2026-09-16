@@ -48,7 +48,7 @@ if (!toc) return;
     ]}>
     <ol
       data-lenis-scroll-native
-      class="has-customized-scrollbar max-h-60 overflow-auto">
+      class="has-customized-scrollbar max-h-60 overflow-auto list-none pl-0">
       {
         toc.map((heading) => (
           <li>
@@ -64,7 +64,30 @@ if (!toc) return;
 
     const toc = document.querySelector(".scroll-menu > ol") as HTMLElement;
 
+    function initTocAccordion() {
+      const accordion = document.querySelector(".hs-accordion");
+      if (!accordion) return;
+      const toggleBtn = accordion.querySelector(".hs-accordion-toggle");
+      const contentNav = accordion.querySelector("#toc-collapse");
+      if (toggleBtn && contentNav) {
+        toggleBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          const isHidden = contentNav.classList.contains("hidden");
+          if (isHidden) {
+            contentNav.classList.remove("hidden");
+            toggleBtn.setAttribute("aria-expanded", "true");
+            accordion.classList.add("active");
+          } else {
+            contentNav.classList.add("hidden");
+            toggleBtn.setAttribute("aria-expanded", "false");
+            accordion.classList.remove("active");
+          }
+        });
+      }
+    }
+
     document.addEventListener("DOMContentLoaded", function () {
+      initTocAccordion();
       if (toc)
         new ScrollMenu(".scroll-menu a", {
           activeOffset: 128, // Custom active offset from top
@@ -80,5 +103,6 @@ if (!toc) return;
           },
         });
     });
+    document.addEventListener("astro:page-load", initTocAccordion);
   </script>
 </div>

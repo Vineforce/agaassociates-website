@@ -132,6 +132,6 @@ export const collections = {
   }),
   team: teamCollection,
   author: defineCollection({
-    loader: contentLoader("./src/content/author"),
+    loader: async () => [],
   }),
 };
