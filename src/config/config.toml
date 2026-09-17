@@ -2,9 +2,9 @@
 [site]
   title            = "H A V N & COMPANY" # Shared title for SEO and OpenGraph
   description      = "AGA Associates provides reliable CA services, including tax planning, auditing, compliance, and financial consulting to help businesses thrive." # Shared description for SEO and OpenGraph
-  tagline          = "Free IT Solutions & Services Astro & Tailwind CSS Theme"
+  tagline          = "Chartered Accountants & Financial Consultants"
   taglineSeparator = "" # default is " - " 
-  baseUrl          = "https://techlo-lite-astro.pages.dev/" # Base URL for the site and used in OpenGraph meta tags.
+  baseUrl          = "https://agaassociates-website.pages.dev/" # Base URL for the site and used in OpenGraph meta tags.
   logo             = "/images/logo.png" # Path to the site's logo
   logoAlternate    = "" # Alternate logo for dark background if needed
   logoText         = "" # Text displayed next to the logo
@@ -121,7 +121,7 @@
   [settings.contactInfo]
     phone       = "[+91 99140-14949](tel:+919914014949)"
     email       = "[info@agaassociates.com](mailto:info@agaassociates.com)"
-    address     = "E10C, First Floor, Near Hira Sweets, Laxmi Nagar – 110092, New Delhi"
+    address     = "202 Hira Enclave Bhawanigarh Road, Distt. Patiala Nabha, 147201"
     officeHours = "Office Hours: 9:30 AM – 7:00 PM"
 
   # Header Offcanvas Configuration
