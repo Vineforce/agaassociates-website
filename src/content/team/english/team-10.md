@@ -5,11 +5,11 @@ image: "/images/team/abhishek-sharma.jpg"
 profession: "Senior Professional"
 category: "SENIOR PROFESSIONALS"
 order: 10
-metaDescription: "Abhishek Sharma - Senior Professional at H A V N & COMPANY."
+metaDescription: "Abhishek Sharma - Senior Professional at H A V N & COMPANY specializing in Tax Audits, GST Audits, and Company Audits."
 draft: false
 
 email: "contact@agaassociates.com"
-phone: "+91 99140-14949"
+
 
 social:
   - enable: true
@@ -18,4 +18,4 @@ social:
     url: "https://www.linkedin.com/company/example-company"
 ---
 
-Abhishek Sharma is a Senior Professional at H A V N & COMPANY, focusing on operational oversight and quality assurance. His disciplined work ethic assists teams in maintaining clean records and dependable reporting workflows.
+Abhishek Sharma is a Senior Professional at H A V N & COMPANY, focusing on Tax Audits, GST Audits, Company Audits, and financial reporting. His disciplined approach ensures precise statutory audit execution and dependable record maintenance across client engagements.

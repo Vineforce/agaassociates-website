@@ -5,11 +5,11 @@ image: "/images/team/amol-gupta.jpg"
 profession: "Executive Chairman"
 category: "FIRM LEADERSHIP"
 order: 2
-metaDescription: "CA Amol Gupta - Executive Chairman at H A V N & COMPANY."
+metaDescription: "CA Amol Gupta - Executive Chairman at H A V N & COMPANY with 15+ years of experience in accounting, auditing, tax consultancy, and corporate advisory services."
 draft: false
 
 email: "contact@agaassociates.com"
-phone: "+91 99140-14949"
+
 
 social:
   - enable: true
@@ -18,4 +18,4 @@ social:
     url: "https://www.linkedin.com/company/example-company"
 ---
 
-CA Amol Gupta is Executive Chairman at H A V N & COMPANY, guiding organizational growth with strategic vision and dedicated leadership. He focuses on expanding client-centric capabilities while maintaining rigorous professional standards.
+CA Amol Gupta serves as Executive Chairman at H A V N & COMPANY, bringing over 15 years of rich professional experience, working with H A V N & COMPANY since 2023. He holds B.Com., FCA, ACCA (9/13), AICA L1, and holds the Concurrent Audit Certification issued by ICAI. Additionally, he is a Xero Certified Advisor, QuickBooks Certified Bookkeeper, and Certified Zoho Books Trainer, possessing deep expertise in accounting, auditing, tax consultancy, ROC & Company Law Compliances, and corporate advisory services.

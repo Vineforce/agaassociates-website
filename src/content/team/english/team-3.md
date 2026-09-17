@@ -5,11 +5,11 @@ image: "/images/team/varinder-kumar.png"
 profession: "Managing Partner"
 category: "FIRM LEADERSHIP"
 order: 3
-metaDescription: "CA Varinder Kumar - Managing Partner at H A V N & COMPANY."
+metaDescription: "CA Varinder Kumar - Managing Partner at H A V N & COMPANY with 27+ years experience. Holds DISA (ICAI), specializing in corporate audits and taxation."
 draft: false
 
 email: "contact@agaassociates.com"
-phone: "+91 99140-14949"
+
 
 social:
   - enable: true
@@ -18,4 +18,4 @@ social:
     url: "https://www.linkedin.com/company/example-company"
 ---
 
-CA Varinder Kumar is a Managing Partner at H A V N & COMPANY, contributing key leadership and operational direction across the practice. He works alongside the executive team to maintain service quality and drive organizational success.
+CA Varinder Kumar is a Managing Partner at H A V N & COMPANY with over 27 years of extensive practice in corporate auditing, direct & indirect taxation, ROC & Company Law Compliances, and comprehensive financial consultancy. He holds DISA (Diploma in Information System Audit) issued by ICAI, providing seasoned executive leadership, system audit direction, and complex tax planning solutions across diverse client sectors.
