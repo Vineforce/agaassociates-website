@@ -262,6 +262,14 @@ async function processSitemaps() {
       await fs.writeFile(sitemapFile, minified, "utf8");
     }
 
+    // Also copy sitemap-0.xml to sitemap.xml so /sitemap.xml is a valid static XML file
+    const sitemap0Path = path.resolve(DIST_FOLDER, "sitemap-0.xml");
+    const sitemapXmlPath = path.resolve(DIST_FOLDER, "sitemap.xml");
+    if (await pathExists(sitemap0Path)) {
+      await fs.copyFile(sitemap0Path, sitemapXmlPath);
+      console.log("✅ Copied sitemap-0.xml to sitemap.xml");
+    }
+
     console.log("✅ Sitemaps processed successfully.");
   } catch (error) {
     console.error("Error processing sitemaps:", error);
