@@ -18,6 +18,11 @@ export async function getStaticPaths() {
 
       let teamCollection = await getCollectionCTM("team", lang.languageCode);
 
+      // Only generate single pages for FIRM LEADERSHIP members
+      teamCollection = teamCollection.filter(
+        (team) => team.data.category === "FIRM LEADERSHIP",
+      );
+
       // If draft true in index.md file frontmatter don't include any page related to this page collection in production
       if (teamIndex?.data.draft && import.meta.env.PROD) {
         return [];

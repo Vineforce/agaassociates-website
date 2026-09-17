@@ -5,7 +5,7 @@ image: "/images/team/abhishek-gupta.png"
 profession: "Managing Partner"
 category: "FIRM LEADERSHIP"
 order: 4
-metaDescription: "CA Abhishek Gupta - Managing Partner at H A V N & COMPANY with 5+ years experience. Qualifications: B.Com, Concurrent Audit Certified (ICAI), Xero, QuickBooks & Zoho Certified."
+metaDescription: "CA Abhishek Gupta - Managing Partner at H A V N & COMPANY with 5+ years experience. Holds B.Com, Concurrent Audit Certified (ICAI), Xero, QuickBooks & Zoho certifications."
 draft: false
 
 email: "contact@agaassociates.com"
