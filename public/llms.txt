@@ -1,0 +1,31 @@
+# H A V N & COMPANY (Amol Gupta & Associates)
+
+> Leading Chartered Accountant (CA) firm in New Delhi, India. Providing expert services in Tax Planning, Audit & Assurance, Corporate Compliance, NRI Financial Advisory, Company Formation, Bank Financing, and Business Software Consultancy.
+
+## Overview
+Founded in 2013 by CA Amol Gupta, H A V N & COMPANY (Amol Gupta & Associates) is a premier Chartered Accountancy firm committed to professional excellence, statutory compliance, and ethical financial strategies. We serve Indian startups, established corporations, non-resident Indians (NRIs), and global enterprises.
+
+## Primary Pages & Information
+- [Home](https://agaassociates-website.pages.dev/): Comprehensive overview of CA consulting services, practice areas, leadership, and firm contact info.
+- [About Us](https://agaassociates-website.pages.dev/about-us/): Detailed history, firm vision, mission statement, core principles, and executive leadership background.
+- [Services](https://agaassociates-website.pages.dev/services/): Full breakdown of auditing, direct and indirect taxation, corporate compliance, and advisory services.
+- [Our Teams](https://agaassociates-website.pages.dev/our-teams/): Leadership profiles of CA Hukam Chand Jindal (Executive Chairman), CA Amol Gupta (Founder & Managing Partner), and senior partners.
+- [Articles & News](https://agaassociates-website.pages.dev/article/): Statutory tax notifications, regulatory updates, audit guidelines, and business finance articles.
+- [Contact Us](https://agaassociates-website.pages.dev/contact/): Office locations, telephone details, email contact, and consultation request form.
+
+## Key Specialized Consultancy Services
+- [Company Formation](https://agaassociates-website.pages.dev/other-consultancy-services/company-formation/): Registration and incorporation of Private Limited Companies, LLPs, One Person Companies (OPC), and Partnership firms in India.
+- [Bank Loan and Finance Services](https://agaassociates-website.pages.dev/other-consultancy-services/bank-loan-and-finance-services/): Project finance, working capital loans, CMA data preparation, project reports, and loan syndication.
+- [Financial Advisory Services](https://agaassociates-website.pages.dev/other-consultancy-services/financial-advisory-services/): Corporate restructuring, capital planning, risk assessment, valuation, and wealth management.
+- [NRI Services & ITR of NRI](https://agaassociates-website.pages.dev/other-consultancy-services/nri-services-itr-of-nri/): Non-Resident Indian tax filing, FEMA compliance, 15CA & 15CB certifications, foreign asset reporting, and repatriation advice.
+- [Business Software Consultancy](https://agaassociates-website.pages.dev/other-consultancy-services/business-software-consultancy/): Implementation, setup, and support for accounting software (Tally, Zoho Books, ERP) and compliance automation tools.
+
+## Official Contact Details
+- **Firm Name**: H A V N & COMPANY / Amol Gupta & Associates
+- **Address**: 202 Hira Enclave Bhawanigarh Road, Distt. Patiala Nabha, 147201
+- **Phone**: +91 99140-14949
+- **Email**: info@agaassociates.com
+- **Office Hours**: 9:30 AM – 7:00 PM (Monday – Saturday)
+
+## Full Documentation & Detailed Content
+- For full-text markdown content of all service pages, leadership bios, and compliance guides, consult [llms-full.txt](https://agaassociates-website.pages.dev/llms-full.txt).
