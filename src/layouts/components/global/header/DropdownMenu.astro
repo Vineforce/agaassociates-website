@@ -40,10 +40,10 @@ const isMenuActive = (item: NavigationLink): boolean =>
         active: isMenuActive(menu),
       },
       recursive
-        ? "justify-between text-dark hover:text-primary"
+        ? "w-full justify-between py-2 px-3 rounded-lg text-slate-700 hover:text-primary transition-colors"
         : "nav-link max-lg:flex! max-lg:justify-between",
     ]}
-    {...((!menu.url || menu.url === "#" || menu.hasChildren) ? { "onclick": "if(window.innerWidth < 1024){ event.preventDefault(); }" } : {})}>
+    {...((!menu.url || menu.url === "#") ? { "onclick": "event.preventDefault();" } : (menu.hasChildren ? { "onclick": "if(window.innerWidth < 1024){ event.preventDefault(); }" } : {}))}>
     {menu.name}
     {
       menu.hasChildren && (
@@ -68,7 +68,7 @@ const isMenuActive = (item: NavigationLink): boolean =>
     menu.hasChildren && (
       <ul
         class:list={[
-          "nav-dropdown-list hs-dropdown-menu hs-dropdown-open:pointer-events-auto hs-dropdown-open:opacity-100 pointer-events-none hidden opacity-0 transition-all duration-200 max-lg:m-0! max-lg:transform-none! lg:absolute",
+          "nav-dropdown-list hs-dropdown-menu hs-dropdown-open:pointer-events-auto hs-dropdown-open:opacity-100 pointer-events-none hidden opacity-0 transition-opacity duration-150 max-lg:m-0! max-lg:transform-none! lg:absolute",
           recursive ? "lg:left-full lg:top-0 lg:ms-0 lg:mt-0!" : "lg:top-full lg:left-0 lg:mt-3!",
         ]}
         {...(recursive ? { "aria-orientation": "vertical" } : {})}>
