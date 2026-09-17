@@ -5,7 +5,7 @@ image: "/images/team/hukam-chand-jindal.jpg"
 profession: "Executive Chairman"
 category: "FIRM LEADERSHIP"
 order: 1
-metaDescription: "CA Hukam Chand Jindal - Executive Chairman at Amol Gupta & Associates."
+metaDescription: "CA Hukam Chand Jindal - Executive Chairman at H A V N & COMPANY."
 draft: false
 
 email: "contact@agaassociates.com"
@@ -18,4 +18,4 @@ social:
     url: "https://www.linkedin.com/company/example-company"
 ---
 
-CA Hukam Chand Jindal is a Executive Chairman at Amol Gupta & Associates.
+CA Hukam Chand Jindal serves as Executive Chairman at H A V N & COMPANY, providing overarching strategic vision and leadership. He upholds high standards of professional ethics and mentors the leadership team across all operations.

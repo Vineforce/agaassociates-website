@@ -5,7 +5,7 @@ image: "/images/team/ajay-aggarwal.png"
 profession: "Managing Partner"
 category: "FIRM LEADERSHIP"
 order: 7
-metaDescription: "CA. Ajay Aggarwal - Managing Partner at Amol Gupta & Associates."
+metaDescription: "CA. Ajay Aggarwal - Managing Partner at H A V N & COMPANY."
 draft: false
 
 email: "contact@agaassociates.com"
@@ -18,4 +18,4 @@ social:
     url: "https://www.linkedin.com/company/example-company"
 ---
 
-CA. Ajay Aggarwal is a Managing Partner at Amol Gupta & Associates.
+CA. Ajay Aggarwal is a Managing Partner at H A V N & COMPANY, steering management initiatives and partner-level client advisory. He works closely with leadership to optimize organizational processes and enforce professional excellence.

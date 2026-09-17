@@ -5,7 +5,7 @@ image: "/images/team/abhishek-sharma.jpg"
 profession: "Senior Professional"
 category: "SENIOR PROFESSIONALS"
 order: 10
-metaDescription: "Abhishek Sharma - Senior Professional at Amol Gupta & Associates."
+metaDescription: "Abhishek Sharma - Senior Professional at H A V N & COMPANY."
 draft: false
 
 email: "contact@agaassociates.com"
@@ -18,4 +18,4 @@ social:
     url: "https://www.linkedin.com/company/example-company"
 ---
 
-Abhishek Sharma is a Senior Professional at Amol Gupta & Associates. He leads direct tax filings, GST compliance verification, and financial report reconciliations. His analytical skill set assists clients in maintaining complete and transparent financial records.
+Abhishek Sharma is a Senior Professional at H A V N & COMPANY, focusing on operational oversight and quality assurance. His disciplined work ethic assists teams in maintaining clean records and dependable reporting workflows.

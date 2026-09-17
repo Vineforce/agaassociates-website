@@ -5,7 +5,7 @@ image: "/images/team/abhishek-gupta.png"
 profession: "Managing Partner"
 category: "FIRM LEADERSHIP"
 order: 4
-metaDescription: "CA Abhishek Gupta - Managing Partner at Amol Gupta & Associates."
+metaDescription: "CA Abhishek Gupta - Managing Partner at H A V N & COMPANY."
 draft: false
 
 email: "contact@agaassociates.com"
@@ -18,4 +18,4 @@ social:
     url: "https://www.linkedin.com/company/example-company"
 ---
 
-CA Abhishek Gupta is a Managing Partner at Amol Gupta & Associates.
+CA Abhishek Gupta is a Managing Partner at H A V N & COMPANY, playing an integral role in strategic oversight and partner-level advisory. He focuses on driving effective solution delivery while upholding the firm's quality standards.

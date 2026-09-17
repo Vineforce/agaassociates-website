@@ -5,7 +5,7 @@ image: "/images/team/anshul-goyal.png"
 profession: "Managing Partner"
 category: "FIRM LEADERSHIP"
 order: 5
-metaDescription: "CA Anshul Goyal - Managing Partner at Amol Gupta & Associates."
+metaDescription: "CA Anshul Goyal - Managing Partner at H A V N & COMPANY."
 draft: false
 
 email: "contact@agaassociates.com"
@@ -18,4 +18,4 @@ social:
     url: "https://www.linkedin.com/company/example-company"
 ---
 
-CA Anshul Goyal is a Managing Partner at Amol Gupta & Associates.
+CA Anshul Goyal is a Managing Partner at H A V N & COMPANY, helping guide practice operations and client relationship strategies. His disciplined approach ensures high consistency, operational efficiency, and quality across firm deliverables.

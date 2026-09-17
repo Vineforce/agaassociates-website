@@ -13,7 +13,7 @@ const { Content } = await render(Astro.props.content);
 ---
 
 <section class="pt-6 pb-16 lg:pt-10 lg:pb-24">
-  <div class="container">
+  <div class="container mx-auto px-4">
     <div
       class="team-single-layout mx-auto grid w-full grid-cols-1 items-center gap-y-8 lg:grid-cols-2">
       {
@@ -30,7 +30,7 @@ const { Content } = await render(Astro.props.content);
         )
       }
 
-      <div class="team-single-content">
+      <div class="team-single-content max-w-xl">
         <div class="space-y-2">
           {
             title && (
@@ -94,7 +94,7 @@ const { Content } = await render(Astro.props.content);
 
 <style>
   .team-single-layout {
-    max-width: 1272px;
+    max-width: 960px;
     gap: 36px;
   }
 
@@ -141,7 +141,7 @@ const { Content } = await render(Astro.props.content);
 
   @media (min-width: 1024px) {
     .team-single-layout {
-      grid-template-columns: minmax(280px, 360px) minmax(0, 1fr);
+      grid-template-columns: minmax(280px, 340px) minmax(0, 1fr);
       gap: 48px;
     }
 

@@ -3,7 +3,7 @@ title: "Firm Leadership & Experts"
 description: "Meet our leadership team of experienced Chartered Accountants, corporate advisors, and financial experts. We combine industry leadership with strategic foresight to ensure statutory compliance, optimize financial performance, and drive sustainable growth."
 heroDescription: "Meet our leadership team of experienced Chartered Accountants, corporate advisors, and financial experts. We combine industry leadership with strategic foresight to ensure statutory compliance, optimize financial performance, and drive sustainable growth."
 image: "/src/assets/images/team-hero.jpg"
-metaDescription: "Meet the experienced leadership team of chartered accountants, tax consultants, and financial advisors at AGA & Associates."
+metaDescription: "Meet the experienced leadership team of chartered accountants, tax consultants, and financial advisors at H A V N & COMPANY."
 draft: false
 
 # Override Default Content of `/sections/team-section.md`

@@ -5,7 +5,7 @@ image: "/images/team/ashish-pawar.jpg"
 profession: "Assistant"
 category: "ASSISTANT"
 order: 13
-metaDescription: "Ashish Pawar - Assistant at Amol Gupta & Associates."
+metaDescription: "Ashish Pawar - Assistant at H A V N & COMPANY."
 draft: false
 
 email: "contact@agaassociates.com"
@@ -18,4 +18,4 @@ social:
     url: "https://www.linkedin.com/company/example-company"
 ---
 
-Ashish Pawar is a Assistant at Amol Gupta & Associates.
+Ashish Pawar is an Assistant at H A V N & COMPANY, assisting with documentation processing, client communication, and administrative coordination. He ensures streamlined record keeping and prompt response management for client engagements.
