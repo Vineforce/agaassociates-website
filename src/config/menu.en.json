@@ -423,16 +423,6 @@
           "enable": true,
           "name": "Latest Posts",
           "url": "/article/"
-        },
-        {
-          "enable": true,
-          "name": "Terms & Conditions",
-          "url": "/terms-conditions/"
-        },
-        {
-          "enable": true,
-          "name": "Privacy Policy",
-          "url": "/privacy-policy/"
         }
       ]
     },
