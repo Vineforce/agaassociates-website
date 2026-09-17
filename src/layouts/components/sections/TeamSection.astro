@@ -79,7 +79,10 @@ function getMemberCategory(item: any): string {
   const profession = (item.data?.profession || "").toLowerCase();
   const order = item.data?.order ?? parseInt(item.id.match(/\d+/)?.[0] || "0", 10);
 
-  if (profession.includes("senior") || order === 9 || order === 10) {
+  if (profession.includes("senior assistant")) {
+    return "SENIOR ASSISTANTS";
+  }
+  if (profession.includes("senior professional") || order === 9 || order === 10) {
     return "SENIOR PROFESSIONALS";
   }
   if (profession.includes("assistant") || order >= 11) {
@@ -92,6 +95,7 @@ function getMemberCategory(item: any): string {
 const categoryGroups: { category: string; items: typeof slicedMembers }[] = [
   { category: "FIRM LEADERSHIP", items: [] },
   { category: "SENIOR PROFESSIONALS", items: [] },
+  { category: "SENIOR ASSISTANTS", items: [] },
   { category: "ASSISTANT", items: [] },
 ];
 

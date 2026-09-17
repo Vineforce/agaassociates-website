@@ -5,11 +5,11 @@ image: "/images/team/anmol-goyal.png"
 profession: "Managing Partner"
 category: "FIRM LEADERSHIP"
 order: 8
-metaDescription: "CA. Anmol Goyal - Managing Partner at H A V N & COMPANY."
+metaDescription: "CA. Anmol Goyal - Managing Partner at H A V N & COMPANY with 15+ years of experience in Attestation, Audit & Assurance, and Management Consultancy."
 draft: false
 
 email: "contact@agaassociates.com"
-phone: "+91 99140-14949"
+
 
 social:
   - enable: true
@@ -18,4 +18,4 @@ social:
     url: "https://www.linkedin.com/company/example-company"
 ---
 
-CA. Anmol Goyal is a Managing Partner at H A V N & COMPANY, providing leadership across partner operations and advisory engagements. He is dedicated to maintaining high professional rigor and nurturing strong client relationships.
+CA. Anmol Goyal serves as a Managing Partner at H A V N & COMPANY, offering over 15 years of seasoned expertise across Attestation, Audit & Assurance, Management Consultancy, ROC & Company Law Compliances, and Business Registration services. He works closely with enterprise leadership to enhance financial credibility, optimize operational performance, and ensure statutory alignment.

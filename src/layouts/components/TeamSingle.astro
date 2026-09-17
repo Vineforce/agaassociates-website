@@ -6,7 +6,7 @@ import OptimizedImage from "./utilities/OptimizedImage.astro";
 import { render } from "astro:content";
 
 const { data } = Astro.props.content;
-const { title, image, profession, email, phone } =
+const { title, image, profession, email } =
   data as InferEntrySchema<"team">;
 
 const { Content } = await render(Astro.props.content);
@@ -56,21 +56,6 @@ const { Content } = await render(Astro.props.content);
 
         <div class="team-single-contact space-y-3">
           {
-            phone && (
-              <div class="team-single-contact-item">
-                <svg
-                  class="size-5"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  aria-hidden="true">
-                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.3-.3.73-.39 1.12-.26 1.23.41 2.55.63 3.91.63.59 0 1.06.47 1.06 1.06v3.49c0 .59-.47 1.06-1.06 1.06C10.46 21.66 2.34 13.54 2.34 3.56c0-.59.47-1.06 1.06-1.06h3.5c.59 0 1.06.47 1.06 1.06 0 1.36.22 2.68.63 3.91.12.39.03.82-.27 1.12l-2.2 2.2Z" />
-                </svg>
-                <span set:html={markdownify(phone)} />
-              </div>
-            )
-          }
-
-          {
             email && (
               <div class="team-single-contact-item">
                 <svg
@@ -115,15 +100,21 @@ const { Content } = await render(Astro.props.content);
 
   .team-single-profession {
     color: #0F5277;
-    font-size: 20px;
-    line-height: 34px;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 600;
   }
 
   .team-single-bio {
-    margin-top: 26px;
-    color: #585b6f;
-    font-size: 16px;
-    line-height: 30px;
+    margin-top: 24px;
+  }
+
+  .team-single-bio,
+  .team-single-bio p {
+    font-weight: 600 !important;
+    color: #475569 !important;
+    font-size: 16px !important;
+    line-height: 28px !important;
   }
 
   .team-single-contact {

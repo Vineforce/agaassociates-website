@@ -2,14 +2,14 @@
 title: "Shubham Jain"
 customSlug: "shubham-jain"
 image: "/images/team/shubham-jain.jpg"
-profession: "Assistant"
-category: "ASSISTANT"
+profession: "Senior Assistant"
+category: "SENIOR ASSISTANTS"
 order: 11
-metaDescription: "Shubham Jain - Assistant at H A V N & COMPANY."
+metaDescription: "Shubham Jain - Senior Assistant at H A V N & COMPANY specializing in GST Audits and tax compliance support."
 draft: false
 
 email: "contact@agaassociates.com"
-phone: "+91 99140-14949"
+
 
 social:
   - enable: true
@@ -18,4 +18,4 @@ social:
     url: "https://www.linkedin.com/company/example-company"
 ---
 
-Shubham Jain is an Assistant at H A V N & COMPANY, delivering essential operational and administrative support. He focuses on maintaining organized documentation and facilitating smooth execution across client assignments.
+Shubham Jain is a Senior Assistant at H A V N & COMPANY, delivering key technical support for GST Audits, tax documentation, and regulatory compliance. He ensures structured file organization and seamless execution during annual audit schedules.
