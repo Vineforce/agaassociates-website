@@ -240,7 +240,7 @@ const navigationButton = { ...navBtnConfig, ...customNavigationButton };
   function initDropdownToggleAndClose(): void {
     const isMobile = () => window.innerWidth < 1024;
 
-    // Prevent default jump on any link with href="#" or javascript:void(0)
+    // Prevent default jump on dummy links with href="#" or javascript:void(0)
     document
       .querySelectorAll<HTMLAnchorElement>('a[href="#"], a[href="javascript:void(0)"]')
       .forEach((link) => {
@@ -255,6 +255,7 @@ const navigationButton = { ...navBtnConfig, ...customNavigationButton };
       toggle.addEventListener("click", (e) => {
         const hasChildren = toggle.dataset.hasChildren === "true" || toggle.classList.contains("hs-dropdown-toggle");
         const href = (toggle as HTMLAnchorElement).getAttribute?.("href");
+        const isDummy = !href || href === "#" || href === "javascript:void(0)";
 
         if (isMobile() && hasChildren) {
           e.preventDefault();
@@ -285,7 +286,7 @@ const navigationButton = { ...navBtnConfig, ...customNavigationButton };
               }
             }
           }
-        } else if (!href || href === "#" || href === "javascript:void(0)") {
+        } else if (isDummy) {
           e.preventDefault();
         }
       });

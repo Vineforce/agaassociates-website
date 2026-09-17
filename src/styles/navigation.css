@@ -136,7 +136,7 @@
     }
 
     .nav-dropdown-list {
-      @apply lg:shadow-card-hover z-50 min-w-65 rounded-2xl border bg-white py-4 ps-7 pe-5 max-lg:static! max-lg:transform-none! max-lg:w-full max-lg:border-0 max-lg:shadow-none max-lg:ps-4 max-lg:pe-2 max-lg:py-2 max-lg:rounded-none max-lg:border-s-2 max-lg:border-primary/20;
+      @apply lg:shadow-card-hover z-50 min-w-65 rounded-2xl border bg-white py-4 px-5 max-lg:static! max-lg:transform-none! max-lg:w-full max-lg:border-0 max-lg:shadow-none max-lg:px-3 max-lg:py-2 max-lg:rounded-none max-lg:border-s-2 max-lg:border-primary/20;
 
       .nav-dropdown-item {
         .nav-dropdown-link {
@@ -187,8 +187,9 @@
       position: static !important;
     }
 
-    /* Sub level dropdown (Registration Services, etc. - always starts at top: 0 of Services card) */
+    /* Sub level dropdown card - fixed position at top: 0, left: 100% of main Services card without slide animation */
     .nav-dropdown-item.nav-dropdown:hover > .nav-dropdown-list,
+    .nav-dropdown-item.nav-dropdown.open > .nav-dropdown-list,
     .nav-dropdown-item.nav-dropdown.hs-dropdown-open > .nav-dropdown-list,
     .nav-dropdown-item.nav-dropdown > .nav-dropdown-list:hover {
       display: block !important;
@@ -199,9 +200,11 @@
       left: 100% !important;
       margin-top: 0 !important;
       margin-left: 0 !important;
+      transform: none !important;
+      transition: opacity 0.15s ease-in-out !important;
     }
 
-    /* Permanent hover bridge extending across parent item to prevent premature menu closure */
+    /* Hover bridge extending across parent item to prevent premature menu closure */
     .nav-dropdown-item.nav-dropdown > .nav-dropdown-list::before {
       content: "" !important;
       position: absolute !important;
@@ -242,7 +245,7 @@
   }
 
   .nav-dropdown-list {
-    @apply static! transform-none! w-full! shadow-none! border-0! bg-slate-50 py-2 ps-6 pe-4 rounded-xl text-sm hidden my-1;
+    @apply static! transform-none! w-full! shadow-none! border-0! bg-slate-50 py-2 ps-3 pe-3 rounded-xl text-sm hidden my-1;
 
     .nav-dropdown-link {
       @apply py-2 px-3 text-slate-700 hover:text-primary text-sm font-normal rounded-lg;
