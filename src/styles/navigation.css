@@ -111,20 +111,18 @@
       @apply ms-2 size-4 shrink-0 transition duration-300;
     }
 
-    &.open > .nav-dropdown-toggle {
+    &.open > .nav-dropdown-toggle,
+    &.hs-dropdown-open > .nav-dropdown-toggle {
       @apply text-primary;
     }
 
     &.open
       > .nav-dropdown-toggle
-      .nav-dropdown-chevron[data-icon="arrow-down"] {
-      @apply rotate-180;
-    }
-
-    &.open
+      .nav-dropdown-chevron,
+    &.hs-dropdown-open
       > .nav-dropdown-toggle
-      .nav-dropdown-chevron[data-icon="arrow-right"] {
-      @apply translate-x-1;
+      .nav-dropdown-chevron {
+      @apply rotate-180;
     }
 
     /* Mobile Accordion Dropdown Open State */
@@ -216,11 +214,10 @@
       z-index: 60 !important;
     }
 
-    .nav-dropdown:hover > .nav-dropdown-toggle .nav-dropdown-chevron[data-icon="arrow-down"] {
+    .nav-dropdown:hover > .nav-dropdown-toggle .nav-dropdown-chevron,
+    .nav-dropdown.open > .nav-dropdown-toggle .nav-dropdown-chevron,
+    .nav-dropdown.hs-dropdown-open > .nav-dropdown-toggle .nav-dropdown-chevron {
       transform: rotate(180deg) !important;
-    }
-    .nav-dropdown:hover > .nav-dropdown-toggle .nav-dropdown-chevron[data-icon="arrow-right"] {
-      transform: translateX(0.25rem) !important;
     }
   }
 

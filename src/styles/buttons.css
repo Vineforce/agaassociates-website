@@ -3,13 +3,13 @@
 /* ====================================================== */
 
 @utility btn {
-  @apply relative inline-block overflow-hidden rounded-lg px-6 py-5 leading-tight font-medium whitespace-nowrap text-white capitalize duration-300 disabled:cursor-not-allowed;
+  @apply relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full px-6 py-3 text-sm sm:text-base leading-tight font-semibold whitespace-nowrap text-white capitalize transition-all duration-300 disabled:cursor-not-allowed;
 }
 @utility btn-sm {
-  @apply px-10 py-3;
+  @apply px-5 py-2.5 text-xs sm:text-sm;
 }
 @utility btn-md {
-  @apply px-10 py-4 md:text-lg xl:px-12;
+  @apply px-8 py-3.5 text-base md:text-lg;
 }
 
 @utility btn-light {
@@ -20,7 +20,16 @@
   @apply text-dark bg-white;
 }
 @utility btn-primary {
-  @apply bg-primary;
+  background-color: #0F5277;
+  border: 2px solid #0F5277;
+  color: #ffffff;
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+
+  &:hover {
+    background-color: #61CE70;
+    border-color: #61CE70;
+    color: #ffffff;
+  }
 }
 @utility btn-black {
   @apply bg-theme-dark text-white;
@@ -41,7 +50,16 @@
 
 /* Button Outline Variant */
 @utility btn-outline {
-  @apply text-text-default border;
+  color: #0F5277;
+  background-color: transparent;
+  border: 2px solid #0F5277;
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+
+  &:hover {
+    background-color: #61CE70;
+    border-color: #61CE70;
+    color: #ffffff;
+  }
 }
 @utility btn-outline-white {
   @apply text-text-default border bg-white;

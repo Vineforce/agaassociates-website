@@ -237,28 +237,93 @@ const navigationButton = { ...navBtnConfig, ...customNavigationButton };
     handleScroll(true);
   }
 
-  function initDropdownClickClose(): void {
-    const dropdownLinks = document.querySelectorAll<HTMLAnchorElement>(
-      ".nav-dropdown-list a, .nav-dropdown-link",
+  function initDropdownToggleAndClose(): void {
+    const isMobile = () => window.innerWidth < 1024;
+
+    // Prevent default jump on any link with href="#" or javascript:void(0)
+    document
+      .querySelectorAll<HTMLAnchorElement>('a[href="#"], a[href="javascript:void(0)"]')
+      .forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+        });
+      });
+
+    // Handle dropdown toggling on click for mobile screens and parent dropdown items
+    const toggles = document.querySelectorAll<HTMLElement>(".hs-dropdown-toggle, .nav-dropdown-toggle");
+    toggles.forEach((toggle) => {
+      toggle.addEventListener("click", (e) => {
+        const hasChildren = toggle.dataset.hasChildren === "true" || toggle.classList.contains("hs-dropdown-toggle");
+        const href = (toggle as HTMLAnchorElement).getAttribute?.("href");
+
+        if (isMobile() && hasChildren) {
+          e.preventDefault();
+          e.stopImmediatePropagation();
+
+          const parentDropdown = toggle.closest(".nav-dropdown");
+          if (parentDropdown) {
+            const list =
+              parentDropdown.querySelector<HTMLElement>(":scope > .nav-dropdown-list") ||
+              parentDropdown.querySelector<HTMLElement>(".nav-dropdown-list");
+            const isCurrentlyOpen =
+              parentDropdown.classList.contains("open") ||
+              parentDropdown.classList.contains("hs-dropdown-open");
+
+            if (isCurrentlyOpen) {
+              parentDropdown.classList.remove("open", "hs-dropdown-open");
+              if (list) {
+                list.style.display = "none";
+                list.style.removeProperty("opacity");
+                list.style.removeProperty("visibility");
+              }
+            } else {
+              parentDropdown.classList.add("open", "hs-dropdown-open");
+              if (list) {
+                list.style.display = "block";
+                list.style.opacity = "1";
+                list.style.visibility = "visible";
+              }
+            }
+          }
+        } else if (!href || href === "#" || href === "javascript:void(0)") {
+          e.preventDefault();
+        }
+      });
+    });
+
+    // Clean up dropdowns when clicking genuine leaf navigation links
+    const realNavLinks = document.querySelectorAll<HTMLAnchorElement>(
+      ".nav-dropdown-list a:not(.hs-dropdown-toggle)",
     );
-    dropdownLinks.forEach((link) => {
-      link.addEventListener("click", () => {
-        const dropdownLists =
-          document.querySelectorAll<HTMLElement>(".nav-dropdown-list");
+    realNavLinks.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        const hasChildren = link.dataset.hasChildren === "true" || link.classList.contains("hs-dropdown-toggle");
+        if (hasChildren && isMobile()) {
+          e.preventDefault();
+          return;
+        }
+
+        const href = link.getAttribute("href");
+        if (!href || href === "#" || href === "javascript:void(0)") {
+          e.preventDefault();
+          return;
+        }
+
+        const dropdownLists = document.querySelectorAll<HTMLElement>(".nav-dropdown-list");
         dropdownLists.forEach((list) => {
-          list.style.setProperty("display", "none", "important");
-          list.style.setProperty("opacity", "0", "important");
-          list.style.setProperty("pointer-events", "none", "important");
+          list.style.removeProperty("display");
+          list.style.removeProperty("opacity");
+          list.style.removeProperty("pointer-events");
         });
       });
     });
   }
 
   stickyHeader();
-  initDropdownClickClose();
+  initDropdownToggleAndClose();
 
   document.addEventListener("astro:page-load", () => {
     stickyHeader();
-    initDropdownClickClose();
+    initDropdownToggleAndClose();
   });
 </script>

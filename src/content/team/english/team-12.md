@@ -5,7 +5,7 @@ image: "/images/team/deepanshu-bansal.png"
 profession: "Assistant"
 category: "ASSISTANT"
 order: 12
-metaDescription: "Deepanshu Bansal - Assistant at Amol Gupta & Associates."
+metaDescription: "Deepanshu Bansal - Assistant at H A V N & COMPANY."
 draft: false
 
 email: "contact@agaassociates.com"
@@ -18,4 +18,4 @@ social:
     url: "https://www.linkedin.com/company/example-company"
 ---
 
-Deepanshu Bansal is a Assistant at Amol Gupta & Associates.
+Deepanshu Bansal is an Assistant at H A V N & COMPANY, specializing in record maintenance, data coordination, and process support. His attention to detail contributes significantly to structured file management and daily office execution.
