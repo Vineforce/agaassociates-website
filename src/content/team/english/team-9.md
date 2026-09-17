@@ -18,4 +18,4 @@ social:
     url: "https://www.linkedin.com/company/example-company"
 ---
 
-Cherry Kumar is a Senior Professional at H A V N & COMPANY, playing a key role in operational execution and client engagement. He supports senior leadership across core service functions while ensuring seamless deliverable workflows.
+Cherry Kumar is a Senior Professional at H A V N & COMPANY, specializing in GST Audits, tax return filings, and client compliance coordination. He plays an active role in executing audit workflows and facilitating timely tax submissions for diverse corporate clients.

@@ -18,4 +18,4 @@ social:
     url: "https://www.linkedin.com/company/example-company"
 ---
 
-CA. Ajay Aggarwal serves as a Managing Partner at H A V N & COMPANY with over 27 years of deep professional experience. He holds DISA (Diploma in Information System Audit) issued by ICAI and specializes in corporate restructuring, ROC & Company Law Compliances, transaction advisory, project financing, and strategic business consulting, guiding major corporate clients through complex financial transactions and long-term capital planning.
+CA. Ajay Aggarwal serves as a Managing Partner at H A V N & COMPANY with over 27 years of deep professional experience. He holds B.Com. and DISA (Diploma in Information System Audit) issued by ICAI and specializes in corporate restructuring, ROC & Company Law Compliances, transaction advisory, project financing, and strategic business consulting, guiding major corporate clients through complex financial transactions and long-term capital planning.

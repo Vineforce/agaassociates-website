@@ -11,7 +11,13 @@ interface Props {
 }
 
 const { content, class: className, ...rest } = Astro.props;
-const { title, image, profession } = content.data as any;
+const { title, image, profession, category } = content.data as any;
+const categoryName = category || (
+  profession?.toLowerCase().includes("assistant") ? "ASSISTANT" :
+  profession?.toLowerCase().includes("senior professional") ? "SENIOR PROFESSIONALS" :
+  "FIRM LEADERSHIP"
+);
+const isClickable = categoryName === "FIRM LEADERSHIP";
 
 const t = await useTranslations(Astro.currentLocale as string);
 const slug = getLocaleUrlCTM(
@@ -24,10 +30,17 @@ const slug = getLocaleUrlCTM(
 {
   image && (
     <article
-      data-cursor-label={t("common.viewDetails")}
-      data-cursor-type="link"
+      {...(isClickable
+        ? {
+            "data-cursor-label": t("common.viewDetails"),
+            "data-cursor-type": "link",
+          }
+        : {})}
       class:list={[
-        "group relative flex flex-col items-center justify-center rounded-2xl bg-white p-6 sm:p-7 border border-slate-200/80 shadow-xs transition-all duration-300 hover:shadow-md hover:scale-[1.02] hover:-translate-y-1 text-center",
+        "group relative flex flex-col items-center justify-center rounded-2xl bg-white p-6 sm:p-7 border border-slate-200/80 shadow-xs text-center transition-all duration-300",
+        isClickable
+          ? "hover:shadow-md hover:scale-[1.02] hover:-translate-y-1 cursor-pointer"
+          : "cursor-default",
         className,
       ]}
       {...rest}>
@@ -46,7 +59,10 @@ const slug = getLocaleUrlCTM(
       <div class="mt-4 flex flex-col items-center">
         {title && (
           <h3
-            class="text-base sm:text-lg font-extrabold text-slate-900 leading-snug group-hover:text-[#0F5277] transition-colors"
+            class:list={[
+              "text-base sm:text-lg font-extrabold text-slate-900 leading-snug transition-colors",
+              isClickable && "group-hover:text-[#0F5277]",
+            ]}
             set:html={markdownify(title)}
           />
         )}
@@ -58,12 +74,14 @@ const slug = getLocaleUrlCTM(
         )}
       </div>
 
-      <a
-        title={toSentenceCase(t("common.learnMoreAbout") + " " + title)}
-        class="absolute inset-0 z-20"
-        href={slug}
-        aria-label={title}
-      />
+      {isClickable && (
+        <a
+          title={toSentenceCase(t("common.learnMoreAbout") + " " + title)}
+          class="absolute inset-0 z-20"
+          href={slug}
+          aria-label={title}
+        />
+      )}
     </article>
   )
 }
