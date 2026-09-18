@@ -1,11 +1,11 @@
 ---
-title: "CA. Anmol Goyal"
+title: "CA Anmol Goyal"
 customSlug: "ca-anmol-goyal"
 image: "/images/team/anmol-goyal.png"
 profession: "Managing Partner"
 category: "FIRM LEADERSHIP"
 order: 8
-metaDescription: "CA. Anmol Goyal - Managing Partner at H A V N & COMPANY with 15+ years of experience in Attestation, Audit & Assurance, and Management Consultancy."
+metaDescription: "CA Anmol Goyal - Managing Partner at H A V N & COMPANY with 15+ years of experience in Attestation, Audit & Assurance, and Management Consultancy."
 draft: false
 
 email: "contact@agaassociates.com"
