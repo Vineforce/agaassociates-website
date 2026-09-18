@@ -1,4 +1,4 @@
-# robots.txt for H A V N & COMPANY (Amol Gupta & Associates)
+# robots.txt for H A V N & COMPANY (AGA Associates)
 User-agent: *
 Allow: /
 
@@ -7,8 +7,8 @@ Disallow: /_astro/
 Disallow: /api/
 
 # Sitemap location
-Sitemap: https://agaassociates-website.pages.dev/sitemap-index.xml
+Sitemap: https://www.agaassociates.com/sitemap.xml
 
 # LLM Crawler reference
 # See https://llmstxt.org/
-LLMs-txt: https://agaassociates-website.pages.dev/llms.txt
+LLMs-txt: https://www.agaassociates.com/llms.txt

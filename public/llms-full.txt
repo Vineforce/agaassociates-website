@@ -1,17 +1,17 @@
-# H A V N & COMPANY (Amol Gupta & Associates) — Full Knowledge Base & Site Content
+# H A V N & COMPANY (AGA Associates) — Full Knowledge Base & Site Content
 
-> Complete markdown representation of all website content, service details, team profiles, principles, and regulatory guidance for AI language models and crawlers.
+> Complete markdown representation of all website content, service details, team profiles, principles, service URLs, and regulatory guidance for AI language models and crawlers.
 
 ---
 
 ## 1. Firm Overview & Background
 
-Founded in 2013 by CA Amol Gupta, a distinguished professional with over 13 years of extensive experience in accounting, auditing, tax consultancy, and corporate advisory services, Amol Gupta & Associates (H A V N & COMPANY) is a leading Chartered Accountancy firm committed to delivering excellence.
+Founded in 2013 by CA Amol Gupta, a distinguished professional with over 13 years of extensive experience in accounting, auditing, tax consultancy, and corporate advisory services, AGA Associates (H A V N & COMPANY) is a leading Chartered Accountancy firm committed to delivering excellence.
 
 Our journey began with a vision to empower businesses by offering innovative financial strategies and ethical solutions tailored to each client's unique needs. We operate in a highly professional environment where precision, innovation, and reliability are the cornerstones of our practice.
 
 ### Executive Leadership
-- **CA Hukam Chand Jindal** — Executive Chairman at Amol Gupta & Associates.
+- **CA Hukam Chand Jindal** — Executive Chairman at AGA Associates.
 - **CA Amol Gupta** — Founder & Managing Partner. Bachelor's Degree in Commerce from Punjabi University, Patiala. Expert in strategic business roadmaps, Indian tax regulations, corporate laws, and audit assurance.
 
 ---
@@ -25,7 +25,7 @@ To be a trusted partner for businesses, driving their success through innovative
 To equip clients with the knowledge and strategies to achieve financial goals and navigate tax and corporate regulations confidently.
 
 ### Our Core Values
-At Amol Gupta & Associates, our values guide every interaction, ensuring excellence, innovation, ethics, and mutual respect.
+At AGA Associates, our values guide every interaction, ensuring excellence, innovation, ethics, and mutual respect.
 
 ### Our Commitment
 We are committed to providing personalized financial solutions with integrity, transparency, and exceptional service.
@@ -40,7 +40,7 @@ We are committed to providing personalized financial solutions with integrity, t
 
 ---
 
-## 3. Comprehensive Services Directory
+## 3. Comprehensive Services Directory & Direct URLs
 
 ### A. Direct & Indirect Taxation
 - Income Tax Return (ITR) filing for individuals, firms, companies, trusts, and NRIs.
@@ -48,45 +48,60 @@ We are committed to providing personalized financial solutions with integrity, t
 - GST Registration, GST Return Filing (GSTR-1, GSTR-3B, GSTR-9/9C annual audit), and GST litigation advisory.
 - Representation before Income Tax Appellate Tribunal (ITAT) and GST authorities.
 
-### B. Audit & Assurance
-- Statutory Financial Audits under the Companies Act, 2013.
-- Internal Audits, Management Audits, and Operational Risk Reviews.
-- Stock & Inventory Audits, Forensic Audits, and Due Diligence reports.
+### B. Attestation, Audit & Assurance Services
+- [Audit & Assurance Overview](https://www.agaassociates.com/attestation-audit-assurance/): Comprehensive statutory, internal, and specialized audit solutions.
+- [Statutory Audit](https://www.agaassociates.com/attestation-audit-assurance/statutory-audit/): Statutory financial audits under the Companies Act, 2013.
+- [Internal Audit](https://www.agaassociates.com/attestation-audit-assurance/internal-audit/): Operational risk management, internal controls review, and governance audits.
+- [Concurrent Audit](https://www.agaassociates.com/attestation-audit-assurance/concurrent-audit/): Real-time transaction verification for banks, financial institutions, and enterprises.
+- [Compliance Audit](https://www.agaassociates.com/attestation-audit-assurance/compliance-audit/): Regulatory, labor, and corporate statutory compliance audits.
+- [Inventory Audit](https://www.agaassociates.com/attestation-audit-assurance/inventory-audit/): Physical stock verification, inventory valuation, and asset reconciliation.
+- [Investigative Audit](https://www.agaassociates.com/attestation-audit-assurance/investigative-audit/): Forensic auditing, fraud investigation, and special financial reviews.
+- [Payroll Audit](https://www.agaassociates.com/attestation-audit-assurance/payroll-audit/): Verification of employee compensation, PF/ESI compliance, and tax withholding.
+- [Revenue Audit](https://www.agaassociates.com/attestation-audit-assurance/revenue-audit/): Revenue leakage assessment, income verification, and financial leak analysis.
 
-### C. Company Formation & Corporate Compliance
-- Incorporation of Private Limited (Pvt Ltd) Companies, Public Limited Companies, and One Person Companies (OPC).
-- Registration of Limited Liability Partnerships (LLP) and Partnership Firms.
-- Secretarial Compliance: Annual ROC filings (Form AOC-4, MGT-7), DIR-3 KYC, and Board Meeting resolutions.
-- Startup India Registration, MSME/Udyam Registration, and Import Export Code (IEC) allocation.
+### C. Registration & Business Setup Services
+- [Registration Services Overview](https://www.agaassociates.com/registration-services/): Complete registration and licensing portal.
+- [Company Incorporation Services](https://www.agaassociates.com/registration-services/company-incorporation-services/): Complete assistance for forming new businesses in India.
+- [Private Company Registration](https://www.agaassociates.com/registration-services/private-company-registration/): Private Limited Company incorporation and ROC approval.
+- [Setting Up Company](https://www.agaassociates.com/registration-services/setting-up-company/): End-to-end corporate setup and statutory structuring.
+- [Partnership Firm Registration](https://www.agaassociates.com/registration-services/partnership-firm-registration/): Partnership deed drafting and Registrar of Firms registration.
+- [HUF Registration](https://www.agaassociates.com/registration-services/huf-registration/): Hindu Undivided Family formation and tax entity creation.
+- [Society Registration](https://www.agaassociates.com/registration-services/society-registration/): Non-profit and NGO society registration under Societies Registration Act.
+- [GST Registration](https://www.agaassociates.com/registration-services/gst-registration/): Goods and Services Tax registration and GSTIN issuance.
+- [Trademark Registration](https://www.agaassociates.com/registration-services/trademark-registration/): Intellectual property and brand logo/name registration.
+- [FSSAI License Registration](https://www.agaassociates.com/registration-services/fssai-license-registration/): Food safety license and FSSAI business registration.
+- [GeM Registration](https://www.agaassociates.com/registration-services/gem-registration/): Government e-Marketplace vendor portal registration.
+- [NITI Aayog / Udyog Registration](https://www.agaassociates.com/registration-services/niti-udyog-registration/): NGO Darpan / NITI Aayog portal listing and MSME Udyam registration.
+- [PAN Application](https://www.agaassociates.com/registration-services/pan-application/): Permanent Account Number issuance for individuals, firms, and companies.
+- [Start Up Certificate](https://www.agaassociates.com/registration-services/start-up-certificate/): DPIIT Startup India recognition and tax exemption certification.
+- [Shop Act Registration](https://www.agaassociates.com/registration-services/shop-act-registration/): Shop and Commercial Establishment Act licensing.
+- [Registration for Jewellers](https://www.agaassociates.com/registration-services/registration-for-jewellers/): BIS Hallmark registration and specialized compliance for jewelers.
 
-### D. Bank Loan & Project Financing Services
-- Preparation of Detailed Project Reports (DPR) and CMA Data for bank loan approval.
-- Working Capital Loan Syndication (CC/OD limits) and Term Loans for business expansion.
-- Credit Appraisal, Loan Restructuring, and Bank Debt Advisory.
+### D. Other Key Consultancy Services
+- [Company Formation](https://www.agaassociates.com/other-consultancy-services/company-formation/): Formation and structure optimization of LLPs, OPCs, and corporate entities.
+- [Bank Loan & Project Financing](https://www.agaassociates.com/other-consultancy-services/bank-loan-and-finance-services/): Project finance, working capital loans, CMA data preparation, and loan syndication.
+- [Financial Advisory Services](https://www.agaassociates.com/other-consultancy-services/financial-advisory-services/): Corporate restructuring, capital planning, risk assessment, valuation, and wealth management.
+- [NRI Taxation & Advisory](https://www.agaassociates.com/other-consultancy-services/nri-services-itr-of-nri/): Non-Resident Indian tax filing, FEMA compliance, 15CA & 15CB certifications, foreign asset reporting, and repatriation advice.
+- [Business Software Consultancy](https://www.agaassociates.com/other-consultancy-services/business-software-consultancy/): Implementation, setup, and support for accounting software (Tally, Zoho Books, ERP) and compliance automation tools.
 
-### E. Financial Advisory Services
-- Corporate Capital Structure Planning, Financial Modeling, and Valuation.
-- M&A Financial Advisory, Business Restructuring, and Wealth Management.
-- Cash Flow Optimization, Budgeting, and Working Capital Management.
-
-### F. NRI Taxation & Advisory (ITR of NRI)
-- Non-Resident Indian Income Tax Return filing in India.
-- Foreign Exchange Management Act (FEMA) advisory and RBI compliance.
-- Issuance of Form 15CA & 15CB certifications for international outward remittances.
-- Advisory on DTAA (Double Taxation Avoidance Agreement) benefits and capital gains tax on Indian property/assets.
-
-### G. Business Software Consultancy
-- Accounting Software Advisory & Implementation (Tally Prime, Zoho Books, QuickBooks, SAP, ERP systems).
-- Cloud accounting setup, inventory module integration, and customized financial reporting setup.
-- Staff training and automated compliance workflow integration.
+### E. Primary Website Links
+- [Home Page](https://www.agaassociates.com/)
+- [About Us](https://www.agaassociates.com/about-us/)
+- [Services Directory](https://www.agaassociates.com/services/)
+- [Our Teams](https://www.agaassociates.com/our-teams/)
+- [Articles & News](https://www.agaassociates.com/article/)
+- [Blog](https://www.agaassociates.com/blog/)
+- [News](https://www.agaassociates.com/news/)
+- [Contact Us](https://www.agaassociates.com/contact-us/)
 
 ---
 
 ## 4. Contact & Office Location
 
-- **Firm Name**: H A V N & COMPANY (Amol Gupta & Associates)
+- **Firm Name**: H A V N & COMPANY (AGA Associates)
 - **Address**: 202 Hira Enclave Bhawanigarh Road, Distt. Patiala Nabha, 147201
 - **Phone**: +91 99140-14949
 - **Email**: info@agaassociates.com
-- **Website**: https://agaassociates-website.pages.dev/
+- **Website**: https://www.agaassociates.com/
+- **Sitemap**: https://www.agaassociates.com/sitemap.xml
 - **Office Hours**: 9:30 AM – 7:00 PM (Monday – Saturday)
