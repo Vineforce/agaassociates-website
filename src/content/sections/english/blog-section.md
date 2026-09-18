@@ -13,7 +13,7 @@ button:
   # target: "" # Optional
   # class: "" # Optional
   icon: # Optional
-    enable: true
+    enable: false
     name: "ArrowUpRight"
     position: "right" # left | right
 
