@@ -103,14 +103,14 @@ const cursorLabel = t("common.readBlog");
         "group border-border-light text-text-default overflow-hidden rounded-xl border bg-white transition duration-300 shadow-xs hover:shadow-md",
       ]}
       {...rest}>
-      <div class="aspect-[16/9] relative overflow-hidden">
+      <div class="aspect-[16/7.5] relative overflow-hidden bg-slate-900 flex items-center justify-center">
         {image && (
           <OptimizedImage
             src={image}
             alt={toSentenceCase("Image related to " + title)}
             class="size-full object-cover transition duration-500 group-hover:scale-102"
             width={600}
-            height={338}
+            height={280}
           />
         )}
         {date && (
