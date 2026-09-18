@@ -1,11 +1,11 @@
 ---
-title: "CA. Ajay Aggarwal"
+title: "CA Ajay Aggarwal"
 customSlug: "ca-ajay-aggarwal"
 image: "/images/team/ajay-aggarwal.png"
 profession: "Managing Partner"
 category: "FIRM LEADERSHIP"
 order: 7
-metaDescription: "CA. Ajay Aggarwal - Managing Partner at H A V N & COMPANY with 27+ years experience. Holds DISA (ICAI), specializing in corporate restructuring and project financing."
+metaDescription: "CA Ajay Aggarwal - Managing Partner at H A V N & COMPANY with 27+ years experience. Holds DISA (ICAI), specializing in corporate restructuring and project financing."
 draft: false
 
 email: "contact@agaassociates.com"
