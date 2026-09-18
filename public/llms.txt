@@ -1,31 +1,61 @@
-# H A V N & COMPANY (Amol Gupta & Associates)
+# H A V N & COMPANY (AGA Associates)
 
-> Leading Chartered Accountant (CA) firm in New Delhi, India. Providing expert services in Tax Planning, Audit & Assurance, Corporate Compliance, NRI Financial Advisory, Company Formation, Bank Financing, and Business Software Consultancy.
-
-## Overview
-Founded in 2013 by CA Amol Gupta, H A V N & COMPANY (Amol Gupta & Associates) is a premier Chartered Accountancy firm committed to professional excellence, statutory compliance, and ethical financial strategies. We serve Indian startups, established corporations, non-resident Indians (NRIs), and global enterprises.
+> Leading Chartered Accountant (CA) firm in Nabha / Patiala, Punjab and across India. Providing expert services in Tax Planning, Audit & Assurance, Corporate Compliance, NRI Financial Advisory, Company Formation, Bank Financing, and Business Software Consultancy.
 
 ## Primary Pages & Information
-- [Home](https://agaassociates-website.pages.dev/): Comprehensive overview of CA consulting services, practice areas, leadership, and firm contact info.
-- [About Us](https://agaassociates-website.pages.dev/about-us/): Detailed history, firm vision, mission statement, core principles, and executive leadership background.
-- [Services](https://agaassociates-website.pages.dev/services/): Full breakdown of auditing, direct and indirect taxation, corporate compliance, and advisory services.
-- [Our Teams](https://agaassociates-website.pages.dev/our-teams/): Leadership profiles of CA Hukam Chand Jindal (Executive Chairman), CA Amol Gupta (Founder & Managing Partner), and senior partners.
-- [Articles & News](https://agaassociates-website.pages.dev/article/): Statutory tax notifications, regulatory updates, audit guidelines, and business finance articles.
-- [Contact Us](https://agaassociates-website.pages.dev/contact/): Office locations, telephone details, email contact, and consultation request form.
+- [Home](https://www.agaassociates.com/): Comprehensive overview of CA consulting services, practice areas, leadership, and firm contact info.
+- [About Us](https://www.agaassociates.com/about-us/): Detailed history, firm vision, mission statement, core principles, and executive leadership background.
+- [Services Overview](https://www.agaassociates.com/services/): Full breakdown of auditing, direct and indirect taxation, corporate compliance, and advisory services.
+- [Our Teams](https://www.agaassociates.com/our-teams/): Leadership profiles of CA Hukam Chand Jindal (Executive Chairman), CA Amol Gupta (Founder & Managing Partner), and senior partners.
+- [Articles & News](https://www.agaassociates.com/article/): Statutory tax notifications, regulatory updates, audit guidelines, and business finance articles.
+- [Blog](https://www.agaassociates.com/blog/): Insights, tax advice, financial planning tips, and compliance articles.
+- [News Updates](https://www.agaassociates.com/news/): Official announcements and regulatory updates.
+- [Contact Us](https://www.agaassociates.com/contact-us/): Office locations, telephone details, email contact, and consultation request form.
 
-## Key Specialized Consultancy Services
-- [Company Formation](https://agaassociates-website.pages.dev/other-consultancy-services/company-formation/): Registration and incorporation of Private Limited Companies, LLPs, One Person Companies (OPC), and Partnership firms in India.
-- [Bank Loan and Finance Services](https://agaassociates-website.pages.dev/other-consultancy-services/bank-loan-and-finance-services/): Project finance, working capital loans, CMA data preparation, project reports, and loan syndication.
-- [Financial Advisory Services](https://agaassociates-website.pages.dev/other-consultancy-services/financial-advisory-services/): Corporate restructuring, capital planning, risk assessment, valuation, and wealth management.
-- [NRI Services & ITR of NRI](https://agaassociates-website.pages.dev/other-consultancy-services/nri-services-itr-of-nri/): Non-Resident Indian tax filing, FEMA compliance, 15CA & 15CB certifications, foreign asset reporting, and repatriation advice.
-- [Business Software Consultancy](https://agaassociates-website.pages.dev/other-consultancy-services/business-software-consultancy/): Implementation, setup, and support for accounting software (Tally, Zoho Books, ERP) and compliance automation tools.
+## Attestation, Audit & Assurance Services
+- [Audit & Assurance Overview](https://www.agaassociates.com/attestation-audit-assurance/): Comprehensive statutory, internal, and specialized audit solutions.
+- [Statutory Audit](https://www.agaassociates.com/attestation-audit-assurance/statutory-audit/): Statutory financial audits under the Companies Act and statutory regulations.
+- [Internal Audit](https://www.agaassociates.com/attestation-audit-assurance/internal-audit/): Operational risk management, internal controls review, and governance audits.
+- [Concurrent Audit](https://www.agaassociates.com/attestation-audit-assurance/concurrent-audit/): Real-time transaction verification for banks, financial institutions, and enterprises.
+- [Compliance Audit](https://www.agaassociates.com/attestation-audit-assurance/compliance-audit/): Regulatory, labor, and corporate statutory compliance audits.
+- [Inventory Audit](https://www.agaassociates.com/attestation-audit-assurance/inventory-audit/): Physical stock verification, inventory valuation, and asset reconciliation.
+- [Investigative Audit](https://www.agaassociates.com/attestation-audit-assurance/investigative-audit/): Forensic auditing, fraud investigation, and special financial reviews.
+- [Payroll Audit](https://www.agaassociates.com/attestation-audit-assurance/payroll-audit/): Verification of employee compensation, PF/ESI compliance, and tax withholding.
+- [Revenue Audit](https://www.agaassociates.com/attestation-audit-assurance/revenue-audit/): Revenue leakage assessment, income verification, and financial leak analysis.
 
-## Official Contact Details
-- **Firm Name**: H A V N & COMPANY / Amol Gupta & Associates
+## Registration & Incorporation Services
+- [Registration Services Overview](https://www.agaassociates.com/registration-services/): Business entity setup, government registrations, and licensing.
+- [Company Incorporation Services](https://www.agaassociates.com/registration-services/company-incorporation-services/): Complete assistance for forming new businesses in India.
+- [Private Company Registration](https://www.agaassociates.com/registration-services/private-company-registration/): Private Limited Company incorporation and ROC approval.
+- [Setting Up Company](https://www.agaassociates.com/registration-services/setting-up-company/): End-to-end corporate setup and statutory structuring.
+- [Partnership Firm Registration](https://www.agaassociates.com/registration-services/partnership-firm-registration/): Partnership deed drafting and Registrar of Firms registration.
+- [HUF Registration](https://www.agaassociates.com/registration-services/huf-registration/): Hindu Undivided Family formation and tax entity creation.
+- [Society Registration](https://www.agaassociates.com/registration-services/society-registration/): Non-profit and NGO society registration under Societies Registration Act.
+- [GST Registration](https://www.agaassociates.com/registration-services/gst-registration/): Goods and Services Tax registration and GSTIN issuance.
+- [Trademark Registration](https://www.agaassociates.com/registration-services/trademark-registration/): Intellectual property and brand logo/name registration.
+- [FSSAI License Registration](https://www.agaassociates.com/registration-services/fssai-license-registration/): Food safety license and FSSAI business registration.
+- [GeM Registration](https://www.agaassociates.com/registration-services/gem-registration/): Government e-Marketplace vendor portal registration.
+- [NITI Aayog / Udyog Registration](https://www.agaassociates.com/registration-services/niti-udyog-registration/): NGO Darpan / NITI Aayog portal listing and MSME Udyam registration.
+- [PAN Application](https://www.agaassociates.com/registration-services/pan-application/): Permanent Account Number issuance for individuals, firms, and companies.
+- [Start Up Certificate](https://www.agaassociates.com/registration-services/start-up-certificate/): DPIIT Startup India recognition and tax exemption certification.
+- [Shop Act Registration](https://www.agaassociates.com/registration-services/shop-act-registration/): Shop and Commercial Establishment Act licensing.
+- [Registration for Jewellers](https://www.agaassociates.com/registration-services/registration-for-jewellers/): BIS Hallmark registration and specialized compliance for jewelers.
+
+## Other Consultancy Services
+- [Company Formation](https://www.agaassociates.com/other-consultancy-services/company-formation/): Formation and structure optimization of LLPs, OPCs, and corporate entities.
+- [Bank Loan and Finance Services](https://www.agaassociates.com/other-consultancy-services/bank-loan-and-finance-services/): Project finance, working capital loans, CMA data preparation, and loan syndication.
+- [Financial Advisory Services](https://www.agaassociates.com/other-consultancy-services/financial-advisory-services/): Corporate restructuring, capital planning, risk assessment, valuation, and wealth management.
+- [NRI Services & ITR of NRI](https://www.agaassociates.com/other-consultancy-services/nri-services-itr-of-nri/): Non-Resident Indian tax filing, FEMA compliance, 15CA & 15CB certifications, foreign asset reporting, and repatriation advice.
+- [Business Software Consultancy](https://www.agaassociates.com/other-consultancy-services/business-software-consultancy/): Implementation, setup, and support for accounting software (Tally, Zoho Books, ERP) and compliance automation tools.
+
+## Official Contact & Website Details
+- **Firm Name**: H A V N & COMPANY / AGA Associates
 - **Address**: 202 Hira Enclave Bhawanigarh Road, Distt. Patiala Nabha, 147201
 - **Phone**: +91 99140-14949
 - **Email**: info@agaassociates.com
+- **Website**: https://www.agaassociates.com/
+- **Sitemap**: https://www.agaassociates.com/sitemap.xml
 - **Office Hours**: 9:30 AM – 7:00 PM (Monday – Saturday)
 
 ## Full Documentation & Detailed Content
-- For full-text markdown content of all service pages, leadership bios, and compliance guides, consult [llms-full.txt](https://agaassociates-website.pages.dev/llms-full.txt).
+- For full-text markdown content of all service pages, leadership bios, and compliance guides, consult [llms-full.txt](https://www.agaassociates.com/llms-full.txt).

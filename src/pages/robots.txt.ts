@@ -20,8 +20,8 @@ Sitemap: ${sitemapURL.href}
 `;
 
 export const GET: APIRoute = ({ site }) => {
-  const baseUrl = config.site.baseUrl || site?.href || "https://agaassociates-website.pages.dev/";
-  const sitemapURL = new URL("sitemap-0.xml", baseUrl);
+  const baseUrl = config.site.baseUrl || site?.href || "https://www.agaassociates.com/";
+  const sitemapURL = new URL("sitemap.xml", baseUrl);
   return enable
     ? new Response(getRobotsTxt(sitemapURL))
     : new Response(null, { status: 404 });
