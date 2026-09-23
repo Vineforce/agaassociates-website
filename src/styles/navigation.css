@@ -171,15 +171,20 @@
       background: transparent;
     }
 
-    /* Top level dropdown (Services, About Us) */
+    /* Top level dropdown (Services, About Us) - fixed position at top: 100%, margin-top: 0.75rem without slide animation */
+    .nav-item.nav-dropdown > .nav-dropdown-list {
+      top: 100% !important;
+      left: 0 !important;
+      margin-top: 0.75rem !important;
+      transform: none !important;
+      transition: opacity 0.15s ease-in-out !important;
+    }
+
     .nav-item.nav-dropdown:hover > .nav-dropdown-list,
     .nav-item.nav-dropdown.hs-dropdown-open > .nav-dropdown-list {
       display: block !important;
       opacity: 1 !important;
       pointer-events: auto !important;
-      top: 100% !important;
-      left: 0 !important;
-      margin-top: 0.75rem !important;
     }
 
     /* Sub-items are static so nested sub-dropdowns anchor to top: 0 of the main Services card */
