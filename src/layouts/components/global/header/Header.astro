@@ -6,7 +6,7 @@ import NavbarToggler from "@/layouts/components/global/header/NavbarToggler.astr
 import Navbar from "./Navbar.astro";
 import Topbar from "./Topbar.astro";
 import Icons from "@/helpers/Icons.astro";
-import { getLocaleUrlCTM, useTranslations } from "@/lib/utils/i18nUtils.ts";
+import { useTranslations } from "@/lib/utils/i18nUtils.ts";
 import config from ".astro/config.generated.json";
 import type { HeaderLayout } from "@/types";
 
@@ -106,18 +106,47 @@ const navigationButton = { ...navBtnConfig, ...customNavigationButton };
           class:list={[
             currentLayout.isMenuRight && "navbar-right",
             currentLayout.navbarClass,
+            "lg:pe-4",
           ]}
         />
 
-        <div class="flex items-center gap-2">
-          <!-- Search Icon Button -->
-          <button
-            type="button"
-            aria-label="Search"
-            data-hs-overlay="#header-search-modal"
-            class="flex h-10 w-10 items-center justify-center rounded-full bg-slate-100 text-slate-700 hover:bg-primary hover:text-white transition-all duration-200 cursor-pointer">
-            <Icons icon="Search" class="size-5" />
-          </button>
+        <div class="flex items-center gap-2 ms-2 sm:ms-4">
+          <!-- Animated Expandable Search Area -->
+          <div class="relative w-10 h-10 shrink-0 flex items-center justify-end" id="header-search-area">
+            <div
+              id="header-search-bar"
+              class="absolute right-0 top-0 z-20 flex items-center h-10 w-10 overflow-hidden rounded-full bg-slate-100/90 border border-slate-200/60 transition-all duration-300 ease-in-out shadow-xs">
+              <button
+                id="header-search-trigger"
+                type="button"
+                aria-label="Search"
+                class="flex h-10 w-10 shrink-0 items-center justify-center text-slate-700 hover:text-emerald-600 transition-colors cursor-pointer z-10">
+                <Icons icon="Search" class="size-5 pointer-events-none" />
+              </button>
+              <input
+                id="header-search-field"
+                type="search"
+                placeholder="Search..."
+                class="w-full bg-transparent py-2 text-sm text-slate-800 placeholder:text-slate-400 focus:outline-none border-none ring-0 focus:ring-0 opacity-0 pointer-events-none transition-opacity duration-200"
+                autocomplete="off"
+              />
+              <button
+                id="header-search-clear"
+                type="button"
+                aria-label="Clear Search"
+                class="hidden shrink-0 pr-3 text-slate-400 hover:text-slate-600 cursor-pointer z-10">
+                <Icons icon="X" class="size-4 pointer-events-none" />
+              </button>
+            </div>
+
+            <!-- Pagefind Search Results Dropdown Panel -->
+            <div
+              id="header-search-dropdown"
+              data-lenis-prevent=""
+              class="hidden absolute right-0 top-full mt-2.5 w-[280px] sm:w-[320px] max-h-[400px] overflow-y-auto overscroll-contain bg-white rounded-2xl shadow-2xl border border-slate-100 p-3 z-50">
+              <div id="header-search-results" class="divide-y divide-slate-100"></div>
+            </div>
+          </div>
 
           <!-- Mobile Navbar Toggler -->
           {
@@ -157,40 +186,43 @@ const navigationButton = { ...navBtnConfig, ...customNavigationButton };
   )
 }
 
-<!-- Search Modal Overlay -->
-<div
-  id="header-search-modal"
-  class="hs-overlay hidden fixed inset-0 z-50 overflow-y-auto bg-slate-900/60 backdrop-blur-xs p-4 sm:p-6 md:p-20"
-  tabindex="-1">
-  <div class="hs-overlay-open:opacity-100 hs-overlay-open:duration-300 opacity-0 transition-all max-w-2xl mx-auto bg-white rounded-2xl shadow-2xl p-6 border border-slate-100">
-    <div class="flex items-center justify-between border-b border-slate-100 pb-4 mb-4">
-      <h3 class="text-lg font-semibold text-slate-800 flex items-center gap-2">
-        <Icons icon="Search" class="size-5 text-primary" /> Search AGA Associates
-      </h3>
-      <button
-        type="button"
-        class="inline-flex justify-center items-center size-8 rounded-full bg-slate-100 text-slate-500 hover:bg-slate-200 hover:text-slate-800 transition-colors"
-        data-hs-overlay="#header-search-modal">
-        <span class="sr-only">Close</span>
-        <Icons icon="X" class="size-4" />
-      </button>
-    </div>
-    <form action={getLocaleUrlCTM("/article/", Astro.currentLocale)} method="get" class="relative">
-      <input
-        type="search"
-        name="search"
-        placeholder="Search services, articles, audits..."
-        class="w-full rounded-xl border border-slate-200 bg-slate-50 py-3.5 pl-4 pr-24 text-slate-800 placeholder:text-slate-400 focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 text-base"
-        autofocus
-      />
-      <button
-        type="submit"
-        class="absolute right-2 top-1/2 -translate-y-1/2 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white hover:bg-primary/90 transition-colors">
-        Search
-      </button>
-    </form>
-  </div>
-</div>
+<style is:global>
+  /* Remove native browser input[type="search"] clear button */
+  #header-search-field::-webkit-search-cancel-button,
+  #header-search-field::-webkit-search-decoration,
+  #header-search-field::-webkit-search-results-button,
+  #header-search-field::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+  }
+
+  /* Animated Search Bar Overlay */
+  #header-search-bar {
+    width: 2.5rem; /* 40px */
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  #header-search-bar.is-expanded {
+    width: 10.5rem; /* 168px */
+    background-color: #ffffff;
+    border-color: #10b981;
+    box-shadow: none;
+  }
+  @media (min-width: 640px) {
+    #header-search-bar.is-expanded {
+      width: 12.5rem; /* 200px */
+    }
+  }
+
+  /* Pagefind Search Result Snippet Highlighting */
+  #header-search-results mark {
+    background-color: #d1fae5;
+    color: #065f46;
+    border-radius: 0.25rem;
+    padding: 0 0.2rem;
+    font-weight: 600;
+  }
+</style>
 
 <script>
   function stickyHeader(): void {
@@ -240,7 +272,6 @@ const navigationButton = { ...navBtnConfig, ...customNavigationButton };
   function initDropdownToggleAndClose(): void {
     const isMobile = () => window.innerWidth < 1024;
 
-    // Prevent default jump on dummy links with href="#" or javascript:void(0)
     document
       .querySelectorAll<HTMLAnchorElement>('a[href="#"], a[href="javascript:void(0)"]')
       .forEach((link) => {
@@ -249,7 +280,6 @@ const navigationButton = { ...navBtnConfig, ...customNavigationButton };
         });
       });
 
-    // Handle dropdown toggling on click for mobile screens and parent dropdown items
     const toggles = document.querySelectorAll<HTMLElement>(".hs-dropdown-toggle, .nav-dropdown-toggle");
     toggles.forEach((toggle) => {
       toggle.addEventListener("click", (e) => {
@@ -292,7 +322,6 @@ const navigationButton = { ...navBtnConfig, ...customNavigationButton };
       });
     });
 
-    // Clean up dropdowns when clicking genuine leaf navigation links
     const realNavLinks = document.querySelectorAll<HTMLAnchorElement>(
       ".nav-dropdown-list a:not(.hs-dropdown-toggle)",
     );
@@ -321,12 +350,10 @@ const navigationButton = { ...navBtnConfig, ...customNavigationButton };
   }
 
   function closeAllDropdowns(): void {
-    // Remove Preline and custom open-state classes from all dropdown wrappers
     document.querySelectorAll<HTMLElement>(".hs-dropdown, .nav-dropdown").forEach((dropdown) => {
       dropdown.classList.remove("hs-dropdown-open", "open");
     });
 
-    // Hide all dropdown lists and clear any inline styles set by JS
     document.querySelectorAll<HTMLElement>(".hs-dropdown-menu, .nav-dropdown-list").forEach((menu) => {
       menu.classList.remove("hs-dropdown-open");
       menu.style.removeProperty("display");
@@ -336,16 +363,188 @@ const navigationButton = { ...navBtnConfig, ...customNavigationButton };
     });
   }
 
+  let pagefindInstance: any = null;
+
+  async function getPagefindInstance() {
+    if (!pagefindInstance) {
+      try {
+        const pfPath = "/pagefind/pagefind.js";
+        pagefindInstance = await import(/* @vite-ignore */ pfPath);
+        await pagefindInstance.init();
+      } catch (err) {
+        console.warn("Pagefind JS module not initialized", err);
+      }
+    }
+    return pagefindInstance;
+  }
+
+  function initInlineHeaderSearch(): void {
+    const searchArea = document.getElementById("header-search-area");
+    const searchBar = document.getElementById("header-search-bar");
+    const searchTrigger = document.getElementById("header-search-trigger");
+    const searchField = document.getElementById("header-search-field") as HTMLInputElement | null;
+    const searchClear = document.getElementById("header-search-clear");
+    const searchDropdown = document.getElementById("header-search-dropdown");
+    const searchResults = document.getElementById("header-search-results");
+
+    if (!searchArea || !searchBar || !searchTrigger || !searchField || !searchDropdown || !searchResults) return;
+
+    if (searchArea.dataset.searchInitialized === "true") return;
+    searchArea.dataset.searchInitialized = "true";
+
+    function expandSearch(): void {
+      searchBar?.classList.add("is-expanded");
+      searchField?.classList.remove("opacity-0", "pointer-events-none");
+      searchField?.classList.add("pointer-events-auto");
+      searchClear?.classList.remove("hidden");
+      setTimeout(() => searchField?.focus(), 50);
+    }
+
+    function collapseSearch(): void {
+      searchBar?.classList.remove("is-expanded");
+      searchField?.classList.add("opacity-0", "pointer-events-none");
+      searchField?.classList.remove("pointer-events-auto");
+      if (searchField) searchField.value = "";
+      searchClear?.classList.add("hidden");
+      searchDropdown?.classList.add("hidden");
+      if (searchResults) searchResults.innerHTML = "";
+    }
+
+    searchBar.addEventListener("click", (e) => {
+      const isExpanded = searchBar.classList.contains("is-expanded");
+      if (!isExpanded) {
+        e.preventDefault();
+        expandSearch();
+      }
+    });
+
+    searchTrigger.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const isExpanded = searchBar.classList.contains("is-expanded");
+      if (isExpanded) {
+        if (!searchField.value.trim()) {
+          collapseSearch();
+        } else {
+          searchField.focus();
+        }
+      } else {
+        expandSearch();
+      }
+    });
+
+    searchClear?.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      collapseSearch();
+    });
+
+    function escapeHTML(str: string): string {
+      return str.replace(/[&<>"']/g, (c) => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#039;"
+      }[c] || c));
+    }
+
+    let debounceTimer: any = null;
+
+    searchField.addEventListener("input", () => {
+      clearTimeout(debounceTimer);
+      const query = searchField.value.trim();
+
+      if (!query) {
+        searchDropdown.classList.add("hidden");
+        if (searchResults) searchResults.innerHTML = "";
+        return;
+      }
+
+      debounceTimer = setTimeout(async () => {
+        searchDropdown.classList.remove("hidden");
+        if (searchResults) {
+          searchResults.innerHTML = `<div class="p-4 text-center text-xs text-slate-400 font-medium">Searching...</div>`;
+        }
+
+        try {
+          const pf = await getPagefindInstance();
+          if (!pf) return;
+
+          const searchRes = await pf.search(query);
+          const results = await Promise.all(searchRes.results.slice(0, 8).map((r: any) => r.data()));
+
+          if (results.length === 0) {
+            if (searchResults) {
+              searchResults.innerHTML = `
+                <div class="p-6 text-center">
+                  <p class="text-sm font-semibold text-slate-700">No results found for "${escapeHTML(query)}"</p>
+                  <p class="text-xs text-slate-400 mt-1">Try searching for GST, Tax, Audit, or Incorporation.</p>
+                </div>
+              `;
+            }
+            return;
+          }
+
+          let html = "";
+          results.forEach((item: any) => {
+            const title = item.meta?.title || "Page Result";
+            const url = item.url;
+            const excerpt = item.excerpt || "";
+
+            html += `
+              <a href="${escapeHTML(url)}" class="group block p-3.5 hover:bg-emerald-50/70 rounded-xl transition-colors border-b border-slate-100 last:border-b-0">
+                <div class="font-semibold text-sm text-slate-800 group-hover:text-emerald-700 transition-colors">
+                  ${escapeHTML(title)}
+                </div>
+                <div class="text-xs text-slate-500 mt-1 line-clamp-2 leading-relaxed">
+                  ${excerpt}
+                </div>
+              </a>
+            `;
+          });
+
+          if (searchResults) searchResults.innerHTML = html;
+        } catch (e) {
+          console.error("Pagefind search error", e);
+        }
+      }, 120);
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!searchArea?.contains(e.target as Node)) {
+        if (!searchField.value.trim()) {
+          collapseSearch();
+        } else {
+          searchDropdown.classList.add("hidden");
+        }
+      }
+    });
+
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        collapseSearch();
+      }
+    });
+
+    searchDropdown.addEventListener("click", (e) => {
+      const link = (e.target as HTMLElement).closest("a");
+      if (link) {
+        collapseSearch();
+      }
+    });
+  }
+
   stickyHeader();
   initDropdownToggleAndClose();
+  initInlineHeaderSearch();
 
   document.addEventListener("astro:page-load", () => {
     stickyHeader();
     initDropdownToggleAndClose();
+    initInlineHeaderSearch();
   });
 
-  // Fix: close dropdowns when page is restored from bfcache (browser back/forward button).
-  // astro:page-load does NOT fire on bfcache restores — only the native `pageshow` event does.
   window.addEventListener("pageshow", (event) => {
     if (event.persisted) {
       closeAllDropdowns();

@@ -2,6 +2,7 @@ import mdx from "@astrojs/mdx";
 import remarkToc from "remark-toc";
 import { unified } from "@astrojs/markdown-remark";
 import sitemap from "@astrojs/sitemap";
+import pagefind from "astro-pagefind";
 import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import rehypeExternalLinks from "rehype-external-links";
@@ -46,6 +47,7 @@ export default defineConfig({
     // Shortcodes are provided to MDX via the `components` prop on `<Content />`
     // (see `src/lib/shortcodes.ts`), so no auto-import integration is needed.
     mdx(),
+    pagefind(),
   ],
   markdown: {
     // Since @astrojs/mdx v6, remark/rehype plugins are configured on the
