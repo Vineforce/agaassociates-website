@@ -7,6 +7,10 @@ import {
   ArrowUpRight,
   Award,
   Banknote,
+  BarChart,
+  BarChart2,
+  BarChart3,
+  BarChart4,
   Briefcase,
   Calculator,
   Check,
@@ -81,6 +85,10 @@ const iconMap: Record<string, LucideIconNode> = {
   arrowupright: ArrowUpRight,
   award: Award,
   banknote: Banknote,
+  barchart: BarChart,
+  barchart2: BarChart2,
+  barchart3: BarChart3,
+  barchart4: BarChart4,
   briefcase: Briefcase,
   calculator: Calculator,
   check: Check,
@@ -137,7 +145,25 @@ const inlineIcon = iconMap[iconKey];
 ---
 
 {
-  inlineIcon ? (
+  iconKey === "bargrapharrow" ? (
+    <svg
+      viewBox="0 0 24 24"
+      width="24"
+      height="24"
+      fill={fill}
+      stroke="currentColor"
+      stroke-width={resolvedStrokeWidth}
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      aria-hidden={title ? "false" : "true"}
+      role={title ? "img" : "presentation"}
+      {...restProps}>
+      {title && <title>{title}</title>}
+      <rect x="2.5" y="13" width="3.5" height="8" rx="0.5" />
+      <rect x="8.5" y="10" width="3.5" height="11" rx="0.5" />
+      <path d="M14.5 21V10h-2l4-7.5 4 7.5h-2v11z" />
+    </svg>
+  ) : inlineIcon ? (
     <svg
       viewBox="0 0 24 24"
       width="24"

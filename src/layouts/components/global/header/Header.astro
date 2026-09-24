@@ -320,11 +320,35 @@ const navigationButton = { ...navBtnConfig, ...customNavigationButton };
     });
   }
 
+  function closeAllDropdowns(): void {
+    // Remove Preline and custom open-state classes from all dropdown wrappers
+    document.querySelectorAll<HTMLElement>(".hs-dropdown, .nav-dropdown").forEach((dropdown) => {
+      dropdown.classList.remove("hs-dropdown-open", "open");
+    });
+
+    // Hide all dropdown lists and clear any inline styles set by JS
+    document.querySelectorAll<HTMLElement>(".hs-dropdown-menu, .nav-dropdown-list").forEach((menu) => {
+      menu.classList.remove("hs-dropdown-open");
+      menu.style.removeProperty("display");
+      menu.style.removeProperty("opacity");
+      menu.style.removeProperty("visibility");
+      menu.style.removeProperty("pointer-events");
+    });
+  }
+
   stickyHeader();
   initDropdownToggleAndClose();
 
   document.addEventListener("astro:page-load", () => {
     stickyHeader();
     initDropdownToggleAndClose();
+  });
+
+  // Fix: close dropdowns when page is restored from bfcache (browser back/forward button).
+  // astro:page-load does NOT fire on bfcache restores — only the native `pageshow` event does.
+  window.addEventListener("pageshow", (event) => {
+    if (event.persisted) {
+      closeAllDropdowns();
+    }
   });
 </script>

@@ -3,6 +3,7 @@ import Base from "@/layouts/Base.astro";
 import { generatePaths } from "@/lib/utils/i18nUtils.ts";
 import DynamicIcon from "@/helpers/DynamicIcon.astro";
 import OptimizedImage from "@/components/utilities/OptimizedImage.astro";
+import FeatureGrid from "@/components/cards/FeatureGrid.astro";
 
 export function getStaticPaths() {
   return generatePaths();
@@ -16,7 +17,7 @@ const pageMeta = {
 const missionPillars = [
   {
     title: "Our Vision",
-    icon: "TrendingUp",
+    icon: "BarGraphArrow",
     description: "To be a trusted partner for businesses, driving their success through innovative, ethical, and comprehensive financial solutions",
   },
   {
@@ -31,7 +32,7 @@ const missionPillars = [
   },
   {
     title: "Our Commitment",
-    icon: "Award",
+    icon: "Trophy",
     description: "We are committed to providing personalized financial solutions with integrity, transparency, and exceptional service",
   },
 ];
@@ -40,13 +41,13 @@ const principles = [
   {
     title: "Commitment",
     subtitle: "We Keep Our Promises",
-    icon: "Briefcase",
+    icon: "UsersRound",
     description: "Every task is met with diligence, ensuring timely, effective results. Your trust drives our accountability",
   },
   {
     title: "Respect",
     subtitle: "Fostering Growth Together",
-    icon: "UsersRound",
+    icon: "BarGraphArrow",
     description: "We believe in mutual respect and collaboration, empowering our team and clients to reach their full potential",
   },
   {
@@ -58,7 +59,7 @@ const principles = [
   {
     title: "Vision",
     subtitle: "Innovative Strategies",
-    icon: "Lightbulb",
+    icon: "Sparkles",
     description: "We understand your aspirations and provide tailored strategies to drive your growth",
   },
   {
@@ -70,7 +71,7 @@ const principles = [
   {
     title: "Excellence",
     subtitle: "Exceeding Expectations",
-    icon: "Sparkles",
+    icon: "Globe",
     description: "We go above and beyond, ensuring solutions that exceed expectations and deliver lasting results",
   },
 ];
@@ -116,7 +117,7 @@ const principles = [
         <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
           Our Mission
         </h2>
-        <div class="w-12 h-1 bg-[#61CE70] rounded-full mx-auto mt-3"></div>
+        <div class="w-12 h-1 bg-[#10B981] rounded-full mx-auto mt-3"></div>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center max-w-6xl mx-auto">
@@ -125,13 +126,13 @@ const principles = [
           {
             missionPillars.map((pillar) => (
               <div class="flex flex-col items-start text-left">
-                <div class="flex size-12 items-center justify-center rounded-xl bg-[#EEFBEE] text-[#61CE70] mb-4 shadow-xs">
-                  <DynamicIcon name={pillar.icon} inlineSvg={true} class="size-6 stroke-[2]" />
+                <div class="mb-3 text-[#10B981]">
+                  <DynamicIcon name={pillar.icon} inlineSvg={true} class="size-10 stroke-[1.75]" />
                 </div>
                 <h3 class="text-lg sm:text-xl font-bold text-slate-900 mb-2">
                   {pillar.title}
                 </h3>
-                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                <p class="text-xs sm:text-sm text-slate-500 leading-relaxed font-normal">
                   {pillar.description}
                 </p>
               </div>
@@ -155,37 +156,16 @@ const principles = [
   </section>
 
   {/* SECTION 3: OUR PRINCIPLES IN ACTION */}
-  <section class="relative bg-white pt-6 sm:pt-8 pb-10 sm:pb-14 border-t border-slate-100">
+  <section class="relative bg-white pt-8 sm:pt-12 pb-12 sm:pb-16 border-t border-slate-100">
     <div class="container mx-auto px-4 md:px-6">
-      <div class="text-center max-w-2xl mx-auto mb-6 sm:mb-8">
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+      <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-3">
           Our Principles in Action
         </h2>
-        <div class="w-12 h-1 bg-[#61CE70] rounded-full mx-auto mt-3"></div>
+        <div class="w-12 h-1 bg-[#10B981] rounded-full mx-auto"></div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 max-w-6xl mx-auto">
-        {
-          principles.map((item) => (
-            <div class="flex items-start gap-4 sm:gap-5">
-              <div class="flex size-12 shrink-0 items-center justify-center rounded-xl bg-[#EEFBEE] text-[#61CE70] shadow-xs">
-                <DynamicIcon name={item.icon} inlineSvg={true} class="size-6 stroke-[2]" />
-              </div>
-              <div class="text-left">
-                <h3 class="text-lg font-bold text-slate-900 leading-snug">
-                  {item.title}
-                </h3>
-                <p class="text-xs sm:text-sm font-semibold text-slate-500 mb-1.5">
-                  {item.subtitle}
-                </p>
-                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
-                  {item.description}
-                </p>
-              </div>
-            </div>
-          ))
-        }
-      </div>
+      <FeatureGrid items={principles} />
     </div>
   </section>
 </Base>
