@@ -1,26 +1,12 @@
 ---
 import Base from "@/layouts/Base.astro";
-import { getCollectionCTM } from "@/lib/contentParser.astro";
 import { generatePaths } from "@/lib/utils/i18nUtils.ts";
-import BlogCard from "@/components/cards/BlogCard.astro";
-
-import Pagination from "@/components/widgets/Pagination.astro";
-
+import ContentList from "@/components/widgets/ContentList.astro";
 import PageHeader from "@/components/widgets/PageHeader.astro";
 
 export function getStaticPaths() {
   return generatePaths();
 }
-
-const rawPosts = await getCollectionCTM("blog", Astro.currentLocale);
-const posts = rawPosts.sort((a, b) => {
-  const dateA = a.data.date ? new Date(a.data.date).getTime() : 0;
-  const dateB = b.data.date ? new Date(b.data.date).getTime() : 0;
-  return dateB - dateA;
-});
-
-const pageSize = 3;
-const totalPages = Math.max(2, Math.ceil(posts.length / pageSize));
 
 const pageMeta = {
   title: "Articles, Insights & News",
@@ -33,20 +19,16 @@ const pageMeta = {
   <PageHeader content={pageMeta} />
   <section class="py-10 md:py-14 bg-slate-50/50 min-h-[75vh]">
     <div class="container mx-auto px-4 md:px-6">
-
-      {/* 3 Articles Grid */}
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-        {
-          posts?.slice(0, 3).map((post) => (
-            <div data-scroll-reveal="fade-up">
-              <BlogCard content={post} options={{ layout: "grid" }} />
-            </div>
-          ))
-        }
-      </div>
-
-      {/* Dynamic Theme Pagination Bar */}
-      <Pagination collection="article" currentPage={1} totalPages={totalPages} />
+      <ContentList
+        options={{
+          layout: "grid",
+          columns: 3,
+        }}
+        pagination={{
+          enable: true,
+          currentPage: 1,
+        }}
+      />
     </div>
   </section>
 </Base>
