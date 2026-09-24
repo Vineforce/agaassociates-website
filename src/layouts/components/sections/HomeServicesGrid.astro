@@ -1,7 +1,8 @@
 ---
-import DynamicIcon from "@/helpers/DynamicIcon.astro";
+import FeatureGrid from "@/components/cards/FeatureGrid.astro";
+import type { IconName } from "@/lib/iconNames";
 
-const services = [
+const services: { title: string; icon: IconName; description: string }[] = [
   {
     title: "Business Registration",
     icon: "FileText",
@@ -21,7 +22,7 @@ const services = [
       "CMA Data Preparation, Bank Loan Services, CIBIL Report Correction, Financial Advisory, Internal Audit Services, and Net Worth Report Preparation for businesses and individuals.",
   },
   {
-    title: "Taxation and Certification",
+    title: "Taxation & Certification",
     icon: "Receipt",
     description:
       "PAN Application/Amendment, ISO Certification, NRI Services (ITR for NRIs), and Startup Certificate Assistance for Compliance, Business Growth, and Seamless Tax Filing.",
@@ -41,54 +42,24 @@ const services = [
 ];
 ---
 
-<section class="home-services-grid relative bg-white !py-6 md:!py-8 overflow-hidden">
+<section class="home-services-grid relative bg-white py-12 lg:py-16 overflow-hidden">
   <div class="container relative z-10 mx-auto px-4 md:px-6">
-    
-    <!-- Section Header (Green line bar + Our Services title + Subtitle) -->
-    <div class="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
+
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
       <h2 class="text-3xl sm:text-4xl lg:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight mb-3">
         <span class="inline-block relative pb-2">
           Our
           <span class="absolute bottom-0 left-0 w-full h-1 bg-[#10B981] rounded-full"></span>
         </span> <span class="text-[#10B981]">Services</span>
       </h2>
-
-      <p class="text-sm sm:text-base text-slate-500 leading-relaxed max-w-2xl mx-auto font-medium">
+      <p class="text-sm sm:text-base text-slate-500 leading-relaxed max-w-2xl mx-auto">
         Comprehensive solutions to help your business grow with confidence.
       </p>
     </div>
 
-    <!-- 6 Cards Grid Layout -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-      {
-        services.map((item) => {
-          return (
-            <article class="group relative flex items-start gap-4 sm:gap-5 rounded-2xl bg-white border border-slate-200/80 p-6 sm:p-7 shadow-xs transition-all duration-300 hover:shadow-md hover:border-[#10B981]/40">
-              
-              <!-- Circular Icon Badge (Light green soft background with dark green icon) -->
-              <div class="flex size-14 sm:size-16 shrink-0 items-center justify-center rounded-full bg-[#D1FAE5] text-[#059669] shadow-xs group-hover:scale-105 group-hover:bg-[#10B981] group-hover:text-white transition-all duration-300">
-                <DynamicIcon
-                  name={item.icon}
-                  inlineSvg={true}
-                  class="size-7 sm:size-8 stroke-[2]"
-                />
-              </div>
-
-              <!-- Content (Title & Description) -->
-              <div class="flex flex-col flex-1">
-                <h3 class="text-lg sm:text-xl font-bold text-slate-900 mb-2 leading-snug group-hover:text-[#10B981] transition-colors">
-                  {item.title}
-                </h3>
-
-                <p class="text-xs sm:text-sm text-slate-500 leading-relaxed font-normal">
-                  {item.description}
-                </p>
-              </div>
-            </article>
-          );
-        })
-      }
-    </div>
+    <!-- 6 Cards Grid -->
+    <FeatureGrid items={services} />
 
   </div>
 </section>
