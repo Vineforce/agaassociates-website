@@ -143,7 +143,7 @@ const navigationButton = { ...navBtnConfig, ...customNavigationButton };
             <div
               id="header-search-dropdown"
               data-lenis-prevent=""
-              class="hidden absolute right-0 top-full mt-2.5 w-[280px] sm:w-[320px] max-h-[400px] overflow-y-auto overscroll-contain bg-white rounded-2xl shadow-2xl border border-slate-100 p-3 z-50">
+              class="hidden absolute right-0 top-full mt-2.5 w-[calc(100vw-2rem)] max-w-[320px] sm:w-[320px] max-h-[400px] overflow-y-auto overscroll-contain bg-white rounded-2xl shadow-2xl border border-slate-100 p-3 z-50">
               <div id="header-search-results" class="divide-y divide-slate-100"></div>
             </div>
           </div>
@@ -203,14 +203,52 @@ const navigationButton = { ...navBtnConfig, ...customNavigationButton };
     transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
   }
   #header-search-bar.is-expanded {
-    width: 10.5rem; /* 168px */
+    width: calc(100vw - 5.5rem); /* Expands full towards the left side on mobile */
+    max-width: calc(100% + 220px);
     background-color: #ffffff;
     border-color: #10b981;
-    box-shadow: none;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    z-index: 30;
   }
+
+  @media (max-width: 639px) {
+    #header-search-dropdown {
+      position: absolute;
+      top: 100%;
+      margin-top: 0.625rem;
+      right: calc(50vw - 4rem);
+      left: auto;
+      transform: translateX(50%);
+      width: calc(100vw - 2rem);
+      max-width: 360px;
+      z-index: 50;
+    }
+    .header.search-active .logo-wrapper {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.2s ease, visibility 0.2s ease;
+    }
+    .header .logo-wrapper {
+      transition: opacity 0.2s ease, visibility 0.2s ease;
+    }
+  }
+
   @media (min-width: 640px) {
     #header-search-bar.is-expanded {
       width: 12.5rem; /* 200px */
+      max-width: none;
+      box-shadow: none;
+      z-index: 20;
+    }
+    #header-search-dropdown {
+      position: absolute;
+      top: 100%;
+      left: auto;
+      right: 0;
+      margin-left: 0;
+      margin-right: 0;
+      width: 320px;
+      transform: none;
     }
   }
 
@@ -392,8 +430,11 @@ const navigationButton = { ...navBtnConfig, ...customNavigationButton };
     if (searchArea.dataset.searchInitialized === "true") return;
     searchArea.dataset.searchInitialized = "true";
 
+    const headerEl = searchArea.closest(".header");
+
     function expandSearch(): void {
       searchBar?.classList.add("is-expanded");
+      headerEl?.classList.add("search-active");
       searchField?.classList.remove("opacity-0", "pointer-events-none");
       searchField?.classList.add("pointer-events-auto");
       searchClear?.classList.remove("hidden");
@@ -402,6 +443,7 @@ const navigationButton = { ...navBtnConfig, ...customNavigationButton };
 
     function collapseSearch(): void {
       searchBar?.classList.remove("is-expanded");
+      headerEl?.classList.remove("search-active");
       searchField?.classList.add("opacity-0", "pointer-events-none");
       searchField?.classList.remove("pointer-events-auto");
       if (searchField) searchField.value = "";
