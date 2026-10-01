@@ -11,13 +11,15 @@ import config from ".astro/config.generated.json";
 const t = await useTranslations(Astro.currentLocale as string);
 
 let {
-  copyright,
   footerDescription,
   contactInfo: { phone, email },
 } = config.settings;
 
 footerDescription = footerDescription || t("footer.description") || "";
 const footerColumns = getFooterMenuGroups(t);
+
+import { getGitLastUpdated } from "@/lib/utils/gitDate";
+const { currentYear, lastUpdatedDate } = getGitLastUpdated();
 
 
 ---
@@ -133,11 +135,11 @@ const footerColumns = getFooterMenuGroups(t);
       {
         config.settings.copyright?.enable && (
           <p class="text-sm text-white font-normal m-0">
-            Copyright © 2026{" "}
+            Copyright © {currentYear}{" "}
             <a
               href="/"
               class="text-white font-normal hover:underline cursor-pointer"
-            >HAVN &amp; COMPANY</a>. All rights reserved. Last updated on Sept 17, 2026.
+            >HAVN &amp; COMPANY</a>. All rights reserved. Last updated on {lastUpdatedDate}.
           </p>
         )
       }
