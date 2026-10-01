@@ -11,7 +11,7 @@ export function getGitLastUpdated(): GitBuildInfo {
   let commitDate: Date | null = null;
 
   try {
-    // %cI returns ISO 8601 strict date string with timezone offset (e.g., 2026-09-28T13:04:06+05:30)
+    // %cI returns ISO 8601 strict date string with timezone offset (e.g., 2026-10-01T13:04:06+05:30)
     const gitDateStr = execSync("git log -1 --format=%cI", {
       encoding: "utf-8",
       stdio: ["pipe", "pipe", "ignore"],
@@ -28,6 +28,8 @@ export function getGitLastUpdated(): GitBuildInfo {
   }
 
   const targetDate = commitDate || now;
+
+  // 12 months array (including Aug)
   const monthNames = [
     "Jan",
     "Feb",
@@ -36,6 +38,7 @@ export function getGitLastUpdated(): GitBuildInfo {
     "May",
     "June",
     "July",
+    "Aug",
     "Sept",
     "Oct",
     "Nov",
