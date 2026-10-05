@@ -1,7 +1,7 @@
 ---
 title: "Ashish Pawar"
 customSlug: "ashish-pawar"
-image: "/images/team/ashish-pawar.jpg"
+image: "/images/team/ashish-pawar.png"
 profession: "Senior Assistant"
 category: "SENIOR ASSISTANTS"
 order: 12
